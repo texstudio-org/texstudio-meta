@@ -1,0 +1,29 @@
+h1 {
+  background-color: #3B6D9E;
+  color: #FFFFFF;
+  padding: 3px;
+  margin: 0;
+}
+h2 { border-top: 2px solid #0000AA}
+#navigation{
+  background-color:#95C1DF;
+  color:#557799;
+  font-family:sans-serif;
+  font-size:0.8em;
+  margin: 0;
+  padding: 3px;
+  display: block; 
+}
+
+#navigation li{
+  display: inline;
+  border-right: 1px solid blue;
+  padding-right: 1em;
+  padding-left: 1em;
+  margin: 0;
+}
+
+#navigation a:visited{color: #557799}
+#navigation a:hover {font-weight: bold; color: red}
+
+a:hover {color:red}
