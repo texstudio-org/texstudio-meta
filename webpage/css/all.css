@@ -12,7 +12,9 @@ h1 {
   padding: 3px;
   margin: 0;
 }
-h2 { border-top: 2px solid #0000AA}
+h2 { margin-top:3em;
+    border-top: 3px solid #0000AA;
+    border-bottom: 1px solid #CCCCEE}
 #navigation{
   background-color:#80B0DF;
   color:#202047;
@@ -31,6 +33,7 @@ h2 { border-top: 2px solid #0000AA}
   margin: 0;
 }
 
+#navigation a{color:#202047; text-decoration: none;}
 #navigation a:visited{color:#202047}
 #navigation a:hover {font-weight: bold; color: red}
 
