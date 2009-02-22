@@ -11,7 +11,12 @@
   <li><a href="#features">Features</a></li>
   <li><a href="#downloads">Downloads</a></li>
 </ul>
-
+<div id="newsbox">
+<h3>Latest News</h3>
+2009-02-22: <br>
+The first release TexMaker 1.8 is finished.<br>
+You can download it <a href="#downloads">below</a>.
+</div>
 <div id="homecontent">
 <p>TexMakerX is a plain fork of the <strong>Free LaTeX IDE</strong> <a href="http://www.xm1math.net/texmaker/">TexMaker</a>. Both of them allow you to access all necessary Latex tools from within a single application.<br>
 TexMakerX tries to be as close as possible to the original version while also providing a lot of new, useful features. So it also runs  on <strong>Windows, Unix/Linux, BSD and MacOSX systems</strong> and is licensed under the GPL.<br>
@@ -32,6 +37,7 @@ The editor itself has been replaced with the more powerful <a href="http://qcode
   <li><strong>LaTeX documentation</strong> where you can lookup the tags you don't know</li>
   <li><strong>Translated</strong> in English, German and French</li>
   <li><strong>Platform independence</strong> allows you to use it on Windows, Linux, BSD and Mac</li>
+  <li><strong>USB-Mode</strong> stores its settings in a texmakerx.ini (only if you create one!), so you can use the same configuration on different computers</li>
   <li>And also customizable code snippets, tabbed MDI view, automatical tool detection, ... </li>
 </ul>
 </li>
@@ -45,26 +51,30 @@ The editor itself has been replaced with the more powerful <a href="http://qcode
   <li><strong>Incremental search</strong> like in FireFox on a search panel at the text bottom (where you can also find a replace panel)</li>
   <li><strong>Text Navigation</strong> jumps to bookmarks, certain lines, last changes and LaTex errors/warnings</li>
   <li><strong>Key Remapping</strong> of single keys for automatically text insertion (e.g of nice quotation marks)</li>
-  <li>And also line numbers, dynamic word wrapping, parenthesis highlighting, undo/redo, ...</li>
+  <li>And also line numbers, dynamic word wrapping, parenthesis highlighting, undo/redo, line change state ...</li>
 </ul>
 </li>
-<ul>
-
   
 </ul>
-
+<br>
+You can find more details in the <a href="http://texmakerx.svn.sourceforge.net/viewvc/texmakerx/trunk/utilities/usermanual_en.html?content-type=text%2Fhtml">user manual</a> or in the <a href="http://texmakerx.svn.sourceforge.net/viewvc/texmakerx/trunk/?view=log">SVN Changelog</a>.
 </p>
 </div>
 <div id="downloads">
 <h2><a id="downloads">Downloads</a></h2>
+<h3>Binaries</h3>
+For the latest release <a href="https://sourceforge.net/project/showfiles.php?group_id=250595&package_id=306278&release_id=663133">TexMakerX 1.8</a>  these binaries are currently available:<br>
+<a href="http://downloads.sourceforge.net/texmakerx/texmakerx_1.8-1_i386.deb">Debian package for i386-<strong>Linux</strong></a>: download and open it with your package manager to install it (latter e.g. by a double click on Ubuntu)<br>
+<a href="http://downloads.sourceforge.net/texmakerx/texmakerx18win32-install.exe">Installer for <strong>Win32</strong> systems</a>: download and double click on the installer exe to install it<br>
+<a href="http://downloads.sourceforge.net/texmakerx/TexMakerX18Win32_usb.zip">USB stick version for <strong>Win32</strong> systems</a>: just download and unzip this to install it<br>
+
 <h3>Source</h3>
 You can download the current source via SVN from <a href="http://texmakerx.svn.sourceforge.net/svnroot/texmakerx/trunk/">http://texmakerx.svn.sourceforge.net/svnroot/texmakerx/trunk/</a><br>
+Or you can download the source of the <a href="http://downloads.sourceforge.net/texmakerx/texmakerx1.8.tar.gz">current release 1.8</a>. <br>
 You need <a href="http://gcc.gnu.org/">GCC</a> and the <a href="http://www.trolltech.com/">Qt Toolkit</a> (>= 4.4.0 is recommended, 4.3.0 could also work) to compile it.<br> 
 You can compile it on all platforms using: qmake texmakerx.pro && make release<br>
 On Unix/MacOSX it is also possible to call: sudo sh build.sh  
-<h3>Binaries</h3>
-Binaries aren't release now, but they will come soon (or later).<br>
-However, I posted some in an <a href="http://www.latex-community.org/forum/viewtopic.php?f=21&t=3530">forum</a>, but keep in mind that these are old versions, containing bugs fixed in the source in the mean time. 
+
 </div>
 <div id="contact">
 <h2>Contact</h2>

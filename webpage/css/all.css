@@ -50,3 +50,11 @@ a:hover {color:red}
 li {
   padding: 2px;
 }
+
+#newsbox {
+  float: right;
+  border: 2px dashed blue;
+  padding: 5px;
+  margin-top: 0.5em;
+}
+#newsbox h3 {text-align:center; color: red}
