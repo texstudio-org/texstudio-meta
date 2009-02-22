@@ -45,7 +45,7 @@ Name: "{group}\TexMakerX"; Filename: "{app}\TexMakerX.exe";
 Name: "{commondesktop}\TexMakerX"; Filename: "{app}\TexMakerX.exe";
 
 [Languages]
-Name: "en"; MessagesFile: "compiler:Languages\English.isl"
+Name: "en"; MessagesFile: "compiler:Default.isl"
 Name: "de"; MessagesFile: "compiler:Languages\German.isl"
 Name: "fr"; MessagesFile: "compiler:Languages\French.isl"
 
