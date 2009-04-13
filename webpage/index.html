@@ -10,9 +10,14 @@
   <li style="border-left: 1px solid blue;"><a href="#home">Home</a></li>
   <li><a href="#features">Features</a></li>
   <li><a href="#downloads">Downloads</a></li>
+  <li><a href="#faq">FAQ</a></li>
+  <li><a href="#contact">Contact</a></li>
 </ul>
 <div id="newsbox">
 <h3>Latest News</h3>
+2009-04-03: <br>
+TexMakerX 1.8 has now been <br>
+downloaded one thousand times.<br><br>
 2009-02-22: <br>
 The first release TexMaker 1.8 is finished.<br>
 You can download it <a href="#downloads">below</a>.
@@ -20,7 +25,7 @@ You can download it <a href="#downloads">below</a>.
 <div id="homecontent">
 <p>TexMakerX is a fork of the <strong>LaTeX IDE</strong> <a href="http://www.xm1math.net/texmaker/">TexMaker</a> and gives you an environment where you can easily create and manage LaTeX documents. <br>
 It provides modern writing support, like interactive spell checking, code folding and syntax highlighting. Also it serves as a starting point from where you can easily run all necessary LaTeX tools. (you can see more <a href="#features">features below</a>) <br>
-You can run it on <strong>Windows, Unix/Linux and BSD (and perhaps MacOSX) systems</strong> and modify it if you want, since it is licensed under the GPL.<br>
+You can run it on <strong>Windows, Unix/Linux, BSD and MacOSX systems</strong> and modify it if you want, since it is licensed under the GPL.<br>
 Althought TexMakerX has a lot of additional features, it tries to be like an improved version of Texmaker, so it keeps it look&amp;feel as well as its version number.</p>
 <p style="text-align:center">
   <img src="img/example.png" alt="TexMakerX in action"><br><br>
@@ -69,7 +74,7 @@ Planned features and their current state:
 <li>User defined shortcuts for IDE and editor: menu part finished in SVN</li>
 <li>Highlighting of Latex warnings/errors + integrated checker: highlighting finished in SVN</li>
 <li>Integrated LaTex help: finished in SVN (but based on an old LaTeX reference)</li>
-<li>Improved recognizing of tool paths, checking of correct tool settings,  custom build actions: implementation started</li>
+<li>Improved recognizing of tool paths, checking of correct tool settings,  custom build actions: implementation started (Windows MiKTeX/Ghostscript detection finished)</li>
 <li>Integrated grammar checker/synonym dictionary: planned</li>
 <li>Better support for includes/projects: waiting for ideas (first step implemented in SVN as list of recent master documents)</li>
 </ul>
@@ -78,13 +83,13 @@ Feel free to fill in a <a href="http://sourceforge.net/tracker/?group_id=250595&
 </div>
 <div id="downloads">
 <h2><a id="downloads">Downloads</a></h2>
-<h3>Binaries</h3>
+<h3><a id="downloadBinaries">Binaries</a></h3>
 For the latest release <a href="https://sourceforge.net/project/showfiles.php?group_id=250595&package_id=306278&release_id=663133">TexMakerX 1.8</a>  these binaries are currently available:<br><br>
 <a href="http://downloads.sourceforge.net/texmakerx/texmakerx_1.8-1_i386.deb">Debian package for i386-<strong>Linux</strong></a>: download and open it with your package manager to install it (latter e.g. by a double click on Ubuntu)<br><br>
 <a href="http://downloads.sourceforge.net/texmakerx/texmakerx18win32-install.exe">Installer for <strong>Win32</strong> systems</a>: download and double click on the installer exe to install it<br>
 <a href="http://downloads.sourceforge.net/texmakerx/TexMakerX18Win32_usb.zip">USB stick version for <strong>Win32</strong> systems</a>: just download and unzip this to install it<br><br>
 <a href="http://www.freshports.org/editors/texmakerx/"><strong>FreeBSD</strong> port, see FreshPorts.org</a>: install it with cd /usr/ports/editors/texmakerx/ && make install clean
-<h3>Source</h3>
+<h3><a id="downloadSource">Source</a></h3>
 You can download the current source via SVN from <a href="http://texmakerx.svn.sourceforge.net/svnroot/texmakerx/trunk/">http://texmakerx.svn.sourceforge.net/svnroot/texmakerx/trunk/</a><br>
 Or you can download the source tarball of the <a href="http://downloads.sourceforge.net/texmakerx/texmakerx1.8.tar.gz">latest release 1.8</a>. <br><br>
 You need <a href="http://gcc.gnu.org/">GCC</a> and the <a href="http://www.trolltech.com/">Qt Toolkit</a> (>= 4.4.0 is recommended, 4.3.0 could also work) to compile it.<br> 
@@ -92,8 +97,37 @@ You can compile it on all platforms using: qmake texmakerx.pro && make release<b
 On Unix/MacOSX it is also possible to call: sudo sh build.sh  
 
 </div>
+<div id="faq">
+<h2><a id="faq">Frequently Asked Questions</a></h2>
+<h3>Why does it replace so many characters with quotation marks?</h3>
+As a new feature in TexMakerX " and ' are replaced with French ("&lt; and ">) and English ('', ``) quotation marks. <br>
+If you don't want this (e.g. because you write in English and need ') you can change the settings in User\Edit User Key Replacements. (in the newer SVN version the settings are moved to Options\Configure\Shortcuts)
+
+<h3>Where can I get the SVN version?</h3>
+See <a href="#downloadSource">above</a>.
+
+<h3>How can I run it on MacOSX?</h3>
+You have to follow these steps: (thanks to yunghsianghan):
+<ol>
+<li>Download QT SDK for mac from <a href="http://www.qtsoftware.com/downloads">http://www.qtsoftware.com/downloads</a> and install it.</li>
+<li>Open Terminal.app</li>
+<li>Download source files of texmakerx from svn: <a href="http://texmakerx.svn.sourceforge.net/svnroot/texmakerx/trunk/">http://texmakerx.svn.sourceforge.net/svnroot/texmakerx/trunk/</a></li>
+<li>Write the following first lines in the terminal: Cd trunk</li>
+<li>Sudo sh build.sh.<br>
+Password:<br>
+TexMakerX compilation :<br>
+----------------------------------------<br>
+Enter path to QT4 (/usr/lib/qt4 or ...): <br></li>
+<li>/usr/bin<br>
+Enter SYSTEM (1: UNIX ; 2: MACOSX) : </li>
+<li>2<br>
+Then compiling processing continued for several minutes.<br>
+Finally we have texmakerx.app in /Applications.<br>
+Sam</li>
+</ol>
+</div>
 <div id="contact">
-<h2>Contact</h2>
+<h2><a id="contact">Contact</a></h2>
 If you encounter a bug, please fill in a <a href="http://sourceforge.net/tracker/?group_id=250595&atid=1126426">bug report</a>. Or if you want a certain feature, you can write a <a href="http://sourceforge.net/tracker/?group_id=250595&atid=1126427">feature request</a>.<br>
 You can also discuss something in the <a href="http://sourceforge.net/forum/forum.php?forum_id=907839">TexMakerX forum</a>.
 <br>
@@ -102,7 +136,7 @@ Author of TexMakerX: Benito van der Zander, <a href="benito_NOSPAM_benibela.de">
 Original author (of Texmaker): Pascal Brachet, <a href="mailto:pbrachet_NOSPAM_xm1math.net">pbrachet_NOSPAM_xm1math.net</a>, <A href="http://www.xm1math.net">http://www.xm1math.net</A><br>
 (replace _NOSPAM_ with @)
 </div>
-<div id="sf-logo"><a href="http://sourceforge.net"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=250595&amp;type=4" width="125" height="37" border="0" alt="SourceForge.net Logo" /></a></div>
+<div id="sf-logo"><a href="http://sourceforge.net/projects/texmakerx"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=250595&amp;type=4" width="125" height="37" border="0" alt="SourceForge.net Logo" /></a></div>
 <div id="piwik">
 <!-- Piwik -->
 <script type="text/javascript">
@@ -110,11 +144,11 @@ var pkBaseURL = (("https:" == document.location.protocol) ? "https://apps.source
 document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
 </script><script type="text/javascript">
 piwik_action_name = '';
-piwik_idsite = 2;
+piwik_idsite = 1;
 piwik_url = pkBaseURL + "piwik.php";
 piwik_log(piwik_action_name, piwik_idsite, piwik_url);
 </script>
-<object><noscript><p><img src="http://apps.sourceforge.net/piwik/texmakerx/piwik.php?idsite=2" alt="piwik"/></p></noscript></object>
+<object><noscript><p><img src="http://apps.sourceforge.net/piwik/texmakerx/piwik.php?idsite=1" alt="piwik"/></p></noscript></object>
 <!-- End Piwik Tag -->
 </div>
 </body>
