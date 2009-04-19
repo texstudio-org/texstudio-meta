@@ -1,7 +1,7 @@
 [Setup]
 ;Change this in every version
-AppVerName=TexMakerX 1.8
-AppVersion=1.8
+AppVerName=TexMakerX 1.8.1
+AppVersion=1.8.1
 
 ;Don't change
 AppName=TexMakerX
