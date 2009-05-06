@@ -15,12 +15,19 @@
 </ul>
 <div id="newsbox">
 <h3>Latest News</h3>
+<p>
+2009-05-06:<br>
+The second release TexMaker 1.8.1 is available<br>
+which fixes several bugs and add some new features<br>
+You can download it <a href="#downloads">below</a>.</p>
+<p>
 2009-04-03: <br>
 TexMakerX 1.8 has now been <br>
-downloaded one thousand times.<br><br>
+downloaded one thousand times.</p>
+<p>
 2009-02-22: <br>
 The first release TexMaker 1.8 is finished.<br>
-You can download it <a href="#downloads">below</a>.
+You can download it <a href="#downloads">below</a>.</p>
 </div>
 <div id="homecontent">
 <p>TexMakerX is a fork of the <strong>LaTeX IDE</strong> <a href="http://www.xm1math.net/texmaker/">TexMaker</a> and gives you an environment where you can easily create and manage LaTeX documents. <br>
@@ -36,18 +43,17 @@ Althought TexMakerX has a lot of additional features, it tries to be like an imp
 <ul>
 <li><h3>IWE - Integrated Writing Environment</h3>
 <ul>
-  <li><strong>All LaTex tools</strong> can be called from TexMakerX with just one key press and you can add your own command line options (e.g. for forward/inverse search)</li>
+  <li><strong>All LaTeX tools</strong> can be called from TexMakerX with just one key press and you can add your own command line options (e.g. for forward/inverse search)</li>
   <li><strong>LaTex tags and 370 mathematical symbols</strong> you can easily select and add to your text</li>
   <li><strong>Wizards</strong> generating necessary code (e.g. documents, tabular/array-environments and BibTex-types)</li>
-  <li><strong>LaTex errors</strong> are displayed in a Log panel and you can easily jump to them </li>
+  <li><strong>LaTeX errors</strong> are displayed in a Log panel and highlight within the tex file </li>
   <li><strong>Structure View</strong> which shows the logical hierarchy of a file</li>
   <li><strong>HTML Converter</strong> which creates a html out of your LaTex-based PS-file</li>
-  <li><strong>Text analysis</strong> showing often used words</li>
+  <li><strong>Text analysis</strong> counting and showing often used words or phrases</li>
   <li><strong>LaTeX documentation</strong> where you can lookup the tags you don't know</li>
-  <li><strong>Translated</strong> in English, German and French</li>
-  <li><strong>Platform independence</strong> allows you to use it on Windows, Linux, BSD and Mac</li>
-  <li><strong>USB-Mode</strong> stores its settings in a texmakerx.ini (only if you create one!), so you can use the same configuration on different computers</li>
-  <li>And also customizable code snippets, tabbed MDI view, automatical tool detection, ... </li>
+  <li><strong>Customizable</strong> menu shortcuts</li>
+  <li><strong>DDE-Support</strong> to interact with other programs on Windows</li>
+  <li>And also customizable code snippets, tabbed MDI view,  ... </li>
 </ul>
 </li>
 <li><h3>Powerful Text Editor <a href="http://qcodeedit.edyuk.org" style="font-size:50%; font-weight:normal">based on QCodeEdit</a></h3>
@@ -55,28 +61,36 @@ Althought TexMakerX has a lot of additional features, it tries to be like an imp
   <li><strong>Interactive spell checker</strong> which marks errors while you type them</li>
   <li><strong>Syntax highlighting</strong> drawing LaTex commands in different, customizable formats</li>
   <li><strong>Code folding</strong> which allows you to hide certain blocks</li>
-  <li><strong>Auto completion</strong> completing tags you wrote</li>
+  <li><strong>Auto completion</strong> completes tags you wrote and shows corresponding help entries</li>
   <li><strong>Unicode support</strong> which can handle files in all encodings</li>
   <li><strong>Incremental search</strong> like in FireFox on a search panel at the text bottom (where you can also find a replace panel)</li>
   <li><strong>Text Navigation</strong> jumps to bookmarks, certain lines, last changes and LaTex errors/warnings</li>
   <li><strong>Key Remapping</strong> of single keys for automatically text insertion (e.g of nice quotation marks)</li>
   <li>And also line numbers, dynamic word wrapping, parenthesis highlighting, undo/redo, line change state ...</li>
 </ul>
+<li><h3>Installation</h3>
+<ul>
+  <li><strong>Platform independence</strong> allows you to use it on Windows, Linux, BSD and Mac</li>
+  <li><strong>Automatical detection</strong> of MikTeX, Ghostscript and Standardlatex</li>
+  <li><strong>USB-Mode</strong> stores its settings in a texmakerx.ini (only if you create one!), so you can use the same configuration on different computers</li>
+  <li><strong>Translated</strong> in English, German and French</li>
+</ul>
 </li>
   
 </ul>
 <br>
 You can find more details in the <a href="http://texmakerx.svn.sourceforge.net/viewvc/texmakerx/trunk/utilities/usermanual_en.html?content-type=text%2Fhtml">user manual</a> or in the <a href="http://texmakerx.svn.sourceforge.net/viewvc/texmakerx/trunk/?view=log">SVN Changelog</a>.<br><br>
-Planned features and their current state: 
+New/Planned features and their current state: (which of course only list differences to the latest release)
 <ul>
-<li>Improved text analysis with support for sentences/phrases and highlighting of them: finished in SVN</li>
-<li>(Windows) DDE support to control viewer: finished in SVN</li>
-<li>User defined shortcuts for IDE and editor: menu part finished in SVN</li>
-<li>Highlighting of Latex warnings/errors + integrated checker: highlighting finished in SVN</li>
-<li>Integrated LaTex help: finished in SVN (but based on an old LaTeX reference)</li>
-<li>Improved recognizing of tool paths, checking of correct tool settings,  custom build actions: implementation started (Windows MiKTeX/Ghostscript detection finished)</li>
+<li>Special highlighting of environment names: implemented in a patch (by Jan Sundermeyer)</li>
+<li>Support for KILE completer word list: implemented in a patch (by Jan Sundermeyer)</li>
+<li>Mathtext preview: planned</li>
+<li>Improved recognizing of tool paths, checking of correct tool settings,  custom build actions: planned (although former is finished for miktex+ghostscript)</li>
+<li>Integrated LaTeX checker: planned</li>
 <li>Integrated grammar checker/synonym dictionary: planned</li>
+<li>User defined shortcuts for editor: waiting for QCE update</li>
 <li>Better support for includes/projects: waiting for ideas (first step implemented in SVN as list of recent master documents)</li>
+<li>Better Integrated LaTeX help: waiting for help (this means someone who want to write it)</li>
 </ul>
 Feel free to fill in a <a href="http://sourceforge.net/tracker/?group_id=250595&atid=1126427">feature request</a> if you have any wishes.
 </p>
@@ -84,30 +98,33 @@ Feel free to fill in a <a href="http://sourceforge.net/tracker/?group_id=250595&
 <div id="downloads">
 <h2><a id="downloads">Downloads</a></h2>
 <h3><a id="downloadBinaries">Binaries</a></h3>
-For the latest release <a href="https://sourceforge.net/project/showfiles.php?group_id=250595&package_id=306278&release_id=663133">TexMakerX 1.8</a>  these binaries are currently available:<br><br>
-<a href="http://downloads.sourceforge.net/texmakerx/texmakerx_1.8-1_i386.deb">Debian package for i386-<strong>Linux</strong></a>: download and open it with your package manager to install it (latter e.g. by a double click on Ubuntu)<br><br>
-<a href="http://downloads.sourceforge.net/texmakerx/texmakerx18win32-install.exe">Installer for <strong>Win32</strong> systems</a>: download and double click on the installer exe to install it<br>
-<a href="http://downloads.sourceforge.net/texmakerx/TexMakerX18Win32_usb.zip">USB stick version for <strong>Win32</strong> systems</a>: just download and unzip this to install it<br><br>
-<a href="http://www.freshports.org/editors/texmakerx/"><strong>FreeBSD</strong> port, see FreshPorts.org</a>: install it with cd /usr/ports/editors/texmakerx/ && make install clean
+For the latest release <a href="https://sourceforge.net/project/showfiles.php?group_id=250595&package_id=306278&release_id=680854">TexMakerX 1.8.1</a>  these binaries are currently available:<br><br>
+<a href="http://downloads.sourceforge.net/texmakerx/texmakerx1.8.1.win32-install.exe">Installer for <strong>Win32</strong> systems</a>: download and double click on the installer exe to install it (it also contains qt 4.5.0)<br>
+<a href="http://downloads.sourceforge.net/texmakerx/texmakerX1.8.1Win32_usb.zip">USB stick version for <strong>Win32</strong> systems</a>: just download and unzip this to install it (it also contains  qt 4.5.0)<br><br>
+<a href="http://downloads.sourceforge.net/texmakerx/texmakerx_1.8.1-1_i386.deb">Debian package for i386-<strong>Linux</strong></a>: download and open it with your package manager to install it (latter e.g. by a double click on Ubuntu)<br><br>
+<a href="http://downloads.sourceforge.net/texmakerx/texmakerx1.8.1MacOSX-static-x68.dmg">DMG Image <strong>MacOSX 10.5 x86</strong> systems</a>: just download and install it (it also contains qt)<br><br>
+
+<!--<a href="http://www.freshports.org/editors/texmakerx/"><strong>FreeBSD</strong> port, see FreshPorts.org</a>: install it with cd /usr/ports/editors/texmakerx/ && make install clean-->
 <h3><a id="downloadSource">Source</a></h3>
 You can download the current source via SVN from <a href="http://texmakerx.svn.sourceforge.net/svnroot/texmakerx/trunk/">http://texmakerx.svn.sourceforge.net/svnroot/texmakerx/trunk/</a><br>
-Or you can download the source tarball of the <a href="http://downloads.sourceforge.net/texmakerx/texmakerx1.8.tar.gz">latest release 1.8</a>. <br><br>
-You need <a href="http://gcc.gnu.org/">GCC</a> and the <a href="http://www.trolltech.com/">Qt Toolkit</a> (>= 4.4.0 is recommended, 4.3.0 could also work) to compile it.<br> 
+Or you can download the source tarball of the <a href="http://downloads.sourceforge.net/texmakerx/texmakerx1.8.1.tar.gz">latest release 1.8.1</a>. <br><br>
+You need <a href="http://gcc.gnu.org/">GCC</a> and the <a href="http://www.trolltech.com/">Qt Toolkit</a> (>= 4.5.0 is recommended, >=4.3.0 could also work) to compile it.<br> 
 You can compile it on all platforms using: qmake texmakerx.pro && make release<br>
-On Unix/MacOSX it is also possible to call: sudo sh build.sh  
+On Unix/MacOSX it is also possible to call: sudo sh BUILD.sh  
 
 </div>
 <div id="faq">
 <h2><a id="faq">Frequently Asked Questions</a></h2>
 <h3>Why does it replace so many characters with quotation marks?</h3>
-As a new feature in TexMakerX " and ' are replaced with French ("&lt; and ">) and English ('', ``) quotation marks. <br>
-If you don't want this (e.g. because you write in English and need ') you can change the settings in User\Edit User Key Replacements. (in the newer SVN version the settings are moved to Options\Configure\Shortcuts)
+As a new feature in TexMakerX " are replaced with French ("&lt; and ">) quotation marks (in older version it also always replaced ' but now it only if you work on a German system). <br>
+If you don't want these replacements you can change the settings in the Options\Configure\Shortcuts table.
 
 <h3>Where can I get the SVN version?</h3>
 See <a href="#downloadSource">above</a>.
 
 <h3>How can I run it on MacOSX?</h3>
-You have to follow these steps: (thanks to yunghsianghan):
+This question is deprecated since the 1.8.1 release which provides a <a href="#downloadBinaries">.dmg image</a>, <br>
+but if that doesn't work (e.g. if you have MacOSX 10.4 or PPC), you can still follow these old steps: (thanks to yunghsianghan):
 <ol>
 <li>Download QT SDK for mac from <a href="http://www.qtsoftware.com/downloads">http://www.qtsoftware.com/downloads</a> and install it.</li>
 <li>Open Terminal.app</li>
