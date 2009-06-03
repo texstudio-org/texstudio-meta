@@ -1,0 +1,45 @@
+\documentclass[10pt,a4paper,landscape]{report}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{geometry}
+
+\begin{document}
+\chapter{Rules}
+This chapter describes some development rules.
+
+\section{Basic C++}
+Order the include directives from high level to low level, e.g.:\\
+\begin{verbatim}
+#include "texmaker.h"
+
+#include <qt>
+\end{verbatim}
+instead of the other way around
+
+Insert only things in texmaker.cpp or smallUsefulFunction.h if it is really necessary,
+better create a new .cpp/.h if you can't find one to put it in
+
+\section {Compatibility}
+Don't use QT 4.4 or 4.5, only functions of Qt4.3.\\
+If they are really necessary wrap them in \#ifdefs
+
+Some can be easily replaecd, these include:
+
+\begin{center}
+\begin{tabular}{lll}
+example & use instead & remark\\
+\hline \\
+QFormLayout & QGridLayout\\
+Q(String)List.append(Q(String)List)  &  $<<$ & This doesn't apply to .append(T) \\
+Q(String)List.length  &  QList.count() \\
+Q(String)List.removeOne   &  \verb!if (i=QList.indexOf()>0) QList.removeAt(i)! \\
+QRegExp.cap const  & QRegExp.cap & cap has first been made const in 4.5 \\
+\end{tabular}
+\end{center}
+
+\chapter{TODO}
+
+\end{document}
+
