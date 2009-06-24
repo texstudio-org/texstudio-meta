@@ -33,9 +33,11 @@ better create a new .cpp/.h if you can't find one to put it in
 
 \section {Compatibility}
 Don't use QT 4.4 or 4.5, only functions of Qt4.3.\\
-If they are really necessary wrap them in \#ifdefs
+If they are really necessary wrap them in \#if, like:\\
+\verb+#if QT_VERSION >= 0x040500+ für Qt 4.5.0\\
+\verb+#if QT_VERSION >= 0x040400+ für Qt 4.4.0\\
 
-Some can be easily replaecd, these include:
+Some can be easily replaced, these include:
 
 \begin{center}
 \begin{tabular}{lll}
@@ -48,6 +50,14 @@ Q(String)List.removeOne   &  \verb!if (i=QList.indexOf()>0) QList.removeAt(i)! \
 QRegExp.cap const  & QRegExp.cap & cap has first been made const in 4.5 \\
 \end{tabular}
 \end{center}
+
+Those don't exists in old qt, but should be used for the newer version, so they must be included in \#if.
+(min version is the minimum version where it can be used)
+\begin{tabular}{llll}
+example & min version & possible replacement\\
+QPalette::ToolTipBase & 4.4 & QPalette::AlternateBase\\
+QPalette::ToolTipText & 4.4 & QPalette::Text
+\end{tabular}
 
 \chapter{TODO}
 
