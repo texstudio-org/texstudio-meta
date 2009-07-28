@@ -86,6 +86,9 @@ New/Planned features and their current state: (which of course only list differe
 <li>Special highlighting of environment names: implemented in SVN</li>
 <li>Support for KILE completer word list: implemented in SVN</li>
 <li>Mathtext preview: implemented in SVN (but still experimental)</li>
+<li>Integrated synonym dictionary: implemented in SVN</li>
+<li>BibTeX parsing: implemented in SVN</li>
+<li>Interactive checking of  \ref to \label matching: implemented in SVN</li>
 <li>Improved recognizing of tool paths, checking of correct tool settings,  custom build actions: planned (although former is finished for miktex+ghostscript)</li>
 <li>Integrated LaTeX checker: planned</li>
 <li>Integrated grammar checker/synonym dictionary: planned</li>
@@ -100,16 +103,16 @@ Feel free to fill in a <a href="http://sourceforge.net/tracker/?group_id=250595&
 <h2><a id="downloads">Downloads</a></h2>
 <h3><a id="downloadBinaries">Binaries</a></h3>
 For the latest release <a href="https://sourceforge.net/project/showfiles.php?group_id=250595&package_id=306278&release_id=680854">TexMakerX 1.8.1</a>  these binaries are currently available:<br><br>
-<a href="http://downloads.sourceforge.net/texmakerx/texmakerx1.8.1.win32-install.exe">Installer for <strong>Win32</strong> systems</a>: download and double click on the installer exe to install it (it also contains qt 4.5.0)<br>
-<a href="http://downloads.sourceforge.net/texmakerx/texmakerX1.8.1Win32_usb.zip">USB stick version for <strong>Win32</strong> systems</a>: just download and unzip this to install it (it also contains  qt 4.5.0)<br><br>
-<a href="http://downloads.sourceforge.net/texmakerx/texmakerx_1.8.1-1_i386.deb">Debian package for i386-<strong>Linux</strong></a>: download and open it with your package manager to install it (latter e.g. by a double click on Ubuntu)<br><br>
-<a href="http://downloads.sourceforge.net/texmakerx/texmakerx1.8.1MacOSX-static-x68.dmg">DMG Image <strong>MacOSX 10.5 x86</strong> systems</a>: just download and start it (it also contains qt 4.5.0) (thanks to: David Sichau)<br><br>
+<a href="http://sourceforge.net/projects/texmakerx/files/texmakerx/TexMakerX%201.8.1/texmakerx1.8.1.win32-install.exe/download">Installer for <strong>Win32</strong> systems</a>: download and double click on the installer exe to install it (it also contains qt 4.5.0)<br>
+<a href="http://sourceforge.net/projects/texmakerx/files/texmakerx/TexMakerX%201.8.1/texmakerX1.8.1Win32_usb.zip/download">USB stick version for <strong>Win32</strong> systems</a>: just download and unzip this to install it (it also contains  qt 4.5.0)<br><br>
+<a href="http://sourceforge.net/projects/texmakerx/files/texmakerx/TexMakerX%201.8.1/texmakerx_1.8.1-1_i386.deb/download">Debian package for i386-<strong>Linux</strong></a>: download and open it with your package manager to install it (latter e.g. by a double click on Ubuntu)<br><br>
+<a href="http://sourceforge.net/projects/texmakerx/files/texmakerx/TexMakerX%201.8.1/texmakerx1.8.1MacOSX-static-x68.dmg/download">DMG Image <strong>MacOSX 10.5 x86</strong> systems</a>: just download and start it (it also contains qt 4.5.0) (thanks to: David Sichau)<br><br>
 
 <a href="http://www.freshports.org/editors/texmakerx/"><strong>FreeBSD</strong> port, see FreshPorts.org</a>: install it with cd /usr/ports/editors/texmakerx/ && make install clean
 <h3><a id="downloadSource">Source</a></h3>
 You can download the current source via SVN from <a href="http://texmakerx.svn.sourceforge.net/svnroot/texmakerx/trunk/">http://texmakerx.svn.sourceforge.net/svnroot/texmakerx/trunk/</a><br>
-Or you can download the source tarball of the <a href="http://downloads.sourceforge.net/texmakerx/texmakerx1.8.1.tar.gz">latest release 1.8.1</a>. <br><br>
-You need <a href="http://gcc.gnu.org/">GCC</a> and the <a href="http://www.trolltech.com/">Qt Toolkit</a> (>= 4.5.0 is recommended, >=4.3.0 could also work) to compile it.<br> 
+Or you can download the source tarball of the <a href="http://sourceforge.net/projects/texmakerx/files/texmakerx/TexMakerX%201.8.1/texmakerx1.8.1.tar.gz/download">latest release 1.8.1</a>. <br><br>
+You need <a href="http://gcc.gnu.org/">GCC</a> and the <a href="http://www.trolltech.com/">Qt Toolkit</a> (>=4.3.0, but >= 4.5.0 is recommended) to compile it.<br> 
 You can compile it on all platforms using: qmake texmakerx.pro && make release<br>
 On Unix/MacOSX it is also possible to call: sudo sh BUILD.sh  
 
@@ -147,6 +150,9 @@ Sam</li>
 
 <div id="participate">
 <h2><a id="participate">Participate</a></h2>
+The easiest way to help on the development with TexMakerX is to use it!<br>
+Furthermore you can tell everyone that you write your texts with TexMakerX, if you like it. <br> 
+
 If you have any suggestions, or even created patches you can submit them either over the <a href="https://sourceforge.net/tracker/?group_id=250595&atid=1126426">bug</a> or <a href="https://sourceforge.net/tracker/?group_id=250595&atid=1126427">feature request tracker</a>. Another alternative is just to use <a href="#contact">e-mail</a>.<br>
 <br>
 If you speak a foreign language except English or German, you can help us a lot by providing a new translation for TexMakerX.<br>
