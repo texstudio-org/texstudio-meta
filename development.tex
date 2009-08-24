@@ -1,5 +1,5 @@
 \documentclass[10pt,a4paper,landscape]{report}
-\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -63,6 +63,175 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 \end{tabular}
 
 \chapter{TODO}
+
+\begin{verbatim}
+=====texmaker: 
+1.9 changes:
+texmaker.cpp: many changes
+symbollistwidget: initialized hidden (???)
+webpublishdialog: it always used it own settings!
+
+bug: 
+mark hover
+wrong name after save all in tab
+crash: {}, altgr+space, enter, strg+z, strg+z
+* Koperien von JabRef (STRG+C) und Einfügen in Notepad++ funktioniert. Einfügen in TexMakerX funktioniert nicht.
+ersetzungsfunktion total bekloppt, weitersuchen
+not active, empty placeholders
+movement bug, mouse moving right in the same line
+\frac denominator placeholder bug (ein zeichen im placeholder)
+spellchecking nach hspace, vspace?
+placeholder selection with cursor in it
+placeholder selection from codesnippet doesn't work if the placeholder is in the last line and text comes behind it (e.g. \begin{environment-name}
+\bar{\ geht nicht, markiert \ und verhindert tippen
+enter in structure view
+complete selection deletion of placeholder
+ausschneiden stört cut
+completion crash?? spellchecker crashes??
+latex-*.cwl als standard, duplikate, \setminus, 
+escape geht nicht immer
+next/prev doc remove focus
+sprung zur warnung statt error (include with master only?), don't jump away from log file
+textanalyse count übersetzungsfehler
+Die BibLaTeX-Befehle \parencite und \textcite fehlen
+ende taste probleme bei gewrappter letzter zeile im dokument
+
+@MastersThesis{Marold,
+author = {Alexander Marold},
+title = {Rekonstruktion 
+der globalen 
+Ereignisreihenfolge aus lokalen Logdateien},
+school = {Heinrich-Heine-Universität Düsseldorf},
+year = {2008},
+type = {Bachelorarbeit},
+}
+
+ Ist es wirklich so, dass Wärter ''so`` und nicht ``so'' umschlossen
+     kein zurückscrollen des log view bei neuem log
+     web dialog versteht kein ?ame
+     abspeichern scrolls struktur to markierung, bug or feature
+     kein kommentieren von ein/ausgeklappten blöcken
+autoindent of \end{unknown}
+
+qce:
+allow comment indenation/unindation???
+commenting one line to far (up to cursor line even if no text there, ignores selection)
+
+Noch ein paar Stichpunkte zum Thesaurus:
+- trimmen, größe beibehalten nach schließen
+- (multi) markieren, pfeiltasten
+- versteht es deklinierte formen?
+- enthalten, startend mit (wie im Everest dictionary)
+- eigene Wörter hinzufügen, wie bei der Rechtschreibprüfung (prinzipiell könnte man sogar die Ignoredatei benutzen)
+- online lookup mit wortschatz.uni-leipzig.de (vermutlich eine blöde idee, weil es nur für deutsch funktionieren würde)
+
+---------------------------------
+jump to label from ref, to ref (selection window?)
+goto panel
+
+suchfenster
+
+bib tex in eigener klasse, bibtex hover, bibtex auto checking, bib tex right click correction
+\label, \ref right click correction
+references to all included files
+BIBINPUTS = C:\My Documents\CDMA\Papers\Bib;C:\My Documents\GPS\Papers\Bib
+
+\newcounter
+obscure tex features:
+\def, \edef, \xdef, \gdef for new commands (to be put into the completion list)
+\newcount (=tex counter)
+
+\hspace, \vspace ohne rechtschreibprüfung
+
+* Mir ist nicht klar ob/wann TexMakerX BibTeX aufruft. 
+
+geometry support
+
+(math) font style icons
+
+preview zoom
+
+detextify
+
+http://homepage.ruhr-uni-bochum.de/Georg.Verweyen/silbentrennung.html
+
+* Weshalb erscheint die Combobox zum Ändern nicht nach einem Doppelklick
+auf "Standardkürzel"? - nicht jeder ließt die Tabellenüberschriften :)
+
+* Weshalb enthält die Textvervollständigung nicht die Parameter von
+Befehlen? - Ich habe gerade die Anfangsbuchstaben des Parameters eines
+\textcite{}-Befehls eingegeben und bei SHIFT+ALT+Space kommt kein Vorschlag
+
+
+Mehrere Funktionen hinzufügen, um Environments/Blöcke/Sektions zu markieren/löschen, etc. ändern $$ zu \[ \]  oder \begin{..} zu \begin{??} 
+(wird um einiges einfacher zu implementieren sein, wenn die QCE 2.3 syntax engine fertig ist)
+
+bracket auto close
+
+dateiname für aktives dokument+spalten nunmmer (forward/inv search)
+
+>>
+qnfadefinition.cpp, line 1102, replace
+
+if ( ::match(par, parens.top()) )
+
+with
+
+if ( parens.count() > 1 || ::match(par, parens.top()) )
+
+And similarly change line 1233
+<<<<
+
+Tooltips bei Scrollen (Zeile\n part\chapter\section)
+
+.chapter analyse dblclick should search only in chapter 
+
+.structure click selecting chapter title
+
+* Ist es Absicht, dass die Ausgabe von pdflatex nicht angezeigt wird?
+
+highlighted match
+update works in O(foundMatches), but it could theoretically be done in O(log foundMatches);
+and finding the matches the first time needs O(total lines), but O(visible lines) is feasible)
+
+Langfristig:
+
+So wie es auf der Homepage steht:
+<li>Improved recognizing of tool paths, checking of correct tool settings,  custom build actions: planned (although former is finished for miktex+ghostscript)</li>
+<li>Integrated LaTeX checker: planned</li>
+<li>Integrated grammar checker: planned</li>
+
+.lacheck
+. command tooltips
+
+die angezeigten Symbolsammlungen konfigurierbar machen, da
+
+
+\cite{alle werte aus der geparsten bibtex}
+
+[cite]
+Das empfinde ich auch als sehr störend. Die meisten Nutzer erwarten, dass der markierter Text mit der Maus verschoben wird und nicht kopiert.
+Verschieben wird üblicherweise nur aktiviert, wenn man gleichzeitig die Strg Taste dabei drückt. Beim Schreiben wird wahrscheinlich häufiger Text verschoben als kopiert.
+Vielleicht lässt sich die Standardeinstellung ja ändern? 
+[/cite]
+Das ist wohl Geschmackssache, beim Explorer liest man dauern davon, wie nervig es sei, dass er die Dateien verschiebt statt kopiert.
+Aber irgendwann soll es sowieso völlig anpassbar sein, dann kann ich auch eine Option für die Standardaktion einbauen.
+
+Dann noch die gesamten Konfigurationssachen (readsettings, savesettings) von texmakerx.cpp in den configmanager zu verschieben und alle Funktionen, um den Text zu verändert entweder in latexeditorview oder in eine eigene Latexparserklasse (wobei ich mir noch nicht sicher bin, ob die sinnvoll ist).
+Irgendwann soll texmakerx.cpp unter 1000 Zeilen liegen...
+
+
+
+
+
+
+
+
+--------qcodeedit:
+
+search something below the current visible area, scroll up, search again, press arrow down, the search result is drawn selected although it isn't
+
+\end{verbatim}
 
 \end{document}
 
