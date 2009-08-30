@@ -73,7 +73,6 @@ webpublishdialog: it always used it own settings!
 
 bug: 
 codesnippt mit placeholder einfügen und rückgängig machen plaziert cursor an falscher column position => schreiben zerstört rückgängig
-\bar{\ geht nicht, markiert \ und verhindert tippen (nur in der unittest ausgabe??)
 enter in structure view
 complete selection deletion of placeholder
 movement bug, mouse moving right in the same line (probably fixed in new qce)
@@ -83,6 +82,8 @@ latex-*.cwl als standard, duplikate, \setminus,
 next/prev doc remove focus
 sprung zur warnung statt error (include with master only?), don't jump away from log file
 textanalyse count übersetzungsfehler
+\irgendwas wird in der unittest ausgabe rückwärts las sawdnegri\ geschrieben
+
 
 @MastersThesis{Marold,
 author = {Alexander Marold},
@@ -128,12 +129,13 @@ BIBINPUTS = C:\My Documents\CDMA\Papers\Bib;C:\My Documents\GPS\Papers\Bib
 obscure tex features:
 \def, \edef, \xdef, \gdef for new commands (to be put into the completion list)
 \newcount (=tex counter)
+\nameref, \vref
 
 * Mir ist nicht klar ob/wann TexMakerX BibTeX aufruft. 
 
 unittest (gui, qeditor, qdocument,..)
 
-unittest (gui, qeditor, qdocument,..)
+umlaute bei rechtschreibprüfung: l\"{o}sbar?
 
 geometry support
 
