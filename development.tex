@@ -64,158 +64,174 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 
 \chapter{TODO}
 
-\begin{verbatim}
-=====texmaker: 
-1.9 changes:
-texmaker.cpp: many changes
-symbollistwidget: initialized hidden (???)
-webpublishdialog: it always used it own settings!
+\subsection{necessary before 1.9.2 }
 
-bug: 
-codesnippt mit placeholder einfügen und rückgängig machen plaziert cursor an falscher column position => schreiben zerstört rückgängig
-ausschneiden stört cut????
-completion crash?? spellchecker crashes??
-latex-*.cwl als standard, duplikate, \setminus, 
-next/prev doc remove focus
-sprung zur warnung statt error (include with master only?), don't jump away from log file
-\irgendwas wird in der unittest ausgabe rückwärts las sawdnegri\ geschrieben
+\subsubsection{bugs}
+\begin{itemize}
+	\item webpublishdialog doesn't understand ?ame) syntax in commands
+	\item webpublishdialog doesn't use configmanager and stores settings at the wrong place
+	\item Starting compilation of unsaved file doesn't ask to save it but shows stupid messages, 
+	\item setting a preferred file name over the command line doesn't work (texmakerx hallo.tex should set the default file name to hallo.tex)
+	\item user tag abbreviation ignores special characters and leads to another result than its shortcut
+\end{itemize}
 
+\subsubsection{others}
+\begin{itemize}
+	\item import tm 1.9 structure/symbol view layout (with icons at the side instead in pages)
+	\item option for disabling of inline citation/reference checking
+	\item option for disabling new parsing of master and current document in master mode (old behaviour: only current is parsed)
+	\item \textbf{Make a list of new files which have to be included in the installer} 
+	\item \textbf{Update about dialog}  (version, using kile source)
+\end{itemize}
 
-@MastersThesis{Marold,
-author = {Alexander Marold},
-title = {Rekonstruktion 
-der globalen 
-Ereignisreihenfolge aus lokalen Logdateien},
-school = {Heinrich-Heine-Universität Düsseldorf},
-year = {2008},
-type = {Bachelorarbeit},
-}
+\subsection{nice to have before 1.9.2 }
+\subsubsection{Bugs}
+\begin{itemize}
+	\item log view isn't scrolled to log start if a new log is loaded
+\item \verb+\irgendwas+ wird in der unittest ausgabe rückwärts las \verb+sawdnegri\+ geschrieben
+	\item codesnippt mit placeholder einfügen und rückgängig machen plaziert cursor an falscher column position => schreiben zerstört rückgängig
+	\item check support for Chinese (bug 2854917)
+	\item sprung zur warnung statt error (include with master only?), don't jump away from log file
+\end{itemize}
 
- Ist es wirklich so, dass Wärter ''so`` und nicht ``so'' umschlossen
-     kein zurückscrollen des log view bei neuem log
-     web dialog versteht kein ?ame
-     abspeichern scrolls struktur to markierung, bug or feature
-     kein kommentieren von ein/ausgeklappten blöcken
-autoindent of \end{unknown}
-
-qce:
-allow comment indenation/unindation???
-commenting one line to far (up to cursor line even if no text there, ignores selection)
-
-Noch ein paar Stichpunkte zum Thesaurus:
-- trimmen, größe beibehalten nach schließen
-- (multi) markieren, pfeiltasten
-- versteht es deklinierte formen?
-- enthalten, startend mit (wie im Everest dictionary)
-- eigene Wörter hinzufügen, wie bei der Rechtschreibprüfung (prinzipiell könnte man sogar die Ignoredatei benutzen)
-- online lookup mit wortschatz.uni-leipzig.de (vermutlich eine blöde idee, weil es nur für deutsch funktionieren würde)
-
----------------------------------
-jump  from label to ref (selection window?)
-goto panel: enter sollte fokus entfernens
-
-bib tex in eigener klasse, bib tex right click suggestions
-\label, \ref right click correction
-references to all included files
-BIBINPUTS = C:\My Documents\CDMA\Papers\Bib;C:\My Documents\GPS\Papers\Bib
-
-\newcounter
-obscure tex features:
-\def, \edef, \xdef, \gdef for new commands (to be put into the completion list)
-\newcount (=tex counter)
-\nameref, \vref
-
-* Mir ist nicht klar ob/wann TexMakerX BibTeX aufruft. 
-
-unittest (gui, qeditor, qdocument,..)
-
-geometry support
-
-(math) font style icons
-
-preview zoom
-
-detextify
-
-http://homepage.ruhr-uni-bochum.de/Georg.Verweyen/silbentrennung.html
-
-* Weshalb erscheint die Combobox zum Ändern nicht nach einem Doppelklick
-auf "Standardkürzel"? - nicht jeder ließt die Tabellenüberschriften :)
-
-* Weshalb enthält die Textvervollständigung nicht die Parameter von
-Befehlen? - Ich habe gerade die Anfangsbuchstaben des Parameters eines
-\textcite{}-Befehls eingegeben und bei SHIFT+ALT+Space kommt kein Vorschlag
+\subsubsection{others}
+\begin{itemize}
+	\item ask for search from scope begin if replace all is finished (and didn't start from scope begin)
+	\item latex-*.cwl als standard completion list as standard
+	\item remove duplicate entries from the loaded *.cwls (later ignoring \%< Comments\%> in the cwl)
+	\item check tm 1.9.x texmaker.cpp for changes
+	\item pressing return in the goto dialog should close it
+	\item Tests: \begin{itemize}
+		\item check for completion/spellchecker crashes
+		\item codesnippet (especially placeholder), qdocumentcursor, qeditor, ...
+	\end{itemize}	
+\end{itemize}
 
 
-Mehrere Funktionen hinzufügen, um Environments/Blöcke/Sektions zu markieren/löschen, etc. ändern $$ zu \[ \]  oder \begin{..} zu \begin{??} 
-(wird um einiges einfacher zu implementieren sein, wenn die QCE 2.3 syntax engine fertig ist)
+\subsection{later}
 
-bracket auto close
+\subsubsection{Bugs}
+\begin{itemize}
+	\item understand the meaning of: ausschneiden stört cut????
+	\item Wrong indentation of \begin{verbatim}
+		@MastersThesis{Marold,
+		author = {Alexander Marold},
+		title = {Rekonstruktion 
+		der globalen 
+		Ereignisreihenfolge aus lokalen Logdateien},
+		school = {Heinrich-Heine-Universität Düsseldorf},
+		year = {2008},
+		type = {Bachelorarbeit},
+		}
+	\end{verbatim} in bib files
+\end{itemize} 
 
-dateiname für aktives dokument+spalten nunmmer (forward/inv search)
+\subsubsection{others}
+\begin{itemize}
+	\item QCodeEdit: \begin{itemize}
+		\item Deleting placeholders by pressing repeadetly backspace after one
+		\item don't comment the line the cursor is on when several lines are selected and the no text in this line is selected
+		\item Not annoying auto indentation (three modes: none, local (taking indentation from previous line), global (=like now); inserting several \verb+ \end{unknown}+ should not destroy indentation
+		\item folded blocks should not prevent removing/un-/indenting/un-/commenting
+		\item bracket auto closing
+		\item don't be confused by mismatching brackets (e.g. \verb+$[4,5[$+ for interval)
+%>>
+%qnfadefinition.cpp, line 1102, replace
+%
+%if ( ::match(par, parens.top()) )
+%
+%with
+%
+%if ( parens.count() > 1 || ::match(par, parens.top()) )
+%
+%And similarly change line 1233
+%<<<<
+		\item show tooltips when scrolling (line, section, chapter)
+		\item search panel: highlighted match update works in O(foundMatches), but it could theoretically be done in O(log foundMatches);
+		and finding the matches the first time needs O(total lines), but O(visible lines) is feasible)
+		\item changing default action of mouse drag/drop from copying to moving
+		\item BUG? (probably fixed already): 
+		search something below the current visible area, scroll up, search again, press arrow down, the search result is drawn selected although it isn't
+	\end{itemize}
+	\item better structure view: \begin{itemize}
+		\item BUG: \verb+\chapter{title}\label{label overrides title}+
+		\item parser in own file, not in texmaker.cpp
+		\item select section title when double clicked of one?
+		\item should not close everything after update, should it scroll to selected entry? (like it does in r460)
+		\item should show all loaded/included files
+		\item parsing not loaded files
+		\item should cache old parsing, don't reparse unmodified files
+		\item could use .aux files
+		\item should not execute several regex after each other on the same line (custom parser? mixed regex?)	
+	\end{itemize}
+	\item Document Managment \begin{itemize}
+		\item class storing tree structure of included files
+		\item yields better structure view
+		\item Latex Parser class
+	\end{itemize}
+	\item Synonym dictionary: \begin{itemize}
+		\item ignore space on words looked up
+		\item remember window size
+		\item allow selecting of words with arrow keys
+		\item faster contains checks using Tries
+		\item support for 
+		\item adding own words like in the spell checking 
+		\item online lookup (e.g german: wortschatz.uni-leipzig.de)
+	\end{itemize}
+	\item Labels/References: \begin{itemize}
+		\item understand \verb+\nameref, \vref+
+		\item 	show all refs using a label and allow easy jumping to them (e.g selection window?)
+		\item using a SoundEx suggestion list for wrong references/labels like in the spell checker
+	\end{itemize}
+	\item Citations: \begin{itemize}
+		\item automatically call bibtex if .bib files are changed
+		\item bib tex parser in own class
+		\item with unit tests
+		\item show SoundEx suggestion for wrong citatinos
+		\item check environment paths (e.g. \verb+BIBINPUTS = C:\My Documents\CDMA\Papers\Bib;C:\My Documents\GPS\Papers\Bib+)
+		\item references to all included files
+	\end{itemize}
+	\item Better new document wizard (look at kile, support for geometry package)
+	\item Completion List \begin{itemize}
+		\item Understand \verb+\usepackage}, newcounter, tex: \newcount  \def, \edef, \xdef, \gdef+
+		\item text completion should show parameters of commands (e.g. reference names) even if they aren't currently used
+		\item merging text completion and spell checker cache?
+	\end{itemize}
+	\item GUI: \begin{itemize}
+		\item using new tmx 1.9.2 icons
+		\item using icons for math font styles (like in text font style)
+		\item Customizable tool bars
+		\item Customizable symbol lists
+		\item combo boxes (dropdown tool buttons) instead of several icons for each command (like 1.9 or kile)
+	\end{itemize}
+	\item Preview: \begin{itemize}
+		\item allow real zoom (regenerating png)
+	\end{itemize}
+	\item  Checker: \begin{itemize}
+		\item Silbentrennung: \verb+http://homepage.ruhr-uni-bochum.de/Georg.Verweyen/silbentrennung.html+
+		\item Respect \verb+\verb+ or even multiline \verb+\begin{verbatim}+
+		\item Grammar Checker
+		\item LaTeX Checker	(calling lacheck?)
+	\end{itemize}
+	\item Building \begin{itemize}
+		\item Don't require to save everything (temporary location?)
+		\item Having a placeholder for current document and cursor position (like ?ame) perhaps ?ane) or ?ace) (needed for forward invert search)
+		\item Is the output of (pdf)latex shown? should it?
+		\item Improved recognizing of tool paths, checking of correct tool settings,  custom build actions: planned (although former is finished for miktex+ghostscript)
+		\item . command tooltips (right section?)
+		
+	\end{itemize}
+	\item Configuration \begin{itemize}
+		\item open combobox for shortcut changing if double clicked on standard shortcut
+		\item move from texmaker.cpp to configmanager.cpp (texmaker.cpp should have less than 1000 lines)
+		\item use some macro tricks, so that not everything has to be written five times (header declaration, loading, storing, config dialog in, config dialog out)
+	\end{itemize} 
+	\item Recognizing hand written symbols (online lookup in detextify)
+	\item New Tabular Dialog (of kile)
+	\item Having functions to select environments/blocks/sections, changing \verb+$$+ to \verb+\[\]+, or to \verb+\begin{something}+ (waiting for qce2.3 syntax engine)
+	\item Unit Tests (gui, qeditor, qdocument,..)
+\end{itemize}
 
->>
-qnfadefinition.cpp, line 1102, replace
-
-if ( ::match(par, parens.top()) )
-
-with
-
-if ( parens.count() > 1 || ::match(par, parens.top()) )
-
-And similarly change line 1233
-<<<<
-
-Tooltips bei Scrollen (Zeile\n part\chapter\section)
-
-.chapter analyse dblclick should search only in chapter 
-
-.structure click selecting chapter title
-
-* Ist es Absicht, dass die Ausgabe von pdflatex nicht angezeigt wird?
-
-highlighted match
-update works in O(foundMatches), but it could theoretically be done in O(log foundMatches);
-and finding the matches the first time needs O(total lines), but O(visible lines) is feasible)
-
-Langfristig:
-
-So wie es auf der Homepage steht:
-<li>Improved recognizing of tool paths, checking of correct tool settings,  custom build actions: planned (although former is finished for miktex+ghostscript)</li>
-<li>Integrated LaTeX checker: planned</li>
-<li>Integrated grammar checker: planned</li>
-
-.lacheck
-. command tooltips
-
-die angezeigten Symbolsammlungen konfigurierbar machen, da
-
-
-\cite{alle werte aus der geparsten bibtex}
-
-[cite]
-Das empfinde ich auch als sehr störend. Die meisten Nutzer erwarten, dass der markierter Text mit der Maus verschoben wird und nicht kopiert.
-Verschieben wird üblicherweise nur aktiviert, wenn man gleichzeitig die Strg Taste dabei drückt. Beim Schreiben wird wahrscheinlich häufiger Text verschoben als kopiert.
-Vielleicht lässt sich die Standardeinstellung ja ändern? 
-[/cite]
-Das ist wohl Geschmackssache, beim Explorer liest man dauern davon, wie nervig es sei, dass er die Dateien verschiebt statt kopiert.
-Aber irgendwann soll es sowieso völlig anpassbar sein, dann kann ich auch eine Option für die Standardaktion einbauen.
-
-Dann noch die gesamten Konfigurationssachen (readsettings, savesettings) von texmakerx.cpp in den configmanager zu verschieben und alle Funktionen, um den Text zu verändert entweder in latexeditorview oder in eine eigene Latexparserklasse (wobei ich mir noch nicht sicher bin, ob die sinnvoll ist).
-Irgendwann soll texmakerx.cpp unter 1000 Zeilen liegen...
-
-
-
-
-
-
-
-
---------qcodeedit:
-
-search something below the current visible area, scroll up, search again, press arrow down, the search result is drawn selected although it isn't
-
-\end{verbatim}
 
 \end{document}
 
