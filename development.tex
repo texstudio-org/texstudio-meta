@@ -68,8 +68,6 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 
 \subsubsection{bugs}
 \begin{itemize}
-	\item webpublishdialog doesn't understand ?ame) syntax in commands
-	\item webpublishdialog doesn't use configmanager and stores settings at the wrong place
 	\item setting a preferred file name over the command line doesn't work (texmakerx hallo.tex should set the default file name to hallo.tex)
 \end{itemize}
 
@@ -96,6 +94,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 \begin{itemize}
 	\item ask for search from scope begin if replace all is finished (and didn't start from scope begin)
 	\item latex-*.cwl als standard completion list as standard
+	\item simple hard line wrap dialog
 	\item remove duplicate entries from the loaded *.cwls (later ignoring \%< Comments\%> in the cwl)
 	\item check tm 1.9.x texmaker.cpp for changes
 	\item pressing return in the goto dialog should close it
@@ -129,7 +128,8 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 	\item QCodeEdit: \begin{itemize}
 		\item Deleting placeholders by pressing repeadetly backspace after one
 		\item don't comment the line the cursor is on when several lines are selected and the no text in this line is selected
-		\item Not annoying auto indentation (three modes: none, local (taking indentation from previous line), global (=like now); inserting several \verb+ \end{unknown}+ should not destroy indentation
+		\item %Not annoying auto indentation (three modes: none, local (taking indentation from previous line), global (=like now); 
+		inserting several \verb+ \end{unknown}+ should not destroy indentation
 		\item folded blocks should not prevent removing/un-/indenting/un-/commenting
 		\item bracket auto closing
 		\item don't be confused by mismatching brackets (e.g. \verb+$[4,5[$+ for interval)
@@ -216,8 +216,10 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 		\item Having a placeholder for current document and cursor position (like ?ame) perhaps ?ane) or ?ace) (needed for forward invert search)
 		\item Is the output of (pdf)latex shown? should it?
 		\item Improved recognizing of tool paths, checking of correct tool settings,  custom build actions: planned (although former is finished for miktex+ghostscript)
+		\item better browser detection in WebPublish dialog 
+		\item running arbitrary commands as CMD_UNKNOWN
+		\item if the parameters of the user and the program differ, which should be used? (that problem is the reason, ghostscript have to be the plain program name)
 		\item . command tooltips (right section?)
-		
 	\end{itemize}
 	\item Configuration \begin{itemize}
 		\item open combobox for shortcut changing if double clicked on standard shortcut
