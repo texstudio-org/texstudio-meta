@@ -74,8 +74,6 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 \subsubsection{others}
 \begin{itemize}
 	\item import tm 1.9 structure/symbol view layout (with icons at the side instead in pages)
-	\item option for disabling of inline citation/reference checking
-	\item option for disabling new parsing of master and current document in master mode (old behaviour: only current is parsed)
 	\item \textbf{Make a list of new files which have to be included in the installer} 
 	\item \textbf{Update about dialog}  (version, using kile source)
 \end{itemize}
@@ -179,7 +177,9 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 	\item Labels/References: \begin{itemize}
 		\item understand \verb+\nameref, \vref+
 		\item 	show all refs using a label and allow easy jumping to them (e.g selection window?)
+		\item check references to other files
 		\item using a SoundEx suggestion list for wrong references/labels like in the spell checker
+		\item a reference/label check dialog like the old spell checking dialog
 	\end{itemize}
 	\item Citations: \begin{itemize}
 		\item automatically call bibtex if .bib files are changed
@@ -225,6 +225,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 		\item open combobox for shortcut changing if double clicked on standard shortcut
 		\item move from texmaker.cpp to configmanager.cpp (texmaker.cpp should have less than 1000 lines)
 		\item use some macro tricks, so that not everything has to be written five times (header declaration, loading, storing, config dialog in, config dialog out)
+		\item update all overlays (environment, spell checking, refs..) when they are en/disabled in the config dialog (? will be slow? disabling => just remove overlays instead reparsing)
 	\end{itemize} 
 	\item Recognizing hand written symbols (online lookup in detextify)
 	\item New Tabular Dialog (of kile)
