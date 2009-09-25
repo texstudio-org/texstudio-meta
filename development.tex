@@ -75,17 +75,13 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 \subsection{nice to have before 1.9.2 }
 \subsubsection{Bugs}
 \begin{itemize}
-	\item replace all can count the found places wrong (shows a message: "3 of 2 occurences replaced")
-	\item log view isn't scrolled to log start if a new log is loaded
 \item \verb+\irgendwas+ wird in der unittest ausgabe rückwärts las \verb+sawdnegri\+ geschrieben
 	\item codesnippt mit placeholder einfügen und rückgängig machen plaziert cursor an falscher column position => schreiben zerstört rückgängig
 	\item check support for Chinese (bug 2854917)
-	\item sprung zur warnung statt error (include with master only?), don't jump away from log file
 \end{itemize}
 
 \subsubsection{others}
 \begin{itemize}
-	\item ask for search from scope begin if replace all is finished (and didn't start from scope begin)
 	\item Tests: \begin{itemize}
 		\item check for completion/spellchecker crashes
 		\item codesnippet (especially placeholder), qdocumentcursor, qeditor, ...
@@ -115,6 +111,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 \begin{itemize}
 	\item QCodeEdit: \begin{itemize}
 		\item Deleting placeholders by pressing repeadetly backspace after one
+		\item if replace all is restarted from scope begin, show the count of replaced occurrences before the scope restart and afterwards.
 		\item don't comment the line the cursor is on when several lines are selected and the no text in this line is selected
 		\item %Not annoying auto indentation (three modes: none, local (taking indentation from previous line), global (=like now); 
 		inserting several \verb+ \end{unknown}+ should not destroy indentation
@@ -203,6 +200,12 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 		\item Respect \verb+\verb+ or even multiline \verb+\begin{verbatim}+
 		\item Grammar Checker
 		\item LaTeX Checker	(calling lacheck?)
+	\end{itemize}
+	\item Log files:\begin{itemize}
+	\item if there are several errors, should it jump to the first or the one after the current cursor position? If the errors are in different files, should it jump to another file? which one? Should it jump to warnings? 	(current in r500 it only jumps to the next error in the same file) 
+		\item More log: What do we do with errors in other files when we are not in master mode? 
+		\item Is it a good idea to change the tab from ">log file"< to ">messages"< if another tex file is opened and we are not in master mode?
+		\item don't jump away from log file (what did that mean???????)
 	\end{itemize}
 	\item Building \begin{itemize}
 		\item Don't require to save everything (temporary location?)
