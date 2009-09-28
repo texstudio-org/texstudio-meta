@@ -1,0 +1,114 @@
+<!DOCTYPE QPH>
+<QPH language="fr_FR">
+<phrase>
+    <source>document</source>
+    <target>le document</target>
+</phrase>
+<phrase>
+    <source>der</source>
+    <target>le</target>
+</phrase>
+<phrase>
+    <source>die</source>
+    <target>la</target>
+</phrase>
+<phrase>
+    <source>replace</source>
+    <target>remplacer</target>
+    <definition>ersetzen</definition>
+</phrase>
+<phrase>
+    <source>search</source>
+    <target>chercher</target>
+    <definition>suchen</definition>
+</phrase>
+<phrase>
+    <source>close</source>
+    <target>fermer</target>
+    <definition>schließen</definition>
+</phrase>
+<phrase>
+    <source>Appearance</source>
+    <target>Apparence</target>
+</phrase>
+<phrase>
+    <source>Style</source>
+    <target>Style</target>
+    <definition>m.</definition>
+</phrase>
+<phrase>
+    <source>Font</source>
+    <target>Police</target>
+    <definition>f.</definition>
+</phrase>
+<phrase>
+    <source>Tab</source>
+    <target>onglet</target>
+    <definition>m.</definition>
+</phrase>
+<phrase>
+    <source>Language</source>
+    <target>Langue</target>
+</phrase>
+<phrase>
+    <source>Never</source>
+    <target>Jamais</target>
+</phrase>
+<phrase>
+    <source>Always</source>
+    <target>Toujours</target>
+</phrase>
+<phrase>
+    <source>file name</source>
+    <target>nom fichier</target>
+    <definition>m. (or nom de fichier?)</definition>
+</phrase>
+<phrase>
+    <source>file</source>
+    <target>fichier</target>
+    <definition>m.</definition>
+</phrase>
+<phrase>
+    <source>log</source>
+    <target>log</target>
+    <definition>m.</definition>
+</phrase>
+<phrase>
+    <source>ignore</source>
+    <target>ignorer</target>
+    <definition>ignorer qn/qc.</definition>
+</phrase>
+<phrase>
+    <source>show</source>
+    <target>afficher</target>
+    <definition>afficher qc.</definition>
+</phrase>
+<phrase>
+    <source>error</source>
+    <target>erreur</target>
+    <definition>f.</definition>
+</phrase>
+<phrase>
+    <source>selected</source>
+    <target>sélectionné</target>
+    <definition>m=sélectionné, f=sélectionnée</definition>
+</phrase>
+<phrase>
+    <source>text</source>
+    <target>texte</target>
+    <definition>m.</definition>
+</phrase>
+<phrase>
+    <source>(New Entry)</source>
+    <target></target>
+</phrase>
+<phrase>
+    <source>character</source>
+    <target>caractère</target>
+    <definition>m.</definition>
+</phrase>
+<phrase>
+    <source>preview</source>
+    <target>prévisualisation</target>
+</phrase>
+</QPH>
