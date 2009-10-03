@@ -99,8 +99,9 @@
     <definition>m.</definition>
 </phrase>
 <phrase>
-    <source>(New Entry)</source>
-    <target></target>
+    <source>label</source>
+    <target>label</target>
+    <definition>m.</definition>
 </phrase>
 <phrase>
     <source>character</source>
@@ -110,5 +111,14 @@
 <phrase>
     <source>preview</source>
     <target>prévisualisation</target>
+</phrase>
+<phrase>
+    <source>default</source>
+    <target>par défaut</target>
+</phrase>
+<phrase>
+    <source>none</source>
+    <target>aucun</target>
+    <definition>keiner (keine, f-&gt;aucune)</definition>
 </phrase>
 </QPH>
