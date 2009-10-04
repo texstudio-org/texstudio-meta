@@ -121,4 +121,18 @@
     <target>aucun</target>
     <definition>keiner (keine, f-&gt;aucune)</definition>
 </phrase>
+<phrase>
+    <source>letter</source>
+    <target>lettre</target>
+    <definition>f. (pl=lettres)</definition>
+</phrase>
+<phrase>
+    <source>insert</source>
+    <target>insérer</target>
+</phrase>
+<phrase>
+    <source>next</source>
+    <target>suivant</target>
+    <definition>(f=suivante), alt: prochain, prochaine </definition>
+</phrase>
 </QPH>
