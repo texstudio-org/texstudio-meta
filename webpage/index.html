@@ -17,8 +17,13 @@
 <div id="newsbox">
 <h3>Latest News</h3>
 <p>
+2009-10-26:<br>
+The new release TexMakerX 1.9.2 is available<br>
+which adds several new features and fixes some bugs<br>
+You can download it <a href="#downloads">below</a>.</p>
+<p>
 2009-05-06:<br>
-The second release TexMaker 1.8.1 is available<br>
+The second release TexMakerX 1.8.1 is available<br>
 which fixes several bugs and add some new features<br>
 You can download it <a href="#downloads">below</a>.</p>
 <p>
@@ -27,7 +32,7 @@ TexMakerX 1.8 has now been <br>
 downloaded one thousand times.</p>
 <p>
 2009-02-22: <br>
-The first release TexMaker 1.8 is finished.<br>
+The first release TexMakerX 1.8 is finished.<br>
 You can download it <a href="#downloads">below</a>.</p>
 </div>
 <div id="homecontent">
@@ -45,12 +50,15 @@ Althought TexMakerX has a lot of additional features, it tries to be like an imp
 <li><h3>IWE - Integrated Writing Environment</h3>
 <ul>
   <li><strong>All LaTeX tools</strong> can be called from TexMakerX with just one key press and you can add your own command line options (e.g. for forward/inverse search)</li>
-  <li><strong>LaTex tags and 370 mathematical symbols</strong> you can easily select and add to your text</li>
+  <li><strong>LaTex tags and 1102 mathematical symbols</strong> you can easily select and add to your text</li>
   <li><strong>Wizards</strong> generating necessary code (e.g. documents, tabular/array-environments and BibTex-types)</li>
+  <li><strong>Thesaurus</strong> which shows possible synonyms for a certain word</li>
   <li><strong>LaTeX errors</strong> are displayed in a Log panel and highlight within the tex file </li>
   <li><strong>Structure View</strong> which shows the logical hierarchy of a file</li>
-  <li><strong>HTML Converter</strong> which creates a html out of your LaTex-based PS-file</li>
+  <li><strong>HTML Converter</strong> which creates a html out of your LaTeX-based PS-file</li>
+  <li><strong>Math Preview</strong> which shows the latex output within TexMakerX</li>
   <li><strong>Text analysis</strong> counting and showing often used words or phrases</li>
+  <li><strong>Random Text</strong> generator which automatically creates a text similar to the one you wrote</li>
   <li><strong>LaTeX documentation</strong> where you can lookup the tags you don't know</li>
   <li><strong>Customizable</strong> menu shortcuts</li>
   <li><strong>DDE-Support</strong> to interact with other programs on Windows</li>
@@ -60,9 +68,10 @@ Althought TexMakerX has a lot of additional features, it tries to be like an imp
 <li><h3>Powerful Text Editor <a href="http://qcodeedit.edyuk.org" style="font-size:50%; font-weight:normal">based on QCodeEdit</a></h3>
 <ul>
   <li><strong>Interactive spell checker</strong> which marks errors while you type them</li>
+  <li><strong>Interactive reference checker</strong> which marks wrong reference/label combinations and wrong citations</li>
   <li><strong>Syntax highlighting</strong> drawing LaTex commands in different, customizable formats</li>
   <li><strong>Code folding</strong> which allows you to hide certain blocks</li>
-  <li><strong>Auto completion</strong> completes tags you wrote and shows corresponding help entries</li>
+  <li><strong>Auto completion</strong> completes tags you wrote and shows corresponding help entriesm, uses the taglists from kile</li>
   <li><strong>Unicode support</strong> which can handle files in all encodings</li>
   <li><strong>Incremental search</strong> like in FireFox on a search panel at the text bottom (where you can also find a replace panel)</li>
   <li><strong>Text Navigation</strong> jumps to bookmarks, certain lines, last changes and LaTex errors/warnings</li>
@@ -83,36 +92,46 @@ Althought TexMakerX has a lot of additional features, it tries to be like an imp
 You can find more details in the <a href="http://texmakerx.svn.sourceforge.net/viewvc/texmakerx/trunk/utilities/usermanual_en.html?content-type=text%2Fhtml">user manual</a> or in the <a href="http://texmakerx.svn.sourceforge.net/viewvc/texmakerx/trunk/?view=log">SVN Changelog</a>.<br><br>
 New/Planned features and their current state: (which of course only list differences to the latest release)
 <ul>
-<li>Special highlighting of environment names: implemented in SVN</li>
-<li>Support for KILE completer word list: implemented in SVN</li>
-<li>Mathtext preview: implemented in SVN (but still experimental)</li>
-<li>Integrated synonym dictionary: implemented in SVN</li>
-<li>BibTeX parsing: implemented in SVN</li>
-<li>Interactive checking of  \ref to \label matching: implemented in SVN</li>
+<li>Mathtext preview: implemented in 1.9.2 (but still experimental)</li>
 <li>Improved recognizing of tool paths, checking of correct tool settings,  custom build actions: planned (although former is finished for miktex+ghostscript)</li>
 <li>Integrated LaTeX checker: planned</li>
-<li>Integrated grammar checker/synonym dictionary: planned</li>
+<li>Integrated grammar checker: planned</li>
 <li>User defined shortcuts for editor: waiting for QCE update</li>
-<li>Better support for includes/projects: waiting for ideas (first step implemented in SVN as list of recent master documents)</li>
+<li>Better support for includes/projects: waiting for ideas (first step implemented in 1.8.1 as list of recent master documents)</li>
 <li>Better Integrated LaTeX help: waiting for help (this means someone who want to write it)</li>
+<li>see more in the tex-based <a href="http://texmakerx.svn.sourceforge.net/viewvc/texmakerx/trunk/utilities/notInBinary/development.tex?content-type=text%2Fplain">road map</a></li>
 </ul>
 Feel free to fill in a <a href="http://sourceforge.net/tracker/?group_id=250595&atid=1126427">feature request</a> if you have any wishes.
 </p>
 </div>
 <div id="downloads">
 <h2><a id="downloads">Downloads</a></h2>
-<h3><a id="downloadBinaries">Binaries</a></h3>
-For the latest release <a href="https://sourceforge.net/project/showfiles.php?group_id=250595&package_id=306278&release_id=680854">TexMakerX 1.8.1</a>  these binaries are currently available:<br><br>
-<a href="http://sourceforge.net/projects/texmakerx/files/texmakerx/TexMakerX%201.8.1/texmakerx1.8.1.win32-install.exe/download">Installer for <strong>Win32</strong> systems</a>: download and double click on the installer exe to install it (it also contains qt 4.5.0)<br>
-<a href="http://sourceforge.net/projects/texmakerx/files/texmakerx/TexMakerX%201.8.1/texmakerX1.8.1Win32_usb.zip/download">USB stick version for <strong>Win32</strong> systems</a>: just download and unzip this to install it (it also contains  qt 4.5.0)<br><br>
-<a href="http://sourceforge.net/projects/texmakerx/files/texmakerx/TexMakerX%201.8.1/texmakerx_1.8.1-1_i386.deb/download">Debian package for i386-<strong>Linux</strong></a>: download and open it with your package manager to install it (latter e.g. by a double click on Ubuntu)<br><br>
-<a href="http://sourceforge.net/projects/texmakerx/files/texmakerx/TexMakerX%201.8.1/texmakerx1.8.1MacOSX-static-x68.dmg/download">DMG Image <strong>MacOSX 10.5 x86</strong> systems</a>: just download and start it (it also contains qt 4.5.0) (thanks to: David Sichau)<br><br>
+<table class="downloadTable">
+<tr><th>Platform</th><th>Version</th><th>Download Type</th><th>Requires QT</th><th>Contains QT</th><th>Dictionaries</th><th>How to install</th></tr>
+<tr class="platformDownload"><td>Windows</td></tr>
+<tr><td></td><td>1.9.2</td><td><a href="http://sourceforge.net/projects/texmakerx/files/texmakerx/TexMakerX%201.9.2/texmakerxwin32-install.exe/download">Installer</a></td><td>-</td><td>4.5.2</td><td>en, fr, de</td><td><a href="http://sourceforge.net/projects/texmakerx/files/texmakerx/TexMakerX%201.9.2/texmakerxwin32-install.exe/download">download</a> and double click on the installer exe</td></tr>
+<tr><td></td><td>1.9.2</td><td><a href="http://sourceforge.net/projects/texmakerx/files/texmakerx/TexMakerX%201.9.2/texmakerx1.9.2win32_usb.zip/download">USB (.zip)</td><td>-</td><td>4.5.2</td><td>en, fr, de</td><td><a href="http://sourceforge.net/projects/texmakerx/files/texmakerx/TexMakerX%201.9.2/texmakerx1.9.2win32_usb.zip/download">download</a> and unzip the zip</td></tr>
+<tr><td></td><td>1.9.2</td><td><a href="http://sourceforge.net/projects/texmakerx/files/texmakerx/TexMakerX%201.9.2/texmakerx1.9.2win32_usb_small.zip/download">USB small (.zip)</a></td><td>4.5 (4.4?)</td><td>-</td><td>none</td><td><a href="http://sourceforge.net/projects/texmakerx/files/texmakerx/TexMakerX%201.9.2/texmakerx1.9.2win32_usb_small.zip/download">download</a> and unzip the zip if you have qt</td></tr>
+<tr class="platformDownload"><td>Linux</td></tr>
+<tr><td>Ubuntu/Debian</td><td>1.9.2</td><td><a href="http://sourceforge.net/projects/texmakerx/files/texmakerx/TexMakerX%201.9.2/texmakerx_1.9.2-1_i386.deb/download">.deb Package</a></td><td>4.5 (4.4?)</td><td>-</td><td>en, fr, de</td><td><a href="http://sourceforge.net/projects/texmakerx/files/texmakerx/TexMakerX%201.9.2/texmakerx_1.9.2-1_i386.deb/download">download</a> and open it with your package manager</td></tr>
+<tr class="platformDownload"><td>MacOSX</td></tr>
+<tr><td>10.5 x86</td><td>old 1.8.1</td><td><a href="http://sourceforge.net/projects/texmakerx/files/texmakerx/TexMakerX%201.8.1/texmakerx1.8.1MacOSX-static-x68.dmg/download">DMG Image</a></td><td>-</td><td>4.4?</td><td>en, fr</td><td><a href="http://sourceforge.net/projects/texmakerx/files/texmakerx/TexMakerX%201.8.1/texmakerx1.8.1MacOSX-static-x68.dmg/download">download</a> and just start it (thanks to: David Sichau)</td></tr>
+<tr class="platformDownload"><td>FreeBSD</td></tr>
+<tr><td></td><td>old 1.8.1</td><td><a href="http://www.freshports.org/editors/texmakerx/">FreshPorts.org</a></td><td>4.4?</td><td>-</td><td>en, fr</td><td>cd /usr/ports/editors/texmakerx/ && make install clean</td></tr>
+<tr class="platformDownload"><td>All Platforms</td></tr>
+<tr><td></td><td>latest</td><td><a href="http://texmakerx.svn.sourceforge.net/svnroot/texmakerx/trunk/">SVN source</a></td><td>4.3</td><td>-</td><td>en, fr, de</td><td>see below</td></tr>
+<tr><td></td><td>1.9.2</td><td><a href="http://sourceforge.net/projects/texmakerx/files/texmakerx/TexMakerX%201.9.2/texmakerx1.9.2.tar.gz/download">source tarball</a></td><td>4.3</td><td>-</td><td>en, fr, de</td><td>see below</td></tr>
+<tr><td></td><td>old 1.8.1</td><td><a href="http://sourceforge.net/projects/texmakerx/files/texmakerx/TexMakerX%201.8.1/texmakerx1.8.1.tar.gz/download">source tarball</a></td><td>4.3</td><td>-</td><td>en, fr, de</td><td>see below</td></tr>
 
-<a href="http://www.freshports.org/editors/texmakerx/"><strong>FreeBSD</strong> port, see FreshPorts.org</a>: install it with cd /usr/ports/editors/texmakerx/ && make install clean
-<h3><a id="downloadSource">Source</a></h3>
-You can download the current source via SVN from <a href="http://texmakerx.svn.sourceforge.net/svnroot/texmakerx/trunk/">http://texmakerx.svn.sourceforge.net/svnroot/texmakerx/trunk/</a><br>
-Or you can download the source tarball of the <a href="http://sourceforge.net/projects/texmakerx/files/texmakerx/TexMakerX%201.8.1/texmakerx1.8.1.tar.gz/download">latest release 1.8.1</a>. <br><br>
-You need <a href="http://gcc.gnu.org/">GCC</a> and the <a href="http://www.trolltech.com/">Qt Toolkit</a> (>=4.3.0, but >= 4.5.0 is recommended) to compile it.<br> 
+</table>
+<!--<h3><a id="downloadBinaries">Binaries</a></h3>-->
+
+<h2><a id="downloadSource">Source</a></h2>
+
+<!--You can download the current source via SVN from <a href="http://texmakerx.svn.sourceforge.net/svnroot/texmakerx/trunk/">http://texmakerx.svn.sourceforge.net/svnroot/texmakerx/trunk/</a><br>
+Or you can download the source tarball of the <a href="http://sourceforge.net/projects/texmakerx/files/texmakerx/TexMakerX%201.8.1/texmakerx1.8.1.tar.gz/download">latest release 1.8.1</a>. <br><br>-->
+You can choose a source download in the table above.<br>
+Then you need <a href="http://gcc.gnu.org/">GCC</a> and the <a href="http://www.trolltech.com/">Qt Toolkit</a> (>=4.3.0, but >= 4.5.0 is recommended) to compile it.<br> 
 You can compile it on all platforms using: qmake texmakerx.pro && make release<br>
 On Unix/MacOSX it is also possible to call: sudo sh BUILD.sh  
 
@@ -127,7 +146,7 @@ If you don't want these replacements you can change the settings in the Options\
 See <a href="#downloadSource">above</a>.
 
 <h3>How can I run it on MacOSX?</h3>
-This question is deprecated since the 1.8.1 release which provides a <a href="#downloadBinaries">.dmg image</a>, <br>
+This question is deprecated since the 1.8.1 release which provides a <a href="#downloads">.dmg image</a>, <br>
 but if that doesn't work (e.g. if you have MacOSX 10.4 or PPC), you can still follow these old steps: (thanks to yunghsianghan):
 <ol>
 <li>Download QT SDK for mac from <a href="http://www.qtsoftware.com/downloads">http://www.qtsoftware.com/downloads</a> and install it.</li>
