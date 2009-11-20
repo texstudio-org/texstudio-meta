@@ -64,15 +64,16 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 
 \chapter{TODO}
 
-\subsection{necessary before 1.9.2 }
-
-\subsubsection{others}
+\subsection{necessary before 1.9.3 }
 \begin{itemize}
-	\item \textbf{Make a list of new files which have to be included in the installer} 
-	%\item \textbf{Update about dialog}  (version, using kile source)
+\item testing
+\item fix linux color scheme
+\item testing
+\item investigate slowdown on mac/ubuntu 
+\item investigate a crash when opening the config dialog with opened text edito
+\item testing...
 \end{itemize}
-
-\subsection{nice to have before 1.9.2 }
+\subsection{nice to have before 1.9.3 }
 \subsubsection{Bugs}
 \begin{itemize}
 \item \verb+\irgendwas+ wird in der unittest ausgabe rückwärts las \verb+sawdnegri\+ geschrieben
@@ -82,6 +83,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 
 \subsubsection{others}
 \begin{itemize}
+\item larger (=sharp) icons for the taskswitcher
 	\item Tests: \begin{itemize}
 		\item check for completion/spellchecker crashes
 		\item codesnippet (especially placeholder), qdocumentcursor, qeditor, ...
@@ -138,7 +140,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 		search something below the current visible area, scroll up, search again, press arrow down, the search result is drawn selected although it isn't
 	\end{itemize}
 	\item Latex Parser: \begin{itemize}
-		\item move everything in the \verb+Latexparser+
+		\item move everything in the \verb+Latexparser+ class
 		\item NextWord with cookie state (to recognize multi line verbatim)?? Or read from qce?
 		\item Understand some TeX Things (e.g. \verb+^^5c^^5c+ equals \verb+\\+ if not in verbatim)
 	\end{itemize}
@@ -234,6 +236,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 	\item Recognizing hand written symbols (online lookup in detextify)
 	\item New Tabular Dialog (of kile)
 	\item Having functions to select environments/blocks/sections, changing \verb+$$+ to \verb+\[\]+, or to \verb+\begin{something}+ (waiting for qce2.3 syntax engine)
+	\item single instance: open the documents in the order the second instances were called instead in the order theirs messages arrive in the first instance (using a queue like described in 2877037)
 	\item Unit Tests (gui, qeditor, qdocument,..)
 \end{itemize}
 
