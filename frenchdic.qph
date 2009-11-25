@@ -135,4 +135,14 @@
     <target>suivant</target>
     <definition>(f=suivante), alt: prochain, prochaine </definition>
 </phrase>
+<phrase>
+    <source>line</source>
+    <target>ligne</target>
+    <definition>f.</definition>
+</phrase>
+<phrase>
+    <source>document</source>
+    <target>document</target>
+    <definition>m.</definition>
+</phrase>
 </QPH>
