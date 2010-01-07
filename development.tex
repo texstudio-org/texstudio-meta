@@ -64,13 +64,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 
 \chapter{TODO}
 
-\subsection{necessary before 1.9.3 }
-\begin{itemize}
-\item testing
-\item testing
-\item testing...
-\end{itemize}
-\subsection{nice to have before 1.9.3 }
+\subsection{nice to have before 1.9.5 }
 \subsubsection{Bugs}
 \begin{itemize}
 \item \verb+\irgendwas+ wird in der unittest ausgabe rückwärts las \verb+sawdnegri\+ geschrieben
@@ -143,19 +137,12 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 	\end{itemize}
 	\item better structure view: \begin{itemize}
 		\item BUG: \verb+\chapter{title}\label{label overrides title}+
-		\item parser in own file, not in texmaker.cpp
 		\item select section title when double clicked of one?
-		\item should not close everything after update, should it scroll to selected entry? (like it does in r460)
-		\item should show all loaded/included files
+		\item should not close everything after update
 		\item parsing not loaded files
 		\item should cache old parsing, don't reparse unmodified files
 		\item could use .aux files
 		\item should not execute several regex after each other on the same line (custom parser? mixed regex?)	
-	\end{itemize}
-	\item Document Managment \begin{itemize}
-		\item class storing tree structure of included files
-		\item yields better structure view
-		\item Latex Parser class
 	\end{itemize}
 	\item Synonym dictionary: \begin{itemize}
 		\item ignore space on words looked up
@@ -174,13 +161,9 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 		\item a reference/label check dialog like the old spell checking dialog
 	\end{itemize}
 	\item Citations: \begin{itemize}
-		\item Completer: \verb+Suggest \cite{} \citep, \citet, \pagecite,...+
-		\item automatically call bibtex if .bib files are changed
-		\item bib tex parser in own class
-		\item with unit tests
+		\item unit tests for bibtex parser
 		\item show SoundEx suggestion for wrong citatinos
 		\item check environment paths (e.g. \verb+BIBINPUTS = C:\My Documents\CDMA\Papers\Bib;C:\My Documents\GPS\Papers\Bib+)
-		\item references to all included files
 	\end{itemize}
 	\item Better new document wizard (look at kile, support for geometry package)
 	\item Completion List \begin{itemize}
@@ -215,7 +198,6 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 	\item Building \begin{itemize}
 		\item Don't require to save everything (temporary location?)
 		\item Asymptote support
-		\item Having a placeholder for current document and cursor position (like ?ame) perhaps ?ane) or ?ace) (needed for forward invert search)
 		\item Is the output of (pdf)latex shown? should it?
 		\item Improved recognizing of tool paths, checking of correct tool settings,  custom build actions: planned (although former is finished for miktex+ghostscript)
 		\item better browser detection in WebPublish dialog 
@@ -226,7 +208,6 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 	\end{itemize}
 	\item Configuration \begin{itemize}
 		\item open combobox for shortcut changing if double clicked on standard shortcut
-		\item move from texmaker.cpp to configmanager.cpp (texmaker.cpp should have less than 1000 lines)
 		\item use some macro tricks, so that not everything has to be written five times (header declaration, loading, storing, config dialog in, config dialog out)
 		\item update all overlays (environment, spell checking, refs..) when they are en/disabled in the config dialog (? will be slow? disabling => just remove overlays instead reparsing)
 	\end{itemize} 
