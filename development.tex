@@ -105,23 +105,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 	\item QCodeEdit: \begin{itemize}
 		\item Deleting placeholders by pressing repeadetly backspace after one
 		\item if replace all is restarted from scope begin, show the count of replaced occurrences before the scope restart and afterwards.
-		\item don't comment the line the cursor is on when several lines are selected and the no text in this line is selected
-		\item %Not annoying auto indentation (three modes: none, local (taking indentation from previous line), global (=like now); 
-		inserting several \verb+ \end{unknown}+ should not destroy indentation
-		\item folded blocks should not prevent removing/un-/indenting/un-/commenting
 		\item bracket auto closing
-		\item don't be confused by mismatching brackets (e.g. \verb+$[4,5[$+ for interval)
-%>>
-%qnfadefinition.cpp, line 1102, replace
-%
-%if ( ::match(par, parens.top()) )
-%
-%with
-%
-%if ( parens.count() > 1 || ::match(par, parens.top()) )
-%
-%And similarly change line 1233
-%<<<<
 		\item show tooltips when scrolling (line, section, chapter)
 		\item search panel: highlighted match update works in O(foundMatches), but it could theoretically be done in O(log foundMatches);
 		and finding the matches the first time needs O(total lines), but O(visible lines) is feasible)
@@ -156,7 +140,6 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 	\item Labels/References: \begin{itemize}
 		\item understand \verb+\nameref, \vref+
 		\item 	show all refs using a label and allow easy jumping to them (e.g selection window?)
-		\item check references to other files
 		\item using a SoundEx suggestion list for wrong references/labels like in the spell checker
 		\item a reference/label check dialog like the old spell checking dialog
 	\end{itemize}
@@ -176,7 +159,6 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 		\item using new tm 1.9.2 icons
 		\item new tm 1.9 output view (icons left instead of tabs + next/previous error buttons)
 		\item using icons for math font styles (like in text font style)
-		\item Customizable tool bars
 		\item Customizable symbol lists
 		\item combo boxes (dropdown tool buttons) instead of several icons for each command (like 1.9 or kile)
 	\end{itemize}
