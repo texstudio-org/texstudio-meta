@@ -89,7 +89,13 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 \item keep indentation and white space addition
 \item completion and enter \\dr... xxxxxxxxxxxxxx
 \item no underscores \_ visible until zooming (Ubuntu 10.4, Deja Sans, qt 4.6.3)
-\item Home/Ende don't work 
+\item Home/Ende don't work (siehe mrunix forum)
+\item bibtex insert dialog: changing selection in middle column doesn't always update right column
+\item line caches and cursor mirrors (create them with ctrl+alt, not visible at all)
+\item adding new bib tex entries doesn't always update completer list;; also changing citations in latex doc also require bibtex call and aren't detectedd
+\item completer doesn't contain citation labels (this means if you have \verb+\cite{abcd|+ with | marking cursor position it doesn't suggest abcdef as citation even if \verb+\cite{abcd}+ is in the list)
+\item referenz/label/citation doesn't check for verb e.g. \verb+\verb#\cite{abc}\ref{xx}\label{xx}#+
+
 
 	\item Wrong indentation of \begin{verbatim}
 		@MastersThesis{Marold,
