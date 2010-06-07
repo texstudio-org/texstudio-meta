@@ -87,15 +87,20 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 \subsubsection{Bugs}
 \begin{itemize}
 \item keep indentation and white space addition
-\item completion and enter \\dr... xxxxxxxxxxxxxx
+\item completion and enter \\dr... xxxxxxxxxxxxxx (jetzt habe ich schon wieder vergessen, was ein bugreport bedeutet)
+\item auto replace is not atomic for menu replace (e.g. select text, press shift+alt+f, multiple undos necessary to return to selection)
 \item no underscores \_ visible until zooming (Ubuntu 10.4, Deja Sans, qt 4.6.3)
-\item Home/Ende don't work (siehe mrunix forum)
+\item Home/Ende keys don't work (siehe mrunix forum)
 \item bibtex insert dialog: changing selection in middle column doesn't always update right column
 \item line caches and cursor mirrors (create them with ctrl+alt, not visible at all)
 \item adding new bib tex entries doesn't always update completer list;; also changing citations in latex doc also require bibtex call and aren't detectedd
 \item completer doesn't contain citation labels (this means if you have \verb+\cite{abcd|+ with | marking cursor position it doesn't suggest abcdef as citation even if \verb+\cite{abcd}+ is in the list)
+\item  if you want to complete \verb+\cite{..+  pressing \verb+{+  closes the completion list
 \item referenz/label/citation doesn't check for verb e.g. \verb+\verb#\cite{abc}\ref{xx}\label{xx}#+
-
+\item completer list for references shows label defined in comments (e.g. \verb+\label{sssss}+)
+\item \verb+22222\%+ is spell checked! Also \verb+9\%.+, but not \verb+9\%+
+\item spellchecking destroys other formatting especially anoying in bib files or verbatim (simple workaround: don't spellcheck them | real solution: implement real merging of formats)
+\item hint by  \verb+\ref+  can be much to long (e.g. write \verb+\re+, the hint for the first reference is shown and can hide the completer list, if there is a lot of text in the line after the corresponding label)
 
 	\item Wrong indentation of \begin{verbatim}
 		@MastersThesis{Marold,
@@ -204,6 +209,8 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 		\item use some macro tricks, so that not everything has to be written five times (header declaration, loading, storing, config dialog in, config dialog out)
 		\item update all overlays (environment, spell checking, refs..) when they are en/disabled in the config dialog (? will be slow? disabling => just remove overlays instead reparsing)
 	\end{itemize} 
+	\item Text analyse should have a list of environments to ignore and if it should read math/envs
+	\item Plugins
 	\item Recognizing hand written symbols (online lookup in detextify)
 	\item New Tabular Dialog (of kile)
 	\item Having functions to select environments/blocks/sections, changing \verb+$$+ to \verb+\[\]+, or to \verb+\begin{something}+ (waiting for qce2.3 syntax engine)
