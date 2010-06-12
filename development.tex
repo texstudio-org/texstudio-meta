@@ -86,8 +86,10 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 
 \subsubsection{Bugs}
 \begin{itemize}
+\item format merging and cursor positoin
+
 \item keep indentation and white space addition
-\item completion and enter \\dr... xxxxxxxxxxxxxx (jetzt habe ich schon wieder vergessen, was ein bugreport bedeutet)
+\item completion and enter \\dr... xxxxxxxxxxxxxx (jetzt habe ich schon wieder vergessen, was ein $bug$report bedeutet)
 \item auto replace is not atomic for menu replace (e.g. select text, press shift+alt+f, multiple undos necessary to return to selection)
 \item no underscores \_ visible until zooming (Ubuntu 10.4, Deja Sans, qt 4.6.3)
 \item Home/Ende keys don't work (siehe mrunix forum)
@@ -208,6 +210,10 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 		\item use some macro tricks, so that not everything has to be written five times (header declaration, loading, storing, config dialog in, config dialog out)
 		\item update all overlays (environment, spell checking, refs..) when they are en/disabled in the config dialog (? will be slow? disabling => just remove overlays instead reparsing)
 	\end{itemize} 
+	\begin{itemize}
+	\item qdocumentsearch access
+	\item universalinpuit dialog
+	\end{itemize}
 	\item Text analyse should have a list of environments to ignore and if it should read math/envs
 	\item Plugins
 	\item Recognizing hand written symbols (online lookup in detextify)
