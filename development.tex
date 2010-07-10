@@ -86,19 +86,19 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 
 \subsubsection{Bugs}
 \begin{itemize}
-\item format merging and cursor positoin
+\item if ctrl+f/r is pressed the selected text is used as search text, this should not happen, if the search panel is already open
 
 \item keep indentation and white space addition
 \item completion and enter \\dr... xxxxxxxxxxxxxx (jetzt habe ich schon wieder vergessen, was ein $bug$report bedeutet)
 \item auto replace is not atomic for menu replace (e.g. select text, press shift+alt+f, multiple undos necessary to return to selection)
 \item Home/Ende keys don't work (siehe mrunix forum)
 \item bibtex insert dialog: changing selection in middle column doesn't always update right column
-\item line caches and cursor mirrors (create them with ctrl+alt, not visible at all)
 \item adding new bib tex entries doesn't always update completer list;; also changing citations in latex doc also require bibtex call and aren't detectedd
 \item completer doesn't contain citation labels (this means if you have \verb+\cite{abcd|+ with | marking cursor position it doesn't suggest abcdef as citation even if \verb+\cite{abcd}+ is in the list)
 \item  if you want to complete \verb+\cite{..+  pressing \verb+{+  closes the completion list
 \item referenz/label/citation doesn't check for verb e.g. \verb+\verb#\cite{abc}\ref{xx}\label{xx}#+
-\item completer list for references shows label defined in comments (e.g. \verb+\label{sssss}+)
+\item completer list for references shows label defined in comments (e.g. \verb+%\label{sssss}+) if there is a master document set
+\item setting a master document clears the current completer reference list
 \item \verb+22222\%+ is spell checked! Also \verb+9\%.+, but not \verb+9\%+
 \item hint by  \verb+\ref+  can be much to long (e.g. write \verb+\re+, the hint for the first reference is shown and can hide the completer list, if there is a lot of text in the line after the corresponding label)
 
