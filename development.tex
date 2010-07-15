@@ -86,6 +86,8 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 
 \subsubsection{Bugs}
 \begin{itemize}
+\item  auto rename doesn't work if there are points in the env. name (e.g. \verb+\begin{a..s}+)
+\item  If the cut buffer contains several lines it shouldn't be inserted in the first but in the second placeholder if an unnamed environment is created (i.e between begin and end, not as env. name)
 \item completion and enter \\dr... xxxxxxxxxxxxxx (jetzt habe ich schon wieder vergessen, was ein $bug$report bedeutet)
 \item auto replace is not atomic for menu replace (e.g. select text, press shift+alt+f, multiple undos necessary to return to selection)
 \item Home/Ende keys don't work (siehe mrunix forum)
@@ -98,6 +100,8 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 \item setting a master document clears the current completer reference list
 \item \verb+22222\%+ is spell checked! Also \verb+9\%.+, but not \verb+9\%+
 \item hint by  \verb+\ref+  can be much to long (e.g. write \verb+\re+, the hint for the first reference is shown and can hide the completer list, if there is a lot of text in the line after the corresponding label)
+\item preview and beamer class (preview image contains slide template, but ">verzerrt"<)
+\item preview doesn't always work (e.g. no tooltip appears, not 
 
 	\item Wrong indentation of \begin{verbatim}
 		@MastersThesis{Marold,
@@ -169,6 +173,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 		\item merging text completion and spell checker cache?
 	\end{itemize}
 	\item GUI: \begin{itemize}
+		\item search for latex commands in the completion package list; list for every available package the contained commands
 		\item using new tm 1.9.2 icons
 		\item new tm 1.9 output view (icons left instead of tabs + next/previous error buttons)
 		\item using icons for math font styles (like in text font style)

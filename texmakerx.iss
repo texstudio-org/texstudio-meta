@@ -47,9 +47,9 @@ Source: texmakerx_fr.qm; DestDir: {app}\translations
 Source: texmakerx_it.qm; DestDir: {app}\translations
 Source: texmakerx_cs.qm; DestDir: {app}\translations
 Source: texmakerx_hu.qm; DestDir: {app}\translations
-Source: utilities\qt_de.qm; DestDir: {app}\translations
-Source: utilities\qt_fr.qm; DestDir: {app}\translations
-Source: utilities\qt_zh.qm; DestDir: {app}\translations
+Source: qt_de.qm; DestDir: {app}\translations
+Source: qt_fr.qm; DestDir: {app}\translations
+;removed, we don't have a tmx translation anyways Source: utilities\qt_zh.qm; DestDir: {app}\translations
 
 
 [Icons]
