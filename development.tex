@@ -86,6 +86,8 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 
 \subsubsection{Bugs}
 \begin{itemize}
+\item  writing \verb+\abstract"+ creates \verb+\abstractname{"<}+ which is okay, BUT the last bracket is highlighted (highlighting of a single bracket without highlighting the whole pair, shouldn't even be possible).
+\item the auto completion of directory names in the config dialog doesn't work if you press arrow+up/down (it seems to not notice that the box drops open )
 \item  auto rename doesn't work if there are points in the env. name (e.g. \verb+\begin{a..s}+)
 \item  If the cut buffer contains several lines it shouldn't be inserted in the first but in the second placeholder if an unnamed environment is created (i.e between begin and end, not as env. name)
 \item completion and enter \\dr... xxxxxxxxxxxxxx (jetzt habe ich schon wieder vergessen, was ein $bug$report bedeutet)
