@@ -60,7 +60,16 @@ li {
 #newsbox h3 {text-align:center; color: red}
 
 
+#oldnewsbox .more {display: block}
+#oldnewsbox:hover .more {display: none}
+#oldnewsbox .hiddentext {display: none}
+#oldnewsbox:hover .hiddentext {display: block}
+
 
 .downloadTable th{ font-size: 110%; padding-right: 15px}
 .platformDownload {font-weight: bold; }
 .platformDownload td{ padding-top: 1em;}
+
+
+
+
