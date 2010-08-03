@@ -64,21 +64,20 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 
 \chapter{TODO}
 
-\subsection{nice to have before 1.9.5 }
+\subsection{necessary before 2.0 }
+
 \subsubsection{Bugs}
 \begin{itemize}
-\item \verb+\irgendwas+ wird in der unittest ausgabe rückwärts las \verb+sawdnegri\+ geschrieben
+\item \verb+\irgendwas+ wird in der unittest ausgabe rückwärts las \verb+sawdnegri\+ geschrieben?? (Still wichtig?)
 	\item codesnippt mit placeholder einfügen und rückgängig machen plaziert cursor an falscher column position => schreiben zerstört rückgängig
-	\item check support for Chinese (bug 2854917)
+	\item check support for Chinese (bug 2854917, forum)
 \end{itemize}
 
 \subsubsection{others}
 \begin{itemize}
-\item larger (=sharp) icons for the taskswitcher
-	\item Tests: \begin{itemize}
-		\item check for completion/spellchecker crashes
-		\item codesnippet (especially placeholder), qdocumentcursor, qeditor, ...
-	\end{itemize}	
+\item look at texmaker 2.0 (especially quickbuild)
+\item larger (=sharp) icons for the taskswitcher (???)
+\item Tests
 \end{itemize}
 
 
@@ -124,7 +123,6 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 	\item QCodeEdit: \begin{itemize}
 		\item Deleting placeholders by pressing repeadetly backspace after one
 		\item if replace all is restarted from scope begin, show the count of replaced occurrences before the scope restart and afterwards.
-		\item bracket auto closing
 		\item show tooltips when scrolling (line, section, chapter)
 		\item search panel: highlighted match update works in O(foundMatches), but it could theoretically be done in O(log foundMatches);
 		and finding the matches the first time needs O(total lines), but O(visible lines) is feasible)
@@ -139,10 +137,9 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 		\item Understand some TeX Things (e.g. \verb+^^5c^^5c+ equals \verb+\\+ if not in verbatim)
 	\end{itemize}
 	\item better structure view: \begin{itemize}
-		\item BUG: \verb+\chapter{title}\label{label overrides title}+
-		\item select section title when double clicked of one?
-		\item should not close everything after update
+		\item select section title when double clicked of one?		
 		\item parsing not loaded files
+		\item show section/figure/table numbers
 		\item should cache old parsing, don't reparse unmodified files
 		\item could use .aux files
 		\item should not execute several regex after each other on the same line (custom parser? mixed regex?)	
@@ -184,6 +181,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 		\item combo boxes (dropdown tool buttons) instead of several icons for each command (like 1.9 or kile)
 	\end{itemize}
 	\item Preview: \begin{itemize}
+	
 		\item allow real zoom (regenerating png)
 	\end{itemize}
 	\item  Checker: \begin{itemize}
@@ -214,6 +212,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 		\item use some macro tricks, so that not everything has to be written five times (header declaration, loading, storing, config dialog in, config dialog out)
 		\item update all overlays (environment, spell checking, refs..) when they are en/disabled in the config dialog (? will be slow? disabling => just remove overlays instead reparsing)
 	\end{itemize} 
+	\item  Scripting
 	\begin{itemize}
 	\item qdocumentsearch access
 	\item universalinpuit dialog
