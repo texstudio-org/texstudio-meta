@@ -89,7 +89,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 \item  writing \verb+\abstract"+ creates \verb+\abstractname{"<}+ which is okay, BUT the last bracket is highlighted (highlighting of a single bracket without highlighting the whole pair, shouldn't even be possible | btw: there is a comment somewhere below the call stack of keypressevent, that clearMatches have to be called in qeditor at this position, perhaps this is also needed there).
 \item  env highlighting doesn't work if there are points in the env. name (e.g. \verb+\begin{a..s}+)
 \item  If the cut buffer contains several lines it shouldn't be inserted in the first but in the second placeholder if an unnamed environment is created (i.e between begin and end, not as env. name)
-\item completion and enter \\dr... xxxxxxxxxxxxxx (jetzt habe ich schon wieder vergessen, was ein bugreport bedeutet)
+\item completion and enter \verb+\\dr...+ (if you write \verb+\\+ and then something else an empty completion list is opened)
 \item auto replace is not atomic for menu replace (e.g. select text, press shift+alt+f, multiple undos necessary to return to selection)
 \item Home/Ende keys don't work (siehe mrunix forum)
 \item adding new bib tex entries doesn't always update completer list;; also changing citations in latex doc also require bibtex call and aren't detectedd
