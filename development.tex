@@ -87,10 +87,9 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 \begin{itemize}
 \item  preview: requires saved tex file?  
 \item  writing \verb+\abstract"+ creates \verb+\abstractname{"<}+ which is okay, BUT the last bracket is highlighted (highlighting of a single bracket without highlighting the whole pair, shouldn't even be possible | btw: there is a comment somewhere below the call stack of keypressevent, that clearMatches have to be called in qeditor at this position, perhaps this is also needed there).
-\item the auto completion of directory names in the config dialog doesn't work if you press arrow+up/down (it seems to not notice that the box drops open )
-\item  auto rename doesn't work if there are points in the env. name (e.g. \verb+\begin{a..s}+)
+\item  env highlighting doesn't work if there are points in the env. name (e.g. \verb+\begin{a..s}+)
 \item  If the cut buffer contains several lines it shouldn't be inserted in the first but in the second placeholder if an unnamed environment is created (i.e between begin and end, not as env. name)
-\item completion and enter \\dr... xxxxxxxxxxxxxx (jetzt habe ich schon wieder vergessen, was ein $bug$report bedeutet)
+\item completion and enter \\dr... xxxxxxxxxxxxxx (jetzt habe ich schon wieder vergessen, was ein bugreport bedeutet)
 \item auto replace is not atomic for menu replace (e.g. select text, press shift+alt+f, multiple undos necessary to return to selection)
 \item Home/Ende keys don't work (siehe mrunix forum)
 \item bibtex insert dialog: changing selection in middle column doesn't always update right column
@@ -124,8 +123,6 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 		\item Deleting placeholders by pressing repeadetly backspace after one
 		\item if replace all is restarted from scope begin, show the count of replaced occurrences before the scope restart and afterwards.
 		\item show tooltips when scrolling (line, section, chapter)
-		\item search panel: highlighted match update works in O(foundMatches), but it could theoretically be done in O(log foundMatches);
-		and finding the matches the first time needs O(total lines), but O(visible lines) is feasible)
 		\item changing default action of mouse drag/drop from copying to moving
 		\item RTL support like in texmaker 1.9.0/1 (but there it was removed in 1.9.2) (import fy to unicode)
 		\item BUG? (probably fixed already): 
@@ -165,7 +162,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 		\item show SoundEx suggestion for wrong citatinos
 		\item check environment paths (e.g. \verb+BIBINPUTS = C:\My Documents\CDMA\Papers\Bib;C:\My Documents\GPS\Papers\Bib+)
 	\end{itemize}
-	\item Better new document wizard (look at kile, support for geometry package)
+	\item Better new document wizard (look at kile)
 	\item Completion List \begin{itemize}
 		\item treat \verb+\+abc\{\%<xyz\%>\} and \verb+\+abc\{\%<def\%>\} as identical and ignore one of thems
 		\item Understand \verb+\usepackage}, newcounter, tex: \newcount \newfont \def, \edef, \xdef, \gdef+
@@ -173,6 +170,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 		\item merging text completion and spell checker cache?
 	\end{itemize}
 	\item GUI: \begin{itemize}
+		\item different categories for the formats in the formatconfig
 		\item search for latex commands in the completion package list; list for every available package the contained commands
 		\item using new tm 1.9.2 icons
 		\item new tm 1.9 output view (icons left instead of tabs + next/previous error buttons)
