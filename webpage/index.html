@@ -111,7 +111,7 @@ Althought TexMakerX has a lot of additional features, it tries to be like an imp
   
 </ul>
 <br>
-You can find more details in the <a href="http://texmakerx.svn.sourceforge.net/viewvc/texmakerx/trunk/utilities/usermanual_en.html?content-type=text%2Fhtml">user manual</a> or in the <a href="http://texmakerx.svn.sourceforge.net/viewvc/texmakerx/trunk/?view=log">SVN Changelog</a>.<br><br>
+You can find more details in the <a href="http://texmakerx.svn.sourceforge.net/viewvc/texmakerx/trunk/utilities/usermanual_en.html">user manual</a> or in the <a href="http://texmakerx.svn.sourceforge.net/viewvc/texmakerx/trunk/?view=log">SVN Changelog</a>.<br><br>
 New/Planned features and their current state: (which of course only list differences to the latest release)
 <ul>
 <li>Improved recognizing of tool paths, checking of correct tool settings,  custom build actions: planned (although former is finished for miktex+ghostscript)</li>
@@ -229,6 +229,16 @@ Feel free to fill in a <a href="http://sourceforge.net/tracker/?group_id=250595&
   <td><a href="http://sourceforge.net/projects/texmakerx/files/texmakerx/TexMakerX%201.9.9/texmakerx_1.9.9-1_amd64.deb/download">download</a> and open it with your package manager</td>
 </tr>-->
 
+<tr><td>Fedora 13</td>
+<td>1.9.9a</td>
+<td>Repository package</td>
+<td></td>
+<td></td>
+<td></td>
+<td>en, fr, de</td>
+<td>Install it with the Yellowdog Updater: su -c 'yum install texmakerx'</td>
+</td>
+
 <tr><td>Fedora</td>
   <td>1.9.9a</td>
   <td><a href="https://sourceforge.net/projects/texmakerx/files/texmakerx/TexMakerX%201.9.9a/texmakerx-1.9.9a-1.fc13.i686.rpm/download">.rpm i686 Package</a></td>
@@ -309,7 +319,16 @@ Feel free to fill in a <a href="http://sourceforge.net/tracker/?group_id=250595&
   <td>-</td>
   <td>4.6.1</td>
   <td>en, fr, de</td>
-  <td><a href="https://sourceforge.net/projects/texmakerx/files/texmakerx/TexMakerX%201.9.9a/texmakerx_1.9.9a-1.dmg/download">download</a> and just start it</td></tr>
+  <td><a href="https://sourceforge.net/projects/texmakerx/files/texmakerx/TexMakerX%201.9.9a/texmakerx_1.9.9a-1.dmg/download">download</a> and just start it.  </td></tr>
+
+<tr><td>10.6.4 x86</td>
+  <td>SVN 1216M (newer than 1.9.9a)</td>
+  <td><a href="http://sourceforge.net/projects/texmakerx/files/texmakerx/TexMakerX%20SVN/texmakerx.app_macosx10.6.4_qt4.6.3_rev1216_itob_special.zip/download">Zipped app</a></td>
+  <td>11.5 MiB</td>
+  <td>4.6.3</td>
+  <td>-</td>
+  <td>en, fr, de</td>
+  <td><a href="http://sourceforge.net/projects/texmakerx/files/texmakerx/TexMakerX%20SVN/texmakerx.app_macosx10.6.4_qt4.6.3_rev1216_itob_special.zip/download">download</a> and start it (This version is specially made for "iTob", and fix a kerning issue and a \ref-completion crash, but disables mouse zoom)</td></tr>
 
 <!--<tr><td>10.5 x86+ppc</td>
   <td>old 1.9.9</td>
@@ -318,7 +337,7 @@ Feel free to fill in a <a href="http://sourceforge.net/tracker/?group_id=250595&
   <td>-</td>
   <td>4.6.1</td>
   <td>en, fr, de</td>
-  <td><a href="https://sourceforge.net/projects/texmakerx/files/texmakerx/TexMakerX%201.9.9/texmakerx_1.9.9-1.dmg/download">download</a> and just start it</td></tr>-->
+  <td><a href="https://sourceforge.net/projects/texmakerx/files/texmakerx/TexMakerX%201.9.9/texmakerx_1.9.9-1.dmg/download">download</a> and just start it</td></tr>f-->
 
 <!--<tr><td>10.5/10.6 x86</td><td>1.9.3</td><td><a href="https://sourceforge.net/projects/texmakerx/files/texmakerx/TexMakerX%201.9.3/texmakerx1.9.3MacOSX-static-x86.dmg/download">DMG Image</a></td><td>15.4 MiB</td><td>-</td><td>4.6</td><td>en, fr, de</td><td><a href="https://sourceforge.net/projects/texmakerx/files/texmakerx/TexMakerX%201.9.3/texmakerx1.9.3MacOSX-static-x86.dmg/download">download</a> and just start it (thanks to: David Sichau)</td></tr>
 -->
@@ -362,8 +381,12 @@ On Unix/MacOSX it is also possible to call: sudo sh BUILD.sh
 </div>
 <div id="faq">
 <h2><a id="faq">Frequently Asked Questions</a></h2>
+<h3>How can I change the shortcuts?</h3>
+This is simple: Click on the menu item "Options\Configure TexMakerX..." and open the page "Shortcuts" where you can see all menus in a tree like structure. You can now select an item and double click on the third column "Current Shortcut" (you can also single click and then press f2). This will create a combobox in which you can select a new shortcut. If the shortcut you want is not contained in the list, you can also manually enter it in the box (e.g. "Ctrl+F13").<br>
+In the newest version you can also change the keybindings of the editor at the bottom this table. So if you really want to annoy someone, you can map arrow left to arrow right, and vice verse. There you can not only change the shortcuts in the third column, but also the actions in the first column. Due to the way qt shortcuts works, shortcuts set for menu items will override editor keys.
+
 <h3>Why does it replace so many characters with quotation marks?</h3>
-As a new feature in TexMakerX " are replaced with French ("&lt; and ">) quotation marks (in older version it also always replaced ' but now it only if you work on a German system). <br>
+As a new feature in TexMakerX " are replaced with French ("&lt; and ">) quotation marks (in older version it also always replaced ' but now it does that only if you work on a German system). <br>
 If you don't want these replacements you can change the settings in the Options\Configure\Shortcuts table.
 
 <h3>Where can I get the SVN version?</h3>
