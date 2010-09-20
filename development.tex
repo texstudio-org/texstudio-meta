@@ -99,7 +99,12 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 \item hint by  \verb+\ref+  can be much to long (e.g. write \verb+\re+, the hint for the first reference is shown and can hide the completer list, if there is a lot of text in the line after the corresponding label)
 \item preview and beamer class (preview image contains slide template, but ">verzerrt"<)
 \item preview doesn't always work (e.g. no tooltip appears, not 
-
+\item hint by \verb+\ref+ parse html code. E.g. if you have \begin{verbatim}
+<html><body>asas<img src=":/images/splash.png"><b>AAA
+\label{key}
+</b></body></html>
+\end{verbatim} in the latex file
+\item \verb+\ref+ searches for references too far, e.g. if you have  \verb+\ref xxxxxxxxxxxxxxxx {ssasd}+, ssasd is marked as missing reference
 	\item Wrong indentation of \begin{verbatim}
 		@MastersThesis{Marold,
 		author = {Alexander Marold},
