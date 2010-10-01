@@ -86,7 +86,6 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 \subsubsection{Bugs}
 \begin{itemize}
 \item  preview: requires saved tex file?  
-\item  writing \verb+\abstract"+ creates \verb+\abstractname{"<}+ which is okay, BUT the last bracket is highlighted (highlighting of a single bracket without highlighting the whole pair, shouldn't even be possible | btw: there is a comment somewhere below the call stack of keypressevent, that clearMatches have to be called in qeditor at this position, perhaps this is also needed there).
 \item  env highlighting doesn't work if there are points in the env. name (e.g. \verb+\begin{a..s}+)
 \item completion and enter \verb+\\dr...+ (if you write \verb+\\+ and then something else an empty completion list is opened)
 \item auto replace is not atomic for menu replace (e.g. select text, press shift+alt+f, multiple undos necessary to return to selection)
