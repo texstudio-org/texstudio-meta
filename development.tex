@@ -75,8 +75,8 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 
 \subsubsection{others}
 \begin{itemize}
-\item look at texmaker 2.0 (especially quickbuild)
 \item larger (=sharp) icons for the taskswitcher (???)
+\item sort the config dialog pages
 \item Tests
 \end{itemize}
 
@@ -85,6 +85,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 
 \subsubsection{Bugs}
 \begin{itemize}
+\item saving an untitled file under the name of an already opened file, leads to two different editor tabs showing the same file (check file name, before saving?) and strange ">file has been changed"<-messages.
 \item  env highlighting doesn't work if there are points in the env. name (e.g. \verb+\begin{a..s}+)
 \item auto replace is not atomic for menu replace (e.g. select text, press shift+alt+f, multiple undos necessary to return to selection)
 \item Home/Ende keys don't work (siehe mrunix forum)
@@ -174,8 +175,15 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 		\item combo boxes (dropdown tool buttons) instead of several icons for each command (like 1.9 or kile)
 	\end{itemize}
 	\item Preview: \begin{itemize}
-	
 		\item allow real zoom (regenerating png)
+		
+	\item Internal PDF-Previewer:
+	\item Options to jump from source to pdf with synctex
+	\item It should be possible to set a filename in the call command and a destination synctex-line
+	\item Shortcuts of pdf previewer should be customizable (managedMenu)
+	\item Toolbars should also be customizable
+	\item There should be an continuous display mode (scrollbar.size = pageheight*pagecount, and currentpage = scrollbar.pos/pageheight).
+	\item options menu entry of the pdf previewer should open the config dialog on a preview page
 	\end{itemize}
 	\item  Checker: \begin{itemize}
 		\item Silbentrennung: \verb+http://homepage.ruhr-uni-bochum.de/Georg.Verweyen/silbentrennung.html+
