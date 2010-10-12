@@ -97,6 +97,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 \item hint by  \verb+\ref+  can be much to long (e.g. write \verb+\re+, the hint for the first reference is shown and can hide the completer list, if there is a lot of text in the line after the corresponding label)
 \item preview and beamer class (preview image contains slide template, but ">verzerrt"<)
 \item preview doesn't always work (e.g. no tooltip appears, not 
+\item texworks pdf viewer changes it cursor when shift/alt is pressed, but that only works every 2nd time
 \item hint by \verb+\ref+ parse html code. E.g. if you have \begin{verbatim}
 <html><body>asas<img src=":/images/splash.png"><b>AAA
 \label{key}
@@ -173,12 +174,13 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 		\item using icons for math font styles (like in text font style)
 		\item Customizable symbol lists
 		\item combo boxes (dropdown tool buttons) instead of several icons for each command (like 1.9 or kile)
+		\item toolbar icon size should be customizable
 	\end{itemize}
 	\item Preview: \begin{itemize}
 		\item allow real zoom (regenerating png)
 		
 	\item Internal PDF-Previewer:
-	\item Options to jump from source to pdf with synctex
+	\item Options to jump from source to pdf with synctex (context menu?)
 	\item It should be possible to set a filename in the call command and a destination synctex-line
 	\item Shortcuts of pdf previewer should be customizable (managedMenu)
 	\item Toolbars should also be customizable
