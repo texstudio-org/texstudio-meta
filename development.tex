@@ -121,8 +121,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 		\item if replace all is restarted from scope begin, show the count of replaced occurrences before the scope restart and afterwards.
 		\item show tooltips when scrolling (line, section, chapter)
 		\item RTL support like in texmaker 1.9.0/1 (but there it was removed in 1.9.2) (import fy to unicode)
-		\item BUG? (probably fixed already): 
-		search something below the current visible area, scroll up, search again, press arrow down, the search result is drawn selected although it isn't
+		\item Auto Closing of \verb+$+ (problem: how to detect if there follows a closing \verb+$+)
 	\end{itemize}
 	\item Latex Parser: \begin{itemize}
 		\item move everything in the \verb+Latexparser+ class
@@ -157,7 +156,8 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 		\item check environment paths (e.g. \verb+BIBINPUTS = C:\My Documents\CDMA\Papers\Bib;C:\My Documents\GPS\Papers\Bib+)
 	\end{itemize}
 	\item Better new document wizard (look at kile)
-	\item Completion List \begin{itemize}
+	\item Completion \begin{itemize}
+	 	\item Open completion list of xyz if cursor is after \verb+\xyz{+ (= ignore \verb+{}+ before cursor)
 		\item treat \verb+\+abc\{\%<xyz\%>\} and \verb+\+abc\{\%<def\%>\} as identical and ignore one of thems
 		\item Understand \verb+\usepackage}, newcounter, tex: \newcount \newfont \def, \edef, \xdef, \gdef+
 		\item text completion should show parameters of commands (e.g. reference names) even if they aren't currently used
