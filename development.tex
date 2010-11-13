@@ -96,7 +96,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 \item preview doesn't always work (e.g. no tooltip appears, not 
 \item texworks pdf viewer changes it cursor when shift/alt is pressed, but that only works every 2nd time
 \item switching between forward/backward search in the pdf previewer, sometimes doesn't find matches or finds them twice (e.g. in this development.pdf). Possibly a poppler bug
-\item hint by \verb+\ref+ parse html code. E.g. if you have \begin{verbatim}
+\item hint by \verb+\ref+ parses html code. E.g. if you have \begin{verbatim}
 <html><body>asas<img src=":/images/splash.png"><b>AAA
 \label{key}
 </b></body></html>
@@ -117,6 +117,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 \subsubsection{others}
 \begin{itemize}
 	\item QCodeEdit: \begin{itemize}
+		\item Generate custom highlighting from the used custom completion cwl files. (important for syntax check, if you have a custom math environment you currently have to define it twice, once as custom highlighting(to syntax check multi line environments) and in the cwl (to check single line envs))
 		\item Deleting placeholders by pressing repeadetly backspace after one
 		\item if replace all is restarted from scope begin, show the count of replaced occurrences before the scope restart and afterwards.
 		\item show tooltips when scrolling (line, section, chapter)
