@@ -64,7 +64,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 
 \chapter{TODO}
 
-\subsection{necessary before 2.0 }
+\subsection{necessary before 2.1 }
 
 \subsubsection{Bugs}
 
@@ -78,6 +78,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 
 \subsubsection{Bugs}
 \begin{itemize}
+\item line number panel has wrong color on windows (white instead of black) 
 \item codesnippt mit placeholder einfügen und rückgängig machen plaziert cursor an falscher column position => schreiben zerstört rückgängig (see failing, commented tests in codesnippet\_t)
 \item saving an untitled file under the name of an already opened file, leads to two different editor tabs showing the same file (check file name, before saving?) and strange ">file has been changed"<-messages.
 \item  env highlighting doesn't work if there are points in the env. name (e.g. \verb+\begin{a..s}+)
@@ -106,6 +107,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 		type = {Bachelorarbeit},
 		}
 	\end{verbatim} in bib files
+	\item  qce crashes if the searchpanel is not deleted before the qcodeedit object is deleted (because the search as child of the editor is then automatically deleted after the editor and crashes when it calls the editor to clear it match overlays)
 \end{itemize} 
 
 \subsubsection{others}
@@ -152,6 +154,8 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 	\end{itemize}
 	\item Better new document wizard (look at kile)
 	\item Completion \begin{itemize}
+	\item  Menu command to complete current/last environment/bracket
+	\item \verb+\begin{Umgebungsname}+ should not add \verb+\end{Umgebungsname}+ if that \textbackslash end is already in the next/a later line
 	 	\item Open completion list of xyz if cursor is after \verb+\xyz{+ (= ignore \verb+{}+ before cursor)
 		\item treat \verb+\+abc\{\%<xyz\%>\} and \verb+\+abc\{\%<def\%>\} as identical and ignore one of thems
 		\item Understand \verb+\usepackage}, newcounter, tex: \newcount \newfont \def, \edef, \xdef, \gdef+
