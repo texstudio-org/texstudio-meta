@@ -70,7 +70,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 
 \subsubsection{others}
 \begin{itemize}
-\item larger (=sharp) icons for the taskswitcher (???)
+\item larger (=sharp) icons for the taskswitcher
 \end{itemize}
 
 
@@ -79,6 +79,9 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 \subsubsection{Bugs}
 \begin{itemize}
 \item line number panel has wrong color on windows (white instead of black) 
+\item if you use the environment completion in the unit test results it SOMETIMES adds \verb+\begin{+, but places the cursor before the backslash instead after the bracket (and everything entered later is written backwards)
+\item If you have \verb+\begin{+ without a closing \} in the text, placing the cursor behind the \{, creates a placeholder for the whole line after the begin
+\item  Auto completion does not correctly count brackets (e.g. if you have \verb+{}}+ an write \verb+{+ before it, a unnecessary closing \verb+}+ is inserted)
 \item codesnippt mit placeholder einfügen und rückgängig machen plaziert cursor an falscher column position => schreiben zerstört rückgängig (see failing, commented tests in codesnippet\_t)
 \item saving an untitled file under the name of an already opened file, leads to two different editor tabs showing the same file (check file name, before saving?) and strange ">file has been changed"<-messages.
 \item  env highlighting doesn't work if there are points in the env. name (e.g. \verb+\begin{a..s}+)
@@ -111,6 +114,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 		}
 	\end{verbatim} in bib files
 	\item  qce crashes if the searchpanel is not deleted before the qcodeedit object is deleted (because the search as child of the editor is then automatically deleted after the editor and crashes when it calls the editor to clear it match overlays)
+	\item list of open documents still contains an entry, after all open documents were closed
 \end{itemize} 
 
 \subsubsection{others}
