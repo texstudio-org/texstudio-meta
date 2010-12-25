@@ -18,6 +18,7 @@ SourceDir=..\..\
 [Files]
 Source: texmakerx.exe; DestDir: {app}\
 Source: mingwm10.dll; DestDir: {app}\
+Source: iconv.dll; DestDir: {app}\
 Source: QtCore4.dll; DestDir: {app}\
 Source: QtGui4.dll; DestDir: {app}\
 Source: QtNetwork4.dll; DestDir: {app}\
@@ -50,7 +51,18 @@ Source: texmakerx_hu.qm; DestDir: {app}\translations
 Source: qt_de.qm; DestDir: {app}\translations
 Source: qt_fr.qm; DestDir: {app}\translations
 ;removed, we don't have a tmx translation anyways Source: utilities\qt_zh.qm; DestDir: {app}\translations
-
+Source: libfontconfig.dll; DestDir: {app}
+Source: libfreetype.dll; DestDir: {app}
+Source: libgcc_s_dw2-1.dll; DestDir: {app}
+Source: liblcms-1.dll; DestDir: {app}
+Source: libopenjpeg.dll; DestDir: {app}
+Source: libpng12.dll; DestDir: {app}
+Source: libpoppler.dll; DestDir: {app}
+Source: libpoppler-qt4.dll; DestDir: {app}
+Source: libxml2.dll; DestDir: {app}
+Source: libzlib1.dll; DestDir: {app}
+Source: zlib1.dll; DestDir: {app}
+Source: jpeg62.dll; DestDir: {app}
 
 [Icons]
 Name: {group}\TexMakerX; Filename: {app}\TexMakerX.exe
