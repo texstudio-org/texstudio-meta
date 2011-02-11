@@ -76,6 +76,8 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 
 \subsubsection{Bugs}
 \begin{itemize}
+\item ctrl+alt+shift env completion doesn't work in the \{\}-bracket pair of \verb+{a}<b>+ 
+\item preview shouldn't freeze the whole program for 30s if it praemble compilation failed (at least not every time)
 \item Restoration of the backslash of \verb+\}+ after completion doesn't work if the completion is canceled by an eof-character
 \item line number panel has wrong color on windows (white instead of black) 
 \item if you use the environment completion in the unit test results it SOMETIMES adds \verb+\begin{+, but places the cursor before the backslash instead after the bracket (and everything entered later is written backwards)
