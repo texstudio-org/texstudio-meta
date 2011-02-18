@@ -80,7 +80,6 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 \item preview shouldn't freeze the whole program for 30s if it praemble compilation failed (at least not every time)
 \item line number panel has wrong color on windows (white instead of black) 
 \item if you use the environment completion in the unit test results it SOMETIMES adds \verb+\begin{+, but places the cursor before the backslash instead after the bracket (and everything entered later is written backwards)
-\item If you have \verb+\begin{+ without a closing \} in the text, placing the cursor behind the \{, creates a placeholder for the whole line after the begin
 \item  Auto completion does not correctly count brackets (e.g. if you have \verb+{}}+ an write \verb+{+ before it, a unnecessary closing \verb+}+ is inserted)
 \item codesnippt mit placeholder einfügen und rückgängig machen plaziert cursor an falscher column position => schreiben zerstört rückgängig (see failing, commented tests in codesnippet\_t)
 \item  env highlighting doesn't work if there are points in the env. name (e.g. \verb+\begin{a..s}+)
