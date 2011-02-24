@@ -76,13 +76,18 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 
 \subsubsection{Bugs}
 \begin{itemize}
+\item unnecessary slow: (possible duplicate setHeight call after adjustWidth )
 \item ctrl+alt+shift env completion doesn't work in the \{\}-bracket pair of \verb+{a}<b>+ 
 \item preview shouldn't freeze the whole program for 30s if it praemble compilation failed (at least not every time)
+\item inline preview looks very strange (even overlapping, problem: no wrappign on empty lines) if it spans several lines (limit auto update to single line preview?) 
 \item line number panel has wrong color on windows (white instead of black) 
 \item  Auto completion does not correctly count brackets (e.g. if you have \verb+{}}+ an write \verb+{+ before it, a unnecessary closing \verb+}+ is inserted)
+\item \verb+\left/\right+ not inverted in inverting parenthese selection
+\item  Saving files clears messages
 \item codesnippt mit placeholder einfügen und rückgängig machen plaziert cursor an falscher column position => schreiben zerstört rückgängig (see failing, commented tests in codesnippet\_t)
 \item  env highlighting doesn't work if there are points in the env. name (e.g. \verb+\begin{a..s}+)
 \item bracket highlighting bug: write \verb+[]+, place cursor on first column (so the brackets are highlighted), write \%, brackets are now within a comment, but one of them is still highlighted
+\item bracket renaming doesn't work for brackets without content (like \verb+[]+ )
 \item auto replace is not atomic for menu replace (e.g. select text, press shift+alt+f, multiple undos necessary to return to selection)
 \item Home/Ende keys don't work (siehe mrunix forum)
 \item adding new bib tex entries doesn't always update completer list;; also changing citations in latex doc also require bibtex call and aren't detectedd
@@ -176,6 +181,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 		
 	\item Internal PDF-Previewer:
 	\item Options to jump from source to pdf with synctex (context menu?)
+	\item mark source bookmarks in pdf preview 
 	\item border around magnifier
 	\item It should be possible to set a filename in the call command and a destination synctex-line
 	\item Shortcuts of pdf previewer should be customizable (managedMenu)
