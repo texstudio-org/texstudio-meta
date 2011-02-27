@@ -1,14 +1,14 @@
 [Setup]
 ;Change this in every version
-AppVerName=TexMakerX 1.9.9a
-AppVersion=1.9.9a
+AppVerName=TexMakerX 2.0.0
+AppVersion=2.0.0
 
 ;Don't change
 AppName=TexMakerX
 AppPublisher=Benito van der Zander
 AppPublisherURL=http://texmakerx.sourceforge.net/
 
-OutputBaseFilename=texmakerxwin32-install
+OutputBaseFilename=texmakerx200_win32-install
 
 DefaultDirName={pf}\TexMakerX
 DefaultGroupName=TexMakerX
@@ -47,7 +47,7 @@ Source: texmakerx_de.qm; DestDir: {app}\translations
 Source: texmakerx_fr.qm; DestDir: {app}\translations
 Source: texmakerx_it.qm; DestDir: {app}\translations
 Source: texmakerx_cs.qm; DestDir: {app}\translations
-Source: texmakerx_hu.qm; DestDir: {app}\translations
+Source: texmakerx_hu.qm; DestDir: {app}\translations; Languages: 
 Source: qt_de.qm; DestDir: {app}\translations
 Source: qt_fr.qm; DestDir: {app}\translations
 ;removed, we don't have a tmx translation anyways Source: utilities\qt_zh.qm; DestDir: {app}\translations
@@ -63,6 +63,7 @@ Source: libxml2.dll; DestDir: {app}
 Source: libzlib1.dll; DestDir: {app}
 Source: zlib1.dll; DestDir: {app}
 Source: jpeg62.dll; DestDir: {app}
+Source: texmakerx_pt_BR.qm; DestDir: {app}\translations
 
 [Icons]
 Name: {group}\TexMakerX; Filename: {app}\TexMakerX.exe
@@ -74,6 +75,8 @@ Name: de; MessagesFile: compiler:Languages\German.isl
 Name: fr; MessagesFile: compiler:Languages\French.isl
 Name: it; MessagesFile: compiler:Languages\Italian.isl
 Name: cz; MessagesFile: compiler:Languages\Czech.isl
+Name: pt_BR; MessagesFile: compiler:Languages\BrazilianPortuguese.isl
+Name: hu; MessagesFile: compiler:Languages\Hungarian.isl
 
 [Run]
 Filename: {app}\texmakerx.exe; Description: Start TexMakerX; Flags: nowait postinstall
