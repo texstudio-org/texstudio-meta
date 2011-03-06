@@ -1,14 +1,14 @@
 [Setup]
 ;Change this in every version
-AppVerName=TexMakerX 2.0.0
-AppVersion=2.0.0
+AppVerName=TexMakerX 2.0.1
+AppVersion=2.0.1
 
 ;Don't change
 AppName=TexMakerX
 AppPublisher=Benito van der Zander
 AppPublisherURL=http://texmakerx.sourceforge.net/
 
-OutputBaseFilename=texmakerx200_win32-install
+OutputBaseFilename=texmakerx201_win32-install
 
 DefaultDirName={pf}\TexMakerX
 DefaultGroupName=TexMakerX
@@ -51,18 +51,17 @@ Source: texmakerx_hu.qm; DestDir: {app}\translations; Languages:
 Source: qt_de.qm; DestDir: {app}\translations
 Source: qt_fr.qm; DestDir: {app}\translations
 ;removed, we don't have a tmx translation anyways Source: utilities\qt_zh.qm; DestDir: {app}\translations
-Source: libfontconfig.dll; DestDir: {app}
 Source: libfreetype.dll; DestDir: {app}
 Source: libgcc_s_dw2-1.dll; DestDir: {app}
 Source: liblcms-1.dll; DestDir: {app}
 Source: libopenjpeg.dll; DestDir: {app}
-Source: libpng12.dll; DestDir: {app}
+Source: libpng14.dll; DestDir: {app}
+Source: libjpeg.dll; DestDir: {app}
 Source: libpoppler.dll; DestDir: {app}
 Source: libpoppler-qt4.dll; DestDir: {app}
 Source: libxml2.dll; DestDir: {app}
 Source: libzlib1.dll; DestDir: {app}
 Source: zlib1.dll; DestDir: {app}
-Source: jpeg62.dll; DestDir: {app}
 Source: texmakerx_pt_BR.qm; DestDir: {app}\translations
 
 [Icons]
