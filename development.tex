@@ -78,6 +78,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 \begin{itemize}
 \item ctrl+alt+shift env completion doesn't work in the \{\}-bracket pair of \verb+{a}<b>+ 
 \item line number panel has wrong color on windows (white instead of black) 
+\item if the open document menu is empty, the tool button which contains the mapped menu is not cleared (the remaining entry causes an assert failure if selected)
 \item  Auto completion does not correctly count brackets (e.g. if you have \verb+{}}+ an write \verb+{+ before it, a unnecessary closing \verb+}+ is inserted)
 \item unnecessary slowness: (possible duplicate setHeight call after adjustWidth )
 \item  Saving files clears messages
