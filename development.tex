@@ -76,6 +76,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 
 \subsubsection{Bugs}
 \begin{itemize}
+\item pdf viewer overview thumbnails are duplicated on first opening
 \item ctrl+alt+shift env completion doesn't work in the \{\}-bracket pair of \verb+{a}<b>+ 
 \item line number panel has wrong color on windows (white instead of black) 
 \item if the open document menu is empty, the tool button which contains the mapped menu is not cleared (the remaining entry causes an assert failure if selected)
@@ -91,13 +92,14 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 \item adding new bib tex entries doesn't always update completer list;; also changing citations in latex doc also require bibtex call and aren't detectedd
 \item completer doesn't contain citation labels (this means if you have \verb+\cite{abcd|+ with | marking cursor position it doesn't suggest abcdef as citation even if \verb+\cite{abcd}+ is in the list)
 \item texworks pdf viewer changes it cursor when shift/alt is pressed, but that only works every 2nd time
+\item presentation mode doesn't hide cursor
 \item switching between forward/backward search in the pdf previewer, sometimes doesn't find matches or finds them twice (e.g. in this development.pdf). Possibly a poppler bug
 \item tmx nearly crashes if the log files is very large (80 MB, it gets this large if logging is enabled)
 \item hint by \verb+\ref+ parses html code. E.g. if you have \begin{verbatim}
 <html><body>asas<img src=":/images/splash.png"><b>AAA
 \label{key}
 </b></body></html>
-\end{verbatim} in the latex file
+\end{verbatim} in the latex file (if there is a security bug in the qt html renderer, it could become a security bug in tmx)
 	\item Wrong indentation of \begin{verbatim}
 		@MastersThesis{Marold,
 		author = {Alexander Marold},
@@ -128,7 +130,8 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 		\item Understand some TeX Things (e.g. \verb+^^5c^^5c+ equals \verb+\\+ if not in verbatim)
 	\end{itemize}
 	\item better structure view: \begin{itemize}
-		\item select section title when double clicked of one?		
+		\item select section title when double clicked of one?	
+		\item open whole structure when loading a (single)	 file
 		\item parsing not loaded files
 		\item show section/figure/table numbers
 		\item should cache old parsing, don't reparse unmodified files
@@ -155,7 +158,10 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 	\end{itemize}
 	\item Better new document wizard (look at kile)
 	\item Completion \begin{itemize}
+	\item Word completion over all open documents
+	\item Show definition of \verb+\newcommand+ commands in the completion list as hint
 	\item  Menu command to complete current/last environment/bracket
+	\item inverting parenthesis selection should support multiple begin/end pairs
 	\item \verb+\begin{Umgebungsname}+ should not add \verb+\end{Umgebungsname}+ if that \textbackslash end is already in the next/a later line
 	 	\item Open completion list of xyz if cursor is after \verb+\xyz{+ (= ignore \verb+{}+ before cursor)
 		\item treat \verb+\+abc\{\%<xyz\%>\} and \verb+\+abc\{\%<def\%>\} as identical and ignore one of them (in the list of possible completions)
@@ -165,6 +171,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 		\item merging text completion and spell checker cache?
 	\end{itemize}
 	\item GUI: \begin{itemize}
+		\item command to open the first recent file not open (like ctrl+shift+t in firefox)
 		\item search for latex commands in the completion package list; list for every available package the contained commands
 		\item new tm 1.9 output view (icons left instead of tabs + next/previous error buttons)
 		\item using icons for math font styles (like in text font style)
@@ -178,6 +185,9 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 		\item show errors
 		
 	\item Internal PDF-Previewer:
+	\item presentation mode could have a ">jump to page"< feature (for questions after a presentation); which is synchronized over all views (s.t. you can see different things on the computer screen vs. beamer, but still don't have to move the mouse cursors from beamer to screen to select page)
+	\item alternative: tool where left/right clicks goes to the next/prev page (i.e. a tool default in presentation mode, but usable in all views)
+	\item (Okular) presentation tools: mouse cursor as laser pointer, drawing on presentation (in tool menu at the top edge), page number display when switching
 	\item Options to jump from source to pdf with synctex (context menu?)
 	\item mark source bookmarks in pdf preview 
 	\item border around magnifier
