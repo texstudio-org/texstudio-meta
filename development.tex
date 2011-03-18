@@ -76,6 +76,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 
 \subsubsection{Bugs}
 \begin{itemize}
+\item Autocompletion of a reference name \verb+\ref{foo+ eats the next word
 \item ctrl+alt+shift env completion doesn't work in the \{\}-bracket pair of \verb+{a}<b>+ 
 \item line number panel has wrong color on windows (white instead of black) 
 \item if the open document menu is empty, the tool button which contains the mapped menu is not cleared (the remaining entry causes an assert failure if selected)
@@ -146,7 +147,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 	\end{itemize}
 	\item Labels/References: \begin{itemize}
 		\item allow to define custom commands
-		\item 	show all refs using a label and allow easy jumping to them (e.g selection window?)
+		\item 	show all refs using a label and allow easy jumping to them (e.g selection window? or ctrl+click on ref jumps to label; ctrl+alt+f does it already, perhaps add a mouse event to action event mapper)
 		\item using a SoundEx suggestion list for wrong references/labels like in the spell checker
 		\item a reference/label check dialog like the old spell checking dialog
 	\end{itemize}
