@@ -70,7 +70,87 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 
 \subsubsection{others}
 
+\subsection{necessary before 2.2 }
 
+\subsubsection{Bugs}
+
+\subsubsection{others}
+
+\subsubsection{TM changes}
+
+\begin{itemize}
+\item graphicfilechooser
+\item  highlighting of (as regex): asy, tikzpicture, pspicture[*]?         AND sweave
+\item continuous scrolling
+\item print pdf
+\item interface disabled during compiling (says sources, i didn't see a effect)
+\item file chooser in status bar (tmx already has this in the toolbar, very non intuitive to activate)
+\item new commands:(forget this crap an make common regex matched to all dirs in the program folder)
+\begin{verbatim}
+new commands:
+
+-viewdvi_command=config->value("Tools/Dvi","\"C:/Program Files/MiKTeX 2.8/miktex/bin/yap.exe\" %.dvi").toString();
+-//C:/texmf/miktex/bin/yap.exe
+-//\"C:/Program Files/MiKTeX 2.7/miktex/bin/yap.exe\" -1 -s @%.tex %.dvi
++viewdvi_command=config->value("Tools/Dvi","\"C:/Program Files/MiKTeX 2.9/miktex/bin/yap.exe\" %.dvi").toString();
+ viewps_command=config->value("Tools/Ps","\"C:/Program Files/Ghostgum/gsview/gsview32.exe\" %.ps").toString();
+ viewpdf_command=config->value("Tools/Pdf","\"C:/Program Files/Adobe/Reader 9.0/Reader/AcroRd32.exe\" %.pdf").toString();
+-ghostscript_command=config->value("Tools/Ghostscript","\"C:/Program Files/gs/gs8.64/bin/gswin32c.exe\"").toString();
++ghostscript_command=config->value("Tools/Ghostscript","\"C:/Program Files/gs/gs9.00/bin/gswin32c.exe\"").toString();
+ asymptote_command=config->value("Tools/Asymptote","\"C:/Asymptote/asy.exe\" %.asy").toString();
++QString yap="C:/Program Files/MiKTeX 2.9/miktex/bin/yap.exe";
++QString gsview="C:/Program Files/Ghostgum/gsview/gsview32.exe";
++QString gswin="C:/Program Files/gs/gs9.00/bin/gswin32c.exe";
++QString acro="C:/Program Files/Adobe/Reader 9.0/Reader/AcroRd32.exe";
+ 
++if (new_user)
++  {
++  if (!QFileInfo(gswin).exists())
++    {
++    if (QFileInfo("C:/Program Files (x86)/gs/gs9.00/bin/gswin32c.exe").exists()) gswin="C:/Program Files (x86)/gs/gs9.00/bin/gswin32c.exe";
++    else if (QFileInfo("C:/Program Files/gs/gs8.71/bin/gswin32c.exe").exists()) gswin="C:/Program Files/gs/gs8.71/bin/gswin32c.exe";
++    else if (QFileInfo("C:/Program Files (x86)/gs/gs8.71/bin/gswin32c.exe").exists()) gswin="C:/Program Files (x86)/gs/gs8.71/bin/gswin32c.exe";
++    else if (QFileInfo("C:/Program Files/gs/gs8.64/bin/gswin32c.exe").exists()) gswin="C:/Program Files/gs/gs8.64/bin/gswin32c.exe";
++    else if (QFileInfo("C:/Program Files (x86)/gs/gs8.64/bin/gswin32c.exe").exists()) gswin="C:/Program Files (x86)/gs/gs8.65/bin/gswin32c.exe";
++    else if (QFileInfo("C:/Program Files/gs/gs8.63/bin/gswin32c.exe").exists()) gswin="C:/Program Files/gs/gs8.63/bin/gswin32c.exe";
++    else if (QFileInfo("C:/Program Files (x86)/gs/gs8.63/bin/gswin32c.exe").exists()) gswin="C:/Program Files (x86)/gs/gs8.63/bin/gswin32c.exe";
++    else if (QFileInfo("C:/Program Files/gs/gs8.62/bin/gswin32c.exe").exists()) gswin="C:/Program Files/gs/gs8.62/bin/gswin32c.exe";
++    else if (QFileInfo("C:/Program Files (x86)/gs/gs8.62/bin/gswin32c.exe").exists()) gswin="C:/Program Files (x86)/gs/gs8.62/bin/gswin32c.exe";
++    }
++  ghostscript_command="\""+gswin+"\"";
++  if (!QFileInfo(yap).exists())
++    {
++    if (QFileInfo("C:/Program Files (x86)/MiKTeX 2.9/miktex/bin/yap.exe").exists()) yap="C:/Program Files (x86)/MiKTeX 2.9/miktex/bin/yap.exe";
++    else if (QFileInfo("C:/Program Files/MiKTeX 2.8/miktex/bin/yap.exe").exists()) yap="C:/Program Files/MiKTeX 2.8/miktex/bin/yap.exe";
++    else if (QFileInfo("C:/Program Files (x86)/MiKTeX 2.8/miktex/bin/yap.exe").exists()) yap="C:/Program Files (x86)/MiKTeX 2.8/miktex/bin/yap.exe";
++    else if (QFileInfo("C:/Program Files/MiKTeX 2.7/miktex/bin/yap.exe").exists()) yap="C:/Program Files/MiKTeX 2.7/miktex/bin/yap.exe";
++    else if (QFileInfo("C:/Program Files (x86)/MiKTeX 2.7/miktex/bin/yap.exe").exists()) yap="C:/Program Files (x86)/MiKTeX 2.7/miktex/bin/yap.exe";
++    else if (QFileInfo("C:/Program Files/MiKTeX 2.5/miktex/bin/yap.exe").exists()) yap="C:/Program Files/MiKTeX 2.5/miktex/bin/yap.exe";
++    else if (QFileInfo("C:/Program Files (x86)/MiKTeX 2.5/miktex/bin/yap.exe").exists()) yap="C:/Program Files (x86)/MiKTeX 2.5/miktex/bin/yap.exe";
++    else if (QFileInfo("C:/texlive/2009/bin/win32/dviout.exe").exists()) yap="C:/texlive/2009/bin/win32/dviout.exe";
++    else if (QFileInfo("C:/texlive/2010/bin/win32/dviout.exe").exists()) yap="C:/texlive/2010/bin/win32/dviout.exe";
++    }
++  viewdvi_command="\""+yap+"\" %.dvi";  
++  if (!QFileInfo(gsview).exists())
++    {
++    if (QFileInfo("C:/Program Files (x86)/Ghostgum/gsview/gsview32.exe").exists()) gsview="C:/Program Files (x86)/Ghostgum/gsview/gsview32.exe";
++    else if (QFileInfo("C:/texlive/2009/bin/win32/psv.exe").exists()) gsview="C:/texlive/2009/bin/win32/psv.exe";
++    else if (QFileInfo("C:/texlive/2010/bin/win32/psv.exe").exists()) gsview="C:/texlive/2010/bin/win32/psv.exe";
++    }
++  viewps_command="\""+gsview+"\" %.ps";
++  if (!QFileInfo(acro).exists())
++    {
++    if (QFileInfo("C:/Program Files (x86)/Adobe/Reader 9.0/Reader/AcroRd32.exe").exists()) acro="C:/Program Files (x86)/Adobe/Reader 9.0/Reader/AcroRd32.exe";
++    else if (QFileInfo("C:/Program Files/Adobe/Reader 8.0/Reader/AcroRd32.exe").exists()) acro="C:/Program Files/Adobe/Reader 8.0/Reader/AcroRd32.exe";
++    else if (QFileInfo("C:/Program Files (x86)/Adobe/Reader 8.0/Reader/AcroRd32.exe").exists()) acro="C:/Program Files (x86)/Adobe/Reader 8.0/Reader/AcroRd32.exe";
++    }
++  viewpdf_command="\""+acro+"\" %.pdf"; 
++  }
++//\"C:/Program Files/MiKTeX 2.7/miktex/bin/yap.exe\" -1 -s @%.tex %.dvi
+ 
+\end{verbatim} 
+\item from changelog (wtf is asymptote??): all "foo*.asy" files are now automatically compiled by Texmaker with the asymptote command (new behaviour of the recent release of asymptote) 
+\end{itemize}
 
 \subsection{later}
 
