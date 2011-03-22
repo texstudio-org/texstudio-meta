@@ -96,7 +96,6 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 \item ctrl+alt+shift env completion doesn't work in the \{\}-bracket pair of \verb+{a}<b>+ 
 \item line number panel has wrong color on windows (white instead of black) 
 \item if the open document menu is empty, the tool button which contains the mapped menu is not cleared (the remaining entry causes an assert failure if selected)
-\item  Auto completion does not correctly count brackets (e.g. if you have \verb+{}}+ an write \verb+{+ before it, a unnecessary closing \verb+}+ is inserted)
 \item unnecessary slowness: (possible duplicate setHeight call after adjustWidth )
 \item  Saving files clears messages
 \item codesnippt mit placeholder einfügen und rückgängig machen plaziert cursor an falscher column position => schreiben zerstört rückgängig (see failing, commented tests in codesnippet\_t)
@@ -129,6 +128,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 		}
 	\end{verbatim} in bib files
 	\item  qce crashes if the searchpanel is not deleted before the qcodeedit object is deleted (because the search as child of the editor is then automatically deleted after the editor and crashes when it calls the editor to clear it match overlays)
+	\item  Auto completion is sometimes unexpected (see unittests)
 \end{itemize} 
 
 \subsubsection{others}
@@ -202,6 +202,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 		\item show errors
 		
 	\item Internal PDF-Previewer:
+	\item three grid next page modes: single page step, grid row, full grid (or allow arbitrary steps? renderer already supports them)
 	\item presentation mode could have a ">jump to page"< feature (for questions after a presentation); which is synchronized over all views (s.t. you can see different things on the computer screen vs. beamer, but still don't have to move the mouse cursors from beamer to screen to select page)
 	\item alternative: tool where left/right clicks goes to the next/prev page (i.e. a tool default in presentation mode, but usable in all views)
 	\item (Okular) presentation tools: mouse cursor as laser pointer, drawing on presentation (in tool menu at the top edge), page number display when switching
