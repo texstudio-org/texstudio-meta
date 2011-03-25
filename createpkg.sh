@@ -18,7 +18,7 @@ if [ "x$LIBCVERSION" = "x" ]; then echo "no libc"; exit; fi;
 if [ "x$QTVERSION" = "x" ]; then echo "no qt"; exit; fi;
 if [ "x$POPPLERVERSION" = "x" ]; then echo "no poppler"; exit; fi;
 
-DEPENDENCIES="libc6,libgcc1,libqtcore4\|libqt4-core,libqtgui4\|libqt4-gui,libqt4-network,libqt4-xml,libstdc++6,libpoppler-qt4-3"
+DEPENDENCIES="libc6 (>=$LIBCVERSION), libgcc1 (>=$GCCVERSION), libqtcore4 (>=$QTVERSION) | libqt4-core (>=$QTVERSION), libqtgui4 (>=$QTVERSION) | libqt4-gui (>=$QTVERSION), libqt4-network (>=$QTVERSION), libqt4-xml (>=$QTVERSION), libstdc++6 (>=$GCCVERSION), libpoppler-qt4-3 (>=$POPPLERVERSION)"
 
 echo "Enter new tmx version:"
 read TMXVERSION
@@ -30,8 +30,10 @@ if [ "x$TMXVERSION" = "x" ]; then echo "no tmx version"; exit; fi;
 
 echo $DEPENDENCIES
 
+export REQUIRES=$DEPENDENCIES
+export SOURCE="http://texmakerx.svn.sourceforge.net/svnroot/texmakerx"
 
-checkinstall --install=no --pkgname=TexMakerX --default  --pkgversion=$TMXVERSION --nodoc --maintainer="Benito van der Zander \<benito@benibela.de\>" --requires="$DEPENDENCIES" 
+checkinstall --install=no --pkgname=TexMakerX  --default --pkgversion=$TMXVERSION --nodoc --maintainer="Benito van der Zander \<benito@benibela.de\>" 
 
 if [ "$1" != "--release" ]; then echo "no release made";  exit; fi;
 
