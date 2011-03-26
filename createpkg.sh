@@ -51,3 +51,5 @@ SFUSER="$SFUSER,texmakerx";
 
 rsync -avRP -e ssh $PKGFILE "$SFUSER@frs.sourceforge.net:/home/frs/project/t/te/texmakerx/texmakerx/TexMakerX\ $TMXVERSION/"
 
+
+
