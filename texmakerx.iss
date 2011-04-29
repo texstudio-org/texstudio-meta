@@ -1,14 +1,14 @@
 [Setup]
 ;Change this in every version
-AppVerName=TexMakerX 2.1
-AppVersion=2.1
+AppVerName=TexMakerX 2.2
+AppVersion=2.2beta
 
 ;Don't change
 AppName=TexMakerX
 AppPublisher=Benito van der Zander
 AppPublisherURL=http://texmakerx.sourceforge.net/
 
-OutputBaseFilename=texmakerx201_win32-install
+OutputBaseFilename=texmakerx22b0_win32
 
 DefaultDirName={pf}\TexMakerX
 DefaultGroupName=TexMakerX
