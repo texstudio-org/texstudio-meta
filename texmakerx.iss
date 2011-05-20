@@ -8,7 +8,7 @@ AppName=TexMakerX
 AppPublisher=Benito van der Zander
 AppPublisherURL=http://texmakerx.sourceforge.net/
 
-OutputBaseFilename=texmakerx22b4_win32
+OutputBaseFilename=texmakerx22b5_win32
 
 DefaultDirName={pf}\TexMakerX
 DefaultGroupName=TexMakerX
