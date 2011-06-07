@@ -90,6 +90,9 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 \begin{itemize}
 \item Autocompletion of a reference name \verb+\ref{foo+ eats the next word
 \item ctrl+alt+shift env completion doesn't work in the \{\}-bracket pair of \verb+{a}<b>+ 
+\item In a trivial beamer document frame + env. completion only adds \verb+\+begin, not \verb+\+end
+\item completion window appeared at the wrong position (cursor almost at the right document border, window appeared top left)
+\item \verb+\begin{matrix}+ marked as unknown
 \item line number panel has wrong color on windows (white instead of black) 
 \item if the open document menu is empty, the tool button which contains the mapped menu is not cleared (the remaining entry causes an assert failure if selected)
 \item unnecessary slowness: (possible duplicate setHeight call after adjustWidth )
@@ -105,6 +108,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 \item completer doesn't contain citation labels (this means if you have \verb+\cite{abcd|+ with | marking cursor position it doesn't suggest abcdef as citation even if \verb+\cite{abcd}+ is in the list)
 \item texworks pdf viewer changes it cursor when shift/alt is pressed, but that only works every 2nd time
 \item presentation mode doesn't hide cursor
+\item zooming in/out in continuous mode changes the current page
 \item switching between forward/backward search in the pdf previewer, sometimes doesn't find matches or finds them twice (e.g. in this development.pdf). Possibly a poppler bug
 \item tmx nearly crashes if the log files is very large (80 MB, it gets this large if logging is enabled)
 \item hint by \verb+\ref+ parses html code. E.g. if you have \begin{verbatim}
