@@ -88,6 +88,10 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 
 \subsubsection{Bugs}
 \begin{itemize}
+\item continuous pdf mode scrollbar range calculation wrong (couldnot move to last pages before zooming)
+\item bad scrolling in non-continuous modes
+\item color command marked as unknown in beamer doc	
+\item \verb+_+ marked as unknown in movie command
 \item Autocompletion of a reference name \verb+\ref{foo+ eats the next word
 \item ctrl+alt+shift env completion doesn't work in the \{\}-bracket pair of \verb+{a}<b>+ 
 \item In a trivial beamer document frame + env. completion only adds \verb+\+begin, not \verb+\+end
@@ -111,6 +115,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 \item zooming in/out in continuous mode changes the current page
 \item switching between forward/backward search in the pdf previewer, sometimes doesn't find matches or finds them twice (e.g. in this development.pdf). Possibly a poppler bug
 \item tmx nearly crashes if the log files is very large (80 MB, it gets this large if logging is enabled)
+\item synctex jumps to the wrong beamer page if only-commands are used
 \item hint by \verb+\ref+ parses html code. E.g. if you have \begin{verbatim}
 <html><body>asas<img src=":/images/splash.png"><b>AAA
 \label{key}
@@ -175,6 +180,9 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 	\end{itemize}
 	\item Better new document wizard (look at kile)
 	\item Completion \begin{itemize}
+	\item auto close last environment/bracket
+	\item complete command options after command (files for includegraphics, environsments for begin, citations, labels, packages, tikzpictures	)
+	\item cut buffer for environment content (multiline to content, singleline to option ?)
 	\item Word completion over all open documents
 	\item Show definition of \verb+\newcommand+ commands in the completion list as hint
 	\item  Menu command to complete current/last environment/bracket
