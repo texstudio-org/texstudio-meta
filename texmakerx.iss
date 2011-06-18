@@ -1,22 +1,22 @@
 [Setup]
 ;Change this in every version
-AppVerName=TexMakerX 2.2
+AppVerName=TeXstudio 2.2
 AppVersion=2.2beta
 
 ;Don't change
-AppName=TexMakerX
+AppName=TeXstudio
 AppPublisher=Benito van der Zander
-AppPublisherURL=http://texmakerx.sourceforge.net/
+AppPublisherURL=http://texstudio.sourceforge.net/
 
-OutputBaseFilename=texmakerx22b5_win32
+OutputBaseFilename=texstudio22b13_win32
 
-DefaultDirName={pf}\TexMakerX
-DefaultGroupName=TexMakerX
-UninstallDisplayIcon={app}\texmakerx.exe
+DefaultDirName={pf}\TeXstudio
+DefaultGroupName=TeXstudio
+UninstallDisplayIcon={app}\texstudio.exe
 SourceDir=..\..\
 
 [Files]
-Source: texmakerx.exe; DestDir: {app}\
+Source: texstudio.exe; DestDir: {app}\
 Source: mingwm10.dll; DestDir: {app}\
 Source: iconv.dll; DestDir: {app}\
 Source: QtCore4.dll; DestDir: {app}\
@@ -24,6 +24,7 @@ Source: QtGui4.dll; DestDir: {app}\
 Source: QtNetwork4.dll; DestDir: {app}\
 Source: QtXml4.dll; DestDir: {app}\
 Source: QtScript4.dll; DestDir: {app}\
+Source: phonon4.dll; DestDir: {app}\
 
 Source: utilities\en_GB.*; DestDir: {app}\dictionaries
 Source: utilities\fr_FR.*; DestDir: {app}\dictionaries
