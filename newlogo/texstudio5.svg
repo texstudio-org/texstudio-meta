@@ -16,10 +16,10 @@
    sodipodi:version="0.32"
    inkscape:version="0.48.1 r9760"
    version="1.0"
-   sodipodi:docname="texstudio4.svg"
-   inkscape:export-filename="/home/grant/Desktop/spotlight.png"
-   inkscape:export-xdpi="100.5"
-   inkscape:export-ydpi="100.5">
+   sodipodi:docname="texstudio5.svg"
+   inkscape:export-filename="/opt/texmakerx/images/splash.png"
+   inkscape:export-xdpi="48.889999"
+   inkscape:export-ydpi="48.889999">
   <defs
      id="defs4">
     <linearGradient
@@ -3520,17 +3520,6 @@
          offset="1"
          style="stop-color:#ffff97;stop-opacity:0.69090909;" />
     </linearGradient>
-    <radialGradient
-       r="90.913727"
-       fy="-127.66716"
-       fx="488.91382"
-       cy="-127.66716"
-       cx="488.91382"
-       gradientTransform="matrix(1,0,0,0.63333333,0,-46.811292)"
-       gradientUnits="userSpaceOnUse"
-       id="radialGradient7748"
-       xlink:href="#linearGradient5306-4"
-       inkscape:collect="always" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -3573,7 +3562,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -4739,7 +4728,7 @@
     </g>
     <g
        id="surface1-7"
-       transform="matrix(1.7648281,0,0,1.7648281,-0.081246,299.72607)"
+       transform="matrix(1.7648281,0,0,1.7648281,-194.08125,-152.27393)"
        style="fill:#ffffff">
       <g
          id="g8822"
@@ -4892,7 +4881,7 @@
     </g>
     <g
        id="surface1-3"
-       transform="matrix(1.9406037,0,0,1.9406037,-282.10128,-223.361)"
+       transform="matrix(1.9406037,0,0,1.9406037,-315.10128,-232.361)"
        style="fill:#ffffff">
       <g
          id="g9029"
@@ -5076,7 +5065,7 @@
     </g>
     <g
        id="surface1-8"
-       transform="matrix(1.5739028,0,0,1.5739028,303.98038,248.1236)"
+       transform="matrix(1.5739028,0,0,1.5739028,323.98038,270.1236)"
        style="fill:#ffffff;stroke:#ffffff">
       <g
          id="g9271"
@@ -5219,7 +5208,7 @@
     </g>
     <g
        id="surface1-81"
-       transform="matrix(1.9658987,0,0,1.9658987,-238.78959,-174.49054)"
+       transform="matrix(1.9658987,0,0,1.9658987,-127.78959,-79.49054)"
        style="fill:#ffffff">
       <g
          id="g9411"
@@ -5320,7 +5309,7 @@
     </g>
     <g
        id="surface1-70"
-       transform="matrix(1.7519541,0,0,1.7519541,-157.62249,218.87361)"
+       transform="matrix(1.7519541,0,0,1.7519541,-136.62249,215.87361)"
        style="fill:#ffffff;stroke:#ffffff">
       <g
          id="g9852"
@@ -5430,7 +5419,7 @@
          id="path9886"
          transform="matrix(1,0,0,-1,314.213,159.685)"
          d="m 0.00184375,0.00140625 21.96093725,0"
-         style="fill:#ffffff;stroke:#ffffff;stroke-width:0.39800000000000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
+         style="fill:#ffffff;stroke:#ffffff;stroke-width:0.398;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
          inkscape:connector-curvature="0" />
       <g
          id="g9888"
@@ -5471,7 +5460,7 @@
     </g>
     <g
        id="surface1-4"
-       transform="matrix(1.6048045,0,0,1.6048045,-196.72175,293.30321)"
+       transform="matrix(1.6048045,0,0,1.6048045,-217.72175,280.30321)"
        style="fill:#ffffff">
       <g
          id="g10644"
@@ -7023,7 +7012,7 @@
     </g>
     <g
        id="surface1-39"
-       transform="matrix(1.5378952,0,0,1.5378952,-38.39265,-27.993419)"
+       transform="matrix(1.5378952,0,0,1.5378952,-61.39265,-63.993419)"
        style="fill:#ffffff">
       <g
          id="g6290"
@@ -7088,7 +7077,7 @@
     </g>
     <g
        id="surface1-83"
-       transform="matrix(1.4696004,0,0,1.4696004,346.02223,346.734)"
+       transform="matrix(1.4696004,0,0,1.4696004,140.02223,342.734)"
        style="fill:#ffffff">
       <g
          id="g7238"
@@ -7357,7 +7346,7 @@
     </g>
     <g
        id="surface1-23"
-       transform="matrix(1.4288772,0,0,1.4288772,217.30647,318.01316)"
+       transform="matrix(1.4288772,0,0,1.4288772,206.30647,318.01316)"
        style="fill:#ffffff">
       <g
          id="g7447"
@@ -7673,5 +7662,16 @@
            style="fill:#ffffff" />
       </g>
     </g>
+    <text
+       xml:space="preserve"
+       style="font-size:12.53152084px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="768.92633"
+       y="583.03125"
+       id="text7790"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan7792"
+         x="768.92633"
+         y="583.03125">http://texstudio.sourceforge.net</tspan></text>
   </g>
 </svg>
