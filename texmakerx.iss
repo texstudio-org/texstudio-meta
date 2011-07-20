@@ -45,13 +45,17 @@ Source: utilities\latexhelp.html; DestDir: {app}\help
 Source: utilities\license.txt; DestDir: {app}\help
 Source: utilities\usermanual*.html; DestDir: {app}\help
 
-Source: texmakerx_de.qm; DestDir: {app}\translations
-Source: texmakerx_fr.qm; DestDir: {app}\translations
-Source: texmakerx_it.qm; DestDir: {app}\translations
-Source: texmakerx_cs.qm; DestDir: {app}\translations
-Source: texmakerx_hu.qm; DestDir: {app}\translations; Languages: 
+Source: texstudio_de.qm; DestDir: {app}\translations
+Source: texstudio_fr.qm; DestDir: {app}\translations
+Source: texstudio_it.qm; DestDir: {app}\translations
+Source: texstudio_cs.qm; DestDir: {app}\translations
+Source: texstudio_hu.qm; DestDir: {app}\translations; Languages:
+Source: texstudio_uk.qm; DestDir: {app}\translations; Languages:  
+Source: texstudio_pt_BR.qm; DestDir: {app}\translations; Languages:  
 Source: qt_de.qm; DestDir: {app}\translations
 Source: qt_fr.qm; DestDir: {app}\translations
+Source: qt_cs.qm; DestDir: {app}\translations
+Source: qt_hu.qm; DestDir: {app}\translations
 ;removed, we don't have a tmx translation anyways Source: utilities\qt_zh.qm; DestDir: {app}\translations
 Source: libfreetype.dll; DestDir: {app}
 Source: libgcc_s_dw2-1.dll; DestDir: {app}
@@ -64,11 +68,11 @@ Source: libpoppler-qt4.dll; DestDir: {app}
 Source: libxml2.dll; DestDir: {app}
 Source: libzlib1.dll; DestDir: {app}
 Source: zlib1.dll; DestDir: {app}
-Source: texmakerx_pt_BR.qm; DestDir: {app}\translations
+Source: texstudio_pt_BR.qm; DestDir: {app}\translations
 
 [Icons]
-Name: {group}\TexMakerX; Filename: {app}\TexMakerX.exe
-Name: {commondesktop}\TexMakerX; Filename: {app}\TexMakerX.exe
+Name: {group}\TeXstudio; Filename: {app}\TeXstudio.exe
+Name: {commondesktop}\TeXstudio; Filename: {app}\TeXstudio.exe
 
 [Languages]
 Name: en; MessagesFile: compiler:Default.isl
@@ -80,4 +84,4 @@ Name: pt_BR; MessagesFile: compiler:Languages\BrazilianPortuguese.isl
 Name: hu; MessagesFile: compiler:Languages\Hungarian.isl
 
 [Run]
-Filename: {app}\texmakerx.exe; Description: Start TexMakerX; Flags: nowait postinstall
+Filename: {app}\texstudio.exe; Description: Start TeXstudio; Flags: nowait postinstall
