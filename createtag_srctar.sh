@@ -10,7 +10,7 @@ TMXREVISION=`svn info | grep Revision | grep -oE [0-9]+`
 echo "Assuming i should tag revision $TMXREVISION"
 
 
-echo "Enter new tmx version:"
+echo "Enter new txs version:"
 read TMXVERSION
 
 
@@ -19,23 +19,23 @@ if [ -e /home/benito ]; then SFUSER="benibela"; else echo "Enter sourceforge use
 if [ "x$SFUSER"  = "x" ]; then echo "no sf user"; exit; fi
 
 
-svn copy -r $TMXREVISION  -m "TAGGED $TMXVERSION RELEASE" https://$SFUSER@texmakerx.svn.sourceforge.net/svnroot/texmakerx/trunk https://$SFUSER@texmakerx.svn.sourceforge.net/svnroot/texmakerx/tags/TexMakerX/$TMXVERSION
+svn copy -r $TMXREVISION  -m "TAGGED $TMXVERSION RELEASE" https://$SFUSER@texstudio.svn.sourceforge.net/svnroot/texstudio/trunk https://$SFUSER@texstudio.svn.sourceforge.net/svnroot/texstudio/tags/TeXstudio/$TMXVERSION
 
 
 
 #get tar from svn
 mkdir -p /tmp/tmxsrc
-wget  http://texmakerx.svn.sf.net/viewvc/texmakerx/tags/TexMakerX/$TMXVERSION/?view=tar -O /tmp/tmxsrc/tmx.tar.gz
+wget  http://texstudio.svn.sf.net/viewvc/texstudio/tags/TeXstudio/$TMXVERSION/?view=tar -O /tmp/tmxsrc/tmx.tar.gz
 
 #add svn_revision.cpp
 mkdir -p /tmp/tmxsrc2
 tar -xf /tmp/tmxsrc/tmx.tar.gz -C /tmp/tmxsrc2
 cp svn_revision.cpp /tmp/tmxsrc2/$TMXVERSION/
-mv /tmp/tmxsrc2/$TMXVERSION/ /tmp/tmxsrc2/texmakerx$TMXVERSION
+mv /tmp/tmxsrc2/$TMXVERSION/ /tmp/tmxsrc2/texstudio$TMXVERSION
 
 #create
 cd /tmp/tmxsrc2
-tar -czf /tmp/tmxsrc/texmakerx-$TMXVERSION.tar.gz  texmakerx$TMXVERSION
+tar -czf /tmp/tmxsrc/texstudio-$TMXVERSION.tar.gz  texstudio$TMXVERSION
 
 cd /tmp/tmxsrc/
-rsync -avRP -e ssh texmakerx-$TMXVERSION.tar.gz "$SFUSER,texmakerx@frs.sourceforge.net:/home/frs/project/t/te/texmakerx/texmakerx/TexMakerX\ $TMXVERSION/"
+rsync -avRP -e ssh texstudio-$TMXVERSION.tar.gz "$SFUSER,texstudio@frs.sourceforge.net:/home/frs/project/t/te/texstudio/texstudio/TeXstudio\ $TMXVERSION/"

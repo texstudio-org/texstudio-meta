@@ -1,7 +1,7 @@
 #!/bin/bash
-if [ ! -f texmakerx ]; then echo "./texmakerx doesn't exist"; exit; fi
+if [ ! -f texstudio ]; then echo "./texstudio doesn't exist"; exit; fi
 
-if ( readelf -d texmakerx | grep QtTest ) then  echo "tmx linked against QtTest => ABORT"; exit; fi
+if ( readelf -d texstudio | grep QtTest ) then  echo "txs linked against QtTest => ABORT"; exit; fi
 
 #get qt version
 QTVERSION=`qmake -v | grep -oE "4\.[2-9]\.[0-9]"`;
@@ -20,10 +20,10 @@ if [ "x$POPPLERVERSION" = "x" ]; then echo "no poppler"; exit; fi;
 
 DEPENDENCIES="libc6 (>=$LIBCVERSION), libgcc1 (>=$GCCVERSION), libqtcore4 (>=$QTVERSION) | libqt4-core (>=$QTVERSION), libqtgui4 (>=$QTVERSION) | libqt4-gui (>=$QTVERSION), libqt4-network (>=$QTVERSION), libqt4-xml (>=$QTVERSION), libstdc++6 (>=$GCCVERSION), libpoppler-qt4-3 (>=$POPPLERVERSION)"
 
-echo "Enter new tmx version:"
+echo "Enter new txs version:"
 read TMXVERSION
 
-if [ "x$TMXVERSION" = "x" ]; then echo "no tmx version"; exit; fi;
+if [ "x$TMXVERSION" = "x" ]; then echo "no txs version"; exit; fi;
 
 
 
@@ -31,25 +31,25 @@ if [ "x$TMXVERSION" = "x" ]; then echo "no tmx version"; exit; fi;
 echo $DEPENDENCIES
 
 export REQUIRES=$DEPENDENCIES
-export SOURCE="http://texmakerx.svn.sourceforge.net/svnroot/texmakerx"
+export SOURCE="http://texstudio.svn.sourceforge.net/svnroot/texstudio"
 
-checkinstall --install=no --pkgname=TexMakerX  --default --pkgversion=$TMXVERSION --nodoc --maintainer="Benito van der Zander \<benito@benibela.de\>" 
+checkinstall --install=no --pkgname=TeXstudio  --default --pkgversion=$TMXVERSION --nodoc --maintainer="Benito van der Zander \<benito@benibela.de\>" 
 
 if [ "$1" != "--release" ]; then echo "no release made";  exit; fi;
 
 #MACHINE=`uname -r |  grep -oE "[^-]*$"`
 #if [ "x$MACHINE" = "x" ]; then echo "couldn't detect machine (i386/amd64) version"; exit; fi;
 
-PKGFILE=`ls -t texmakerx*.deb | grep -m 1  -oE "texmakerx[^ ]*\.deb"`
+PKGFILE=`ls -t texstudio*.deb | grep -m 1  -oE "texstudio[^ ]*\.deb"`
 
 SFUSER="";
 if [ -e /home/benito ]; then SFUSER="benibela"; else echo "Enter sourceforge user name:"; read SFUSER; fi
 if [ "x$SFUSER"  = "x" ]; then echo "no sf user"; exit; fi
-SFUSER="$SFUSER,texmakerx";
+SFUSER="$SFUSER,texstudio";
 
 
 
-rsync -avRP -e ssh $PKGFILE "$SFUSER@frs.sourceforge.net:/home/frs/project/t/te/texmakerx/texmakerx/TexMakerX\ $TMXVERSION/"
+rsync -avRP -e ssh $PKGFILE "$SFUSER@frs.sourceforge.net:/home/frs/project/t/te/texstudio/texstudio/TeXstudio\ $TMXVERSION/"
 
 
 

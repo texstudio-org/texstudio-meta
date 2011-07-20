@@ -1,14 +1,15 @@
 [Setup]
 ;Change this in every version
 AppVerName=TeXstudio 2.2
-AppVersion=2.2beta
+AppVersion=2.2.0
+
+OutputBaseFilename=texstudio22_win32
 
 ;Don't change
 AppName=TeXstudio
 AppPublisher=Benito van der Zander
 AppPublisherURL=http://texstudio.sourceforge.net/
 
-OutputBaseFilename=texstudio22b13_win32
 
 DefaultDirName={pf}\TeXstudio
 DefaultGroupName=TeXstudio
