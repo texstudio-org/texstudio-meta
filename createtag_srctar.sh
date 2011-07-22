@@ -24,6 +24,7 @@ svn copy -r $TMXREVISION  -m "TAGGED $TMXVERSION RELEASE" https://$SFUSER@texstu
 
 
 #get tar from svn
+rm -Rf /tmp/tmxsrc /tmp/tmxsrc2
 mkdir -p /tmp/tmxsrc
 wget  http://texstudio.svn.sf.net/viewvc/texstudio/tags/TeXstudio/$TMXVERSION/?view=tar -O /tmp/tmxsrc/tmx.tar.gz
 
