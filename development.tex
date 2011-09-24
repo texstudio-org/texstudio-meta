@@ -222,7 +222,6 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 	\item \textbf{Internal PDF-Previewer:}
 	\item jump to last viewed page 
 	\item ctrl+home/end should be mapped to home/end
-	\item ctrl+click on a word should jump to the exact word in the source (is this even possible? needs a poppler method to map pos->text and then searchs the text )
 	\item three grid next page modes: single page step, grid row, full grid (or allow arbitrary steps? renderer already supports them)
 	\item presentation mode could have a ">jump to page"< feature (for questions after a presentation); which is synchronized over all views (s.t. you can see different things on the computer screen vs. beamer, but still don't have to move the mouse cursors from beamer to screen to select page)
 	\item alternative: tool where left/right clicks goes to the next/prev page (i.e. a tool default in presentation mode, but usable in all views)
@@ -235,6 +234,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 	\item Toolbars should also be customizable
 	\item There should be an continuous display mode (scrollbar.size = pageheight*pagecount, and currentpage = scrollbar.pos/pageheight).
 	\item options menu entry of the pdf previewer should open the config dialog on a preview page
+	\item ctrl+click on a word should jump to the exact word in the source instead of an approximate position and it should work with formulas (is this even possible?)
 	\end{itemize}
 	\item  Checker: \begin{itemize}
 		\item Way to disable repetition checker (only in math. envs., globally, for a certain word)
