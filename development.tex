@@ -88,6 +88,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 \subsubsection{Bugs}
 \begin{itemize}
 \item \verb+_+ in movie command marked as math error
+\item Word completion does not work in caption commands
 \item Autocompletion of a reference name \verb+\ref{foo+ eats the next word
 \item ctrl+alt+shift env completion doesn't work in the \{\}-bracket pair of \verb+{a}<b>+ 
 \item In a trivial beamer document frame + env. completion only adds \verb+\+begin, not \verb+\+end
@@ -181,6 +182,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 	\item Completion \begin{itemize}
 	\item don't jump to a placeholder by ctrl+left/right if it is more than three lines (or words?) away from the current position
 	\item auto complete \verb+\left<+ like brackets
+	\item if completing a filename, and the selected file has the same extension as the current filename, remove the existing extension
 	\item auto close last environment/bracket
 	\item complete command options after command (files for includegraphics, environsments for begin, citations, labels, packages, tikzpictures	)
 	\item cut buffer for environment content (multiline to content, singleline to option ?)
