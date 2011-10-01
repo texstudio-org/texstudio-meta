@@ -143,6 +143,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 \begin{itemize}
 	\item QCodeEdit: \begin{itemize}
 		\item Generate custom highlighting from the used custom completion cwl files. (important for syntax check, if you have a custom math environment you currently have to define it twice, once as custom highlighting(to syntax check multi line environments) and in the cwl (to check single line envs))
+		\item show diff between current file and changed file, if the file on the harddisk is changed
 		\item Deleting placeholders by pressing repeadetly backspace after one
 		\item if replace all is restarted from scope begin, show the count of replaced occurrences before the scope restart and afterwards.
 		\item show tooltips when scrolling (line, section, chapter)
@@ -225,6 +226,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 	\item \textbf{Internal PDF-Previewer:}
 	\item jump to last viewed page 
 	\item ctrl+home/end should be mapped to home/end
+	\item  show pdf title in windows title bar
 	\item three grid next page modes: single page step, grid row, full grid (or allow arbitrary steps? renderer already supports them)
 	\item presentation mode could have a ">jump to page"< feature (for questions after a presentation); which is synchronized over all views (s.t. you can see different things on the computer screen vs. beamer, but still don't have to move the mouse cursors from beamer to screen to select page)
 	\item alternative: tool where left/right clicks goes to the next/prev page (i.e. a tool default in presentation mode, but usable in all views)
