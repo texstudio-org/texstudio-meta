@@ -88,10 +88,8 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 \subsubsection{Bugs}
 \begin{itemize}
 \item \verb+_+ in movie command marked as math error
-\item Word completion does not work in caption commands
 \item latex checking says "cols in tab missing", although this does not even cause a warning by Latex. (perhaps there should be another marking overlay, for bad style, and this marked as that)
 \item Autocompletion of a reference name \verb+\ref{foo+ eats the next word
-\item ctrl+alt+shift env completion doesn't work in the \{\}-bracket pair of \verb+{a}<b>+ 
 \item In a trivial beamer document frame + env. completion only adds \verb+\+begin, not \verb+\+end
 \item completion window appeared at the wrong position (cursor almost at the right document border, window appeared top left)
 \item line number panel has wrong color on windows (white instead of black (gray??)) 
@@ -220,7 +218,6 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 		\item show errors
 		
 	\item \textbf{Internal PDF-Previewer:}
-	\item jump to last viewed page 
 	\item ctrl+home/end should be mapped to home/end
 	\item  show pdf title in windows title bar
 	\item three grid next page modes: single page step, grid row, full grid (or allow arbitrary steps? renderer already supports them)
