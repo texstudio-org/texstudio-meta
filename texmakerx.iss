@@ -56,7 +56,7 @@ Source: qt_de.qm; DestDir: {app}\translations
 Source: qt_fr.qm; DestDir: {app}\translations
 Source: qt_cs.qm; DestDir: {app}\translations
 Source: qt_hu.qm; DestDir: {app}\translations
-;removed, we don't have a tmx translation anyways Source: utilities\qt_zh.qm; DestDir: {app}\translations
+;removed, we don't have a txs translation anyways Source: utilities\qt_zh.qm; DestDir: {app}\translations
 Source: libfreetype.dll; DestDir: {app}
 Source: libgcc_s_dw2-1.dll; DestDir: {app}
 Source: liblcms-1.dll; DestDir: {app}
