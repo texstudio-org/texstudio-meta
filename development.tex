@@ -80,7 +80,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 
 \begin{itemize}
 \item interface disabled during compiling (says sources, i didn't see a effect)
-\item file chooser in status bar (tmx already has this in the toolbar, very non intuitive to activate)
+\item file chooser in status bar (TXS already has this in the toolbar, very non intuitive to activate)
 \end{itemize}
 
 \subsection{later}
@@ -111,13 +111,13 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 \item presentation mode doesn't hide cursor
 \item zooming in/out in continuous mode changes the current page
 \item switching between forward/backward search in the pdf previewer, sometimes doesn't find matches or finds them twice (e.g. in this development.pdf). Possibly a poppler bug
-\item tmx nearly crashes if the log files is very large (80 MB, it gets this large if logging is enabled)
+\item TXS nearly crashes if the log files is very large (80 MB, it gets this large if logging is enabled)
 \item synctex jumps to the wrong beamer page if only-commands are used
 \item hint by \verb+\ref+ parses html code. E.g. if you have \begin{verbatim}
 <html><body>asas<img src=":/images/splash.png"><b>AAA
 \label{key}
 </b></body></html>
-\end{verbatim} in the latex file (if there is a security bug in the qt html renderer, it could become a security bug in tmx)
+\end{verbatim} in the latex file (if there is a security bug in the qt html renderer, it could become a security bug in TXS)
 	\item Wrong indentation of \begin{verbatim}
 		@MastersThesis{Marold,
 		author = {Alexander Marold},
