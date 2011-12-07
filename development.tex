@@ -77,12 +77,14 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 
 \subsubsection{Bugs}
 \begin{itemize}
+\item sometimes it crashes (perhaps placeholder related)
 \item doesn't know the text-command in beamer
 \item changing style size properties (bold, size) has no affect until txs restart or base font change
 \item escape doesn't close replace panel anymore
 \item get-dictionaries-label to large
 \item switching to advanced options changes current config page
 \item riddle?
+\item highlighting and \verb+@+
 \item scrolling to the end of a pdf (beamer presentation) and pressing down-array jumps to the beginning.
 \item \verb+_+ in movie command marked as math error
 \item latex checking says "cols in tab missing", although this does not even cause a warning by Latex. (perhaps there should be another marking overlay, for bad style, and this marked as that)
@@ -212,15 +214,14 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 		\item show errors
 		
 	\item \textbf{Internal PDF-Previewer:}
-	\item ctrl+home/end should be mapped to home/end
-	\item  show pdf title in windows title bar
+	\item  show pdf title and full path in windows title bar
 	\item three grid next page modes: single page step, grid row, full grid (or allow arbitrary steps? renderer already supports them)
 	\item presentation mode could have a ">jump to page"< feature (for questions after a presentation); which is synchronized over all views (s.t. you can see different things on the computer screen vs. beamer, but still don't have to move the mouse cursors from beamer to screen to select page)
 	\item alternative: tool where left/right clicks goes to the next/prev page (i.e. a tool default in presentation mode, but usable in all views)
 	\item (Okular) presentation tools: mouse cursor as laser pointer, drawing on presentation (in tool menu at the top edge), page number display when switching
 	\item Options to jump from source to pdf with synctex (context menu?)
 	\item mark source bookmarks in pdf preview 
-	\item border around magnifier
+	\item mark contents (section pages) in presentation clock as lines
 	\item It should be possible to set a filename in the call command and a destination synctex-line
 	\item Shortcuts of pdf previewer should be customizable (managedMenu)
 	\item Toolbars should also be customizable
