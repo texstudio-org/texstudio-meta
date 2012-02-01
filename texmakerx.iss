@@ -1,7 +1,7 @@
 [Setup]
 ;Change this in every version
-AppVerName=TeXstudio 2.2
-AppVersion=2.2.0
+AppVerName=TeXstudio 2.3
+AppVersion=2.3.0
 
 OutputBaseFilename=texstudio22_win32
 
