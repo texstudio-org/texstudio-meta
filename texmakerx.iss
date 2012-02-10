@@ -30,6 +30,9 @@ Source: phonon4.dll; DestDir: {app}\
 Source: utilities\en_GB.*; DestDir: {app}\dictionaries
 Source: utilities\fr_FR.*; DestDir: {app}\dictionaries
 Source: utilities\de_DE.*; DestDir: {app}\dictionaries
+Source: utilities\de.*; DestDir: {app}\dictionaries
+Source: utilities\en.*; DestDir: {app}\dictionaries
+Source: utilities\fr.*; DestDir: {app}\dictionaries
 Source: utilities\th_en_US_v2.dat.*; DestDir: {app}\dictionaries
 Source: utilities\th_fr_FR_v2.dat.*; DestDir: {app}\dictionaries
 Source: utilities\th_de_DE_v2.dat.*; DestDir: {app}\dictionaries
