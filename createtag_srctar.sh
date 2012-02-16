@@ -18,6 +18,7 @@ SFUSER="";
 if [ -e /home/benito ]; then SFUSER="benibela"; else echo "Enter sourceforge user name:"; read SFUSER; fi
 if [ "x$SFUSER"  = "x" ]; then echo "no sf user"; exit; fi
 
+svn rm --keep-local  -m "remove possible broken tag" https://$SFUSER@texstudio.svn.sourceforge.net/svnroot/texstudio/tags/TeXstudio/$TMXVERSION
 
 svn copy -r $TMXREVISION  -m "TAGGED $TMXVERSION RELEASE" https://$SFUSER@texstudio.svn.sourceforge.net/svnroot/texstudio/trunk https://$SFUSER@texstudio.svn.sourceforge.net/svnroot/texstudio/tags/TeXstudio/$TMXVERSION
 
@@ -31,7 +32,8 @@ wget  http://texstudio.svn.sf.net/viewvc/texstudio/tags/TeXstudio/$TMXVERSION/?v
 #add svn_revision.cpp
 mkdir -p /tmp/tmxsrc2
 tar -xf /tmp/tmxsrc/tmx.tar.gz -C /tmp/tmxsrc2
-cp svn_revision.cpp /tmp/tmxsrc2/$TMXVERSION/
+#cp svn_revision.cpp /tmp/tmxsrc2/$TMXVERSION/  
+echo "const char* TEXSTUDIO_SVN_VERSION = \"$TMXREVISION\";" > /tmp/tmxsrc2/$TMXVERSION/svn_revision.cpp
 mv /tmp/tmxsrc2/$TMXVERSION/ /tmp/tmxsrc2/texstudio$TMXVERSION
 
 #create
