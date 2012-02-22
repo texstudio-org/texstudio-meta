@@ -125,8 +125,8 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 \subsubsection{others}
 \begin{itemize}
 	\item QCodeEdit: \begin{itemize}
+		\item whitespace format
 		\item Generate custom highlighting from the used custom completion cwl files. (important for syntax check, if you have a custom math environment you currently have to define it twice, once as custom highlighting(to syntax check multi line environments) and in the cwl (to check single line envs))
-		\item show diff between current file and changed file, if the file on the harddisk is changed
 		\item DIFF: jump to next mark, warn if file is saved while diff overlays exist
 		\item Deleting placeholders by pressing repeadetly backspace after one
 		\item if replace all is restarted from scope begin, show the count of replaced occurrences before the scope restart and afterwards.
@@ -135,7 +135,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 		\item Auto Closing of \verb+$+ (problem: how to detect if there follows a closing \verb+$+)
 	\end{itemize}
 	\item Latex Parser: \begin{itemize}
-		\item move everything in the \verb+Latexparser+ class
+		\item move everything in the \verb+Latexparser/reader+ class
 		\item NextWord with cookie state (to recognize multi line verbatim)?? Or read from qce?
 		\item Understand some TeX Things (e.g. \verb+^^5c^^5c+ equals \verb+\\+ if not in verbatim)
 	\end{itemize}
@@ -157,7 +157,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 	\end{itemize}
 	\item Labels/References: \begin{itemize}
 		\item allow to define custom commands
-		\item 	show all refs using a label and allow easy jumping to them (e.g selection window? or ctrl+click on ref jumps to label; ctrl+alt+f does it already, perhaps add a mouse event to action event mapper)
+		\item show all refs using a label and allow easy jumping to them (e.g selection window? or ctrl+click on ref jumps to label; ctrl+alt+f does it already, perhaps add a mouse event to action event mapper)
 		\item using a SoundEx suggestion list for wrong references/labels like in the spell checker
 		\item a reference/label check dialog like the old spell checking dialog
 	\end{itemize}
