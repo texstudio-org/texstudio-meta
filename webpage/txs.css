@@ -19,19 +19,22 @@ body {
 	color: #777;
 	/* height:2000px; */
 	}
-
+#container {
+	min-width: 41em;
+}
 #left {
 	width: 33%;
-	min-width: 13em;
+	min-width: 13em; /* max. width of TeXstudio logo*/
 	position: fixed;
 	background:#29003D; 
 }
 
 #right {
-	width: 67%;
+	width: 67%;	
 	background-color: #f7f7f7;
 	float: right;
 }
+
 
 .page {
 	margin: 10px;
@@ -72,6 +75,7 @@ p {
 	margin-bottom: 2em;
 	float: left;
 	width: 100%;
+	background:#29003D; 	
 }
 
 #logo-img {
@@ -98,7 +102,9 @@ p {
 
 
 #logo-text h1 a .logo_colour
-{ color: #999;}
+{ color: #999;
+  background:#29003D; 	
+}
 
 #logo-text h2
 { font-size: 100%;
