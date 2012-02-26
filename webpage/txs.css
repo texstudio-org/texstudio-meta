@@ -1,0 +1,146 @@
+/* ---------Single Page Website CSS by Kelly King ----------*/
+
+/* *{ margin: 0 auto;} */
+*{ margin: 0}
+
+
+html, body, #left, #right {
+	height: auto;
+}
+
+html, body, #left {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	font: normal .80em 'trebuchet ms', arial, sans-serif;
+	background: #F0EFE2;
+	color: #777;
+	/* height:2000px; */
+	}
+
+#left {
+	width: 33%;
+	min-width: 150px;
+	position: fixed;
+	background:#29003D; 
+}
+
+#right {
+	width: 67%;
+	background-color: #f7f7f7;
+	float: right;
+}
+
+.page {
+	margin: 10px;
+	/*margin-bottom: 300px;  */
+	max-width: 610px;
+	padding-top: 30px;
+	padding-right: 10px;
+	padding-bottom: 30px;
+	padding-left: 30px;
+	background:#FFF;
+}
+
+h1, h2, h3, h4, h5, h6  {
+	font: normal 175% 'century gothic', arial, sans-serif;
+	color: #43423F;
+	margin: 0 0 15px 0;
+	padding: 15px 0 5px 0;
+}
+ h1 {
+	font-size: 225%;
+	text-align: center;
+}	
+  
+p {
+	padding: 0 0 20px 0;
+	line-height: 1.7em;
+}
+
+
+/*** navigation ***/ 
+
+#logo-area {
+	height: 150px;
+}
+
+#logo-img {
+	float: left;
+}
+
+
+
+#logo h1, #logo h2
+{ font: normal 300% 'century gothic', arial, sans-serif;
+  border-bottom: 0;
+  text-transform: none;
+  margin: 0;
+}
+
+#logo-text h1, #logo-text h1 a, #logo-text h1 a:hover 
+{ padding: 22px 0 0 0;
+  color: #777;
+  letter-spacing: 0.1em;
+  text-decoration: none;}
+
+#logo-text h1 a .logo_colour
+{ color: #999;}
+
+#logo-text h2
+{ font-size: 100%;
+  padding: 4px 0 0 0;
+  color: #CDC090;
+  text-align: center}
+
+
+
+#navigation-bar {
+	float: right;
+	
+	border-style: solid;
+	border-right-style: none;
+	border-color: #5A008C;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	/*background: #292951;*/
+background: #222222; /* Old browsers */
+background: -moz-linear-gradient(-45deg,  #222222 0%, #3f43ef 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#222222), color-stop(100%,#3f43ef)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(-45deg,  #222222 0%,#3f43ef 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(-45deg,  #222222 0%,#3f43ef 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(-45deg,  #222222 0%,#3f43ef 100%); /* IE10+ */
+background: linear-gradient(-45deg,  #222222 0%,#3f43ef 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222222', endColorstr='#3f43ef',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+
+}
+
+ul#navigation {
+	font-family: 'century gothic', Arial, sans-serif;
+	horizontal-align: right;
+	list-style: none;
+	padding-right: 1em;
+} 
+	
+ul#navigation li a {
+	font-size: 200%;
+	line-height: 46px;
+	text-shadow: 1px 1px #1e1e1e;
+	color: #f7f7f7;
+}
+
+ul#navigation li a:hover {
+	color: #FFE601;
+	text-decoration: none;
+}
+
+ul#navigation li a.active {
+	color: #db7030;
+}
+
+a { color:#7A0BB7; text-decoration:none;}
+a:visited{ color: #7A0BB7;}
+a:hover { text-decoration:underline;}
