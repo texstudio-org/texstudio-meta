@@ -22,7 +22,7 @@ body {
 
 #left {
 	width: 33%;
-	min-width: 150px;
+	min-width: 13em;
 	position: fixed;
 	background:#29003D; 
 }
@@ -63,8 +63,15 @@ p {
 
 /*** navigation ***/ 
 
+.logo {
+  padding-left: 7px;
+}
+
 #logo-area {
 	height: 150px;
+	margin-bottom: 2em;
+	float: left;
+	width: 100%;
 }
 
 #logo-img {
@@ -78,6 +85,9 @@ p {
   border-bottom: 0;
   text-transform: none;
   margin: 0;
+
+}
+#logo-text{
 }
 
 #logo-text h1, #logo-text h1 a, #logo-text h1 a:hover 
@@ -85,6 +95,7 @@ p {
   color: #777;
   letter-spacing: 0.1em;
   text-decoration: none;}
+
 
 #logo-text h1 a .logo_colour
 { color: #999;}
@@ -95,7 +106,12 @@ p {
   color: #CDC090;
   text-align: center}
 
-
+#navigation-prebar{
+	background:#29003D; 
+	width: 100%;
+	float: right;
+	z-index: 5;
+}
 
 #navigation-bar {
 	float: right;
