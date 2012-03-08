@@ -1,167 +1,312 @@
 <!DOCTYPE html>
-<html><head>
+<html>
+<head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	<meta charset="UTF-8">
-	
+<meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="txs.css">
-
+<title>TeXstudio</title>
 </head>
 <body>
 	
 <div id="container">
-<div id="left">
-	<div id="logo-area">
-		<div id="logo-img">
-			<img class="logo" src="./images/texstudio128x128.png" />
+	<div id="leftbar">
+		<div id="logo-area">
+			<div id="logo-img">
+				<img class="logo" src="./images/texstudio128x128.png" alt="TeXstudio Logo" />
+			</div>
+			<div id="logo-text">
+				<!-- class="logo_colour", allows you to change the colour of the text -->
+				<h1>TeX<span class="logo_colour">studio</span></h1>
+				<h2>LaTeX made comfortable</h2>
+			</div>
 		</div>
-		<div id="logo-text">
-			<!-- class="logo_colour", allows you to change the colour of the text -->
-			<h1><a href="index.html">TeX<span class="logo_colour">studio</span></a></h1>
-			<h2>Free cross-platform LaTeX editor</h2>
-		</div>
+		<div id="navigation-prebar">
+			<div id="navigation-bar">
+				<ul id="navigation">
+					<li><a href="#home">Home</a></li>
+					<li><a href="#news">News</a></li>
+					<li><a href="#features">Features</a></li>
+					<li><a href="#download">Download</a></li>
+					<li><a href="#participate">Participate</a></li>
+					<li><a href="#about">About</a></li>
+				</ul>
+			</div>
+		</div>		
 	</div>
-	<div id="navigation-prebar">
-		<div id="navigation-bar">
-			<ul id="navigation">
-				<li><a href="#home">Home</a></li>
-				<li><a href="#features">Features</a></li>
-				<li><a href="#downloads">Downloads</a></li>
-				<li><a href="#participate">Participate</a></li>
-				<li><a href="#contact">Contact Us</a></li>
-			</ul>
-		</div>
-	</div>		
-</div>
 
 
 <div id="right">
 	<div id="home" class="page">
 		<h1>Welcome to TeXstudio</h1>
-		 <p>TeXstudio is an integrated environment for writing LaTeX documents. Our goal is to make writing LaTeX as easy and comfortable as possible. Therefore TeXstudio has numerous features like syntax-highlighting, integrated viewer, reference checking and various assistants. For more details see the <a href="#features">features</a>.</p>
-
-		<p>TeXstudio has been forked from TeXmaker in 20xx, because of the non-open development process of TeXmaker and due to different philosophies concerning configurability and features. Originally it was called TeXmakerX because it started of as a small set of extensions to TeXmaker with the hope that they would get integrated to TeXmaker some day. At that time, TeXmakerX tried to keep the look and feel of TeXmaker. While at some points you can still see that TeXstudio originates from TeXmaker, significant changes in features and the code base have made it to a fully independent program.</p>
-		
-		<p>TeXstudio runs on Windows, Unix/Linux, BSD and MacOSX. It is licensed under the GPL v2. Beeing open soucre, you are free to use and to modify it as you like.</p>
-		<p>This is what you see on the About page.</p>
+		<img class="img-right" src="./images/title.png" alt="screenshot" />
+		<p>TeXstudio is an integrated environment for writing LaTeX documents. Our goal is to make writing LaTeX as easy and comfortable as possible. Therefore TeXstudio has numerous features like syntax-highlighting, integrated viewer, reference checking and various assistants. For more details see the <a href="#features">features</a>.</p>
+		<p>TeXstudio is open source and is available for all major operating systems.
 	</div> <!--end home-->
+
+
+	
+	<div id="news" class="page">
+		<h1>News</h1>
+		<div id="recent-news">
+			<table class="news">
+			<tr><td class="newsdate">2012-02-06</td>
+			<td  class="newscontent">The new release <strong>TeXstudio 2.3</strong> is available</td></tr>
+			<tr><td class="newsdate">2011-07-20</td>
+			<td  class="newscontent">The new release <strong>TeXstudio 2.2</strong> is available</td></tr>
+			<tr><td class="newsdate">2011-06-15</td>
+			<td  class="newscontent">TexMakerX is now called <strong>TeXstudio</strong></td></tr>
+			</table>
+		</div>
+		<div id="hiding-box">
+		<div class="more">more...</div>
+		<div class="hiddentext">
+			<table class="news">
+			<tr><td class="newsdate">2011-03-19</td>
+			<td  class="newscontent">The new release <strong>TexMakerX 2.1</strong> is available<br>
+				which adds again new features and fixes some bugs.</td></tr>
+			<tr><td class="newsdate">2010-11-29</td>
+			<td  class="newscontent">The new release <strong>TexMakerX 2.0</strong> is available<br>
+				which adds new features and fixes some bugs</td></tr>
+			<tr><td class="newsdate">2010-07-20</td>
+			<td  class="newscontent">The new release <strong>TexMakerX 1.9.9a</strong> is available<br>
+				which adds new features and fixes some bugs</td></tr>
+			<tr><td class="newsdate">2010-05-06</td>
+			<td  class="newscontent">The new release <strong>TexMakerX 1.9.9</strong> is available<br>
+				which adds new features and fixes some bugs</td></tr>
+			<tr><td class="newsdate">2009-11-25</td>
+			<td  class="newscontent">The new release <strong>TexMakerX 1.9.3</strong> is available<br>
+				and fixes several bugs<br>
+				Also the old releases have been downloaded ten thousand times so far.</td></tr>
+			<tr><td class="newsdate">2009-10-26</td>
+			<td  class="newscontent">The new release <strong>TexMakerX 1.9.</strong> is available<br>
+				which adds several new features and fixes some bugs</td></tr>
+			<tr><td class="newsdate">2009-05-06</td>
+			<td  class="newscontent">The second release <strong>TexMakerX 1.8.1</strong> is available<br>
+				which fixes several bugs and add some new features</td></tr>
+			<tr><td class="newsdate">2009-04-03</td>
+			<td  class="newscontent"><strong>TexMakerX 1.8</strong> has now been <br>
+				downloaded one thousand times.</td></tr>
+			<tr><td class="newsdate">2009-02-22</td>
+			<td  class="newscontent">The first release <strong>TexMakerX 1.8</strong> is finished.</td></tr>
+			</table>
+		</div>
+		</div>
+	</div> <!--end news-->
+		
+		
 	
 	<div id="features" class="page">
 		<h1>Features</h1>
 		<h3>IWE - Integrated Writing Environment</h3>
-<ul>
-  <li><strong>All LaTeX tools</strong> can be called from TeXstudio with just one key press and you can add your own command line options (e.g. for forward/inverse search)</li>
-  <li><strong>LaTeX tags and 1102 mathematical symbols</strong> you can easily select and add to your text</li>
-  <li><strong>Wizards</strong> generating necessary code (e.g. documents, tabular/array-environments and BibTex-types)</li>
+		<ul>
+		  <li><strong>All LaTeX tools</strong> can be called from TeXstudio with just one key press and you can add your own command line options (e.g. for forward/inverse search)</li>
+		  <li><strong>LaTeX tags and 1102 mathematical symbols</strong> you can easily select and add to your text</li>
+		  <li><strong>Wizards</strong> generating necessary code (e.g. documents, tabular/array-environments and BibTex-types)</li>
 
-  <li><strong>LaTeX errors</strong> are displayed in a Log panel and highlight within the tex file </li>
-  <li><strong>BibTeX</strong> will be automatically called if the bib 	files are modified</li>
-  <li><strong>LaTeX documentation</strong> where you can lookup the tags you don't know</li>
-  <li><strong>Customizable</strong> menus, toolbars and environments </li>
+		  <li><strong>LaTeX errors</strong> are displayed in a Log panel and highlighted within the tex file </li>
+		  <li><strong>BibTeX</strong> will be automatically called if the bib 	files are modified</li>
+		  <li><strong>LaTeX documentation</strong> where you can lookup the tags you don't know</li>
+		  <li><strong>Customizable</strong> menus, toolbars and environments </li>
 
-  <li><strong>Scripting</strong> to control TeXstudio with user-written scripts </li>
-  <li><strong>DDE-Support</strong> to interact with other programs on Windows</li>
-  <li>And also customizable code snippets, tabbed MDI view,  ... </li>
-</ul>
-<h3>Powerful Text Editor <a href="http://qcodeedit.edyuk.org" style="font-size:50%; font-weight:normal">based on QCodeEdit</a></h3>
+		  <li><strong>Scripting</strong> to control TeXstudio with user-written scripts </li>
+		  <li><strong>DDE-Support</strong> to interact with other programs on Windows</li>
+		  <li>And also customizable code snippets, tabbed MDI view,  ... </li>
+		</ul>
+		<h3>Powerful Text Editor <a href="http://qcodeedit.edyuk.org" style="font-size:50%; font-weight:normal">based on QCodeEdit</a></h3>
 
-<ul>
-  <li><strong>Interactive spell checker</strong> which marks spelling mistakes while you type them</li>
-  <li><strong>Interactive reference checker</strong> which marks wrong reference/label combinations and wrong citations</li>
-  <li><strong>Interactive syntax checker</strong> which marks wrong spelled LaTeX commands</li>
-  <li><strong>Syntax highlighting</strong> drawing LaTex commands in different, customizable formats</li>
+		<ul>
+		  <li><strong>Interactive spell checker</strong> which marks spelling mistakes while you type them</li>
+		  <li><strong>Interactive reference checker</strong> which marks wrong reference/label combinations and wrong citations</li>
+		  <li><strong>Interactive syntax checker</strong> which marks wrong spelled LaTeX commands</li>
+		  <li><strong>Syntax highlighting</strong> drawing LaTeX commands in different, customizable formats</li>
 
-  <li><strong>Code folding</strong> which allows you to hide certain blocks</li>
-  <li><strong>Auto completion</strong> completes tags you wrote and shows corresponding help entries, uses the taglists from kile</li>
-  <li><strong>Unicode support</strong> which can handle files in all encodings</li>
-  <li><strong>Incremental search</strong> and replace on a search panel at the bottom of the text panel</li>
+		  <li><strong>Code folding</strong> which allows you to hide certain blocks</li>
+		  <li><strong>Auto completion</strong> completes tags you wrote and shows corresponding help entries, uses the taglists from kile</li>
+		  <li><strong>Unicode support</strong> which can handle files in all encodings</li>
+		  <li><strong>Incremental search</strong> and replace on a search panel at the bottom of the text panel</li>
 
-  <li><strong>Text Navigation</strong> jumps to bookmarks, certain lines, last changes and LaTeX errors/warnings</li>
-  <li><strong>Key Remapping</strong> of single keys for automatically text insertion (e.g of nice quotation marks)</li>
-  <li>And also line numbers, repetition checker, dynamic word wrapping, parenthesis highlighting, parenthesis completion, unicode table, undo/redo, line change state, table editor...</li>
-</ul>
-<h3>Utilities</h3><ul>
-  <li><strong>Structure View</strong> which shows the logical hierarchy of a file and is interactively updated</li>
+		  <li><strong>Text Navigation</strong> jumps to bookmarks, certain lines, last changes and LaTeX errors/warnings</li>
+		  <li><strong>Key Remapping</strong> of single keys for automatically text insertion (e.g of nice quotation marks)</li>
+		  <li>And also line numbers, repetition checker, dynamic word wrapping, parenthesis highlighting, parenthesis completion, unicode table, undo/redo, line change state, table editor...</li>
+		</ul>
+		<h3>Utilities</h3><ul>
+		  <li><strong>Structure View</strong> which shows the logical hierarchy of a file and is interactively updated</li>
 
-  <li><strong>PDF Preview</strong> which shows the compiled pdf file and supports synctex </li>
-  <li><strong>Math Preview</strong> which shows the latex output of a single expression within the text</li>
-  <li><strong>Find in files</strong> dialog let you search in currently opened files</li>
-  <li><strong>Thesaurus</strong> which shows possible synonyms for a certain word</li>
+		  <li><strong>PDF Preview</strong> which shows the compiled pdf file and supports synctex </li>
+		  <li><strong>Math Preview</strong> which shows the latex output of a single expression within the text</li>
+		  <li><strong>Find in files</strong> dialog let you search in currently opened files</li>
+		  <li><strong>Thesaurus</strong> which shows possible synonyms for a certain word</li>
 
-  <li><strong>HTML Converter</strong> which creates a html out of your LaTeX-based PS-file</li>
-  <li><strong>Text analysis</strong> counting and showing often used words or phrases</li>
-  <li><strong>Random Text</strong> generator which automatically creates a text similar to the one you wrote</li>
-  <li><strong>SVN</strong> support to synchronize local changes with the repository</li>
+		  <li><strong>HTML Converter</strong> which creates a html out of your LaTeX-based PS-file</li>
+		  <li><strong>Text analysis</strong> counting and showing often used words or phrases</li>
+		  <li><strong>Random Text</strong> generator which automatically creates a text similar to the one you wrote</li>
+		  <li><strong>SVN</strong> support to synchronize local changes with the repository</li>
 
-</ul>
-<h3>Installation</h3>
-<ul>
-  <li><strong>Platform independence</strong> allows you to use it on Windows, Linux, BSD and Mac</li>
-  <li><strong>Automatical detection</strong> of MikTeX, Ghostscript and Standardlatex</li>
-  <li><strong>USB-Mode</strong> stores its settings in a texmakerx.ini (only if you create one!), so you can use the same configuration on different computers</li>
+		</ul>
+		<h3>Installation</h3>
+		<ul>
+		  <li><strong>Platform independence</strong> allows you to use it on Windows, Linux, BSD and Mac</li>
+		  <li><strong>Automatical detection</strong> of MikTeX, Ghostscript and Standardlatex</li>
+		  <li><strong>USB-Mode</strong> stores its settings in a texmakerx.ini (only if you create one!), so you can use the same configuration on different computers</li>
 
-  <li><strong>Translated</strong> in English, German, French and more languages</li>
-</ul>
+		  <li><strong>Translated</strong> in English, German, French and more languages</li>
+		</ul>
 
-<p>
-You can find more details in the <a href="http://texstudio.svn.sourceforge.net/viewvc/texstudio/trunk/utilities/usermanual_en.html">user manual</a> or in the <a href="http://texstudio.svn.sourceforge.net/viewvc/texstudio/trunk/?view=log">SVN Changelog</a>.<br><br>
+		<p>
+		You can find more details in the <a href="http://texstudio.svn.sourceforge.net/viewvc/texstudio/trunk/utilities/usermanual_en.html">user manual</a> or in the <a href="http://texstudio.svn.sourceforge.net/viewvc/texstudio/trunk/?view=log">SVN Changelog</a>.<br><br>
 
-Planned features are listed in the tex-based <a href="http://texstudio.svn.sourceforge.net/viewvc/texstudio/trunk/utilities/notInBinary/development.tex?content-type=text%2Fplain">road map</a>.
+		Planned features are listed in the tex-based <a href="http://texstudio.svn.sourceforge.net/viewvc/texstudio/trunk/utilities/notInBinary/development.tex?content-type=text%2Fplain">road map</a>.
 
+		<!--Improved recognizing of tool paths, checking of correct tool settings,  custom build actions: planned-->
+		<!--<li>Better Integrated LaTeX help: waiting for help (this means someone who want to write it)</li>-->
 
-<!--Improved recognizing of tool paths, checking of correct tool settings,  custom build actions: planned-->
-<!--<li>Better Integrated LaTeX help: waiting for help (this means someone who want to write it)</li>-->
-
-Feel free to submit an idea to our <a href="http://sourceforge.net/apps/ideatorrent/texstudio/ideatorrent/">idea torrent</a> if you have any wishes (You can find older or anonymously submitted ideas in the <a href="http://sourceforge.net/tracker/?group_id=250595&atid=1126427">feature request tracker</a>).
-
-There is also a <a href="http://sourceforge.net/apps/mediawiki/texstudio/index.php">wiki</a> where you can write about the things you consider important in TeXstudio. You can also find scripts and installation hints there.
-
-		<p>This is what you would see on the Portfolio page.</p>
+		Feel free to <a href="#participate">share your ideas</a> on possible improvement of TeXstudio.
 	</div> <!--end features-->
 
-	<div id="downloads" class="page">
-		<h1>Downloads</h1>
-		<p>To come...</p>
-	</div> <!--END page3-->
+	
+	
+	<div id="download" class="page">
+		<h1>Download</h1>
+		<table class="downloadTable">
+			<tr class="platformDownload"><td colspan=7>Windows</td></tr>
+			<tr><th>Platform</th><th>Version</th><th> Type</th><th>Size</th><th>QT</th><th>Poppler</th><th>How to install</th></tr>
+			<tr><td>XP/Vista/7</td>
+			  <td>2.3</td>
+			  <td><a href="http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%202.3/texstudio23_win32.exe/download">Installer</a></td>
+			  <td>16.5 MiB</td>
+			  <td>contains 4.7</td>
+			  <td>contains 0.13.2</td>
+			  <td><a href="http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%202.3/texstudio23_win32.exe/download">download</a> and double click on the installer exe</td>
+			</tr>
+			<tr><td>XP/Vista/7</td>
+			  <td>2.3</td>
+			  <td><a href="http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%202.3/texstudio23_win32-usb.zip/download">USB (.zip)</a></td>
 
+			  <td>25.5 MiB</td>
+			  <td>contains 4.7</td>
+			  <td>contains 0.13.2</td>
+			  <td><a href="http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%202.3/texstudio23_win32-usb.zip/download">download</a> and unzip the zip</td>
+			</tr>
+
+			<tr class="platformDownload"><td colspan=7>Linux</td></tr>
+			<tr><th>Platform</th><th>Version</th><th> Type</th><th>Size</th><th>QT</th><th>Poppler</th><th>How to install</th></tr>
+			<tr><td>Debian wheezy</td>
+			  <td>2.3</td>
+			  <td><a href="http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%202.3/texstudio_2.3-1_amd64.deb/download">.amd64 Package</a></td>
+			  <td>12.6 MiB</td>
+
+			  <td>needs 4.7.4</td>
+			  <td>needs 0.12.4</td>
+			  <td><a href="http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%202.3/texstudio_2.3-1_amd64.deb/download">download</a> and open it with your package manager</td>
+			</tr>
+
+			<tr><td>Fedora 13</td>
+			<td>2.3</td>
+			<td>Repository package</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>Install it with the Yellowdog Updater: su -c 'yum install texmakerx'</td>
+			</tr>
+
+			<tr><td>other (e.g. Suse, Ubuntu)</td>
+			  <td>2.3</td>
+			  <td colspan=3><a href="http://download.opensuse.org/repositories/home:/BeniBela:/texstudio/">Open Build Service</a></td>	
+			  <td></td>
+			  <td>Choose the directories corresponding to your linux version and processor type, and download the .rpm or .deb file
+			</td></tr>
+
+			<tr class="platformDownload"><td colspan=7>MacOSX</td></tr>
+			<tr><th>Platform</th><th>Version</th><th> Type</th><th>Size</th><th>QT</th><th>Poppler</th><th>How to install</th></tr>
+			<tr><td>10.5(/6)</td>
+			  <td>post 2.2, r2329</td>
+			  <td><a href="http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%20SVN/texstudio_mac_rev2329.zip/download">zip</a></td>	
+			  <td>31.1 MiB</td>
+			  <td>?</td>
+			  <td>?</td>
+			  <td><a href="http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%20SVN/texstudio_mac_rev2329.zip/download">download</a>, extract and start it.  </td>
+			</tr>
+
+			<tr><td>10.5(/6)</td>
+			  <td>post 2.2</td>
+			  <td><a href="http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%202.2/texstudio.dmg/download">DMG</a></td>	
+			  <td>35.4 MiB</td>
+			  <td>?</td>
+			  <td>?</td>
+			  <td><a href="http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%202.2/texstudio.dmg/download">download</a> and start it.  </td>
+			</tr>
+
+			<tr><td>10.5 x86+ppc</td>
+			  <td>old 2.1</td>
+			  <td><a href="http://sourceforge.net/projects/texstudio/files/texmakerx/TexMakerX%202.1/texmakerx21_macosx105.zip/download">Zip File</a></td>	
+			  <td>30.3 MiB</td>
+			  <td>?</td>
+			  <td>?</td>
+			  <td><a href="http://sourceforge.net/projects/texstudio/files/texmakerx/TexMakerX%202.1/texmakerx21_macosx105.zip/download">download</a>, extract and start it.</td>
+			</tr>
+
+			<tr class="platformDownload"><td colspan=7>FreeBSD</td></tr>
+			<tr><th>Platform</th><th>Version</th><th> Type</th><th>Size</th><th>QT</th><th>Poppler</th><th>How to install</th></tr>
+			<tr><td></td><td>old 2.1</td><td><a href="http://www.freshports.org/editors/texmakerx/">FreshPorts.org</a></td><td></td><td>4.4?</td><td>-</td><td>cd /usr/ports/editors/texmakerx/ && make install clean</td></tr>
+
+			<tr class="platformDownload"><td colspan=7>Source code</td></tr>
+			<tr><th></th><th>Version</th><th> Type</th><th>Size</th><th>QT</th><th>Poppler</th><th>How to install</th></tr>
+			<tr><td></td><td>latest</td><td><a href="http://texstudio.svn.sourceforge.net/svnroot/texstudio/trunk/">SVN source</a><td></td><td>needs 4.3 (tested 4.7)</td><td>-</td><td>see the <a href="http://sourceforge.net/apps/mediawiki/texstudio/index.php?title=CompileTXS">wiki</a></td></tr>
+			<tr><td></td><td>2.3</td><td><a href="http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%202.3/texstudio-2.3.tar.gz/download">source tarball</a></td><td>12.5 MiB</td><td>needs 4.3 (tested 4.7)</td><td>-</td><td>see the <a href="http://sourceforge.net/apps/mediawiki/texstudio/index.php?title=CompileTXS">wiki</a></td></tr>
+
+		</table>
+
+		<h3>Snapshots</h3>
+		<p>In this <a href="https://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%20SVN/">directory</a> you can find binary snapshots which contain most recent changes and features (but are still older than the SVN).  
+		</p>
+	</div> <!--end download-->
+
+	
+	
+	
 	<div id="participate" class="page">
 		<h1>Participate</h1>
-		<p>As TeXstudio is open source it strongly benefits from an active community.</p>
+		<p>As an open source project TeXstudio strongly benefits from an active community.</p>
 		<h2>Use and spread the word</h2>
 		<p>The easiest way to help on the development with TeXstudio is to use it! Furthermore, if you like TeXstudio, tell all your friends and colleagues about it.</p>
 		
 		<h2>Give Feedback</h2>
-		<p>User feedback is highly welcome. Depending on the type of feedback you may use different channels to communicate.
+		<p>User feedback is highly welcome. Depending on the type of feedback you may use different channels to communicate.</p>
 		<ul>
-		<li>Feature requests can be placed in the <a href="">feature request tracker</a> or the <a href="">idea torrent</a>.</li>
-		<li>Bug reports: Please post bug reports in the <a href="">bug tracker</a>.</li>
-		<li>For general discussion and remarks use the texstudio mailinglist</li>
+		<li>Feature requests can be placed in the <a href="http://sourceforge.net/tracker/?group_id=250595&amp;atid=1126427">feature request tracker</a> or the <a href="https://sourceforge.net/apps/ideatorrent/benibela.u/ideatorrent/">idea torrent</a>.</li>
+		<li>Bug reports: Please post bug reports in the <a href="http://sourceforge.net/tracker/?group_id=250595&amp;atid=1126426">bug tracker</a>.</li>
+		<li>For general discussion and remarks use the texstudio <a href="http://sourceforge.net/forum/forum.php?forum_id=907839">forum</a> or mailinglist</li>
 		</ul>
-		</p>
+		
 
 		<h2>Contribute</h2>
-		<p>You do not neccesarily have to be a programmer to help and make TeXstudio even better. There are many ways to contribute.
+		<p>You do not neccesarily have to be a programmer to help and make TeXstudio even better. There are many ways to contribute.<p>
 		<ul>
 		<li>Translate TeXstudio into a new language or update an existing translation</li>
 		<li>Design icons</li>
-		<li>Update or extend the help file</li>
+		<li>Update or extend the help file or the <a href="http://sourceforge.net/apps/mediawiki/texstudio/index.php">wiki</a></li>
 		<li>Package TeXstudio for your favorite distribution or platform</li>
 		<li>TeXstudio is written in C++/Qt. Programmers are welcome to implement new freatures or fix bugs.</li>
 		</ul>
-		It is a good idea to announce your plans on the texstudio mailing list. So everybody knows what's going on around TeXstudio and there is no duplicate work.
-		</p>
+		<p>It is a good idea to announce your plans on the texstudio mailing list. So everybody knows what's going on around TeXstudio and there is no duplicate work.</p>
 	</div> <!--end participate-->
 
-	<div id="contact" class="page">
-		<h1>Contact</h1>
-		<p>If you encounter a bug, please fill in a bug report. Or if you want a certain feature, you can write a feature request.<br/>
-		You can also discuss something in the TeXstudio forum.</p>
+	
+	
+	<div id="about" class="page">
+		<h1>About</h1>
 
-		<p>(Maintaining) Author of TeXstudio:<br/>
-		Benito van der Zander/<br>
-		benito_NOSPAM_benibela.de (replace _NOSPAM_ with @)<br/>
-		www.benibela.de</p>
-		<p>More TeXstudio authors: Jan Sundermeyer, Daniel Braun, Tim Hoffmann</p>
-	</div> <!--end participate-->
+		<p>TeXstudio has been forked from <a href="http://www.xm1math.net/texmaker/">TeXmaker</a> in 2009, because of the non-open development process of TeXmaker and due to different philosophies concerning configurability and features. Originally it was called TeXmakerX because it started of as a small set of extensions to TeXmaker with the hope that they would get integrated to TeXmaker some day. While at some points you can still see that TeXstudio originates from TeXmaker, significant changes in features and the code base have made it to a fully independent program.</p>
+		
+		<p>TeXstudio runs on Windows, Unix/Linux, BSD and MacOSX. It is licensed under the GPL v2. Beeing open source, you are free to use and to modify it as you like.</p>
+
+		<h3>Maintaining author:</h3>
+		<p>Benito van der Zander (&#98;&#x65;n&#105;&#x74;o &#64; &#x62;e&#110;&#x69;b&#101;&#x6c;a&#46;&#x64;e)</p>
+		<h3>Further TeXstudio authors:</h3>
+		<p>Jan Sundermeyer, Daniel Braun, Tim Hoffmann</p>
+		<h3>Thanks to</h3>
+		<p>Frederic Devernay, Denis Bitouzé, Jean-Côme Charpentier, Luis Silvestre, Enrico Vittorini, Aleksandr Zolotarev, David Sichau, Grigory Mozhaev, mattgk, A. Weder, Pavel Fric, András Somogyi, István Blahota, Edson Henriques, Grant McLean, Tom Jampen, Kostas Oikinimou, Lion Guillaume</p>
+	</div> <!--end about-->
 
 </div> <!--end rightb-->
 </div>

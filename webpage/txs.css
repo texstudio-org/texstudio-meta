@@ -1,8 +1,6 @@
-/* ---------Single Page Website CSS by Kelly King ----------*/
+/* --------- CSS for texstudio website ----------*/
 
-/* *{ margin: 0 auto;} */
 *{ margin: 0}
-
 
 html, body, #left, #right {
 	height: auto;
@@ -15,118 +13,153 @@ html, body, #left {
 
 body {
 	font: normal .80em 'trebuchet ms', arial, sans-serif;
-	background: #F0EFE2;
+	background: #f0f0f7;
 	color: #777;
-	/* height:2000px; */
-	}
+}
+
 #container {
 	min-width: 41em;
+	max-width: 70em;
+	margin-left: auto;
+	margin-right: auto;
 }
-#left {
-	width: 33%;
-	min-width: 13em; /* max. width of TeXstudio logo*/
+
+#leftbar {
+	background:#29003D;
+	width: 13em;
+	height: 100%;
 	position: fixed;
-	background:#29003D; 
 }
 
 #right {
-	width: 67%;	
-	background-color: #f7f7f7;
-	float: right;
+	float: left;
+	margin-left: 13em;
 }
-
 
 .page {
 	margin: 10px;
-	/*margin-bottom: 300px;  */
 	max-width: 610px;
 	padding-top: 30px;
-	padding-right: 10px;
+	padding-right: 30px;
 	padding-bottom: 30px;
 	padding-left: 30px;
 	background:#FFF;
+	box-shadow:5px 10px 5px;
 }
 
 h1, h2, h3, h4, h5, h6  {
-	font: normal 175% 'century gothic', arial, sans-serif;
+	font: normal 150% 'century gothic', arial, sans-serif;
 	color: #43423F;
 	margin: 0 0 15px 0;
 	padding: 15px 0 5px 0;
 }
- h1 {
+
+h1 {
 	font-size: 225%;
 	text-align: center;
 }	
   
-p {
-	padding: 0 0 20px 0;
+p, ul {
 	line-height: 1.7em;
+	padding-bottom: 20px;
+}
+
+.img-right {
+	float: right;
+	margin-left: 2em;
+	margin-bottom: 1em;
+	box-shadow: 0px 10px 5px -5px;
+	}
+
+.more {
+	text-align: center;
+	color: #7A0BB7;
+}
+
+.news td {
+	vertical-align: top;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.newsdate {
+	color: #000;
+	padding: 2px 10px 2px 0px;
+}
+
+#hiding-box .more {display: block}
+#hiding-box:hover .more {display: none}
+#hiding-box .hiddentext {display: none}
+#hiding-box:hover .hiddentext {display: block}
+
+
+.platformDownload  td {
+	font: normal 150% 'century gothic', arial, sans-serif;
+	color: #43423F;
+	margin: 0 0 15px 0;
+	padding: 15px 0 5px 0;
+}
+
+.downloadTable th{
+	font-size: 110%;
+	padding-right: 10px;
+	text-align: left;
 }
 
 
 /*** navigation ***/ 
 
 .logo {
-  padding-left: 7px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #logo-area {
-	height: 150px;
-	margin-bottom: 2em;
-	float: left;
+	margin-bottom: 3em;
 	width: 100%;
-	background:#29003D; 	
 }
 
 #logo-img {
-	float: left;
-}
-
-
-
-#logo h1, #logo h2
-{ font: normal 300% 'century gothic', arial, sans-serif;
-  border-bottom: 0;
-  text-transform: none;
-  margin: 0;
-
-}
-#logo-text{
-}
-
-#logo-text h1, #logo-text h1 a, #logo-text h1 a:hover 
-{ padding: 22px 0 0 0;
-  color: #777;
-  letter-spacing: 0.1em;
-  text-decoration: none;}
-
-
-#logo-text h1 a .logo_colour
-{ color: #999;
-  background:#29003D; 	
-}
-
-#logo-text h2
-{ font-size: 100%;
-  padding: 4px 0 0 0;
-  color: #CDC090;
-  text-align: center}
-
-#navigation-prebar{
-	background:#29003D; 
 	width: 100%;
-	float: right;
-	z-index: 5;
+}
+
+#logo-img img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#logo-text h1{
+	font: normal 225% 'century gothic', arial, sans-serif;
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+	color: #777;
+	letter-spacing: 0.1em;
+	text-decoration: none;
+	text-align: center;
+}
+
+#logo-text h1 .logo_colour {
+	color: #999;
+}
+
+#logo-text h2 {
+	font: normal 100% 'century gothic', arial, sans-serif;
+	font-size: 100%;
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+	/*color: #FFE601;*/
+	/*color: #CDC090;*/
+	color: #efe991;
+	text-align: center;
 }
 
 #navigation-bar {
-	float: right;
 	
 	border-style: solid;
 	border-right-style: none;
+	border-left-style: none;
 	border-color: #5A008C;
-	border-top-left-radius: 10px;
-	border-bottom-left-radius: 10px;
 	/*background: #292951;*/
 background: #222222; /* Old browsers */
 background: -moz-linear-gradient(-45deg,  #222222 0%, #3f43ef 100%); /* FF3.6+ */
@@ -136,27 +169,29 @@ background: -o-linear-gradient(-45deg,  #222222 0%,#3f43ef 100%); /* Opera 11.10
 background: -ms-linear-gradient(-45deg,  #222222 0%,#3f43ef 100%); /* IE10+ */
 background: linear-gradient(-45deg,  #222222 0%,#3f43ef 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222222', endColorstr='#3f43ef',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
-
 }
 
 ul#navigation {
 	font-family: 'century gothic', Arial, sans-serif;
-	horizontal-align: right;
 	list-style: none;
-	padding-right: 1em;
+	margin-left: 1em;
+	padding-left: 0;
+	padding-right: 0em;
 } 
 	
 ul#navigation li a {
-	font-size: 200%;
-	line-height: 46px;
-	text-shadow: 1px 1px #1e1e1e;
-	color: #f7f7f7;
+	font-size: 150%;
+	line-height: 40px;
+	/*text-shadow: 1px 1px #1e1e1e;*/
+	/*color: #fff699;*/
+	color: #f1d8ff; 
 }
 
 ul#navigation li a:hover {
 	color: #FFE601;
 	text-decoration: none;
+	background: none;
+	box-shadow: none;
 }
 
 ul#navigation li a.active {
@@ -165,4 +200,8 @@ ul#navigation li a.active {
 
 a { color:#7A0BB7; text-decoration:none;}
 a:visited{ color: #7A0BB7;}
-a:hover { text-decoration:underline;}
+a:hover {
+	text-decoration:none;
+	background: #FFE601;
+	box-shadow: 0px 0px 0.5em 0.4em #FFF inset;
+}
