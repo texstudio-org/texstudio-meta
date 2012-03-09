@@ -5,6 +5,14 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="txs.css">
 <title>TeXstudio</title>
+<!-- gradient support for IE9. See http://www.colorzilla.com/gradient-editor/ -->
+<!--[if gte IE 9]>
+  <style type="text/css">
+    .gradient {
+       filter: none;
+    }
+  </style>
+<![endif]-->
 </head>
 <body>
 	
@@ -21,7 +29,7 @@
 			</div>
 		</div>
 		<div id="navigation-prebar">
-			<div id="navigation-bar">
+			<div id="navigation-bar" class="gradient"> <!-- class="gradient" for IE9 support. See http://www.colorzilla.com/gradient-editor/ -->
 				<ul id="navigation">
 					<li><a href="#home">Home</a></li>
 					<li><a href="#news">News</a></li>
@@ -160,7 +168,7 @@
 		<!--Improved recognizing of tool paths, checking of correct tool settings,  custom build actions: planned-->
 		<!--<li>Better Integrated LaTeX help: waiting for help (this means someone who want to write it)</li>-->
 
-		Feel free to <a href="#participate">share your ideas</a> on possible improvement of TeXstudio.
+		Feel free to <a href="#participate">share your ideas</a> on possible future improvements of TeXstudio.
 	</div> <!--end features-->
 
 	

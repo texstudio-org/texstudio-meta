@@ -68,6 +68,8 @@ p, ul {
 	float: right;
 	margin-left: 2em;
 	margin-bottom: 1em;
+	-moz-box-shadow: 0px 10px 5px -5px;
+	-webkit-box-shadow: 0px 10px 5px -5px;
 	box-shadow: 0px 10px 5px -5px;
 	}
 
@@ -191,6 +193,8 @@ ul#navigation li a:hover {
 	color: #FFE601;
 	text-decoration: none;
 	background: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
 	box-shadow: none;
 }
 
@@ -203,5 +207,7 @@ a:visited{ color: #7A0BB7;}
 a:hover {
 	text-decoration:none;
 	background: #FFE601;
+	-moz-box-shadow: 0px 0px 0.5em 0.4em #FFF inset;
+	-webkit-box-shadow: 0px 0px 0.5em 0.4em #FFF inset;
 	box-shadow: 0px 0px 0.5em 0.4em #FFF inset;
 }
