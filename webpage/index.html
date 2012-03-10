@@ -5,6 +5,8 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="txs.css">
 <title>TeXstudio</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script type="text/javascript" src="scroll.js"></script>
 <!-- gradient support for IE9. See http://www.colorzilla.com/gradient-editor/ -->
 <!--[if gte IE 9]>
   <style type="text/css">
@@ -31,12 +33,12 @@
 		<div id="navigation-prebar">
 			<div id="navigation-bar" class="gradient"> <!-- class="gradient" for IE9 support. See http://www.colorzilla.com/gradient-editor/ -->
 				<ul id="navigation">
-					<li><a href="#home">Home</a></li>
-					<li><a href="#news">News</a></li>
-					<li><a href="#features">Features</a></li>
-					<li><a href="#download">Download</a></li>
-					<li><a href="#participate">Participate</a></li>
-					<li><a href="#about">About</a></li>
+					<li class="nav1"><a href="#home">Home</a></li>
+					<li class="nav2"><a href="#news">News</a></li>
+					<li class="nav3"><a href="#features">Features</a></li>
+					<li class="nav4"><a href="#download">Download</a></li>
+					<li class="nav5"><a href="#participate">Participate</a></li>
+					<li class="nav6"><a href="#about">About</a></li>
 				</ul>
 			</div>
 		</div>		
@@ -318,30 +320,5 @@
 
 </div> <!--end rightb-->
 </div>
-
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-<script>$(document).ready(function() {
-  function filterPath(string) {
-    return string
-      .replace(/^\//,'')  
-      .replace(/(index|default).[a-zA-Z]{3,4}$/,'')  
-      .replace(/\/$/,'');
-  }
-  $('a[href*=#]').each(function() {
-    if ( filterPath(location.pathname) == filterPath(this.pathname)
-    && location.hostname == this.hostname
-    && this.hash.replace(/#/,'') ) {
-      var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
-      var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
-       if ($target) {
-         var targetOffset = $target.offset().top;
-         $(this).click(function() {
-           $('html, body').animate({scrollTop: targetOffset}, 1000);
-           return false;
-         });
-      }
-    }
-  });
-});</script>
 
 </body></html>
