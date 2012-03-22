@@ -80,7 +80,6 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 \item false syntax check error in \verb+\abc123+
 \item \verb+_+ in movie command marked as math error
 \item Pressing enter on a line with inline preview can duplicate the picture
-\item Customtoolbar suddenly lost its icons only displayed text (when changing translations)
 \item latex checking says "cols in tab missing", although this does not even cause a warning by Latex. (perhaps there should be another marking overlay, for bad style, and this marked as that)
 \item Autocompletion of a reference name \verb+\ref{foo+ eats the next word
 \item In a trivial beamer document frame + env. completion only adds \verb+\+begin, not \verb+\+end
@@ -110,17 +109,6 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 \label{key}
 </b></body></html>
 \end{verbatim} in the latex file (if there is a security bug in the qt html renderer, it could become a security bug in TXS)
-	\item Wrong indentation of \begin{verbatim}
-		@MastersThesis{Marold,
-		author = {Alexander Marold},
-		title = {Rekonstruktion 
-		der globalen 
-		Ereignisreihenfolge aus lokalen Logdateien},
-		school = {Heinrich-Heine-Universität Düsseldorf},
-		year = {2008},
-		type = {Bachelorarbeit},
-		}
-	\end{verbatim} in bib files
 	\item  qce crashes if the searchpanel is not deleted before the qcodeedit object is deleted (because the search as child of the editor is then automatically deleted after the editor and crashes when it calls the editor to clear it match overlays)
 	\item  Auto completion is sometimes unexpected (see unittests)
 \end{itemize} 
