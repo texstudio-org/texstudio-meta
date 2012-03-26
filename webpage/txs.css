@@ -108,6 +108,9 @@ p, ul {
 	text-align: left;
 }
 
+#contributorContact {
+	color: #CCC;
+}
 
 /*** navigation ***/ 
 
@@ -146,8 +149,7 @@ p, ul {
 }
 
 #logo-text h2 {
-	font: normal 100% 'century gothic', arial, sans-serif;
-	font-size: 100%;
+	font: normal 96% 'century gothic', arial, sans-serif;
 	padding: 0 0 0 0;
 	margin: 0 0 0 0;
 	/*color: #FFE601;*/
