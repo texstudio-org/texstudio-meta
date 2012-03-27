@@ -187,6 +187,7 @@ ul#navigation li a {
 	line-height: 40px;
 	margin-left: 1em;
 	color: #f1d8ff; 
+	display: block;
 }
 
 ul#navigation li.menu_active a {
