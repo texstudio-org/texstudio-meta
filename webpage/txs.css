@@ -48,7 +48,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6  {
-	font: normal 150% 'century gothic', arial, sans-serif;
+	font: normal 150% 'century gothic', 'URW Gothic L', arial, sans-serif;
 	color: #43423F;
 	margin: 0 0 15px 0;
 	padding: 15px 0 5px 0;
@@ -97,7 +97,7 @@ p, ul {
 
 
 .platformDownload  td {
-	font: normal 150% 'century gothic', arial, sans-serif;
+	font: normal 150% 'century gothic', 'URW Gothic L', arial, sans-serif;
 	color: #43423F;
 	margin: 0 0 15px 0;
 	padding: 15px 0 5px 0;
@@ -137,7 +137,7 @@ p, ul {
 }
 
 #logo-text h1{
-	font: normal 225% 'century gothic', arial, sans-serif;
+	font: normal 225% 'century gothic', 'URW Gothic L', arial, sans-serif;
 	padding: 0 0 0 0;
 	margin: 0 0 0 0;
 	color: #777;
@@ -151,7 +151,7 @@ p, ul {
 }
 
 #logo-text h2 {
-	font: normal 96% 'century gothic', arial, sans-serif;
+	font: normal 96% 'century gothic', 'URW Gothic L', arial, sans-serif;
 	padding: 0 0 0 0;
 	margin: 0 0 0 0;
 	/*color: #FFE601;*/
@@ -178,7 +178,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222222', end
 }
 
 ul#navigation {
-	font-family: 'century gothic', Arial, sans-serif;
+	font-family: 'century gothic', 'URW Gothic L', Arial, sans-serif;
 	list-style: none;
 	margin: 0;
 	padding: 0;
