@@ -77,6 +77,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 
 \subsubsection{Bugs}
 \begin{itemize}
+\item don't show ">show diff"< when the file was deleted
 \item false syntax check error in \verb+\abc123+
 \item \verb+_+ in movie command marked as math error
 \item latex checking says "cols in tab missing", although this does not even cause a warning by Latex. (perhaps there should be another marking overlay, for bad style, and this marked as that)
@@ -114,6 +115,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 \subsubsection{others}
 \begin{itemize}
 	\item QCodeEdit: \begin{itemize}
+		\item show ">ignore all"< for deleted files (for current session)
 		\item whitespace and symbol formats
 		\item option to change color of linenumber/find panels
 		\item Generate custom highlighting from the used custom completion cwl files. (important for syntax check, if you have a custom math environment you currently have to define it twice, once as custom highlighting(to syntax check multi line environments) and in the cwl (to check single line envs))
