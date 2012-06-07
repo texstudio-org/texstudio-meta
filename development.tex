@@ -144,12 +144,9 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 	\item Synonym dictionary: \begin{itemize}
 		\item remember window size
 		\item faster contains checks using Tries
-		\item support for 
-		\item adding own words like in the spell checking 
-		\item online lookup (e.g german: wortschatz.uni-leipzig.de)
+		\item support for online lookup (e.g german: wortschatz.uni-leipzig.de)
 	\end{itemize}
 	\item Labels/References: \begin{itemize}
-		\item allow to define custom commands
 		\item show all refs using a label and allow easy jumping to them (e.g selection window? or ctrl+click on ref jumps to label; ctrl+alt+f does it already, perhaps add a mouse event to action event mapper)
 		\item using a SoundEx suggestion list for wrong references/labels like in the spell checker
 		\item a reference/label check dialog like the old spell checking dialog
@@ -165,7 +162,6 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 	\item if completing a filename, and the selected file has the same extension as the current filename, remove the existing extension, show preview image
 	\item auto close last environment/bracket
 	\item complete command options after command (files for includegraphics, environsments for begin, citations, labels, packages, tikzpictures	)
-	\item cut buffer for environment content (multiline to content, singleline to option ?)
 	\item Word completion over all open documents
 	\item Show definition of \verb+\newcommand+ commands in the completion list as hint
 	\item \verb+\begin{Umgebungsname}+ should not add \verb+\end{Umgebungsname}+ if that \textbackslash end is already in the next/a later line
@@ -185,6 +181,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 	\item document context menu on tabs
 	\item icons for accents!!
 	\item shortcut for always ignore word (in context menu)
+	\item grammar suggestions should show reason like the mouse over (with tooltip? statusbar? smaller font?)
 	\item differenciate between always-ignore-this-word-here and always-ignore-this-word-everywhere (add to dictionary)
 		\item search for latex commands in the completion package list; list for every available package the contained commands
 		\item new tm 1.9 output view (icons left instead of tabs + next/previous error buttons)
@@ -218,7 +215,6 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 		\item Text analyse should have a list of environments to ignore and if it should read math/envs
 		\item Silbentrennung: \verb+http://homepage.ruhr-uni-bochum.de/Georg.Verweyen/silbentrennung.html+
 		\item Respect \verb+\verb+ or even multiline \verb+\begin{verbatim}+
-		\item Grammar Checker
 		\item LaTeX Checker	(calling lacheck?)
 	\end{itemize}
 	\item Log files:\begin{itemize}
@@ -231,16 +227,12 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 		\item Is the output of (pdf)latex shown? should it? Show if it crashes (waiting for pipe, monitor cpu usage)
 		\item Improved recognizing of tool paths, checking of correct tool settings,  custom build actions: planned (although former is finished for miktex+ghostscript)
 		\item better browser detection in WebPublish dialog 
-		\item running arbitrary commands as CMD\_UNKNOWN
-		\item better user command (allow to run the other programs as intern://latex, intern://view/dvi, intern://showlog ?)
-		\item if the parameters of the user and the program differ, which should be used? (that problem is the reason, ghostscript have to be the plain program name)
 		\item . command tooltips (right section?)
 	\end{itemize}
 	\item  Scripting
 	\begin{itemize}
 	\item access to undo/redo stack (for debugging purposes)
 	\item qdocumentsearch access (is it done??)
-	\item universalinpuit dialog
 	\end{itemize}
 	\item Plugins
 	\item Recognizing hand written symbols (online lookup in detextify or Windows 7 mathpanel)
