@@ -1,9 +1,9 @@
 [Setup]
 ;Change this in every version
-AppVerName=TeXstudio 2.3
-AppVersion=2.3.0
+AppVerName=TeXstudio 2.4alpha
+AppVersion=2.3.98
 
-OutputBaseFilename=texstudio22_win32
+OutputBaseFilename=texstudio23_svn3099_win32
 
 ;Don't change
 AppName=TeXstudio
@@ -28,11 +28,12 @@ Source: QtScript4.dll; DestDir: {app}\
 Source: phonon4.dll; DestDir: {app}\
 
 Source: utilities\en_GB.*; DestDir: {app}\dictionaries
+Source: utilities\en_US.*; DestDir: {app}\dictionaries
 Source: utilities\fr_FR.*; DestDir: {app}\dictionaries
 Source: utilities\de_DE.*; DestDir: {app}\dictionaries
 Source: utilities\de.*; DestDir: {app}\dictionaries
 Source: utilities\en.*; DestDir: {app}\dictionaries
-Source: utilities\fr.*; DestDir: {app}\dictionaries
+;Source: utilities\fr.*; DestDir: {app}\dictionaries
 Source: utilities\th_en_US_v2.dat.*; DestDir: {app}\dictionaries
 Source: utilities\th_fr_FR_v2.dat.*; DestDir: {app}\dictionaries
 Source: utilities\th_de_DE_v2.dat.*; DestDir: {app}\dictionaries
