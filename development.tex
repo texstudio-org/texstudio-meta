@@ -1,37 +1,47 @@
-\documentclass[10pt,a4paper,landscape]{report}
+\documentclass[10pt,a4paper,portrait]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
-\usepackage{geometry}
+\usepackage{tabularx}
+\usepackage[left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{fancyhdr}
+
+\setlength{\parskip}{0.5em}%
+\setlength{\parindent}{0em}%
 
 \begin{document}
-\chapter{Rules}
+\title{\vspace{-2ex}TeXstudio Development\vspace{-2ex}}
+\date{}
+\maketitle
+	
+\section{Rules}
 This chapter describes some development rules.
 
-\section{Basic C++}
-The identifier should be named in these ways:\\
-\begin{tabular}{ll}
-ClassSomething & First character and every word in uppercase for a \emph{class}\\
-identifierSomething & camelCase for all local variables and \emph{members} (notice: no m\_ prefix for texmaker compatibility)\\
-headersomething.h & All header in lowercase \\
-headersomething.cpp & sources, too \\
-HEADERSOMETHING\_H & include guards in uppercase \\
-SOME\_CONSTVALUE & const/enum values in uppercase ?????? (with prefix??? without???)
-\end{tabular}
+\subsection{Basic C++}
+The identifier should be named in these ways:
 
-Order the include directives from high level to low level, e.g.:\\
+\begin{tabularx}{\textwidth}{lX}
+	\textbf{Style}      & \textbf{Explanation}                                                                                    \\
+\hline
+	ClassSomething      & First character and every word in uppercase for a \emph{class}                                          \\
+	identifierSomething & camelCase for all local variables and \emph{members} (notice: no m\_ prefix for texmaker compatibility) \\
+	headersomething.h   & All header in lowercase                                                                                 \\
+	headersomething.cpp & sources, too                                                                                            \\
+	HEADERSOMETHING\_H  & include guards in uppercase                                                                             \\
+	SOME\_CONSTVALUE    & const/enum values in uppercase ?????? (with prefix??? without???)                                       \\
+\end{tabularx}
+
+Order the include directives from high level to low level, e.g.:
 \begin{verbatim}
 #include "texmaker.h"
-
 #include <qt>
 \end{verbatim}
-instead of the other way around
+instead of the other way around.
 
-Insert only things in texmaker.cpp or smallUsefulFunction.h if it is really necessary,
-better create a new .cpp/.h if you can't find one to put it in
+Insert only things in texmaker.cpp or smallUsefulFunction.h if it is really necessary. It is better to create a new .cpp/.h if you can't find one to put it in.
 
-\section {Compatibility}
+\subsection {Compatibility}
 Don't use QT 4.4 or 4.5, only functions of Qt4.3.\\
 If they are really necessary you could wrap them in \#if, like: \\
 \verb+#if QT_VERSION >= 0x040500+ für Qt 4.5.0\\
@@ -43,39 +53,43 @@ Use QMetaObject::invokeMethod for Slots/Signals and QObject::setProperty for pro
 Some can be easily replaced, these include:
 
 \begin{center}
-\begin{tabular}{lll}
-example & use instead & remark\\
-\hline \\
-QFormLayout & QGridLayout\\
-Q(String)List.append(Q(String)List)  &  $<<$ & This doesn't apply to .append(T) \\
-Q(String)List.length  &  QList.count() \\
-Q(String)List.removeOne   &  \verb!if (i=QList.indexOf()>0) QList.removeAt(i)! \\
-QRegExp.cap const  & QRegExp.cap & cap has first been made const in 4.5 \\
-\end{tabular}
+\begin{tabularx}{\textwidth}{lXX}
+	\textbf{Example}                             & \textbf{Use Instead}                                       & \textbf{Remark}                               \\
+\hline
+	QFormLayout                         & QGridLayout                                       &  \\
+	Q(String)List.append(Q(String)List) & $<<$                                              & This doesn't apply to .append(T)     \\
+	Q(String)List.length                & QList.count()                                     &  \\
+	Q(String)List.removeOne             & \verb+if (i=QList.indexOf()>0) QList.removeAt(i)+ &  \\
+	QRegExp.cap const                   & QRegExp.cap                                       & cap has first been made const in 4.5 \\
+\end{tabularx}
 \end{center}
 
 Those don't exists in old qt, but should be used for the newer version, so they must be included in \#if.
 (min version is the minimum version where it can be used)
-\begin{tabular}{llll}
-example & min version & possible replacement\\
+
+\begin{tabularx}{\textwidth}{lll}
+\textbf{Example} & \textbf{Min. version} & \textbf{Possible Replacement}\\
 QPalette::ToolTipBase & 4.4 & QPalette::AlternateBase\\
 QPalette::ToolTipText & 4.4 & QPalette::Text
-\end{tabular}
+\end{tabularx}
 
-\chapter{TODO}
+\pagebreak
 
-\subsection{necessary before 2.2 }
+\section{TODO}
 
-\subsubsection{TM changes}
+\subsubsection{necessary before 2.2 }
+
+\paragraph{TM changes}
 
 \begin{itemize}
 \item interface disabled during compiling (says sources, i didn't see a effect)
 \item file chooser in status bar (TXS already has this in the toolbar, very non intuitive to activate)
+\\OBSOLETE: available as context menu on editor tabs
 \end{itemize}
 
-\subsection{later}
+\subsubsection{later}
 
-\subsubsection{Bugs}
+\paragraph{Bugs}
 \begin{itemize}
 \item false syntax check error in \verb+\abc123+
 \item \verb+_+ in movie command marked as math error
@@ -109,10 +123,10 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 	\item  Auto completion is sometimes unexpected (see unittests)
 \end{itemize} 
 
-\subsubsection{others}
+\paragraph{others}
 \begin{itemize}
 	\item QCodeEdit: \begin{itemize}
-		\item show ">ignore all"< for deleted files (for current session)
+		\item show "ignore all" for deleted files (for current session)
 		\item whitespace and symbol formats
 		\item option to change color of linenumber/find panels
 		\item Generate custom highlighting from the used custom completion cwl files. (important for syntax check, if you have a custom math environment you currently have to define it twice, once as custom highlighting(to syntax check multi line environments) and in the cwl (to check single line envs))
@@ -151,7 +165,7 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 	\item Citations: \begin{itemize}
 		\item unit tests for bibtex parser
 		\item show SoundEx suggestion for wrong citatinos
-		\item check environment paths (e.g. \verb+BIBINPUTS = C:\My Documents\CDMA\Papers\Bib;C:\My Documents\GPS\Papers\Bib+)
+		\item check environment paths\\(e.g. \verb+BIBINPUTS = C:\My Documents\CDMA\Papers\Bib;C:\My Documents\GPS\Papers\Bib+)
 	\end{itemize}
 	\item Better new document wizard (look at kile)
 	\item Completion \begin{itemize}
@@ -175,29 +189,25 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 		\item find missing bracket command (instead of just misplaced brackets)
 	\end{itemize}  
 	\item GUI: \begin{itemize}
-	\item document context menu on tabs
-	\item icons for accents!!
 	\item shortcut for always ignore word (in context menu)
 	\item grammar suggestions should show reason like the mouse over (with tooltip? statusbar? smaller font?)
 	\item differenciate between always-ignore-this-word-here and always-ignore-this-word-everywhere (add to dictionary)
 		\item search for latex commands in the completion package list; list for every available package the contained commands
 		\item new tm 1.9 output view (icons left instead of tabs + next/previous error buttons)
-		\item using icons for math font styles (like in text font style)
 		\item Customizable symbol lists
 		\item combo boxes (dropdown tool buttons) instead of several icons for each command (like 1.9 or kile)
 		\item toolbar icon size should be customizable
 	\end{itemize}
 	\item Preview: \begin{itemize}
-		\item allow real zoom (regenerating png)
-		\item show errors
-		
-	\item \textbf{Internal PDF-Previewer:}
+	\item allow real zoom (regenerating png)
+	\item show errors
+	\end{itemize}
+	\item Internal PDF-Previewer: \begin{itemize}
 	\item  show pdf title and full path in windows title bar
 	\item three grid next page modes: single page step, grid row, full grid (or allow arbitrary steps? renderer already supports them)
 	\item presentation mode could have a ">jump to page"< feature (for questions after a presentation); which is synchronized over all views (s.t. you can see different things on the computer screen vs. beamer, but still don't have to move the mouse cursors from beamer to screen to select page)
 	\item alternative: tool where left/right clicks goes to the next/prev page (i.e. a tool default in presentation mode, but usable in all views)
 	\item (Okular) presentation tools: mouse cursor as laser pointer, drawing on presentation (in tool menu at the top edge), page number display when switching
-	\item Options to jump from source to pdf with synctex (context menu?)
 	\item mark source bookmarks in pdf preview 
 	\item mark contents (section pages) in presentation clock as lines
 	\item It should be possible to set a filename in the call command and a destination synctex-line
@@ -221,7 +231,6 @@ QPalette::ToolTipText & 4.4 & QPalette::Text
 		\item don't jump away from log file (what did that mean???????)
 	\end{itemize}
 	\item Building \begin{itemize}
-     	\item output directory for log searching
      	\item show stdout for asymptote
 		\item Is the output of (pdf)latex shown? should it? Show if it crashes (waiting for pipe, monitor cpu usage)
 		\item Improved recognizing of tool paths, checking of correct tool settings,  custom build actions: planned (although former is finished for miktex+ghostscript)
