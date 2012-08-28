@@ -1,9 +1,9 @@
 [Setup]
 ;Change this in every version
-AppVerName=TeXstudio 2.4alpha
-AppVersion=2.3.98
+AppVerName=TeXstudio 2.4rc
+AppVersion=2.4.rc
 
-OutputBaseFilename=texstudio23_svn3099_win32
+OutputBaseFilename=texstudio24rc_svn3228_win32
 
 ;Don't change
 AppName=TeXstudio
@@ -41,13 +41,11 @@ Source: utilities\th_de_DE_v2.dat.*; DestDir: {app}\dictionaries
 Source: utilities\AUTHORS; DestDir: {app}\help
 Source: utilities\CHANGELOG.txt; DestDir: {app}\help
 Source: utilities\COPYING; DestDir: {app}\help
-Source: utilities\doc*.png; DestDir: {app}\help
-Source: utilities\configure*.png; DestDir: {app}\help
-Source: utilities\thesaurus.png; DestDir: {app}\help
-Source: utilities\template.png; DestDir: {app}\help
+Source: utilities\*.png; DestDir: {app}\help
 Source: utilities\latexhelp.html; DestDir: {app}\help
 Source: utilities\license.txt; DestDir: {app}\help
-Source: utilities\usermanual*.html; DestDir: {app}\help
+Source: utilities\usermanual_en.html; DestDir: {app}\help
+Source: utilities\usermanual.css; DestDir: {app}\help
 
 Source: texstudio_de.qm; DestDir: {app}\translations
 Source: texstudio_fr.qm; DestDir: {app}\translations
