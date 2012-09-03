@@ -14,7 +14,7 @@ TXS_VERSION_MANPAGE=`grep TH utilities/texstudio.1 | head -1 | cut -d " " -f 5 |
 TXS_VERSION_DEBIAN_CHANGELOG=`head -1 debian/changelog | grep -oE [0-9][.][0-9] `
 TXS_VERSION_ISS1=`grep AppVer utilities/notInBinary/texmakerx.iss | head -1 | grep -oE [0-9][.][0-9]`
 TXS_VERSION_ISS2=`grep AppVer utilities/notInBinary/texmakerx.iss | head -1 | grep -oE [0-9][.][0-9]`
-TXS_VERSION_MANUAL=`grep SECTIONNEW utilities/usermanual_en.html | tail -1 | grep -oE "Version +[0-9][.][0-9]" | tail -1 | grep -oE [0-9][.][0-9]`
+TXS_VERSION_MANUAL=`grep SECTIONNEW utilities/usermanual_en.html | head -2 | tail -1 | grep -oE "Version +[0-9][.][0-9]" | tail -1 | grep -oE [0-9][.][0-9]`
 
 if [[ "$TXS_VERSION_CPP" != "$TXS_VERSION_MANPAGE" ]]; 
 then echo Error: Version mismatch: manpage: -$TXS_VERSION_MANPAGE- cpp: -$TXS_VERSION_CPP-; 
