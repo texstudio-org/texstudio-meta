@@ -1,9 +1,9 @@
 [Setup]
 ;Change this in every version
-AppVerName=TeXstudio 2.4rc
-AppVersion=2.4.rc
+AppVerName=TeXstudio 2.4.1
+AppVersion=2.4.1
 
-OutputBaseFilename=texstudio24rc_svn3228_win32
+OutputBaseFilename=texstudio241rc_svn3228_win32
 
 ;Don't change
 AppName=TeXstudio
