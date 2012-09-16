@@ -47,6 +47,8 @@ Source: utilities\license.txt; DestDir: {app}\help
 Source: utilities\usermanual_en.html; DestDir: {app}\help
 Source: utilities\usermanual.css; DestDir: {app}\help
 
+Source: utilities\TexTablet\*; DestDir: {app}\TexTablet
+
 Source: texstudio_de.qm; DestDir: {app}\translations
 Source: texstudio_fr.qm; DestDir: {app}\translations
 Source: texstudio_it.qm; DestDir: {app}\translations
