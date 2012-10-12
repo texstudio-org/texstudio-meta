@@ -10,7 +10,6 @@ AppName=TeXstudio
 AppPublisher=Benito van der Zander
 AppPublisherURL=http://texstudio.sourceforge.net/
 
-
 DefaultDirName={pf}\TeXstudio
 DefaultGroupName=TeXstudio
 UninstallDisplayIcon={app}\texstudio.exe
@@ -89,6 +88,14 @@ Name: it; MessagesFile: compiler:Languages\Italian.isl
 Name: cz; MessagesFile: compiler:Languages\Czech.isl
 Name: pt_BR; MessagesFile: compiler:Languages\BrazilianPortuguese.isl
 Name: hu; MessagesFile: compiler:Languages\Hungarian.isl
+
+[Tasks]
+Name: texAssociation; Description: "Associate .tex files with TeXstudio"; GroupDescription: File extensions:
+
+[Registry]
+Root: HKCR; Subkey: ".tex"; ValueType: string; ValueName: ""; ValueData: "texfile"; Flags: uninsdeletevalue
+Root: HKCR; Subkey: "texfile"; ValueType: string; ValueName: ""; ValueData: "LaTeX Document"; Flags: uninsdeletevalue
+Root: HKCR; Subkey: "texfile\shell\open\command"; ValueType: string; ValueName: ""; ValueData: """{app}\TeXstudio.exe"" ""%1"""; Flags: uninsdeletevalue
 
 [Run]
 Filename: {app}\texstudio.exe; Description: Start TeXstudio; Flags: nowait postinstall
