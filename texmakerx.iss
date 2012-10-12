@@ -30,6 +30,8 @@ Source: utilities\dictionaries\en_GB.*; DestDir: {app}\dictionaries
 Source: utilities\dictionaries\en_US.*; DestDir: {app}\dictionaries
 Source: utilities\dictionaries\fr_FR.*; DestDir: {app}\dictionaries
 Source: utilities\dictionaries\de_DE.*; DestDir: {app}\dictionaries
+Source: utilities\dictionaries\hu_HU.*; DestDir: {app}\dictionaries
+Source: utilities\dictionaries\pt_BR.*; DestDir: {app}\dictionaries
 Source: utilities\dictionaries\de.*; DestDir: {app}\dictionaries
 Source: utilities\dictionaries\en.*; DestDir: {app}\dictionaries
 Source: utilities\dictionaries\fr.*; DestDir: {app}\dictionaries
