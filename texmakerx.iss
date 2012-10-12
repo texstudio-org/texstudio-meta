@@ -27,16 +27,16 @@ Source: QtXml4.dll; DestDir: {app}\
 Source: QtScript4.dll; DestDir: {app}\
 Source: phonon4.dll; DestDir: {app}\
 
-Source: utilities\en_GB.*; DestDir: {app}\dictionaries
-Source: utilities\en_US.*; DestDir: {app}\dictionaries
-Source: utilities\fr_FR.*; DestDir: {app}\dictionaries
-Source: utilities\de_DE.*; DestDir: {app}\dictionaries
-Source: utilities\de.*; DestDir: {app}\dictionaries
-Source: utilities\en.*; DestDir: {app}\dictionaries
-;Source: utilities\fr.*; DestDir: {app}\dictionaries
-Source: utilities\th_en_US_v2.dat.*; DestDir: {app}\dictionaries
-Source: utilities\th_fr_FR_v2.dat.*; DestDir: {app}\dictionaries
-Source: utilities\th_de_DE_v2.dat.*; DestDir: {app}\dictionaries
+Source: utilities\dictionaries\en_GB.*; DestDir: {app}\dictionaries
+Source: utilities\dictionaries\en_US.*; DestDir: {app}\dictionaries
+Source: utilities\dictionaries\fr_FR.*; DestDir: {app}\dictionaries
+Source: utilities\dictionaries\de_DE.*; DestDir: {app}\dictionaries
+Source: utilities\dictionaries\de.*; DestDir: {app}\dictionaries
+Source: utilities\dictionaries\en.*; DestDir: {app}\dictionaries
+Source: utilities\dictionaries\fr.*; DestDir: {app}\dictionaries
+Source: utilities\dictionaries\th_en_US_v2.dat.*; DestDir: {app}\dictionaries
+Source: utilities\dictionaries\th_fr_FR_v2.dat.*; DestDir: {app}\dictionaries
+Source: utilities\dictionaries\th_de_DE_v2.dat.*; DestDir: {app}\dictionaries
 
 Source: utilities\AUTHORS; DestDir: {app}\help
 Source: utilities\CHANGELOG.txt; DestDir: {app}\help
@@ -49,18 +49,22 @@ Source: utilities\usermanual.css; DestDir: {app}\help
 
 Source: utilities\TexTablet\*; DestDir: {app}\TexTablet
 
-Source: texstudio_de.qm; DestDir: {app}\translations
-Source: texstudio_fr.qm; DestDir: {app}\translations
-Source: texstudio_it.qm; DestDir: {app}\translations
+; Commented out translations are not packaged because they are stongly incomplete
 Source: texstudio_cs.qm; DestDir: {app}\translations
-Source: texstudio_hu.qm; DestDir: {app}\translations; Languages:
-Source: texstudio_uk.qm; DestDir: {app}\translations; Languages:  
-Source: texstudio_pt_BR.qm; DestDir: {app}\translations; Languages:  
+Source: texstudio_de.qm; DestDir: {app}\translations
+Source: texstudio_es.qm; DestDir: {app}\translations
+Source: texstudio_fr.qm; DestDir: {app}\translations
+Source: texstudio_hu.qm; DestDir: {app}\translations
+;Source: texstudio_it.qm; DestDir: {app}\translations
+Source: texstudio_pt_BR.qm; DestDir: {app}\translations
+;Source: texstudio_uk.qm; DestDir: {app}\translations
+Source: texstudio_zh_CN.qm; DestDir: {app}\translations
+Source: qt_cs.qm; DestDir: {app}\translations
 Source: qt_de.qm; DestDir: {app}\translations
 Source: qt_fr.qm; DestDir: {app}\translations
-Source: qt_cs.qm; DestDir: {app}\translations
 Source: qt_hu.qm; DestDir: {app}\translations
-;removed, we don't have a txs translation anyways Source: utilities\qt_zh.qm; DestDir: {app}\translations
+Source: qt_zh.qm; DestDir: {app}\translations
+
 Source: libfreetype.dll; DestDir: {app}
 Source: libgcc_s_dw2-1.dll; DestDir: {app}
 Source: liblcms-1.dll; DestDir: {app}
@@ -72,7 +76,6 @@ Source: libpoppler-qt4.dll; DestDir: {app}
 Source: libxml2.dll; DestDir: {app}
 Source: libzlib1.dll; DestDir: {app}
 Source: zlib1.dll; DestDir: {app}
-Source: texstudio_pt_BR.qm; DestDir: {app}\translations
 
 [Icons]
 Name: {group}\TeXstudio; Filename: {app}\TeXstudio.exe
