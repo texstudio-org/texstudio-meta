@@ -58,6 +58,7 @@ Source: texstudio_fr.qm; DestDir: {app}\translations
 Source: texstudio_hu.qm; DestDir: {app}\translations
 ;Source: texstudio_it.qm; DestDir: {app}\translations
 Source: texstudio_pt_BR.qm; DestDir: {app}\translations
+Source: texstudio_ja.qm; DestDir: {app}\translations
 ;Source: texstudio_uk.qm; DestDir: {app}\translations
 Source: texstudio_zh_CN.qm; DestDir: {app}\translations
 Source: qt_cs.qm; DestDir: {app}\translations
