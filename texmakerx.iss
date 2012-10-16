@@ -63,8 +63,10 @@ Source: texstudio_pt_BR.qm; DestDir: {app}\translations
 Source: texstudio_zh_CN.qm; DestDir: {app}\translations
 Source: qt_cs.qm; DestDir: {app}\translations
 Source: qt_de.qm; DestDir: {app}\translations
+Source: qt_es.qm; DestDir: {app}\translations
 Source: qt_fr.qm; DestDir: {app}\translations
 Source: qt_hu.qm; DestDir: {app}\translations
+Source: qt_ja.qm; DestDir: {app}\translations
 Source: qt_zh.qm; DestDir: {app}\translations
 
 Source: libfreetype.dll; DestDir: {app}
@@ -86,11 +88,14 @@ Name: {commondesktop}\TeXstudio; Filename: {app}\TeXstudio.exe
 [Languages]
 Name: en; MessagesFile: compiler:Default.isl
 Name: de; MessagesFile: compiler:Languages\German.isl
+Name: es; MessagesFile: compiler:Languages\Spanish.isl
 Name: fr; MessagesFile: compiler:Languages\French.isl
 Name: it; MessagesFile: compiler:Languages\Italian.isl
 Name: cz; MessagesFile: compiler:Languages\Czech.isl
 Name: pt_BR; MessagesFile: compiler:Languages\BrazilianPortuguese.isl
 Name: hu; MessagesFile: compiler:Languages\Hungarian.isl
+Name: ja; MessagesFile: compiler:Languages\Japanese.isl
+
 
 [Tasks]
 Name: texAssociation; Description: "Associate .tex files with TeXstudio"; GroupDescription: File extensions:
