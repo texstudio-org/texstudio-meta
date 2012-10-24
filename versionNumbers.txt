@@ -1,4 +1,4 @@
 aboutdialog.cpp
 utilities\texstudio.spec
-utilities\notin...\texmaker.iss
+utilities\notin...\texstudio.iss
 utilities/CHANGELOG.txt
