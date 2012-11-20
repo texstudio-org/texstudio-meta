@@ -21,12 +21,15 @@ TMXVERSION=$TXS_VERSION_CPP
 echo "Publishing version $TMXVERSION"
 
 SFUSER="";
-if [ -e /home/benito ]; then SFUSER="benibela"; else echo "Enter sourceforge user name:"; read SFUSER; fi
+if [ -e /home/benito ]; then SFUSER="benibela"; eval `keychain -q --eval --agents ssh id_rsa `; 
+else echo "Enter sourceforge user name:"; read SFUSER; fi
 if [ "x$SFUSER"  = "x" ]; then echo "no sf user"; exit; fi
 
-svn rm --keep-local  -m "remove possible broken tag" https://$SFUSER@texstudio.svn.sourceforge.net/svnroot/texstudio/tags/TeXstudio/$TMXVERSION
 
-svn copy -r $TMXREVISION  -m "TAGGED $TMXVERSION RELEASE" https://$SFUSER@texstudio.svn.sourceforge.net/svnroot/texstudio/trunk https://$SFUSER@texstudio.svn.sourceforge.net/svnroot/texstudio/tags/TeXstudio/$TMXVERSION
+
+svn rm --keep-local  -m "remove possible broken tag" svn+ssh://$SFUSER@svn.code.sf.net/p/texstudio/code/tags/TeXstudio/$TMXVERSION
+
+svn copy -r $TMXREVISION  -m "TAGGED $TMXVERSION RELEASE" svn+ssh://$SFUSER@svn.code.sf.net/p/texstudio/code/trunk svn+ssh://$SFUSER@svn.code.sf.net/p/texstudio/code/tags/TeXstudio/$TMXVERSION
 
 
 
