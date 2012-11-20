@@ -32,7 +32,7 @@
 		
 		<div id="directDownload">
 				<a href="http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%202.5/texstudio25_win32.exe/download" id="winDownload" class="downloadButton">Download now<br><span class="downloadVersion">TeXstudio 2.5 (Windows-Installer)</span></a>
-				<a href="http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%202.5/texstudio_2.5_svn3379.dmg.zip/download" id="macDownload" class="downloadButton">Download now<br><span class="downloadVersion">TeXstudio 2.5 (OSX texstudio_2.5_svn3374.dmg.zip)</span></a>
+				<a href="http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%202.5/texstudio_2.5_svn3379.dmg.zip/download" id="macDownload" class="downloadButton">Download now<br><span class="downloadVersion">TeXstudio 2.5 (OSX texstudio_2.5_svn3379.dmg.zip)</span></a>
 		</div>
 		<script type="text/javascript">
 		if (navigator.appVersion.indexOf("Win")==-1)
@@ -50,20 +50,22 @@
 		<h1>News</h1>
 		<div id="recent-news">
 			<table class="news">
+			<tr><td class="newsdate">2012-11-13</td>
+			<td  class="newscontent">TeXstudio is one of the <a href="https://sourceforge.net/blog/featured-projects-november-12-2012/">featured projects</a> of the week on sourceforge.net</td></tr>
 			<tr><td class="newsdate">2012-10-17</td>
 			<td  class="newscontent">The new release <strong>TeXstudio 2.5</strong> is available</td></tr>
 			<tr><td class="newsdate">2012-09-02</td>
 			<td  class="newscontent">The new release <strong>TeXstudio 2.4</strong> is available</td></tr>
 			<tr><td class="newsdate">2012-03-27</td>
 			<td  class="newscontent">TeXstudio got a <strong>new website design</strong></td></tr>
-			<tr><td class="newsdate">2012-02-06</td>
-			<td  class="newscontent">The new release <strong>TeXstudio 2.3</strong> is available</td></tr>
 			</table>
 		</div>
 		<div id="hiding-box">
 		<div class="more">more...</div>
 		<div class="hiddentext">
 			<table class="news">
+			<tr><td class="newsdate">2012-02-06</td>
+			<td  class="newscontent">The new release <strong>TeXstudio 2.3</strong> is available</td></tr>
 			<tr><td class="newsdate">2011-07-20</td>
 			<td  class="newscontent">The new release <strong>TeXstudio 2.2</strong> is available</td></tr>
 			<tr><td class="newsdate">2011-06-15</td>
@@ -104,61 +106,64 @@
 	
 	<div id="features" class="page">
 		<h1>Features</h1>
-		<h3>IWE - Integrated Writing Environment</h3>
+		<h3>Comfortable Editing</h3>
+		<div class="img-block-right">
+		<img src="./images/codeCompletion_zoom.png" alt="screenshot" /></a><br/>Auto Completion
+		</div>
 		<ul>
-		  <li><strong>All LaTeX tools</strong> can be called from TeXstudio with just one key press and you can add your own command line options (e.g. for forward/inverse search)</li>
-		  <li><strong>LaTeX tags and 1102 mathematical symbols</strong> you can easily select and add to your text</li>
-		  <li><strong>Wizards</strong> generating necessary code (e.g. documents, tabular/array-environments and BibTex-types)</li>
-
-		  <li><strong>LaTeX errors</strong> are displayed in a Log panel and highlighted within the tex file </li>
-		  <li><strong>Bib(La-)TeX</strong> will be automatically called if the bib 	files are modified</li>
-		  <li><strong>LaTeX documentation</strong> where you can lookup the tags you don't know</li>
-		  <li><strong>Customizable</strong> menus, toolbars and environments </li>
-
-		  <li><strong>Scripting</strong> to control TeXstudio with user-written scripts </li>
-		  <li><strong>DDE-Support</strong> to interact with other programs on Windows</li>
-		  <li>And also customizable code snippets, tabbed MDI view,  ... </li>
+			<li>Block cursors</li>
+			<li>Auto completion</li>
+			<li>Bookmarks</li>
+			<li>Customizable menus, toolbars and shortcuts</li>
+			<li>Scripting support</li>
+			<li>Direct access to many LaTeX tags and more than 1000 mathematical symbols</li>
+			<li>Link overlay</li>
+			<li>Context menus</li>
+			<li>Jump to error locations</li>
+			<li>Assistants for images, tables, formulas, ...</li>
+			<li>Drag & drop support for images</li>
+			<li>Table-formatting</li>
+			<li>Template system</li>
 		</ul>
-		<h3>Powerful Text Editor <a href="http://qcodeedit.edyuk.org" style="font-size:50%; font-weight:normal">based on QCodeEdit</a></h3>
-
+		<h3>Keep The Overview</h3>
+		<div class="img-block-right">
+		<img src="./images/inlineChecking_zoom.png" alt="screenshot" /></a><br/>Inline Checking
+		</div>
 		<ul>
-		  <li><strong>Interactive spell checker</strong> which marks spelling mistakes while you type them</li>
-		  <li><strong>Interactive grammar checker</strong> which marks grammar mistakes using <a href="http://languagetool.sourceforge.net">LanguageTool</a></li>		  
-		  <li><strong>Interactive reference checker</strong> which marks wrong reference/label combinations and wrong citations</li>
-		  <li><strong>Interactive syntax checker</strong> which marks wrong spelled LaTeX commands</li>
-		  <li><strong>Syntax highlighting</strong> drawing LaTeX commands in different, customizable formats</li>
-
-		  <li><strong>Code folding</strong> which allows you to hide certain blocks</li>
-		  <li><strong>Auto completion</strong> completes tags you wrote and shows corresponding help entries, uses the taglists from kile</li>
-		  <li><strong>Unicode support</strong> which can handle files in all encodings</li>
-		  <li><strong>Incremental search</strong> and replace on a search panel at the bottom of the text panel</li>
-
-		  <li><strong>Text Navigation</strong> jumps to bookmarks, certain lines, last changes and LaTeX errors/warnings</li>
-		  <li><strong>Key Remapping</strong> of single keys for automatically text insertion (e.g of nice quotation marks)</li>
-		  <li>And also line numbers, repetition checker, dynamic word wrapping, parenthesis highlighting, parenthesis completion, unicode table, undo/redo, line change state, table editor...</li>
+			<li>Structure view</li>
+			<li>Code folding</li>
+			<li>Advanced syntax highlighting</li>
+			<li>Interactive spellchecker</li>
+			<li>Interactive grammar checker</li>
+			<li>Interactive reference checker</li>
+			<li>Clear display of LaTeX errors and warnings (in editor and as list)</li>
 		</ul>
-		<h3>Utilities</h3><ul>
-		  <li><strong>Structure View</strong> which shows the logical hierarchy of a file and is interactively updated</li>
-
-		  <li><strong>PDF Preview</strong> which shows the compiled pdf file and supports synctex </li>
-		  <li><strong>Math Preview</strong> which shows the latex output of a single expression within the text</li>
-		  <li><strong>Find in files</strong> dialog let you search in currently opened files</li>
-		  <li><strong>Thesaurus</strong> which shows possible synonyms for a certain word</li>
-
-		  <li><strong>HTML Converter</strong> which creates a html out of your LaTeX-based PS-file</li>
-		  <li><strong>Text analysis</strong> counting and showing often used words or phrases</li>
-		  <li><strong>Random Text</strong> generator which automatically creates a text similar to the one you wrote</li>
-		  <li><strong>SVN</strong> support to synchronize local changes with the repository</li>
-
-		</ul>
-		<h3>Installation</h3>
+		<h3>Avanced build system</h3>
+		<div class="img-block-right">
+		<img src="./images/errorHighlighting_zoom.png" alt="screenshot" /></a><br/>Error Highlighting
+		</div>
 		<ul>
-		  <li><strong>Platform independence</strong> allows you to use it on Windows, Linux, BSD and Mac</li>
-		  <li><strong>Automatic detection</strong> of MikTeX, Ghostscript and Standardlatex</li>
-		  <li><strong>USB-Mode</strong> stores its settings in a texmakerx.ini (only if you create one!), so you can use the same configuration on different computers</li>
-
-		  <li><strong>Translated</strong> in English, German, French and more languages</li>
+			<li>Built-in support for various LaTeX compilers, index, bibliography and glossary tools, Latexmk, and many more</li>
+			<li>Automatic detection of the need for multiple LaTeX runs</li>
+			<li>Run any program you like</li>
+			<li>Completely customizable for the creation of the complete document</li>
 		</ul>
+		<h3>View The Result</h3>
+		<div class="img-block-right">
+		<img src="./images/inlinePreview_zoom.png" alt="screenshot" /></a><br/>Inline Preview
+		</div>
+		<ul>
+			<li>Integrated PDF viewer with (almost) word-level syncing</li>
+			<li>Live-updating inline preview for formulas and code segments</li>
+			<li>Tooltip preview for included images</li>
+		</ul>
+		<h3>Easy Setup</h3>
+		<ul>
+			<li>Installers or packages available for Windows, Linux and (experimental) Mac OS X</li>
+			<li>Portable USB version available</li>
+			<li>Automatic detection of MikTeX, TeX Live, Ghostscript and Standardlatex</li>
+			<li>SVN support</li>
+	</ul>
 
 		<p>
 		You can find more details in the <a href="http://svn.code.sf.net/p/texstudio/code/trunk/utilities/usermanual_en.html">user manual</a> or in the <a href="https://sourceforge.net/p/texstudio/code/commit_browser">SVN Changelog</a>.<br><br>
@@ -295,7 +300,8 @@ xidel http://download.opensuse.org/repositories/home:/jsundermeyer/             
 -->
 
 
-			<tr class="platformDownload"><td colspan=7>MacOSX</td></tr>
+			<tr class="platformDownload"><td colspan=7>Mac OS X</td></tr>
+			<tr><td colspan=7>The OS X version is experimental. Since none of the currently active developers is using OS X, we cannot thoroughly test it. We do our best to also support OS X but be prepared that there may be some issues.</td></tr>
 			<tr><th>Platform</th><th>Version</th><th> Type</th><th>Size</th><th>QT</th><th>Poppler</th><th>How to install</th></tr>	
 			<tr><td>Mac ports</td>
 				<td>2.5</td>
@@ -388,15 +394,17 @@ xidel http://download.opensuse.org/repositories/home:/jsundermeyer/             
 		
 
 		<h2>Contribute</h2>
-		<p>You do not necessarily have to be a programmer to help and make TeXstudio even better. There are many ways to contribute.<p>
+		<p>You do not necessarily have to be a programmer to help and make TeXstudio even better. There are many ways to contribute.</p>
 		<ul>
 		<li><a href="https://sourceforge.net/apps/mediawiki/texstudio/index.php?title=Translate">Translate</a> TeXstudio into a new language or update an existing translation.</li>
 		<li>Design icons.</li>
+		<li>Help on improving our website.</li>
 		<li>Update or extend the <a href="http://svn.code.sf.net/p/texstudio/code/trunk/utilities/usermanual_en.html">user manual</a> or the <a href="https://sourceforge.net/apps/mediawiki/texstudio/index.php">wiki</a>.</li>
+		<li>Write tutorials or create screencasts.</li>
 		<li>Package TeXstudio for your favorite distribution or platform.</li>
 		<li>TeXstudio is written in C++/Qt. Programmers are welcome to implement new features or fix bugs.</li>
 		</ul>
-		<p>It is a good idea to announce your plans on the texstudio mailing list. So everybody knows what's going on around TeXstudio and there is no duplicate work.</p>
+		<p>It is a good idea to announce your plans on the texstudio mailing list. So everybody knows what's going on around TeXstudio and there is no duplicate work. For questions how you can contribute contact one of the developers.</p>
 	</div> <!--end participate-->
 
 	
@@ -406,7 +414,7 @@ xidel http://download.opensuse.org/repositories/home:/jsundermeyer/             
 
 		<p>TeXstudio has been forked from <a href="http://www.xm1math.net/texmaker/">Texmaker</a> in 2009, because of the non-open development process of Texmaker and due to different philosophies concerning configurability and features. Originally it was called TeXmakerX because it started off as a small set of extensions to Texmaker with the hope that they would get integrated into Texmaker some day. While at some points you can still see that TeXstudio originates from Texmaker, significant changes in features and the code base have made it to a fully independent program.</p>
 		
-		<p>TeXstudio runs on Windows, Unix/Linux, BSD and MacOSX. It is licensed under the GPL v2. Being open source, you are free to use and to modify it as you like.</p>
+		<p>TeXstudio runs on Windows, Unix/Linux, BSD and Mac OS X. It is licensed under the GPL v2. Being open source, you are free to use and to modify it as you like.</p>
 
 		<h3>Maintaining Author:</h3>
 		<p>Benito van der Zander (&#98;&#x65;n&#105;&#x74;o &#64; &#x62;e&#110;&#x69;b&#101;&#x6c;a&#46;&#x64;e)</p>
