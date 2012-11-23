@@ -1,7 +1,15 @@
 #!/bin/bash
 if [ ! -f texstudio ]; then echo "./texstudio doesn't exist"; exit; fi
 
-if ( readelf -d texstudio | grep QtTest ) then  echo "txs linked against QtTest => ABORT"; exit; fi
+if ( readelf -d texstudio | grep QtTest ) then  
+  echo "txs linked against QtTest => RECOMPILE"; 
+  make clean
+  qmake CONFIG+=release CONFIG-=debug texstudio.pro
+  make
+
+  if [ ! -f texstudio ]; then echo "./texstudio doesn't exist"; exit; fi
+  if ( readelf -d texstudio | grep QtTest ) then  exit; fi
+fi
 
 #get qt version
 QTVERSION=`qmake -v | grep -oE "4\.[2-9]\.[0-9]"`;
@@ -11,7 +19,7 @@ GCCVERSION=`gcc -v 2>&1 | grep -m 1  -Eo "4\.[0-9]\.[0-9]"`;
 
 #TODO: remove dpkg dependency
 POPPLERVERSION=`dpkg -s libpoppler-qt4-3 | grep Version | grep -Eo "0\.[0-9]+\.[0-9]"`
-LIBCVERSION=`dpkg -s libc6 | grep Version  | grep -Eo "2\.[0-9]+([.][0-9]+)?"`;
+LIBCVERSION=`dpkg -s libc6:amd64 | grep Version  | grep -Eo "2\.[0-9]+([.][0-9]+)?"`;
 
 if [ "x$GCCVERSION" = "x" ]; then echo "no gcc"; exit; fi;
 if [ "x$LIBCVERSION" = "x" ]; then echo "no libc"; exit; fi;
