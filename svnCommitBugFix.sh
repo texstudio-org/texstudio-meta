@@ -5,6 +5,9 @@ RELEASE=2.5.2
 #abort on error
 set -e
 
+#don't ask for ssh password on every ssh call
+eval `keychain -q --eval --agents ssh id_rsa `
+
 
 svn update
 svn commit -m "$@"
