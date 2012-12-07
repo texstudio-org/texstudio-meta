@@ -8,7 +8,6 @@
 <title>TeXstudio</title>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 <script type="text/javascript" src="scroll.js"></script>
-<script type="text/javascript" src="downloadButton.js"></script>
 <!-- gradient support for IE9. See http://www.colorzilla.com/gradient-editor/ -->
 <!--[if gte IE 9]>
   <style type="text/css">
@@ -402,13 +401,31 @@
 		<p>TeXstudio runs on Windows, Unix/Linux, BSD and Mac OS X. It is licensed under the GPL v2. Being open source, you are free to use and to modify it as you like.</p>
 
 		<h3>Maintaining Author:</h3>
-		<p>Benito van der Zander (&#98;&#x65;n&#105;&#x74;o &#64; &#x62;e&#110;&#x69;b&#101;&#x6c;a&#46;&#x64;e)</p>
+		<p>Benito van der Zander <br>
+		<span class="msafe"><span ><span>&#98;&#x65;n&#105;&#x74;o</span><span> [ΑΤ symbol] </span>&#x62;e&#110;&#x69;b&#101;<span>&#x6c;</span>a&#46;&#x64;e  (please mention "texstudio" in the subject, if you write a mail)</span></span><br>
+		<a href="http://www.benibela.de/index_en.html">http://www.benibela.de/</a></p>
 		<h3>Further TeXstudio Authors:</h3>
 		<p>Jan Sundermeyer, Daniel Braun, Tim Hoffmann</p>
 		<h3>Thanks to</h3>
 		<p>Contributers: Frederic Devernay, Denis Bitouzé, Jean-Côme Charpentier, Luis Silvestre, Enrico Vittorini, Aleksandr Zolotarev, David Sichau, Grigory Mozhaev, mattgk, A. Weder, Pavel Fric, András Somogyi, István Blahota, Edson Henriques, Grant McLean, Tom Jampen, Kostas Oikinimou, Lion Guillaume, ranks.nl, AI Corleone, Diego Andrés Jarrín, Matthias Pospiech, Zulkifli Hidayat, Christian Spieß, Robert Diaz, Kirill Müller
 			<span id="contributorContact">(Contact us if you are missing or don't want to be mentioned.)</span></p>
 		<p><a href="http://sourceforge.net/projects/texstudio"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=250595&amp;type=10" width="64" height="12" style="position: relative; top: 3px;" alt="SourceForge" /></a> for hosting TeXstudio.</p>
+		
+<script>
+var sm = document.getElementsByClassName("msafe");
+for (var i=0;i<sm.length;i++) {
+  var mail = /(.*)\((.*)/.exec(sm[i].textContent);
+  sm[i].innerHTML = '<a onmouseover="(function(m){' +
+                      'var truemail = /^([a-zA-Z]+) *\\\[.*\\\] *([a-zA-Z.]+)/.exec(m.textContent); '+
+                      'm.textContent = truemail[1]+\' [click to remove spam protection] \'+truemail[2]; '+
+                      'm.onmouseover=\'\'; '+
+                      'm.onclick = function(){' +
+                        'm.onclick=\'\';'+
+                        'm.textContent = truemail[1]+\'\x40\'+truemail[2]; '+
+                        'setTimeout(function(){ m.href=\'mailto:\'+m.textContent;}, 100);}})(this)">'+mail[1]+
+                    '</a> ('+mail[2];
+}
+</script>
 			
 		<p>And to all open source projects from which TeXstudio uses code or that inspired features of TeXstudio.</p>
 	</div> <!--end about-->
