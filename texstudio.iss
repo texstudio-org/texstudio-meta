@@ -1,9 +1,9 @@
 [Setup]
 ;Change this in every version
-AppVerName=TeXstudio 2.5.1
-AppVersion=2.5.1
+AppVerName=TeXstudio 2.5.2
+AppVersion=2.5.2
 
-OutputBaseFilename=texstudio251_win32
+OutputBaseFilename=texstudio252_win32
 
 ;Don't change
 AppName=TeXstudio
@@ -49,6 +49,7 @@ Source: utilities\usermanual_en.html; DestDir: {app}\help
 Source: utilities\usermanual.css; DestDir: {app}\help
 
 Source: utilities\TexTablet\*; DestDir: {app}\TexTablet
+Source: utilities\poppler-data\*; DestDir: {app}\share\poppler Flags: recursesubdirs
 Source: templates\*; DestDir: {app}\templates
 
 ; Commented out translations are not packaged because they are stongly incomplete
