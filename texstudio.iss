@@ -49,7 +49,7 @@ Source: utilities\usermanual_en.html; DestDir: {app}\help
 Source: utilities\usermanual.css; DestDir: {app}\help
 
 Source: utilities\TexTablet\*; DestDir: {app}\TexTablet
-Source: utilities\poppler-data\*; DestDir: {app}\share\poppler Flags: recursesubdirs
+Source: utilities\poppler-data\*; DestDir: {app}\share\poppler; Flags: recursesubdirs
 Source: templates\*; DestDir: {app}\templates
 
 ; Commented out translations are not packaged because they are stongly incomplete
@@ -101,7 +101,7 @@ Name: ja; MessagesFile: compiler:Languages\Japanese.isl
 
 [Tasks]
 Name: texAssociation; Description: "Associate .tex files with TeXstudio"; GroupDescription: File extensions:
-Name: txssAssociation; Description: "Associate Session files (.txss) files with TeXstudio"; GroupDescription: File extensions:
+Name: txssAssociation; Description: "Associate session files (.txss) files with TeXstudio"; GroupDescription: File extensions:
 
 [Registry]
 Root: HKCR; Subkey: ".tex"; ValueType: string; ValueName: ""; ValueData: "texfile"; Flags: uninsdeletevalue; Tasks: texAssociation
