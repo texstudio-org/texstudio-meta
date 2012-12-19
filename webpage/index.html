@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -182,8 +181,11 @@
 	<div id="download" class="page">
 		<h1>Download</h1>
 		<table class="downloadTable">
+		<thead>
 			<tr class="platformDownload"><td colspan="5">Windows</td></tr>
 			<tr><th>Platform</th><th>Version</th><th> Type</th><th>Size</th><th>How to install</th></tr>
+		</thead>
+		<tbody>
 			<tr><td>XP/Vista/7</td>
 			  <td>2.5.1</td>
 			  <td><a href="http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%202.5.1/texstudio251_win32.exe/download">Installer</a></td>
@@ -196,11 +198,12 @@
 			  <td>26.2 MiB</td>
 			  <td><a href="http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%202.5.1/texstudio251_win32-usb.zip/download">download</a> and unzip the zip</td>
 			</tr>
-
+		</tbody>
+		<thead>
 			<tr class="platformDownload"><td colspan="5">Linux</td></tr>
 			<tr><td colspan="5">We recommend that you first try to install TeXstudio from the repository of your distribution. Only if TeXstudio is not available there, use the following pre-packaged versions.</td></tr>
 			<tr><th>Platform</th><th>Version</th><th> Type</th><th>Size</th><th>How to install</th></tr>
-
+		</thead>
 <!--			<tr><td>Fedora 13</td>
 			<td>2.3</td>
 			<td>Repository package</td>
@@ -219,91 +222,203 @@
 
 
 
+<tbody id="linuxdownloads">
+     <tr>
+           <td>CentOS CentOS-6</td>
+           <td>2.5.1</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/CentOS_CentOS-6/i686/texstudio-2.5.1-2.1.i686.rpm">i686</a> Package</td>
+           <td>13MiB</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/CentOS_CentOS-6/i686/texstudio-2.5.1-2.1.i686.rpm">download</a> and open it with your package manager</td>
+           </tr><tr>
+           <td></td>
+           <td></td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/CentOS_CentOS-6/x86_64/texstudio-2.5.1-2.1.x86_64.rpm">x86_64</a> Package</td>
+           <td>13MiB</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/CentOS_CentOS-6/x86_64/texstudio-2.5.1-2.1.x86_64.rpm">download</a> and open it with your package manager</td>
+           </tr><tr>
+           <td>Debian 6.0</td>
+           <td>2.5.1</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/Debian_6.0/amd64/texstudio_2.5.1_amd64.deb">amd64</a> Package</td>
+           <td>16MiB</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/Debian_6.0/amd64/texstudio_2.5.1_amd64.deb">download</a> and open it with your package manager</td>
+           </tr><tr>
+           <td></td>
+           <td></td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/Debian_6.0/i386/texstudio_2.5.1_i386.deb">i386</a> Package</td>
+           <td>16MiB</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/Debian_6.0/i386/texstudio_2.5.1_i386.deb">download</a> and open it with your package manager</td>
+           </tr><tr>
+           <td>Debian wheezy</td>
+           <td>2.5.1</td>
+           <td><a href="http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%202.5.1/texstudio_2.5.1-1_amd64.deb/download">amd64</a> Package</td>
+           <td>16.0 MB</td>
+           <td><a href="http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%202.5.1/texstudio_2.5.1-1_amd64.deb/download">download</a> and open it with your package manager</td>
+           </tr><tr>
+           <td>Fedora 16</td>
+           <td>2.5.1</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/Fedora_16/i686/texstudio-2.5.1-2.1.i686.rpm">i686</a> Package</td>
+           <td>13MiB</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/Fedora_16/i686/texstudio-2.5.1-2.1.i686.rpm">download</a> and open it with your package manager</td>
+           </tr><tr>
+           <td></td>
+           <td></td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/Fedora_16/x86_64/texstudio-2.5.1-2.1.x86_64.rpm">x86_64</a> Package</td>
+           <td>13MiB</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/Fedora_16/x86_64/texstudio-2.5.1-2.1.x86_64.rpm">download</a> and open it with your package manager</td>
+           </tr><tr>
+           <td>Fedora 17</td>
+           <td>2.5.1</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/Fedora_17/i686/texstudio-2.5.1-2.1.i686.rpm">i686</a> Package</td>
+           <td>13MiB</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/Fedora_17/i686/texstudio-2.5.1-2.1.i686.rpm">download</a> and open it with your package manager</td>
+           </tr><tr>
+           <td></td>
+           <td></td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/Fedora_17/x86_64/texstudio-2.5.1-2.1.x86_64.rpm">x86_64</a> Package</td>
+           <td>13MiB</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/Fedora_17/x86_64/texstudio-2.5.1-2.1.x86_64.rpm">download</a> and open it with your package manager</td>
+           </tr><tr>
+           <td>openSUSE 11.4</td>
+           <td>2.5.1</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_11.4/i586/texstudio-2.5.1-2.1.i586.rpm">i586</a> Package</td>
+           <td>11MiB</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_11.4/i586/texstudio-2.5.1-2.1.i586.rpm">download</a> and open it with your package manager</td>
+           </tr><tr>
+           <td></td>
+           <td></td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_11.4/x86_64/texstudio-2.5.1-2.1.x86_64.rpm">x86_64</a> Package</td>
+           <td>11MiB</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_11.4/x86_64/texstudio-2.5.1-2.1.x86_64.rpm">download</a> and open it with your package manager</td>
+           </tr><tr>
+           <td>openSUSE 12.1</td>
+           <td>2.5.1</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_12.1/i586/texstudio-2.5.1-2.1.i586.rpm">i586</a> Package</td>
+           <td>11MiB</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_12.1/i586/texstudio-2.5.1-2.1.i586.rpm">download</a> and open it with your package manager(use the 11.4 version above, if you do not have qt 4.8)</td>
+           </tr><tr>
+           <td></td>
+           <td></td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_12.1/x86_64/texstudio-2.5.1-2.1.x86_64.rpm">x86_64</a> Package</td>
+           <td>11MiB</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_12.1/x86_64/texstudio-2.5.1-2.1.x86_64.rpm">download</a> and open it with your package manager(use the 11.4 version above, if you do not have qt 4.8)</td>
+           </tr><tr>
+           <td>openSUSE 12.2</td>
+           <td>2.5.1</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_12.2/i586/texstudio-2.5.1-2.1.i586.rpm">i586</a> Package</td>
+           <td>11MiB</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_12.2/i586/texstudio-2.5.1-2.1.i586.rpm">download</a> and open it with your package manager</td>
+           </tr><tr>
+           <td></td>
+           <td></td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_12.2/x86_64/texstudio-2.5.1-2.1.x86_64.rpm">x86_64</a> Package</td>
+           <td>11MiB</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_12.2/x86_64/texstudio-2.5.1-2.1.x86_64.rpm">download</a> and open it with your package manager</td>
+           </tr><tr>
+           <td>openSUSE Factory</td>
+           <td>2.5.1</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_Factory/i586/texstudio-2.5.1-2.2.i586.rpm">i586</a> Package</td>
+           <td>11MiB</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_Factory/i586/texstudio-2.5.1-2.2.i586.rpm">download</a> and open it with your package manager</td>
+           </tr><tr>
+           <td></td>
+           <td></td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_Factory/x86_64/texstudio-2.5.1-2.2.x86_64.rpm">x86_64</a> Package</td>
+           <td>11MiB</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_Factory/x86_64/texstudio-2.5.1-2.2.x86_64.rpm">download</a> and open it with your package manager</td>
+           </tr><tr>
+           <td>openSUSE Tumbleweed</td>
+           <td>2.5.1</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_Tumbleweed/i586/texstudio-2.5.1-2.2.i586.rpm">i586</a> Package</td>
+           <td>11MiB</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_Tumbleweed/i586/texstudio-2.5.1-2.2.i586.rpm">download</a> and open it with your package manager</td>
+           </tr><tr>
+           <td></td>
+           <td></td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_Tumbleweed/x86_64/texstudio-2.5.1-2.2.x86_64.rpm">x86_64</a> Package</td>
+           <td>11MiB</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_Tumbleweed/x86_64/texstudio-2.5.1-2.2.x86_64.rpm">download</a> and open it with your package manager</td>
+           </tr><tr>
+           <td>xUbuntu 10.04</td>
+           <td>2.5.1</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_10.04/amd64/texstudio_2.5.1_amd64.deb">amd64</a> Package</td>
+           <td>16MiB</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_10.04/amd64/texstudio_2.5.1_amd64.deb">download</a> and open it with your package manager</td>
+           </tr><tr>
+           <td></td>
+           <td></td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_10.04/i386/texstudio_2.5.1_i386.deb">i386</a> Package</td>
+           <td>16MiB</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_10.04/i386/texstudio_2.5.1_i386.deb">download</a> and open it with your package manager</td>
+           </tr><tr>
+           <td>xUbuntu 10.10</td>
+           <td>2.5.1</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_10.10/amd64/texstudio_2.5.1_amd64.deb">amd64</a> Package</td>
+           <td>16MiB</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_10.10/amd64/texstudio_2.5.1_amd64.deb">download</a> and open it with your package manager</td>
+           </tr><tr>
+           <td></td>
+           <td></td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_10.10/i386/texstudio_2.5.1_i386.deb">i386</a> Package</td>
+           <td>16MiB</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_10.10/i386/texstudio_2.5.1_i386.deb">download</a> and open it with your package manager</td>
+           </tr><tr>
+           <td>xUbuntu 11.04</td>
+           <td>2.5.1</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_11.04/amd64/texstudio_2.5.1_amd64.deb">amd64</a> Package</td>
+           <td>16MiB</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_11.04/amd64/texstudio_2.5.1_amd64.deb">download</a> and open it with your package manager</td>
+           </tr><tr>
+           <td></td>
+           <td></td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_11.04/i386/texstudio_2.5.1_i386.deb">i386</a> Package</td>
+           <td>16MiB</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_11.04/i386/texstudio_2.5.1_i386.deb">download</a> and open it with your package manager</td>
+           </tr><tr>
+           <td>xUbuntu 11.10</td>
+           <td>2.5.1</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_11.10/amd64/texstudio_2.5.1_amd64.deb">amd64</a> Package</td>
+           <td>16MiB</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_11.10/amd64/texstudio_2.5.1_amd64.deb">download</a> and open it with your package manager</td>
+           </tr><tr>
+           <td></td>
+           <td></td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_11.10/i386/texstudio_2.5.1_i386.deb">i386</a> Package</td>
+           <td>16MiB</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_11.10/i386/texstudio_2.5.1_i386.deb">download</a> and open it with your package manager</td>
+           </tr><tr>
+           <td>xUbuntu 12.04</td>
+           <td>2.5.1</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.04/amd64/texstudio_2.5.1_amd64.deb">amd64</a> Package</td>
+           <td>16MiB</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.04/amd64/texstudio_2.5.1_amd64.deb">download</a> and open it with your package manager</td>
+           </tr><tr>
+           <td></td>
+           <td></td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.04/i386/texstudio_2.5.1_i386.deb">i386</a> Package</td>
+           <td>16MiB</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.04/i386/texstudio_2.5.1_i386.deb">download</a> and open it with your package manager</td>
+           </tr><tr>
+           <td>xUbuntu 12.10</td>
+           <td>2.5.1</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.10/amd64/texstudio_2.5.1_amd64.deb">amd64</a> Package</td>
+           <td>15MiB</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.10/amd64/texstudio_2.5.1_amd64.deb">download</a> and open it with your package manager</td>
+           </tr><tr>
+           <td></td>
+           <td></td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.10/i386/texstudio_2.5.1_i386.deb">i386</a> Package</td>
+           <td>15MiB</td>
+           <td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.10/i386/texstudio_2.5.1_i386.deb">download</a> and open it with your package manager</td>
+           </tr>
+     </tbody>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<tr><td>CentOS CentOS-6</td><td>2.5.1</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/CentOS_CentOS-6/i686/texstudio-2.5.1-1.1.i686.rpm">i686</a> Package</td><td>13 MiB</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/CentOS_CentOS-6/i686/texstudio-2.5.1-1.1.i686.rpm">download</a> and open it with your package manager </td></tr>
-
-<tr><td></td><td></td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/CentOS_CentOS-6/x86_64/texstudio-2.5.1-1.1.x86_64.rpm">x86_64</a> Package</td><td>13 MiB</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/CentOS_CentOS-6/x86_64/texstudio-2.5.1-1.1.x86_64.rpm">download</a> and open it with your package manager </td></tr>
-
-<tr><td>Debian 6.0</td><td>2.5.1</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/Debian_6.0/amd64/texstudio_2.5.1_amd64.deb">amd64</a> Package</td><td>16 MiB</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/Debian_6.0/amd64/texstudio_2.5.1_amd64.deb">download</a> and open it with your package manager </td></tr>
-
-<tr><td></td><td></td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/Debian_6.0/i386/texstudio_2.5.1_i386.deb">i386</a> Package</td><td>16 MiB</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/Debian_6.0/i386/texstudio_2.5.1_i386.deb">download</a> and open it with your package manager </td></tr>
-
-<tr><td>Debian wheezy</td><td>2.5.1</td><td><a href="http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%202.5.1/texstudio_2.5.1-1_amd64.deb/download">amd64</a> Package</td><td>16 MiB</td><td><a href="http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%202.5.1/texstudio_2.5.1-1_amd64.deb/download">download</a> and open it with your package manager </td></tr>
-
-
-<tr><td>Fedora 16</td><td>2.5.1</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/Fedora_16/i686/texstudio-2.5.1-1.1.i686.rpm">i686</a> Package</td><td>13 MiB</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/Fedora_16/i686/texstudio-2.5.1-1.1.i686.rpm">download</a> and open it with your package manager </td></tr>
-
-<tr><td></td><td></td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/Fedora_16/x86_64/texstudio-2.5.1-1.1.x86_64.rpm">x86_64</a> Package</td><td>13 MiB</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/Fedora_16/x86_64/texstudio-2.5.1-1.1.x86_64.rpm">download</a> and open it with your package manager </td></tr>
-
-<tr><td>Fedora 17</td><td>2.5.1</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/Fedora_17/i686/texstudio-2.5.1-1.1.i686.rpm">i686</a> Package</td><td>13 MiB</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/Fedora_17/i686/texstudio-2.5.1-1.1.i686.rpm">download</a> and open it with your package manager </td></tr>
-
-<tr><td></td><td></td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/Fedora_17/x86_64/texstudio-2.5.1-1.1.x86_64.rpm">x86_64</a> Package</td><td>13 MiB</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/Fedora_17/x86_64/texstudio-2.5.1-1.1.x86_64.rpm">download</a> and open it with your package manager </td></tr>
-
-<tr><td>openSUSE 11.4</td><td>2.5.1</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_11.4/i586/texstudio-2.5.1-1.1.i586.rpm">i586</a> Package</td><td>11 MiB</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_11.4/i586/texstudio-2.5.1-1.1.i586.rpm">download</a> and open it with your package manager </td></tr>
-
-<tr><td></td><td></td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_11.4/x86_64/texstudio-2.5.1-1.1.x86_64.rpm">x86_64</a> Package</td><td>11 MiB</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_11.4/x86_64/texstudio-2.5.1-1.1.x86_64.rpm">download</a> and open it with your package manager </td></tr>
-
-<tr><td>openSUSE 12.1</td><td>2.5.1</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_12.1/i586/texstudio-2.5.1-1.1.i586.rpm">i586</a> Package</td><td>11 MiB</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_12.1/i586/texstudio-2.5.1-1.1.i586.rpm">download</a> and open it with your package manager (use the 11.4 version above, if you do not have qt 4.8)</td></tr>
-
-<tr><td></td><td></td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_12.1/x86_64/texstudio-2.5.1-1.1.x86_64.rpm">x86_64</a> Package</td><td>11 MiB</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_12.1/x86_64/texstudio-2.5.1-1.1.x86_64.rpm">download</a> and open it with your package manager (use the 11.4 version above, if you do not have qt 4.8)</td></tr>
-
-<tr><td>openSUSE 12.2</td><td>2.5.1</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_12.2/i586/texstudio-2.5.1-1.1.i586.rpm">i586</a> Package</td><td>11 MiB</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_12.2/i586/texstudio-2.5.1-1.1.i586.rpm">download</a> and open it with your package manager </td></tr>
-
-<tr><td></td><td></td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_12.2/x86_64/texstudio-2.5.1-1.1.x86_64.rpm">x86_64</a> Package</td><td>11 MiB</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_12.2/x86_64/texstudio-2.5.1-1.1.x86_64.rpm">download</a> and open it with your package manager </td></tr>
-
-<tr><td>openSUSE Factory</td><td>2.5.1</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_Factory/i586/texstudio-2.5.1-1.1.i586.rpm">i586</a> Package</td><td>11 MiB</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_Factory/i586/texstudio-2.5.1-1.1.i586.rpm">download</a> and open it with your package manager </td></tr>
-
-<tr><td></td><td></td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_Factory/x86_64/texstudio-2.5.1-1.1.x86_64.rpm">x86_64</a> Package</td><td>11 MiB</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_Factory/x86_64/texstudio-2.5.1-1.1.x86_64.rpm">download</a> and open it with your package manager </td></tr>
-
-<tr><td>openSUSE Tumbleweed</td><td>2.5.1</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_Tumbleweed/i586/texstudio-2.5.1-1.1.i586.rpm">i586</a> Package</td><td>11 MiB</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_Tumbleweed/i586/texstudio-2.5.1-1.1.i586.rpm">download</a> and open it with your package manager </td></tr>
-
-<tr><td></td><td></td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_Tumbleweed/x86_64/texstudio-2.5.1-1.1.x86_64.rpm">x86_64</a> Package</td><td>11 MiB</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/openSUSE_Tumbleweed/x86_64/texstudio-2.5.1-1.1.x86_64.rpm">download</a> and open it with your package manager </td></tr>
-
-<tr><td>xUbuntu 10.04</td><td>2.5.1</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_10.04/amd64/texstudio_2.5.1_amd64.deb">amd64</a> Package</td><td>16 MiB</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_10.04/amd64/texstudio_2.5.1_amd64.deb">download</a> and open it with your package manager </td></tr>
-
-<tr><td></td><td></td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_10.04/i386/texstudio_2.5.1_i386.deb">i386</a> Package</td><td>16 MiB</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_10.04/i386/texstudio_2.5.1_i386.deb">download</a> and open it with your package manager </td></tr>
-
-<tr><td>xUbuntu 10.10</td><td>2.5.1</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_10.10/amd64/texstudio_2.5.1_amd64.deb">amd64</a> Package</td><td>16 MiB</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_10.10/amd64/texstudio_2.5.1_amd64.deb">download</a> and open it with your package manager </td></tr>
-
-<tr><td></td><td></td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_10.10/i386/texstudio_2.5.1_i386.deb">i386</a> Package</td><td>16 MiB</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_10.10/i386/texstudio_2.5.1_i386.deb">download</a> and open it with your package manager </td></tr>
-
-<tr><td>xUbuntu 11.04</td><td>2.5.1</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_11.04/amd64/texstudio_2.5.1_amd64.deb">amd64</a> Package</td><td>16 MiB</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_11.04/amd64/texstudio_2.5.1_amd64.deb">download</a> and open it with your package manager </td></tr>
-
-<tr><td></td><td></td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_11.04/i386/texstudio_2.5.1_i386.deb">i386</a> Package</td><td>16 MiB</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_11.04/i386/texstudio_2.5.1_i386.deb">download</a> and open it with your package manager </td></tr>
-
-<tr><td>xUbuntu 11.10</td><td>2.5.1</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_11.10/amd64/texstudio_2.5.1_amd64.deb">amd64</a> Package</td><td>16 MiB</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_11.10/amd64/texstudio_2.5.1_amd64.deb">download</a> and open it with your package manager </td></tr>
-
-<tr><td></td><td></td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_11.10/i386/texstudio_2.5.1_i386.deb">i386</a> Package</td><td>16 MiB</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_11.10/i386/texstudio_2.5.1_i386.deb">download</a> and open it with your package manager </td></tr>
-
-<tr><td>xUbuntu 12.04</td><td>2.5.1</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.04/amd64/texstudio_2.5.1_amd64.deb">amd64</a> Package</td><td>16 MiB</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.04/amd64/texstudio_2.5.1_amd64.deb">download</a> and open it with your package manager </td></tr>
-
-<tr><td></td><td></td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.04/i386/texstudio_2.5.1_i386.deb">i386</a> Package</td><td>16 MiB</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.04/i386/texstudio_2.5.1_i386.deb">download</a> and open it with your package manager </td></tr>
-
-
-<tr><td>xUbuntu 12.10</td><td>2.5.1</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.10/amd64/texstudio_2.5.1_amd64.deb">amd64</a> Package</td><td>15 MiB</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.10/amd64/texstudio_2.5.1_amd64.deb">download</a> and open it with your package manager </td></tr>
-
-
-<tr><td></td><td></td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.10/i386/texstudio_2.5.1_i386.deb">i386</a> Package</td><td>15 MiB</td><td><a href="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.10/i386/texstudio_2.5.1_i386.deb">download</a> and open it with your package manager </td></tr>
-
-
+			<thead>
+			
 			<tr class="platformDownload"><td colspan="5">Mac OS X</td></tr>
 			<tr><td colspan="5">The OS X version is experimental. Since none of the currently active developers is using OS X, we cannot thoroughly test it. We do our best to also support OS X but be prepared that there may be some issues.</td></tr>
 			<tr><th>Platform</th><th>Version</th><th> Type</th><th>Size</th><th>How to install</th></tr>	
+			</thead>
+			<tbody>
 			<tr><td>Mac ports</td>
 				<td>2.5</td>
 				<td></td>	
@@ -323,7 +438,7 @@
 				<td><a href="http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%202.4/texstudio_2.4_mac_osx105.zip/download">download</a>, extract and start it.</td>
 			</tr>
 
-
+			</tbody>
 
 	<!--		
 			
@@ -340,15 +455,23 @@
 				<td><a href="http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%202.3/texstudio2.3_osx10.5.zip/download">download</a>, extract and start it.  </td></tr>
 			</tr>
 -->
-
+			<thead>
 			<tr class="platformDownload"><td colspan="5">FreeBSD</td></tr>
 			<tr><th>Platform</th><th>Version</th><th> Type</th><th>Size</th><th>How to install</th></tr>
+			</thead>
+			
+			<tbody>
 			<tr><td></td><td>old 2.1</td><td><a href="http://www.freshports.org/editors/texmakerx/">FreshPorts.org</a></td><td></td><td>cd /usr/ports/editors/texmakerx/ &amp;&amp; make install clean</td></tr>
+			</tbody>
 
+			<thead>
 			<tr class="platformDownload"><td colspan="5">Source Code</td></tr>
+			</thead>
+			<tbody>
 			<tr><td></td><td>latest</td><td><a href="http://svn.code.sf.net/p/texstudio/code/trunk/">SVN source</a></td><td></td><td>see the <a href="http://sourceforge.net/apps/mediawiki/texstudio/index.php?title=CompileTXS">wiki</a></td></tr>
 			<tr><td></td><td>2.5.1</td><td><a href="http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%202.5.1/texstudio-2.5.1.orig.tar.gz/download
 ">source tarball</a></td><td>17.4 MiB</td><td>see the <a href="http://sourceforge.net/apps/mediawiki/texstudio/index.php?title=CompileTXS">wiki</a></td></tr>
+			</tbody>
 
 			<!--<tr class="platformDownload"><td colspan=7>New translations</td></tr>
 			<tr><th colspan=3>Language</th><th colspan=3>Thanks to</th></tr>
@@ -477,4 +600,3 @@ piwik_log(piwik_action_name, piwik_idsite, piwik_url);
 <!-- End Piwik Tag -->
 </div>
 </body></html>
-
