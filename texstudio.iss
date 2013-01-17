@@ -16,41 +16,41 @@ UninstallDisplayIcon={app}\texstudio.exe
 SourceDir=..\..\
 
 [Files]
-Source: texstudio.exe; DestDir: {app}\
-Source: mingwm10.dll; DestDir: {app}\
-Source: iconv.dll; DestDir: {app}\
-Source: QtCore4.dll; DestDir: {app}\
-Source: QtGui4.dll; DestDir: {app}\
-Source: QtNetwork4.dll; DestDir: {app}\
-Source: QtXml4.dll; DestDir: {app}\
-Source: QtScript4.dll; DestDir: {app}\
-Source: phonon4.dll; DestDir: {app}\
+;Source: texstudio.exe; DestDir: {app}\
+;Source: mingwm10.dll; DestDir: {app}\
+;Source: iconv.dll; DestDir: {app}\
+;Source: QtCore4.dll; DestDir: {app}\
+;Source: QtGui4.dll; DestDir: {app}\
+;Source: QtNetwork4.dll; DestDir: {app}\
+;Source: QtXml4.dll; DestDir: {app}\
+;Source: QtScript4.dll; DestDir: {app}\
+;Source: phonon4.dll; DestDir: {app}\
 
-Source: utilities\dictionaries\en_GB.*; DestDir: {app}\dictionaries
-Source: utilities\dictionaries\en_US.*; DestDir: {app}\dictionaries
-Source: utilities\dictionaries\fr_FR.*; DestDir: {app}\dictionaries
-Source: utilities\dictionaries\de_DE.*; DestDir: {app}\dictionaries
-Source: utilities\dictionaries\hu_HU.*; DestDir: {app}\dictionaries
-Source: utilities\dictionaries\pt_BR.*; DestDir: {app}\dictionaries
-Source: utilities\dictionaries\de.*; DestDir: {app}\dictionaries
-Source: utilities\dictionaries\en.*; DestDir: {app}\dictionaries
-Source: utilities\dictionaries\fr.*; DestDir: {app}\dictionaries
-Source: utilities\dictionaries\th_en_US_v2.dat.*; DestDir: {app}\dictionaries
-Source: utilities\dictionaries\th_fr_FR_v2.dat.*; DestDir: {app}\dictionaries
-Source: utilities\dictionaries\th_de_DE_v2.dat.*; DestDir: {app}\dictionaries
+;Source: utilities\dictionaries\en_GB.*; DestDir: {app}\dictionaries
+;Source: utilities\dictionaries\en_US.*; DestDir: {app}\dictionaries
+;Source: utilities\dictionaries\fr_FR.*; DestDir: {app}\dictionaries
+;Source: utilities\dictionaries\de_DE.*; DestDir: {app}\dictionaries
+;Source: utilities\dictionaries\hu_HU.*; DestDir: {app}\dictionaries
+;Source: utilities\dictionaries\pt_BR.*; DestDir: {app}\dictionaries
+;Source: utilities\dictionaries\de.*; DestDir: {app}\dictionaries
+;Source: utilities\dictionaries\en.*; DestDir: {app}\dictionaries
+;Source: utilities\dictionaries\fr.*; DestDir: {app}\dictionaries
+;Source: utilities\dictionaries\th_en_US_v2.dat.*; DestDir: {app}\dictionaries
+;Source: utilities\dictionaries\th_fr_FR_v2.dat.*; DestDir: {app}\dictionaries
+;Source: utilities\dictionaries\th_de_DE_v2.dat.*; DestDir: {app}\dictionaries
 
-Source: utilities\AUTHORS; DestDir: {app}\help
-Source: utilities\CHANGELOG.txt; DestDir: {app}\help
-Source: utilities\COPYING; DestDir: {app}\help
-Source: utilities\*.png; DestDir: {app}\help
-Source: utilities\latexhelp.html; DestDir: {app}\help
-Source: utilities\license.txt; DestDir: {app}\help
-Source: utilities\usermanual_en.html; DestDir: {app}\help
-Source: utilities\usermanual.css; DestDir: {app}\help
+;Source: utilities\AUTHORS; DestDir: {app}\help
+;Source: utilities\CHANGELOG.txt; DestDir: {app}\help
+;Source: utilities\COPYING; DestDir: {app}\help
+;Source: utilities\*.png; DestDir: {app}\help
+;Source: utilities\latexhelp.html; DestDir: {app}\help
+;Source: utilities\license.txt; DestDir: {app}\help
+;Source: utilities\usermanual_en.html; DestDir: {app}\help
+;Source: utilities\usermanual.css; DestDir: {app}\help
 
-Source: utilities\TexTablet\*; DestDir: {app}\TexTablet
-Source: utilities\poppler-data\*; DestDir: {app}\share\poppler; Flags: recursesubdirs
-Source: templates\*; DestDir: {app}\templates
+;Source: utilities\TexTablet\*; DestDir: {app}\TexTablet
+;Source: utilities\poppler-data\*; DestDir: {app}\share\poppler; Flags: recursesubdirs
+;Source: templates\*; DestDir: {app}\templates
 
 ; Commented out translations are not packaged because they are stongly incomplete
 Source: texstudio_cs.qm; DestDir: {app}\translations
@@ -87,6 +87,7 @@ Source: zlib1.dll; DestDir: {app}
 Name: {group}\TeXstudio; Filename: {app}\TeXstudio.exe
 Name: {commondesktop}\TeXstudio; Filename: {app}\TeXstudio.exe
 
+
 [Languages]
 Name: en; MessagesFile: compiler:Default.isl
 Name: de; MessagesFile: compiler:Languages\German.isl
@@ -114,3 +115,140 @@ Root: HKCR; Subkey: "txssfile\shell\open\command"; ValueType: string; ValueName:
 
 [Run]
 Filename: {app}\texstudio.exe; Description: Start TeXstudio; Flags: nowait postinstall
+
+[Code]
+// Uninstall currently does not support custom pages so we have to generate a form for the uninstall options
+var
+  CheckAll, CheckSettings, CheckUserTemplates, CheckCwlFiles: TCheckBox;
+
+procedure AllClicked(Sender: TObject);
+begin
+  CheckSettings.Checked := CheckAll.Checked;
+  CheckUserTemplates.Checked := CheckAll.Checked;
+  CheckCwlFiles.Checked := CheckAll.Checked;
+end;
+
+procedure OtherClicked(Sender: TObject);
+var cb: TCheckBox;
+begin
+  cb := TCheckBox(Sender);
+  if not cb.Checked then
+  begin
+    CheckAll.OnClick := NIL;
+    CheckAll.Checked := False;
+    CheckAll.OnClick := @AllClicked;
+  end;
+end;
+
+procedure QueryUninstallOptions;
+var
+  Form: TSetupForm;
+  Info: TLabel;
+  Edit: TNewEdit;
+  UninstallButton, CancelButton: TNewButton;
+begin
+  Form := CreateCustomForm();
+  try
+    Form.ClientWidth := ScaleX(256);
+    Form.ClientHeight := ScaleY(192);
+    Form.Caption := 'Uninstall Options';
+    Form.Center();
+
+    Info := TLabel.Create(Form);
+    Info.Parent := Form;
+    Info.Caption := 'Additionally Remove:'
+    Info.Top := ScaleY(10);
+    Info.Left := ScaleX(10);
+
+    CheckAll := TCheckBox.Create(Form);
+    CheckAll.Parent := Form;
+    CheckAll.Checked := False;
+    CheckAll.Caption := 'User Data Folder';
+    CheckAll.Top := ScaleY(Info.Top + Info.Height + 6);
+    CheckAll.Left := ScaleX(14);
+    CheckAll.Width := Form.ClientWidth - 2*ScaleX(6);
+    CheckAll.OnClick := @AllClicked;
+    
+    CheckSettings := TCheckBox.Create(Form);
+    CheckSettings.Parent := Form;
+    CheckSettings.Checked := True;
+    CheckSettings.Caption := 'Settings';
+    CheckSettings.Top := ScaleY(CheckAll.Top + CheckAll.Height + 6);
+    CheckSettings.Left := ScaleX(20);
+    CheckSettings.Width := Form.ClientWidth - 2*ScaleX(6);
+    CheckSettings.OnClick := @OtherClicked;
+
+    CheckUserTemplates := TCheckBox.Create(Form);
+    CheckUserTemplates.Parent := Form;
+    CheckUserTemplates.Checked := True;
+    CheckUserTemplates.Caption := 'User Templates';
+    CheckUserTemplates.Top := ScaleY(CheckSettings.Top + CheckSettings.Height + 6);
+    CheckUserTemplates.Left := ScaleX(20);
+    CheckUserTemplates.Width := Form.ClientWidth - 2*ScaleX(6);
+    CheckUserTemplates.OnClick := @OtherClicked;
+
+    CheckCwlFiles := TCheckBox.Create(Form);
+    CheckCwlFiles.Parent := Form;
+    CheckCwlFiles.Checked := True;
+    CheckCwlFiles.Caption := 'User Completion Files';
+    CheckCwlFiles.Top := ScaleY(CheckUserTemplates.Top + CheckUserTemplates.Height + 6);
+    CheckCwlFiles.Left := ScaleX(20);
+    CheckAllCwlFiles.Width := Form.ClientWidth - 2*ScaleX(6);
+    CheckCwlFiles.OnClick := @OtherClicked;
+
+    CancelButton := TNewButton.Create(Form);
+    CancelButton.Parent := Form;
+    CancelButton.Width := ScaleX(75);
+    CancelButton.Height := ScaleY(23);
+    CancelButton.Left := Form.ClientWidth - ScaleX(75 + 6 + 75 + 10);
+    CancelButton.Top := Form.ClientHeight - ScaleY(23 + 10);
+    CancelButton.Caption := 'Cancel';
+    CancelButton.ModalResult := mrCancel;
+    CancelButton.Default := True;
+
+    UninstallButton := TNewButton.Create(Form);
+    UninstallButton.Parent := Form;
+    UninstallButton.Width := ScaleX(75);
+    UninstallButton.Height := ScaleY(23);
+    UninstallButton.Left := Form.ClientWidth - ScaleX(75 + 10);
+    UninstallButton.Top := Form.ClientHeight - ScaleY(23 + 10);
+    UninstallButton.Caption := 'Uninstall';
+    UninstallButton.ModalResult := mrOk;
+    UninstallButton.Cancel := True;
+
+    Form.ActiveControl := UninstallButton;
+
+    if Form.ShowModal() = mrCancel then
+      Abort;
+
+    if CheckAll.Checked then begin
+      DelTree(ExpandConstant('{userappdata}')+'\texstudio', True, True, True);
+    end else begin
+      if CheckSettings.Checked then
+        DeleteFile(ExpandConstant('{userappdata}')+'\texstudio\texstudio.ini');
+      if CheckUserTemplates.Checked then
+        DelTree(ExpandConstant('{userappdata}')+'\texstudio\templates\user\*', False, True, True);
+      if CheckCwlFiles.Checked then
+        DelTree(ExpandConstant('{userappdata}')+'\texstudio\*.cwl', False, True, True);
+    end;
+
+  finally
+    Form.Free();
+  end;
+end;
+
+function InitializeSetup(): Boolean;
+begin
+  QueryUninstallOptions;
+  Result := False;
+end;
+
+procedure CurUninstallStepChanged(CurUninstallStep: TUninstallStep);
+begin
+  case CurUninstallStep of
+    usUninstall:
+      begin
+        QueryUninstallOptions;
+      end;
+  end;
+end;
