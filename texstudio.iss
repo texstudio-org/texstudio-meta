@@ -1,9 +1,9 @@
 [Setup]
 ;Change this in every version
-AppVerName=TeXstudio 2.5.2
-AppVersion=2.5.2
+AppVerName=TeXstudio 2.6.0
+AppVersion=2.6.0
 
-OutputBaseFilename=texstudio252_win32
+OutputBaseFilename=texstudio260svn_win32
 
 ;Don't change
 AppName=TeXstudio
@@ -23,6 +23,7 @@ Source: QtCore4.dll; DestDir: {app}\
 Source: QtGui4.dll; DestDir: {app}\
 Source: QtNetwork4.dll; DestDir: {app}\
 Source: QtXml4.dll; DestDir: {app}\
+Source: QtSvg4.dll; DestDir: {app}\
 Source: QtScript4.dll; DestDir: {app}\
 Source: phonon4.dll; DestDir: {app}\
 
