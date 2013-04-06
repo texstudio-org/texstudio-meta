@@ -26,6 +26,7 @@ Source: QtXml4.dll; DestDir: {app}\
 Source: QtSvg4.dll; DestDir: {app}\
 Source: QtScript4.dll; DestDir: {app}\
 Source: phonon4.dll; DestDir: {app}\
+Source: iconengines\qsvgicon4.dll; DestDir: {app}\iconengines
 
 Source: utilities\dictionaries\en_GB.*; DestDir: {app}\dictionaries
 Source: utilities\dictionaries\en_US.*; DestDir: {app}\dictionaries
