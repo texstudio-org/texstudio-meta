@@ -42,7 +42,7 @@ xidel \
              $realplat := filter($plat,"[^/]+$$;")
          return (
            if (contains($os, "Fedora") and not(contains($lastos, "Fedora"))) then entry("Debian wheezy", $debianlink, "amd64", $debiansize) else (),
-           entry($os, $u, $realplat, concat(filter($a/following-sibling::text(),"([0-9.]+[MK])$$;"),"iB"))
+           entry($os, $u, $realplat, replace(extract($a/following-sibling::text(),"[0-9.]+ *[MK]$"), "([0-9.]+) *([MK])", "$1 $2iB"))
          )'     --printed-node-format html                                                                          
      #2> /dev/null
      
