@@ -5,7 +5,7 @@ USERNAME=benibela
 echo Password for sf user $USERNAME
 read PASSWORD
 
-#xidel https://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%20$VERSION/ -e 'css("#files .name")' > /tmp/txsfiles
+xidel https://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%20$VERSION/ -e 'css("#files .name")' > /tmp/txsfiles
 
 function setDef(){
   FILEGREP=$1
@@ -15,7 +15,7 @@ function setDef(){
     echo $FILE on $PLATFORM
   
     /home/benito/hg/programs/internet/xidel/xidel https://sourceforge.net/account/login.php         \
-      -f "form((//form)[2], 'form_loginname=$USERNAME&form_pw=$PASSWORD&login=Log in')"            \
+      -f "form((//form)[2], {'form_loginname': '$USERNAME', 'form_pw': '$PASSWORD', 'login': 'Log in'})"            \
       -f "object(('method', 'PUT', 
                 'post', 'name=$FILE&download_label=&default=$PLATFORM', 
                 'url', 'https://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%20$VERSION/$FILE'))" 
