@@ -2,7 +2,7 @@
 
 echo "create release note readme file"
 
-VERSION=`grep TXSVERSION smallUsefulFunctions.h | head -1 | cut -d " " -f 3 | tr -d "\"" | grep -oE [0-9.]+`
+VERSION=`grep TXSVERSION utilsVersion.h | head -1 | cut -d " " -f 3 | tr -d "\"" | grep -oE [0-9.]+`
 
 cat <<EOF > /tmp/texstudio$VERSION.readme.txt
 Release readme:
