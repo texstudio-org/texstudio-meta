@@ -1,4 +1,0 @@
-smallUsefulFunctions.h
-utilities\texstudio.spec
-utilities\notin...\texstudio.iss
-utilities/CHANGELOG.txt
