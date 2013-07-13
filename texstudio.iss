@@ -1,9 +1,9 @@
 [Setup]
 ;Change this in every version
-AppVerName=TeXstudio 2.6.0
-AppVersion=2.6.0
+AppVerName=TeXstudio 2.6.2
+AppVersion=2.6.2
 
-OutputBaseFilename=texstudio260svn_win32
+OutputBaseFilename=texstudio262_win32
 
 ;Don't change
 AppName=TeXstudio
@@ -73,16 +73,19 @@ Source: qt_hu.qm; DestDir: {app}\translations
 Source: qt_ja.qm; DestDir: {app}\translations
 Source: qt_zh.qm; DestDir: {app}\translations
 
+Source: libcurl.dll; DestDir: {app}
 Source: libfreetype.dll; DestDir: {app}
 Source: libgcc_s_dw2-1.dll; DestDir: {app}
-Source: liblcms-1.dll; DestDir: {app}
+Source: libgcc_s_sjlj-1.dll; DestDir: {app}
+Source: liblcms2.dll; DestDir: {app}
 Source: libopenjpeg.dll; DestDir: {app}
-Source: libpng14.dll; DestDir: {app}
+Source: libpng15.dll; DestDir: {app}
 Source: libjpeg.dll; DestDir: {app}
 Source: libpoppler.dll; DestDir: {app}
 Source: libpoppler-qt4.dll; DestDir: {app}
+Source: libtiff3.dll; DestDir: {app}
 Source: libxml2.dll; DestDir: {app}
-Source: libzlib1.dll; DestDir: {app}
+Source: libz.dll; DestDir: {app}
 Source: zlib1.dll; DestDir: {app}
 
 [Icons]
