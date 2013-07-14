@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION=2.6.0
+VERSION=2.6.2
 USERNAME=benibela
 echo Password for sf user $USERNAME
 read PASSWORD
