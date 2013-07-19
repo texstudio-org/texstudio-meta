@@ -87,6 +87,8 @@ Source: libtiff3.dll; DestDir: {app}
 Source: libxml2.dll; DestDir: {app}
 Source: libz.dll; DestDir: {app}
 Source: zlib1.dll; DestDir: {app}
+Source: libeay32.dll; DestDir: {app}
+Source: ssleay32.dll; DestDir: {app}
 
 [Icons]
 Name: {group}\TeXstudio; Filename: {app}\TeXstudio.exe
