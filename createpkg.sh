@@ -4,7 +4,7 @@ if [ ! -f texstudio ]; then echo "./texstudio doesn't exist"; exit; fi
 if ( readelf -d texstudio | grep QtTest ) then  
   echo "txs linked against QtTest => RECOMPILE"; 
   make clean
-  qmake CONFIG+=release CONFIG-=debug texstudio.pro
+  qmake-qt4 CONFIG+=release CONFIG-=debug texstudio.pro
   make
 
   if [ ! -f texstudio ]; then echo "./texstudio doesn't exist"; exit; fi
@@ -12,7 +12,7 @@ if ( readelf -d texstudio | grep QtTest ) then
 fi
 
 #get qt version
-QTVERSION=`qmake -v | grep -oE "4\.[2-9]\.[0-9]"`;
+QTVERSION=`qmake-qt4 -v | grep -oE "4\.[2-9]\.[0-9]"`;
 #QTVERSION="$QTVERSION.0";  (real version? or erase last digit?)
 
 GCCVERSION=`gcc -v 2>&1 | grep -m 1  -Eo "4\.[0-9]\.[0-9]"`;
