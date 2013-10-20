@@ -1,9 +1,9 @@
 [Setup]
 ;Change this in every version
-AppVerName=TeXstudio 2.6.3
-AppVersion=2.6.3
+AppVerName=TeXstudio 2.6.4
+AppVersion=2.6.4
 
-OutputBaseFilename=texstudio263_win32
+OutputBaseFilename=texstudio264_win32
 
 ;Don't change
 AppName=TeXstudio
@@ -13,7 +13,7 @@ AppPublisherURL=http://texstudio.sourceforge.net/
 DefaultDirName={pf}\TeXstudio
 DefaultGroupName=TeXstudio
 UninstallDisplayIcon={app}\texstudio.exe
-SourceDir=..\..\
+SourceDir=..\texstudio-hg\
 
 [Files]
 Source: texstudio.exe; DestDir: {app}\
