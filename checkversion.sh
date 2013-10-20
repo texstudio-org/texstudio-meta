@@ -1,14 +1,15 @@
 #/bin/bash
 
+METADIR=../texstudiometa
 TXS_VERSION_CPP=`grep TXSVERSION utilsVersion.h | head -1 | cut -d " " -f 3 | tr -d "\"" | grep -oE [0-9.]+`
 TXS_VERSION_MANPAGE=`grep TH utilities/texstudio.1 | head -1 | cut -d " " -f 5 | tr -d "\""`
 TXS_VERSION_CHANGELOG=`grep TeXstudio utilities/CHANGELOG.txt | head -1 | grep -oE [0-9.]+ | tail -1`
 TXS_VERSION_DEBIAN_CHANGELOG=`head -1 debian/changelog | grep -oE [0-9.]+ `
 TXS_VERSION_SPEC=`grep Version: utilities/texstudio.spec | head -1 | grep -oE "[0-9.]+"`
-TXS_VERSION_ISS1=`grep AppVer utilities/notInBinary/texstudio.iss | head -1 | grep -oE [0-9.]+`
-TXS_VERSION_ISS2=`grep AppVer utilities/notInBinary/texstudio.iss | head -1 | grep -oE [0-9.]+`
+TXS_VERSION_ISS1=`grep AppVer $METADIR/texstudio.iss | head -1 | grep -oE [0-9.]+`
+TXS_VERSION_ISS2=`grep AppVer $METADIR/texstudio.iss | head -1 | grep -oE [0-9.]+`
 TXS_VERSION_MANUAL=`grep SECTIONNEW utilities/usermanual_en.html | head -2 | tail -1 | grep -oE "Version +[0-9.]+" | tail -1 | grep -oE [0-9.]+`
-TXS_VERSION_SETDEFAULTS=`grep VERSION utilities/notInBinary/setplatformdefaults.sh | head -1 | grep -oE "[0-9.]+"`
+TXS_VERSION_SETDEFAULTS=`grep VERSION $METADIR/setplatformdefaults.sh | head -1 | grep -oE "[0-9.]+"`
 
 
 if [[ "$TXS_VERSION_CPP" != "$TXS_VERSION_MANPAGE" ]]; 

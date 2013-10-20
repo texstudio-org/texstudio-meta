@@ -2,6 +2,9 @@
 
 echo "create svn tag and src tarball"
 
+echo DEPRECATED
+
+exit
 
 if [[ ! (-e ./texstudio.pro) ]]; then echo need to be called in txs root; exit; fi 
 

@@ -42,7 +42,7 @@ if [ "x$TMXVERSION" = "x" ]; then echo "no txs version"; exit; fi;
 echo $DEPENDENCIES
 
 export REQUIRES=$DEPENDENCIES
-export SOURCE="svn://svn.code.sf.net/p/texstudio/code/trunk"
+export SOURCE="http://hg.code.sf.net/p/texstudio/hg"
 
 checkinstall --install=no --pkgname=TeXstudio  --default --pkgversion=$TMXVERSION --nodoc --maintainer="Benito van der Zander \<benito@benibela.de\>" 
 
