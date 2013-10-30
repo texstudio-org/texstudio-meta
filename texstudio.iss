@@ -1,7 +1,7 @@
 [Setup]
 ;Change this in every version
-AppVerName=TeXstudio 2.6.4
-AppVersion=2.6.4
+AppVerName=TeXstudio 2.6.6
+AppVersion=2.6.6
 
 OutputBaseFilename=texstudio264_win32
 
