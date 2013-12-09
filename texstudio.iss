@@ -3,7 +3,7 @@
 AppVerName=TeXstudio 2.6.6
 AppVersion=2.6.6
 
-OutputBaseFilename=texstudio264_win32
+OutputBaseFilename=texstudio266_win32
 
 ;Don't change
 AppName=TeXstudio
@@ -121,7 +121,7 @@ Root: HKCR; Subkey: "txssfile\shell\open\command"; ValueType: string; ValueName:
 
 
 [Run]
-Filename: {app}\texstudio.exe; Description: Start TeXstudio; Flags: nowait postinstall
+Filename: {app}\texstudio.exe; Description: Start TeXstudio; Flags: nowait skipifsilent postinstall
 
 [Code]
 // Handle uninstall options (Uninstall currently does not support custom pages so we have to generate a form)
