@@ -45,7 +45,8 @@ Source: utilities\AUTHORS; DestDir: {app}\help
 Source: utilities\CHANGELOG.txt; DestDir: {app}\help
 Source: utilities\COPYING; DestDir: {app}\help
 Source: utilities\*.png; DestDir: {app}\help
-Source: utilities\latexhelp.html; DestDir: {app}\help
+Source: utilities\latex2e.html; DestDir: {app}\help
+Source: utilities\latex2e.css; DestDir: {app}\help
 Source: utilities\license.txt; DestDir: {app}\help
 Source: utilities\usermanual_en.html; DestDir: {app}\help
 Source: utilities\usermanual.css; DestDir: {app}\help
