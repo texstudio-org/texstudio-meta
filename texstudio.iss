@@ -3,7 +3,7 @@
 AppVerName=TeXstudio 2.7.0
 AppVersion=2.7.0
 
-OutputBaseFilename=texstudio270
+OutputBaseFilename=texstudio270_win
 
 ;Don't change
 AppName=TeXstudio
@@ -62,8 +62,9 @@ Source: texstudio_es.qm; DestDir: {app}\translations
 Source: texstudio_fr.qm; DestDir: {app}\translations
 Source: texstudio_hu.qm; DestDir: {app}\translations
 Source: texstudio_ja.qm; DestDir: {app}\translations
-;Source: texstudio_it.qm; DestDir: {app}\translations
+Source: texstudio_it.qm; DestDir: {app}\translations
 Source: texstudio_pt_BR.qm; DestDir: {app}\translations
+Source: texstudio_ru.qm; DestDir: {app}\translations
 ;Source: texstudio_uk.qm; DestDir: {app}\translations
 Source: texstudio_zh_CN.qm; DestDir: {app}\translations
 Source: qt_cs.qm; DestDir: {app}\translations
@@ -72,6 +73,7 @@ Source: qt_es.qm; DestDir: {app}\translations
 Source: qt_fr.qm; DestDir: {app}\translations
 Source: qt_hu.qm; DestDir: {app}\translations
 Source: qt_ja.qm; DestDir: {app}\translations
+Source: qt_ru.qm; DestDir: {app}\translations
 Source: qt_zh.qm; DestDir: {app}\translations
 
 Source: libcurl.dll; DestDir: {app}
