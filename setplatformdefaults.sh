@@ -1,7 +1,12 @@
 #!/bin/bash
 
-VERSION=2.7.0
+OWNDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+source $OWNDIR/checkversion.sh
+
+
+VERSION=$TXS_VERSION_CPP
 USERNAME=benibela
+echo Version: $VERSION
 echo Password for sf user $USERNAME
 read PASSWORD
 

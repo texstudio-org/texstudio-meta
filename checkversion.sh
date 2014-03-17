@@ -1,6 +1,7 @@
 #/bin/bash
 
-METADIR=../texstudiometa
+
+METADIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 TXS_VERSION_CPP=`grep TXSVERSION utilsVersion.h | head -1 | cut -d " " -f 3 | tr -d "\"" | grep -oE [0-9.]+`
 TXS_VERSION_MANPAGE=`grep TH utilities/texstudio.1 | head -1 | cut -d " " -f 5 | tr -d "\""`
 TXS_VERSION_CHANGELOG=`grep TeXstudio utilities/CHANGELOG.txt | head -1 | grep -oE [0-9.]+ | tail -1`

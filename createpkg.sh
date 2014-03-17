@@ -1,5 +1,13 @@
 #!/bin/bash
-if [ ! -f texstudio ]; then echo "./texstudio doesn't exist"; exit; fi
+OWNDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+source $OWNDIR/checkversion.sh
+
+if [ ! -f texstudio ]; then 
+  echo "./texstudio doesn't exist => COMPILE"; 
+  qmake-qt4 CONFIG+=release CONFIG-=debug texstudio.pro
+  make
+  exit; 
+fi
 
 if ( readelf -d texstudio | grep QtTest ) then  
   echo "txs linked against QtTest => RECOMPILE"; 
@@ -31,9 +39,9 @@ DEPENDENCIES="libc6 (>=$LIBCVERSION), libgcc1 (>=$GCCVERSION), libqtcore4 (>=$QT
 if ( readelf -d texstudio | grep libphonon ) then DEPENDENCIES="$DEPENDENCIES, libphonon4 (>=4.5.0)"; fi
 
 
-echo "Enter new txs version:"
-read TMXVERSION
-
+#echo "Enter new txs version:"
+#read TMXVERSION
+TMXVERSION=$TXS_VERSION_CPP
 if [ "x$TMXVERSION" = "x" ]; then echo "no txs version"; exit; fi;
 
 
@@ -46,7 +54,16 @@ export SOURCE="http://hg.code.sf.net/p/texstudio/hg"
 
 checkinstall --install=no --pkgname=TeXstudio  --default --pkgversion=$TMXVERSION --nodoc --maintainer="Benito van der Zander \<benito@benibela.de\>" 
 
-if [ "$1" != "--release" ]; then echo "no release made (use --release option to release it)";  exit; fi;
+
+if [ "$1" != "--release" ]; then 
+  echo 
+  echo Do you want to make a release?
+  read RELEASE
+  if [ "$RELEASE" != "yes" ]; then 
+    echo "no release made (use --release option to release it or enter yes)";  
+    exit; 
+  fi;
+fi;
 
 #MACHINE=`uname -r |  grep -oE "[^-]*$"`
 #if [ "x$MACHINE" = "x" ]; then echo "couldn't detect machine (i386/amd64) version"; exit; fi;
