@@ -10,4 +10,5 @@ read
 $OWNDIR/setplatformdefaults.sh 
 cd $OWNDIR/webpage
 scripts/update_links_CALLTHISONE.sh $TXS_VERSION_CPP
+scripts/update_update.sh $TXS_VERSION_CPP
 
