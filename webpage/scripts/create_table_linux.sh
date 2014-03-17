@@ -15,7 +15,7 @@ echo ""
 
 xidel \
      http://download.opensuse.org/repositories/home:/jsundermeyer/                                    \
-     --extract-exclude=u,plat,os,lastos,release-version,release-date                                  \
+     --extract-exclude=u,plat,os,lastos,release-version,release-date,debianlink,debiansize            \
      -e "<body>{os := (), release-version := '$VERSION', lastos := '', debianlink := '$DEBIANLINK', debiansize := '$DEBIANSIZE', release-date:= '$CURYEAR'}</body>"   \
      -f "<BODY><PRE><A/><A/><A/><A/><t:loop><A>{.}</A></t:loop></PRE></BODY>"                         \
      -e '()'                                                                                          \
