@@ -17,6 +17,8 @@ WINUSB=$(xidel /tmp/txsfiles -e 'css("#files a.name")[contains(., "usb") and con
 WINUSBSIZE=$(getSize $WINUSB)
 TARBALL=$(xidel /tmp/txsfiles -e 'css("#files a.name")[contains(., "tar.gz")]/@href')
 TARBALLSIZE=$(getSize $TARBALL)
+OS2=$(xidel /tmp/txsfiles -e 'css("#files a.name")[contains(., "os2")]/@href')
+OS2SIZE=$(getSize $OS2)
 
 
 #echo $WININSTALLER
@@ -46,6 +48,9 @@ xidel index.html --extract-kind=xquery -e - --output-format html > /tmp/new.html
     else if (\$e/@class eq "macDownloadSize") then local:changeText(\$e, "$MACDMGSIZE")
     else if (\$e/@class eq "srcDownload") then local:changeHref(\$e, "$TARBALL")
     else if (\$e/@class eq "srcDownloadSize") then local:changeText(\$e, "$TARBALLSIZE")
+    else if ("$OS2" ne "" and \$e/@class eq "currentVersionOS2") then local:changeText(\$e, "$VERSION")
+    else if ("$OS2" ne "" and \$e/@class eq "os2Download") then local:changeHref(\$e, "$OS2")
+    else if ("$OS2" ne "" and \$e/@class eq "os2DownloadSize") then local:changeText(\$e, "$OS2SIZE")
     else
       element {node-name(\$e)} {\$e / @*, for \$i in \$e/node() return local:update(\$i)}
   };
