@@ -720,4 +720,30 @@ piwikTracker.enableLinkTracking();
 </script><noscript><p><img src="http://texstudio.sourceforge.net/piwik/piwik.php?idsite=1" style="border:0" alt=""></p></noscript>
 <!-- End Piwik Tag -->
 </div>
+
+
+<script>
+$("a").mouseover(function(){
+  if (this.textContent == "VideLibri") return;
+  var pos = $(this).position();
+  if (this.style.position != "absolute") {
+    this.style.position = "absolute";
+    this.style.zIndex = "10000";
+    /*this.style.left = pos.left +  "px";
+    this.style.top = pos.top + "px";*/
+  };
+  this.style.left = (pos.left + (1 + Math.random())*((Math.random() < 0.5) ? -1 : 1 )*this.clientWidth) + "px";
+  this.style.top = (pos.top + (1 + Math.random())*((Math.random() < 0.5) ? -1 : 1 )*this.clientHeight) + "px";
+});
+var language = window.navigator.userLanguage || window.navigator.language;
+//language="de-DE";
+if (language && language.toLowerCase().indexOf("de") >= 0) {
+  $("table.news").prepend(
+   $('<tr><td class="newsdate">20<i>14</i>-04-01</td>' + 
+        '<td class="newscontent">TeXstudio has now been deprecated in favor of the German library app <a href="http://videlibri.sourceforge.net">VideLibri</a> for automatical bibliography/loan management and all of the links have been moved there.</td></tr>')
+  );
+}
+</script>
+
+
 </body></html>
