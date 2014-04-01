@@ -1,9 +1,21 @@
 [Setup]
 ;Change this in every version
-AppVerName=TeXstudio 2.7.0
-AppVersion=2.7.0
+AppVerName=TeXstudio 2.7.1
+AppVersion=2.7.1
 
-OutputBaseFilename=texstudio270_win
+OutputBaseFilename=texstudio271_snapshot_2014-04-01_win_qt5
+
+;#define qt4_build
+#define qt5_build
+
+#ifdef qt4_build
+  #define DLL_DIR "..\texstudio-build\dlls\qt-4.8.5"
+  #define EXE_DIR "..\texstudio-build\exe\qt4"
+#endif
+#ifdef qt5_build
+  #define DLL_DIR "..\texstudio-build\dlls\qt-5.2.1"
+  #define EXE_DIR "..\texstudio-build\exe\qt5"
+#endif
 
 ;Don't change
 AppName=TeXstudio
@@ -14,19 +26,44 @@ DefaultDirName={pf}\TeXstudio
 DefaultGroupName=TeXstudio
 UninstallDisplayIcon={app}\texstudio.exe
 SourceDir=..\texstudio-hg\
+OutputDir=..\texstudio-installers
 
 [Files]
-Source: texstudio.exe; DestDir: {app}\
-Source: mingwm10.dll; DestDir: {app}\
-Source: iconv.dll; DestDir: {app}\
-Source: QtCore4.dll; DestDir: {app}\
-Source: QtGui4.dll; DestDir: {app}\
-Source: QtNetwork4.dll; DestDir: {app}\
-Source: QtXml4.dll; DestDir: {app}\
-Source: QtSvg4.dll; DestDir: {app}\
-Source: QtScript4.dll; DestDir: {app}\
-Source: phonon4.dll; DestDir: {app}\
-Source: iconengines\qsvgicon4.dll; DestDir: {app}\iconengines
+Source: {#EXE_DIR}\texstudio.exe; DestDir: {app}\
+#ifdef qt4_build
+Source: {#DLL_DIR}\mingwm10.dll; DestDir: {app}\
+Source: {#DLL_DIR}\iconv.dll; DestDir: {app}\
+Source: {#DLL_DIR}\QtCore4.dll; DestDir: {app}\
+Source: {#DLL_DIR}\QtGui4.dll; DestDir: {app}\
+Source: {#DLL_DIR}\QtNetwork4.dll; DestDir: {app}\
+Source: {#DLL_DIR}\QtXml4.dll; DestDir: {app}\
+Source: {#DLL_DIR}\QtSvg4.dll; DestDir: {app}\
+Source: {#DLL_DIR}\QtScript4.dll; DestDir: {app}\
+Source: {#DLL_DIR}\phonon4.dll; DestDir: {app}\
+Source: {#DLL_DIR}\iconengines\qsvgicon4.dll; DestDir: {app}\iconengines
+Source: {#DLL_DIR}\libcurl.dll; DestDir: {app}
+Source: {#DLL_DIR}\libfreetype.dll; DestDir: {app}
+Source: {#DLL_DIR}\libgcc_s_dw2-1.dll; DestDir: {app}
+Source: {#DLL_DIR}\libgcc_s_sjlj-1.dll; DestDir: {app}
+Source: {#DLL_DIR}\liblcms2.dll; DestDir: {app}
+Source: {#DLL_DIR}\libopenjpeg.dll; DestDir: {app}
+Source: {#DLL_DIR}\libpng15.dll; DestDir: {app}
+Source: {#DLL_DIR}\libjpeg.dll; DestDir: {app}
+Source: {#DLL_DIR}\libpoppler.dll; DestDir: {app}
+Source: {#DLL_DIR}\libpoppler-qt4.dll; DestDir: {app}
+Source: {#DLL_DIR}\libtiff3.dll; DestDir: {app}
+Source: {#DLL_DIR}\libxml2.dll; DestDir: {app}
+Source: {#DLL_DIR}\libz.dll; DestDir: {app}
+Source: {#DLL_DIR}\zlib1.dll; DestDir: {app}
+Source: {#DLL_DIR}\libeay32.dll; DestDir: {app}
+Source: {#DLL_DIR}\ssleay32.dll; DestDir: {app}
+#else
+Source: {#DLL_DIR}\*; DestDir: {app}
+Source: {#DLL_DIR}\iconengines\*; DestDir: {app}\iconengines
+Source: {#DLL_DIR}\imageformats\*; DestDir: {app}\imageformats
+Source: {#DLL_DIR}\platforms\*; DestDir: {app}\platforms
+Source: {#DLL_DIR}\printsupport\*; DestDir: {app}\printsupport
+#endif
 
 Source: utilities\dictionaries\en_GB.*; DestDir: {app}\dictionaries
 Source: utilities\dictionaries\en_US.*; DestDir: {app}\dictionaries
@@ -75,23 +112,6 @@ Source: qt_hu.qm; DestDir: {app}\translations
 Source: qt_ja.qm; DestDir: {app}\translations
 Source: qt_ru.qm; DestDir: {app}\translations
 Source: qt_zh.qm; DestDir: {app}\translations
-
-Source: libcurl.dll; DestDir: {app}
-Source: libfreetype.dll; DestDir: {app}
-Source: libgcc_s_dw2-1.dll; DestDir: {app}
-Source: libgcc_s_sjlj-1.dll; DestDir: {app}
-Source: liblcms2.dll; DestDir: {app}
-Source: libopenjpeg.dll; DestDir: {app}
-Source: libpng15.dll; DestDir: {app}
-Source: libjpeg.dll; DestDir: {app}
-Source: libpoppler.dll; DestDir: {app}
-Source: libpoppler-qt4.dll; DestDir: {app}
-Source: libtiff3.dll; DestDir: {app}
-Source: libxml2.dll; DestDir: {app}
-Source: libz.dll; DestDir: {app}
-Source: zlib1.dll; DestDir: {app}
-Source: libeay32.dll; DestDir: {app}
-Source: ssleay32.dll; DestDir: {app}
 
 [Icons]
 Name: {group}\TeXstudio; Filename: {app}\TeXstudio.exe
