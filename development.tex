@@ -1,0 +1,260 @@
+\documentclass[10pt,a4paper,portrait]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tabularx}
+\usepackage[left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{fancyhdr}
+
+\setlength{\parskip}{0.5em}%
+\setlength{\parindent}{0em}%
+
+\begin{document}
+\title{\vspace{-2ex}TeXstudio Development\vspace{-2ex}}
+\date{}
+\maketitle
+	
+\section{Rules}
+This chapter describes some development rules.
+
+\subsection{Basic C++}
+The identifier should be named in these ways:
+
+\begin{tabularx}{\textwidth}{lX}
+	\textbf{Style}      & \textbf{Explanation}                                                                                    \\
+\hline
+	ClassSomething      & First character and every word in uppercase for a \emph{class}                                          \\
+	identifierSomething & camelCase for all local variables and \emph{members} (notice: no m\_ prefix for texmaker compatibility) \\
+	headersomething.h   & All header in lowercase                                                                                 \\
+	headersomething.cpp & sources, too                                                                                            \\
+	HEADERSOMETHING\_H  & include guards in uppercase                                                                             \\
+	SOME\_CONSTVALUE    & const/enum values in uppercase ?????? (with prefix??? without???)                                       \\
+\end{tabularx}
+
+Order the include directives from high level to low level, e.g.:
+\begin{verbatim}
+#include "texmaker.h"
+#include <qt>
+\end{verbatim}
+instead of the other way around.
+
+Insert only things in texmaker.cpp or smallUsefulFunction.h if it is really necessary. It is better to create a new .cpp/.h if you can't find one to put it in.
+
+\subsection {Compatibility}
+Don't use QT 4.4 or 4.5, only functions of Qt4.3.\\
+If they are really necessary you could wrap them in \#if, like: \\
+\verb+#if QT_VERSION >= 0x040500+ für Qt 4.5.0\\
+\verb+#if QT_VERSION >= 0x040400+ für Qt 4.4.0\\
+
+But this prevents linking with older qts, so it is better  to call hasAtLeastQt(4,5) of smallAndUseful, to check and then call the methods dynamically.\\
+Use QMetaObject::invokeMethod for Slots/Signals and QObject::setProperty for properties
+
+Some can be easily replaced, these include:
+
+\begin{center}
+\begin{tabularx}{\textwidth}{lXX}
+	\textbf{Example}                             & \textbf{Use Instead}                                       & \textbf{Remark}                               \\
+\hline
+	QFormLayout                         & QGridLayout                                       &  \\
+	Q(String)List.append(Q(String)List) & $<<$                                              & This doesn't apply to .append(T)     \\
+	Q(String)List.length                & QList.count()                                     &  \\
+	Q(String)List.removeOne             & \verb+if (i=QList.indexOf()>0) QList.removeAt(i)+ &  \\
+	QRegExp.cap const                   & QRegExp.cap                                       & cap has first been made const in 4.5 \\
+\end{tabularx}
+\end{center}
+
+Those don't exists in old qt, but should be used for the newer version, so they must be included in \#if.
+(min version is the minimum version where it can be used)
+
+\begin{tabularx}{\textwidth}{lll}
+\textbf{Example} & \textbf{Min. version} & \textbf{Possible Replacement}\\
+QPalette::ToolTipBase & 4.4 & QPalette::AlternateBase\\
+QPalette::ToolTipText & 4.4 & QPalette::Text
+\end{tabularx}
+
+\pagebreak
+
+\section{TODO}
+
+\subsubsection{necessary before 2.2 }
+
+\paragraph{TM changes}
+
+\begin{itemize}
+\item interface disabled during compiling (says sources, i didn't see a effect)
+\item file chooser in status bar (TXS already has this in the toolbar, very non intuitive to activate)
+\\OBSOLETE: available as context menu on editor tabs
+\end{itemize}
+
+\subsubsection{later}
+
+\paragraph{Bugs}
+\begin{itemize}
+\item When a mouse button is pressed and holded in the embedded pdf viewer, while it is closed with escape, the mouse arrow can  change or even disappear.
+\item false syntax check error in \verb+\abc123+
+\item \verb+_+ in movie command marked as math error
+\item latex checking says "cols in tab missing", although this does not even cause a warning by Latex. (perhaps there should be another marking overlay, for bad style, and this marked as that)
+\item Autocompletion of a reference name \verb+\ref{foo+ eats the next word
+\item In a trivial beamer document frame + env. completion only adds \verb+\+begin, not \verb+\+end
+\item completion window appeared at the wrong position (cursor almost at the right document border, window appeared top left)
+\item zooming in editor doesn't correctly synchronizes among all editors (because only one font is allowed in the application)
+\item unnecessary slowness: (possible duplicate setHeight call after adjustWidth )
+\item codesnippt mit placeholder einfügen und rückgängig machen plaziert cursor an falscher column position => schreiben zerstört rückgängig (see failing, commented tests in codesnippet\_t)
+\item  env highlighting doesn't work if there are points in the env. name (e.g. \verb+\begin{a..s}+)
+\item syntax checking highlighting bug (fixed?): error background not updated unless the cursor moves there (on Windows)
+\item bracket renaming doesn't work for brackets without content (like \verb+[]+ )
+\item stop bracket renaming if space is pressed
+\item revert order of brackets
+\item auto replace is not atomic for menu replace (e.g. select text, press shift+alt+f, multiple undos necessary to return to selection)
+\item when a new document is loaded, the wrapping of all lines is calculated around five times (setHeight, setWidth, adjustWidth, ...)
+\item Home/Ende keys don't work (siehe mrunix forum)
+\item adding new bib tex entries doesn't always update completer list;; also changing citations in latex doc also require bibtex call and aren't detectedd
+\item completer doesn't contain citation labels (this means if you have \verb+\cite{abcd|+ with | marking cursor position it doesn't suggest abcdef as citation even if \verb+\cite{abcd}+ is in the list)
+\item texworks pdf viewer changes it cursor when shift/alt is pressed, but that only works every 2nd time
+\item presentation mode doesn't hide cursor
+\item zooming in/out in continuous mode changes the current page
+\item switching between forward/backward search in the pdf previewer, sometimes doesn't find matches or finds them twice (e.g. in this development.pdf). Possibly a poppler bug
+\item synctex jumps to the wrong beamer page if only-commands are used
+\item hint by \verb+\ref+ parses html code. E.g. if you have \begin{verbatim}
+<html><body>asas<img src=":/images/splash.png"><b>AAA
+\label{key}
+</b></body></html>
+\end{verbatim} in the latex file (if there is a security bug in the qt html renderer, it could become a security bug in TXS)
+	\item  qce crashes if the searchpanel is not deleted before the qcodeedit object is deleted (because the search as child of the editor is then automatically deleted after the editor and crashes when it calls the editor to clear it match overlays)
+	\item  Auto completion is sometimes unexpected (see unittests)
+\end{itemize} 
+
+\paragraph{others}
+\begin{itemize}
+	\item QCodeEdit: \begin{itemize}
+		\item show "ignore all" for deleted files (for current session)
+		\item whitespace and symbol formats
+		\item option to change color of linenumber/find panels
+		\item Generate custom highlighting from the used custom completion cwl files. (important for syntax check, if you have a custom math environment you currently have to define it twice, once as custom highlighting(to syntax check multi line environments) and in the cwl (to check single line envs))
+		\item DIFF: jump to next mark, warn if file is saved while diff overlays exist
+		\item Deleting placeholders by pressing repeadetly backspace after one
+		\item save zoom options
+		\item if replace all is restarted from scope begin, show the count of replaced occurrences before the scope restart and afterwards.
+		\item show tooltips when scrolling (line, section, chapter)
+		\item RTL support like in texmaker 1.9.0/1 (but there it was removed in 1.9.2) (import fy to unicode)
+		\item Auto Closing of \verb+$+ (problem: how to detect if there follows a closing \verb+$+)
+	\end{itemize}
+	\item Latex Parser: \begin{itemize}
+		\item move everything in the \verb+Latexparser/reader+ class
+		\item NextWord with cookie state (to recognize multi line verbatim)?? Or read from qce?
+		\item Understand some TeX Things (e.g. \verb+^^5c^^5c+ equals \verb+\\+ if not in verbatim)
+	\end{itemize}
+	\item better structure view: \begin{itemize}
+		\item select section title when double clicked of one?	
+		\item open whole structure when loading a (single)	 file
+		\item parsing not loaded files
+		\item show section/figure/table numbers
+		\item should cache old parsing, don't reparse unmodified files
+		\item could use .aux files
+		\item should not execute several regex after each other on the same line (custom parser? mixed regex?)	
+	\end{itemize}
+	\item Synonym dictionary: \begin{itemize}
+		\item remember window size
+		\item faster contains checks using Tries
+		\item support for online lookup (e.g german: wortschatz.uni-leipzig.de)
+	\end{itemize}
+	\item Labels/References: \begin{itemize}
+	\item option to rename a label (compare shift+enter in matlab) and auto update all references to it
+		\item show all refs using a label and allow easy jumping to them (e.g selection window? or ctrl+click on ref jumps to label; ctrl+alt+f does it already, perhaps add a mouse event to action event mapper)
+		\item using a SoundEx suggestion list for wrong references/labels like in the spell checker
+		\item a reference/label check dialog like the old spell checking dialog
+	\end{itemize}
+	\item Citations: \begin{itemize}
+		\item unit tests for bibtex parser
+		\item show SoundEx suggestion for wrong citatinos
+		\item check environment paths\\(e.g. \verb+BIBINPUTS = C:\My Documents\CDMA\Papers\Bib;C:\My Documents\GPS\Papers\Bib+)
+	\end{itemize}
+	\item Better new document wizard (look at kile)
+	\item Completion \begin{itemize}
+	\item file name completion for bib tex files
+	\item if completing a filename, and the selected file has the same extension as the current filename, remove the existing extension, show preview image
+	\item auto close last environment/bracket
+	\item complete command options after command (files for includegraphics, environsments for begin, citations, labels, packages, tikzpictures	)
+	\item Word completion over all open documents
+	\item Show definition of \verb+\newcommand+ commands in the completion list as hint
+	\item \verb+\begin{Umgebungsname}+ should not add \verb+\end{Umgebungsname}+ if that \textbackslash end is already in the next/a later line
+	 	\item Open completion list of xyz if cursor is after \verb+\xyz{+ (= ignore \verb+{}+ before cursor)
+		\item treat \verb+\+abc\{\%<xyz\%>\} and \verb+\+abc\{\%<def\%>\} as identical and ignore one of them (in the list of possible completions)
+		\item Understand \verb+newcounter, tex: \newcount \newfont \def, \edef, \xdef, \gdef+
+		\item Detect completion within tikz/pstricks/... environments and show a list of corresponding tikz/... commands
+		\item text completion should show parameters of commands (e.g. reference names) even if they aren't currently used
+		\item merging text completion and spell checker cache?
+	\end{itemize}
+	\item brackets: \begin{itemize}
+		\item Menu command to complete current/last environment/bracket
+		\item inverting parenthesis selection should support multiple begin/end pairs
+		\item find missing bracket command (instead of just misplaced brackets)
+	\end{itemize}  
+	\item GUI: \begin{itemize}
+	\item shortcut for always ignore word (in context menu)
+	\item grammar suggestions should show reason like the mouse over (with tooltip? statusbar? smaller font?)
+	\item differenciate between always-ignore-this-word-here and always-ignore-this-word-everywhere (add to dictionary)
+		\item search for latex commands in the completion package list; list for every available package the contained commands
+		\item new tm 1.9 output view (icons left instead of tabs + next/previous error buttons)
+		\item Customizable symbol lists
+		\item combo boxes (dropdown tool buttons) instead of several icons for each command (like 1.9 or kile)
+		\item toolbar icon size should be customizable
+	\end{itemize}
+	\item Preview: \begin{itemize}
+	\item allow real zoom (regenerating png)
+	\item show errors
+	\end{itemize}
+	\item Internal PDF-Previewer: \begin{itemize}
+	\item  show pdf title and full path in windows title bar
+	\item three grid next page modes: single page step, grid row, full grid (or allow arbitrary steps? renderer already supports them)
+	\item presentation mode could have a ">jump to page"< feature (for questions after a presentation); which is synchronized over all views (s.t. you can see different things on the computer screen vs. beamer, but still don't have to move the mouse cursors from beamer to screen to select page)
+	\item alternative: tool where left/right clicks goes to the next/prev page (i.e. a tool default in presentation mode, but usable in all views)
+	\item (Okular) presentation tools: mouse cursor as laser pointer, drawing on presentation (in tool menu at the top edge), page number display when switching
+	\item mark source bookmarks in pdf preview 
+	\item mark contents (section pages) in presentation clock as lines
+	\item It should be possible to set a filename in the call command and a destination synctex-line
+	\item Shortcuts of pdf previewer should be customizable (managedMenu)
+	\item Toolbars should also be customizable
+	\item There should be an continuous display mode (scrollbar.size = pageheight*pagecount, and currentpage = scrollbar.pos/pageheight).
+	\item options menu entry of the pdf previewer should open the config dialog on a preview page
+	\item ctrl+click on a word should jump to the exact word in the source instead of an approximate position and it should work with formulas (is this even possible?)
+	\end{itemize}
+	\item  Checker: \begin{itemize}
+		\item Way to disable repetition checker (only in math. envs., globally, for a certain word)
+		\item Text analyse should have a list of environments to ignore and if it should read math/envs
+		\item Silbentrennung: \verb+http://homepage.ruhr-uni-bochum.de/Georg.Verweyen/silbentrennung.html+
+		\item Respect \verb+\verb+ or even multiline \verb+\begin{verbatim}+
+		\item LaTeX Checker	(calling lacheck?)
+	\end{itemize}
+	\item Log files:\begin{itemize}
+	\item if there are several errors, should it jump to the first or the one after the current cursor position? If the errors are in different files, should it jump to another file? which one? Should it jump to warnings? 	(current in r500 it only jumps to the next error in the same file) 
+		\item More log: What do we do with errors in other files when we are not in master mode? 
+		\item Is it a good idea to change the tab from ">log file"< to ">messages"< if another tex file is opened and we are not in master mode?
+		\item don't jump away from log file (what did that mean???????)
+	\end{itemize}
+	\item Building \begin{itemize}
+     	\item show stdout for asymptote
+		\item Is the output of (pdf)latex shown? should it? Show if it crashes (waiting for pipe, monitor cpu usage)
+		\item Improved recognizing of tool paths, checking of correct tool settings,  custom build actions: planned (although former is finished for miktex+ghostscript)
+		\item better browser detection in WebPublish dialog 
+		\item . command tooltips (right section?)
+	\end{itemize}
+	\item  Scripting
+	\begin{itemize}
+	\item test if script can access the documents language 
+	\item access to undo/redo stack (for debugging purposes)
+	\item qdocumentsearch access (is it done??)
+	\end{itemize}
+	\item Plugins
+	\item when saving an .sh file, ask if it should be made executable
+	\item Recognizing hand written symbols (online lookup in detextify or Windows 7 mathpanel)
+	\item New Tabular Dialog (of kile)
+	\item Having functions to select environments/blocks/sections, changing \verb+$$+ to \verb+\[\]+, or to \verb+\begin{something}+ (waiting for qce2.3 syntax engine)
+	\item single instance: open the documents in the order the second instances were called instead in the order theirs messages arrive in the first instance (using a queue like described in 2877037)
+	\item Unit Tests (gui, qeditor, qdocument,..)
+\end{itemize}
+
+
+\end{document}
+
