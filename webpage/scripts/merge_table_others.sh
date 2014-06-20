@@ -14,12 +14,11 @@ WININSTALLERSIZE=$(getSize $WININSTALLER)
 MACDMG=$(xidel /tmp/txsfiles -e 'css("#files a.name")[contains(., "dmg")]/@href')
 MACDMGSIZE=$(getSize $MACDMG)
 WINUSB=$(xidel /tmp/txsfiles -e 'css("#files a.name")[contains(., "usb") and contains(., "zip")]/@href')
-WINUSBSIZE=$(getSize $WINUSB)
+if [ $? -eq 0 ]; then WINUSBSIZE=$(getSize $WINUSB); else WINUSB=""; fi
 TARBALL=$(xidel /tmp/txsfiles -e 'css("#files a.name")[contains(., "tar.gz")]/@href')
 TARBALLSIZE=$(getSize $TARBALL)
 OS2=$(xidel /tmp/txsfiles -e 'css("#files a.name")[contains(., "os2")]/@href')
-OS2SIZE=$(getSize $OS2)
-
+if [ $? -eq 0 ]; then OS2SIZE=$(getSize $OS2); else OS2=""; fi
 
 #echo $WININSTALLER
 #echo $WININSTALLERSIZE
@@ -42,8 +41,9 @@ xidel index.html --extract-kind=xquery -e - --output-format html > /tmp/new.html
     else if (\$e/@class = ("currentVersion", "currentVersionMac")) then local:changeText(\$e, "$VERSION")
     else if (\$e/@id eq "winDownload" or \$e/@class eq "winDownloadInstaller") then local:changeHref(\$e, "$WININSTALLER")
     else if (\$e/@class eq "winDownloadInstallerSize") then local:changeText(\$e, "$WININSTALLERSIZE")
-    else if (\$e/@class eq "winDownloadUSB") then local:changeHref(\$e, "$WINUSB")
-    else if (\$e/@class eq "winDownloadUSBSize") then local:changeText(\$e, "$WINUSBSIZE")
+    else if ("$winDownloadUSB" ne "" and \$e/@class eq "currentVersionUSB") then local:changeText(\$e, "$VERSION")
+    else if ("$winDownloadUSB" ne "" and \$e/@class eq "winDownloadUSB") then local:changeHref(\$e, "$WINUSB")
+    else if ("$winDownloadUSB" ne "" and \$e/@class eq "winDownloadUSBSize") then local:changeText(\$e, "$WINUSBSIZE")
     else if (\$e/@id eq "macDownload" or \$e/@class eq "macDownload") then local:changeHref(\$e, "$MACDMG")
     else if (\$e/@class eq "macDownloadSize") then local:changeText(\$e, "$MACDMGSIZE")
     else if (\$e/@class eq "srcDownload") then local:changeHref(\$e, "$TARBALL")
