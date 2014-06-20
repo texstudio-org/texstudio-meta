@@ -34,7 +34,7 @@ if [ "x$LIBCVERSION" = "x" ]; then echo "no libc"; exit; fi;
 if [ "x$QTVERSION" = "x" ]; then echo "no qt"; exit; fi;
 if [ "x$POPPLERVERSION" = "x" ]; then echo "no poppler"; exit; fi;
 
-DEPENDENCIES="libc6 (>=$LIBCVERSION), libgcc1 (>=$GCCVERSION), libqtcore4 (>=$QTVERSION) | libqt4-core (>=$QTVERSION), libqtgui4 (>=$QTVERSION) | libqt4-gui (>=$QTVERSION), libqt4-network (>=$QTVERSION), libqt4-xml (>=$QTVERSION), libstdc++6 (>=$GCCVERSION), libpoppler-qt4-3 (>=$POPPLERVERSION)"
+DEPENDENCIES="libc6 (>=$LIBCVERSION), libgcc1 (>=$GCCVERSION), libqtcore4 (>=$QTVERSION) | libqt4-core (>=$QTVERSION), libqtgui4 (>=$QTVERSION) | libqt4-gui (>=$QTVERSION), libqt4-network (>=$QTVERSION), libqt4-xml (>=$QTVERSION), libqt4-svg (>=$QTVERSION), libstdc++6 (>=$GCCVERSION), libpoppler-qt4-3 (>=$POPPLERVERSION)"
 
 if ( readelf -d texstudio | grep libphonon ) then DEPENDENCIES="$DEPENDENCIES, libphonon4 (>=4.5.0)"; fi
 
