@@ -11,7 +11,7 @@ TXS_VERSION_INFOPLIST=$(grep -A 1 CFBundleShortVersionString Info.plist | grep '
 TXS_VERSION_ISS1=`grep AppVer $METADIR/texstudio.iss | head -1 | grep -oE [0-9.]+`
 TXS_VERSION_ISS2=`grep AppVer $METADIR/texstudio.iss | head -1 | grep -oE [0-9.]+`
 TXS_VERSION_MANUAL=`grep SECTIONNEW utilities/usermanual_en.html | head -2 | tail -1 | grep -oE "Version +[0-9.]+" | tail -1 | grep -oE [0-9.]+`
-TXS_VERSION_SETDEFAULTS=`grep VERSION $METADIR/setplatformdefaults.sh | head -1 | grep -oE "[0-9.]+"`
+#TXS_VERSION_SETDEFAULTS=`grep VERSION $METADIR/setplatformdefaults.sh | head -1 | grep -oE "[0-9.]+"`
 
 
 if [[ "$TXS_VERSION_CPP" != "$TXS_VERSION_MANPAGE" ]]; 
@@ -24,4 +24,4 @@ if [[ $TXS_VERSION_CPP != $TXS_VERSION_INFOPLIST ]]; then echo Error: Version mi
 if [[ $TXS_VERSION_CPP != $TXS_VERSION_ISS1 ]]; then echo Error: Version mismatch: iss: $TXS_VERSION_ISS1 cpp: $TXS_VERSION_CPP; exit; fi
 if [[ $TXS_VERSION_CPP != $TXS_VERSION_ISS2 ]]; then echo Error: Version mismatch: iss 2: $TXS_VERSION_ISS2 cpp: $TXS_VERSION_CPP; exit; fi
 if [[ $TXS_VERSION_CPP != $TXS_VERSION_MANUAL ]]; then echo Error: Version mismatch: manual: $TXS_VERSION_MANUAL cpp: $TXS_VERSION_CPP; exit; fi
-if [[ $TXS_VERSION_CPP != $TXS_VERSION_SETDEFAULTS ]]; then echo Error: Version mismatch: setplatformdefaults: $TXS_VERSION_SETDEFAULTS cpp: $TXS_VERSION_CPP; exit; fi
+#if [[ $TXS_VERSION_CPP != $TXS_VERSION_SETDEFAULTS ]]; then echo Error: Version mismatch: setplatformdefaults: $TXS_VERSION_SETDEFAULTS cpp: $TXS_VERSION_CPP; exit; fi
