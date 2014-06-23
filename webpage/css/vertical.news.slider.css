@@ -57,7 +57,7 @@
     margin-right: 7px;
   }
 
-  .news-headlines li:hover, a:hover {
+  .news-headlines li:hover {
       cursor: pointer;
       text-decoration: underline;
   }
