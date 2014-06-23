@@ -1,5 +1,7 @@
 #/bin/bash
-echo untested!
+
+if [[ -e /home/benito ]]; then eval `keychain -q --eval --agents ssh id_rsa `; fi
+
 OWNDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source $OWNDIR/checkversion.sh
 $OWNDIR/createsrctar1.sh 
