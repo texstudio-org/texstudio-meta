@@ -13,7 +13,7 @@ WININSTALLER=$(xidel /tmp/txsfiles -e 'css("#files a.name")[contains(., "exe")]/
 WININSTALLERSIZE=$(getSize $WININSTALLER)
 MACDMG=$(xidel /tmp/txsfiles -e 'css("#files a.name")[contains(., "dmg")]/@href')
 MACDMGSIZE=$(getSize $MACDMG)
-WINUSB=$(xidel /tmp/txsfiles -e 'css("#files a.name")[contains(., "usb") and contains(., "zip")]/@href')
+WINUSB=$(xidel /tmp/txsfiles -e 'css("#files a.name")[(contains(., "usb") or contains(., "portable") ) and contains(., "zip")]/@href')
 if [ $? -eq 0 ]; then WINUSBSIZE=$(getSize $WINUSB); else WINUSB=""; fi
 TARBALL=$(xidel /tmp/txsfiles -e 'css("#files a.name")[contains(., "tar.gz")]/@href')
 TARBALLSIZE=$(getSize $TARBALL)
