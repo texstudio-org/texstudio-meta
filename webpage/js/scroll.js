@@ -24,14 +24,13 @@ $(document).ready(function() {
 	});
 
 	/*** navgation highlighting ***/
-	var div='html'
 	var numNavitems = 6;
 	var docTop=0;
 	$('#navigation .nav1').addClass('menu_active');
 	setInterval(updateNavLink,150);
 	
 	function updateNavLink(){
-		newDocTop=$(div).attr('scrollTop');
+		newDocTop=$(document).scrollTop();
 		var fl=true;
 		if ((newDocTop!=docTop)&&(fl)){
 			docTop=newDocTop;
@@ -46,4 +45,27 @@ $(document).ready(function() {
 			}
 		}
 	}
+	
+	/*** hide show for more news ***/
+	/* Disable the css-based show on hove by show on click if we have scripting */
+	$('#hiding-box').attr('id', 'hiding-box-scripted')
+	$('#hiding-box-scripted .hiddentext').hide();
+	$('#hiding-box-scripted .less').hide();
+	$('#hiding-box-scripted .more').show();
+	$('#hiding-box-scripted .more').click( function() {
+		$('#hiding-box-scripted .hiddentext').show();
+		$('#hiding-box-scripted .less').show();
+		$('#hiding-box-scripted .more').hide();
+	})
+	$('#hiding-box-scripted .less').click( function() {
+		$('#hiding-box-scripted .hiddentext').hide();
+		$('#hiding-box-scripted .less').hide();
+		$('#hiding-box-scripted .more').show();
+		var correctScrolling = $(' .more').offset().top < $(document).scrollTop();
+		if (correctScrolling) {
+			var offset = $('#news').offset().top - $('#news').css("margin-top").replace("px", "");
+			$(document).scrollTop(offset);
+		}
+	})
+	
 });

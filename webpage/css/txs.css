@@ -97,7 +97,7 @@ p, ul {
 	box-shadow: none;
 }
 
-.more {
+.more, .less {
 	text-align: center;
 	color: #7A0BB7;
 }
@@ -113,11 +113,13 @@ p, ul {
 	padding: 2px 10px 2px 0px;
 }
 
+/* use css to show more news on hover */
 #hiding-box .more {display: block}
 #hiding-box:hover .more {display: none}
 #hiding-box .hiddentext {display: none}
+#hiding-box .less {display: none}
 #hiding-box:hover .hiddentext {display: block}
-
+#hiding-box-scripted .more, #hiding-box-scripted .less {cursor: pointer}
 
 .platformDownload  td {
 	font: normal 150% 'century gothic', 'URW Gothic L', arial, sans-serif;
