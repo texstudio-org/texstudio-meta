@@ -1,0 +1,45 @@
+Testscript:
+
+\section{Syntax highlighting}
+\$This shouldn't be math env$But this should be math env$\$This again shouldnot be one\$
+\%This shouldnot be a comment%But this should be a comment
+xxx\$This shouldn't be math env$But this should be math env$
+xxx\%This shouldnot be a comment%But this should be a comment
+\thisShouldBeACommand\\\ThisToo\\This not
+
+\section{code completion}
+
+Press Ctrl+Space after the \, code completion should start with a list. 
+\
+
+press ctrl+space after \a, code completion should start, showing only "a"-items:
+\a
+
+
+(Write \b, close completion)select it (cursor before \), press ctrl+space, code completion should start without selection, showing only "b"-items:
+\b
+
+(Write \c, close completion)select it (cursor after c), press ctrl+space, code completion should start without selection, showing only "c"-items:
+\c
+
+(Write a, )select it, write \, code completion should start after writing another character withou selection:
+a
+
+\section{Configure Window}
+\subsection{Shortcuts}
+Open configure Windows, open shortcut page
+   - click on add row, a row should be added, 
+   - insert something in every field
+   - delete the row
+   - close with ok
+
+Open configure Windows, open shortcut page
+   - click on delete row, the row should be deleted
+   - click on add row, a row should be added, 
+   - insert something in every field
+   - close with cancel
+   
+Nothing should be changed
+
+\section{DDE}
+\verb+dde://acroview/control/[DocOpen("?am).pdf")][DocClose("?am).pdf")]+ should close the currently opened document in Acrobat Reader (test user command and default program (e.g. ps2dvi))
