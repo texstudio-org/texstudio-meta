@@ -171,6 +171,19 @@ begin
   end;
 end;
 
+Function ParamExists(const Param : String) : Boolean; 
+var i: Integer;
+begin
+  result := false;
+  for i := 0 to ParamCount do
+  begin
+    if LowerCase(Param) = LowerCase(ParamStr(i)) then
+    begin
+      result := true;
+    end;
+  end;
+end;
+
 procedure QueryUninstallOptions;
 var
   Form: TSetupForm;
@@ -270,9 +283,9 @@ end;
 procedure CurUninstallStepChanged(CurUninstallStep: TUninstallStep);
 begin
   case CurUninstallStep of
-    usUninstall:
-      begin
-        QueryUninstallOptions;
+    usUninstall: begin
+        if not ParamExists('/SUPPRESSMSGBOXES') then
+          QueryUninstallOptions;
       end;
   end;
 end;
