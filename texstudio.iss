@@ -1,7 +1,7 @@
 [Setup]
 ;Change this in every version
-AppVerName=TeXstudio 2.8.0
-AppVersion=2.8.0
+AppVerName=TeXstudio 2.8.2
+AppVersion=2.8.2
 
 OutputBaseFilename=texstudio280_win
 ;OutputBaseFilename=texstudio271_snapshot_2014-04-01_win_qt5
