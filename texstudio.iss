@@ -3,8 +3,8 @@
 AppVerName=TeXstudio 2.8.4
 AppVersion=2.8.4
 
-OutputBaseFilename=texstudio284_win
-;OutputBaseFilename=texstudio271_snapshot_2014-04-01_win_qt5
+OutputBaseFilename=texstudio2.8.4_win_qt5.3.1
+;OutputBaseFilename=texstudio281_snapshot_2014-07-24_win
 
 ;#define qt4_build
 #define qt5_build
@@ -14,7 +14,7 @@ OutputBaseFilename=texstudio284_win
   #define EXE_DIR "..\texstudio-build\exe\qt4"
 #endif
 #ifdef qt5_build
-  #define DLL_DIR "..\texstudio-build\dlls\qt-5.2.1"
+  #define DLL_DIR "..\texstudio-build\dlls\qt-5.3.1"
   #define EXE_DIR "..\texstudio-build\exe\qt5"
 #endif
 
@@ -82,12 +82,10 @@ Source: utilities\dictionaries\th_de_DE_v2.dat.*; DestDir: {app}\dictionaries
 Source: utilities\AUTHORS; DestDir: {app}\help
 Source: utilities\CHANGELOG.txt; DestDir: {app}\help
 Source: utilities\COPYING; DestDir: {app}\help
-Source: utilities\*.png; DestDir: {app}\help
 Source: utilities\latex2e.html; DestDir: {app}\help
 Source: utilities\latex2e.css; DestDir: {app}\help
 Source: utilities\license.txt; DestDir: {app}\help
-Source: utilities\usermanual_en.html; DestDir: {app}\help
-Source: utilities\usermanual.css; DestDir: {app}\help
+Source: utilities\manual\*; DestDir: {app}\help
 
 Source: utilities\TexTablet\*; DestDir: {app}\TexTablet
 Source: utilities\poppler-data\*; DestDir: {app}\share\poppler; Flags: recursesubdirs
