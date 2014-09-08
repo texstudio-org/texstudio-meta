@@ -10,7 +10,7 @@ TXS_VERSION_SPEC=`grep Version: utilities/texstudio.spec | head -1 | grep -oE "[
 TXS_VERSION_INFOPLIST=$(grep -A 1 CFBundleShortVersionString Info.plist | grep '<string>' | grep -oE "[0-9.]*")
 TXS_VERSION_ISS1=`grep AppVer $METADIR/texstudio.iss | head -1 | grep -oE [0-9.]+`
 TXS_VERSION_ISS2=`grep AppVer $METADIR/texstudio.iss | head -1 | grep -oE [0-9.]+`
-TXS_VERSION_MANUAL=`grep SECTIONNEW utilities/usermanual_en.html | head -2 | tail -1 | grep -oE "Version +[0-9.]+" | tail -1 | grep -oE [0-9.]+`
+TXS_VERSION_MANUAL=`grep SECTIONNEW utilities/manual/usermanual_en.html | head -2 | tail -1 | grep -oE "Version +[0-9.]+" | tail -1 | grep -oE [0-9.]+`
 #TXS_VERSION_SETDEFAULTS=`grep VERSION $METADIR/setplatformdefaults.sh | head -1 | grep -oE "[0-9.]+"`
 
 
