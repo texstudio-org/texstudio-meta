@@ -64,6 +64,10 @@ p, ul {
 	padding-bottom: 20px;
 }
 
+td {
+	vertical-align: top;
+}
+
 .img-right {
 	float: right;
 	margin-left: 2em;
