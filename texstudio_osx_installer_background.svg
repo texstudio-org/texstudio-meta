@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="500"
+   height="400"
+   id="svg3352"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="New document 3.2014_09_17_16_30_06.0.svg"
+   inkscape:export-filename="C:\Users\Tim\texstudio_osx_installer_background.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300">
+  <defs
+     id="defs3354">
+    <linearGradient
+       id="linearGradient3830">
+      <stop
+         style="stop-color:#dca6fa;stop-opacity:1;"
+         offset="0"
+         id="stop3832" />
+      <stop
+         style="stop-color:#c468f7;stop-opacity:1;"
+         offset="1"
+         id="stop3834" />
+    </linearGradient>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 200 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="500 : 200 : 1"
+       inkscape:persp3d-origin="250 : 133.33333 : 1"
+       id="perspective4178" />
+    <linearGradient
+       id="linearGradient4132">
+      <stop
+         style="stop-color:#c7c7c7;stop-opacity:1"
+         offset="0"
+         id="stop4134" />
+      <stop
+         id="stop4140"
+         offset="0.2765795"
+         style="stop-color:#f4f4f4;stop-opacity:1" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1"
+         offset="1"
+         id="stop4136" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4132"
+       id="linearGradient4138"
+       x1="258.67294"
+       y1="1053.0554"
+       x2="257.14285"
+       y2="660.93359"
+       gradientUnits="userSpaceOnUse" />
+    <filter
+       inkscape:collect="always"
+       id="filter4220">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="2.483471"
+         id="feGaussianBlur4222" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter3826"
+       x="-0.06713935"
+       width="1.1342787"
+       y="-0.39528077"
+       height="1.7905615">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="8.0497283"
+         id="feGaussianBlur3828" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3830"
+       id="linearGradient3836"
+       x1="253.54829"
+       y1="854.37231"
+       x2="244.45691"
+       y2="878.61591"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="48.640448"
+     inkscape:cy="224.43439"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1138"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3357">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-652.36218)">
+    <rect
+       style="color:#000000;fill:url(#linearGradient4138);stroke:#e1e1e1;stroke-width:1.39999998000000000;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;fill-opacity:1"
+       id="rect3362"
+       width="498.60001"
+       height="398.60001"
+       x="0.69999999"
+       y="653.06219" />
+    <text
+       xml:space="preserve"
+       style="font-size:64px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#585858;fill-opacity:1;stroke:none;filter:url(#filter3826);font-family:Century Gothic;-inkscape-font-specification:Century Gothic"
+       x="110.66234"
+       y="743.58447"
+       id="text4142-1"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4144-7"
+         x="110.66234"
+         y="743.58447">TeXstudio</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:64px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Century Gothic;-inkscape-font-specification:Century Gothic"
+       x="105.09375"
+       y="741.09308"
+       id="text4142"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4144"
+         x="105.09375"
+         y="741.09308">TeXstudio</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       x="36.589844"
+       y="999.95612"
+       id="text4146"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4148"
+         x="36.589844"
+         y="999.95612">Drag the icon to the applications folder</tspan></text>
+    <path
+       style="color:#000000;fill:#616161;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.39999998;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter4220);enable-background:accumulate"
+       d="m 185.35003,839.48605 78.6,0 0,-9.70001 24.59952,29.00001 -24.59952,30.99999 0,-11.7 -78.6,10e-6 z"
+       id="rect4194"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccc"
+       transform="matrix(1.0355312,0,0,0.70907036,6.6316613,259.38536)" />
+    <path
+       style="color:#000000;fill:url(#linearGradient3836);fill-opacity:1;fill-rule:nonzero;stroke:#7a0bb7;stroke-width:1.39999998000000000;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 196.56684,850.44317 81.39274,0 0,-6.87799 25.47358,20.56305 -25.47358,21.98117 0,-8.29612 -81.39274,0 z"
+       id="rect4194-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccc" />
+  </g>
+</svg>
