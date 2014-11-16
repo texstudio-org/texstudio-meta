@@ -10,7 +10,7 @@ OutputBaseFilename=texstudio2.8.6_win_qt5.3.1
 #define qt5_build
 
 #ifdef qt4_build
-  #define DLL_DIR "..\texstudio-build\dlls\qt-4.8.5"
+  #define DLL_DIR "..\texstudio-build\dlls\qt-4.8.6"
   #define EXE_DIR "..\texstudio-build\exe\qt4"
 #endif
 #ifdef qt5_build
@@ -58,6 +58,8 @@ Source: {#DLL_DIR}\libz.dll; DestDir: {app}
 Source: {#DLL_DIR}\zlib1.dll; DestDir: {app}
 Source: {#DLL_DIR}\libeay32.dll; DestDir: {app}
 Source: {#DLL_DIR}\ssleay32.dll; DestDir: {app}
+Source: {#DLL_DIR}\libwinpthread-1.dll; DestDir: {app}
+Source: {#DLL_DIR}\libstdc++-6.dll; DestDir: {app} 
 #else
 Source: {#DLL_DIR}\*; DestDir: {app}
 Source: {#DLL_DIR}\iconengines\*; DestDir: {app}\iconengines
