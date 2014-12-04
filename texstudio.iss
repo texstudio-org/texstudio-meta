@@ -1,9 +1,9 @@
 [Setup]
 ;Change this in every version
-AppVerName=TeXstudio 2.8.6
-AppVersion=2.8.6
+AppVerName=TeXstudio 2.8.8
+AppVersion=2.8.8
 
-OutputBaseFilename=texstudio2.8.6_win_qt5.3.1
+OutputBaseFilename=texstudio2.8.8_win_qt5.3.1
 ;OutputBaseFilename=texstudio281_snapshot_2014-07-24_win
 
 ;#define qt4_build
