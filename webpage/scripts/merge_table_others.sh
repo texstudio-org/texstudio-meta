@@ -11,7 +11,7 @@ function getSize(){
 
 WININSTALLER=$(xidel /tmp/txsfiles -e 'css("#files a.name")[contains(., "exe")]/@href')
 WININSTALLERSIZE=$(getSize $WININSTALLER)
-MACDMG=$(xidel /tmp/txsfiles -e 'css("#files a.name")[contains(., "dmg")]/@href')
+MACDMG=$(xidel /tmp/txsfiles -e 'css("#files a.name")[contains(., "osx")]/@href')
 MACDMGSIZE=$(getSize $MACDMG)
 WINUSB=$(xidel /tmp/txsfiles -e 'css("#files a.name")[(contains(., "usb") or contains(., "portable") ) and contains(., "zip")]/@href')
 if [ $? -eq 0 ]; then WINUSBSIZE=$(getSize $WINUSB); else WINUSB=""; fi
