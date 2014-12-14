@@ -15,12 +15,14 @@ xidel https://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%20$VE
 function setDef(){
   FILEGREP=$1
   PLATFORM=$2
+  FILEGREPFALLBACK=$3
   FILE=$(grep $FILEGREP /tmp/txsfiles | head -1)
+  if [[ -z  ]]; then FILE=$(grep $FILEGREPFALLBACK /tmp/txsfiles | head -1); fi
   if [[ -n $FILE ]]; then 
     echo $FILE on $PLATFORM
   
-    /home/benito/hg/programs/internet/xidel/xidel https://sourceforge.net/account/login.php         \
-      -f "form((//form)[2], {'form_loginname': '$USERNAME', 'form_pw': '$PASSWORD', 'login': 'Log in'})"            \
+    /home/benito/hg/programs/internet/xidel/xidel https://sourceforge.net/auth/         \
+      -f "form((//form)[2], {'username': '$USERNAME', 'password': '$PASSWORD'})"            \
       -f "object(('method', 'PUT', 
                 'post', 'name=$FILE&download_label=&default=$PLATFORM', 
                 'url', 'https://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%20$VERSION/$FILE'))" 
@@ -30,7 +32,7 @@ function setDef(){
 
 
  
-setDef '\.exe$' windows
+setDef 'qt5.*exe$' windows '\.exe$'
 setDef '\.dmg\.' mac
 setDef '\.deb$' linux
 setDef '\.tar.gz$' "solaris&default=bsd&default=others"
