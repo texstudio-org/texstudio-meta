@@ -5,7 +5,7 @@ source $OWNDIR/checkversion.sh
 
 
 VERSION=$TXS_VERSION_CPP
-USERNAME=benibela
+USERNAME=jsundermeyer
 echo Version: $VERSION
 echo Password for sf user $USERNAME
 read PASSWORD
@@ -33,7 +33,7 @@ function setDef(){
 
  
 setDef 'qt5.*exe$' windows '\.exe$'
-setDef '\.dmg\.' mac
+setDef '\.zip\.' mac
 setDef '\.deb$' linux
 setDef '\.tar.gz$' "solaris&default=bsd&default=others"
 
