@@ -3,11 +3,12 @@
 AppVerName=TeXstudio 2.9.0
 AppVersion=2.9.0
 
-OutputBaseFilename=texstudio2.8.8_win_qt5.3.1
-;OutputBaseFilename=texstudio281_snapshot_2014-07-24_win
+;OutputBaseFilename=texstudio2.9.0_win_qt5.4.1
+;OutputBaseFilename=texstudio2.9.0_win_qt4.8.6
+;OutputBaseFilename=texstudio2.9.1_snapshot_2015-03-21_win_qt5.4.1
 
 ;#define qt4_build
-#define qt5_build
+#define qt54_build
 
 #ifdef qt4_build
   #define DLL_DIR "..\texstudio-build\dlls\qt-4.8.6"
@@ -17,6 +18,11 @@ OutputBaseFilename=texstudio2.8.8_win_qt5.3.1
   #define DLL_DIR "..\texstudio-build\dlls\qt-5.3.1"
   #define EXE_DIR "..\texstudio-build\exe\qt5"
 #endif
+#ifdef qt54_build
+  #define DLL_DIR "..\texstudio-build\dlls\qt-5.4.1"
+  #define EXE_DIR "..\texstudio-build\exe\qt5"
+#endif
+
 
 ;Don't change
 AppName=TeXstudio
@@ -28,6 +34,14 @@ DefaultGroupName=TeXstudio
 UninstallDisplayIcon={app}\texstudio.exe
 SourceDir=..\texstudio-hg\
 OutputDir=..\texstudio-installers
+
+[InstallDelete]
+; delete dlls of former versions
+Type: files; Name: "{app}\*.dll"
+Type: files; Name: "{app}\iconengines\*.dll"
+Type: files; Name: "{app}\imageformats\*.dll"
+Type: files; Name: "{app}\platforms\*.dll"
+Type: files; Name: "{app}\printsupport\*.dll"
 
 [Files]
 Source: {#EXE_DIR}\texstudio.exe; DestDir: {app}\
@@ -106,14 +120,14 @@ Source: texstudio_pt_BR.qm; DestDir: {app}\translations
 Source: texstudio_ru.qm; DestDir: {app}\translations
 ;Source: texstudio_uk.qm; DestDir: {app}\translations
 Source: texstudio_zh_CN.qm; DestDir: {app}\translations
-Source: qt_cs.qm; DestDir: {app}\translations
-Source: qt_de.qm; DestDir: {app}\translations
-Source: qt_es.qm; DestDir: {app}\translations
+;Source: qt_cs.qm; DestDir: {app}\translations
+;Source: qt_de.qm; DestDir: {app}\translations
+;Source: qt_es.qm; DestDir: {app}\translations
 Source: qt_fr.qm; DestDir: {app}\translations
-Source: qt_hu.qm; DestDir: {app}\translations
-Source: qt_ja.qm; DestDir: {app}\translations
+;Source: qt_hu.qm; DestDir: {app}\translations
+;Source: qt_ja.qm; DestDir: {app}\translations
 Source: qt_pl.qm; DestDir: {app}\translations
-Source: qt_ru.qm; DestDir: {app}\translations
+;Source: qt_ru.qm; DestDir: {app}\translations
 Source: qt_zh.qm; DestDir: {app}\translations
 
 [Icons]
