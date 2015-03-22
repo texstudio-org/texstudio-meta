@@ -1,25 +1,25 @@
 [Setup]
 ;Change this in every version
-AppVerName=TeXstudio 2.9.0
-AppVersion=2.9.0
+AppVerName=TeXstudio 2.9.2
+AppVersion=2.9.2
 
-;OutputBaseFilename=texstudio2.9.0_win_qt5.4.1
-;OutputBaseFilename=texstudio2.9.0_win_qt4.8.6
+OutputBaseFilename=texstudio2.9.2_win_qt5.4.1
+;OutputBaseFilename=texstudio2.9.2_win_qt4.8.6
 ;OutputBaseFilename=texstudio2.9.1_snapshot_2015-03-21_win_qt5.4.1
 
 ;#define qt4_build
 #define qt54_build
 
 #ifdef qt4_build
-  #define DLL_DIR "..\texstudio-build\dlls\qt-4.8.6"
+  #define DEPENDENCIES "..\texstudio-build\dependencies\qt-4.8.6"
   #define EXE_DIR "..\texstudio-build\exe\qt4"
 #endif
 #ifdef qt5_build
-  #define DLL_DIR "..\texstudio-build\dlls\qt-5.3.1"
+  #define DEPENDENCIES "..\texstudio-build\dependencies\qt-5.3.1"
   #define EXE_DIR "..\texstudio-build\exe\qt5"
 #endif
 #ifdef qt54_build
-  #define DLL_DIR "..\texstudio-build\dlls\qt-5.4.1"
+  #define DEPENDENCIES "..\texstudio-build\dependencies\qt-5.4.1"
   #define EXE_DIR "..\texstudio-build\exe\qt5"
 #endif
 
@@ -42,44 +42,51 @@ Type: files; Name: "{app}\iconengines\*.dll"
 Type: files; Name: "{app}\imageformats\*.dll"
 Type: files; Name: "{app}\platforms\*.dll"
 Type: files; Name: "{app}\printsupport\*.dll"
+; translations are now located in the translations subdirectory
+Type: files; Name: "{app}\qt_de.qm"
+Type: files; Name: "{app}\qt_hu.qm"
+Type: files; Name: "{app}\qt_it.qm"
+Type: files; Name: "{app}\qt_ja.qm"
+Type: files; Name: "{app}\qt_ru.qm"
+Type: files; Name: "{app}\qt_uk.qm"
 
 [Files]
 Source: {#EXE_DIR}\texstudio.exe; DestDir: {app}\
 #ifdef qt4_build
-Source: {#DLL_DIR}\mingwm10.dll; DestDir: {app}\
-Source: {#DLL_DIR}\iconv.dll; DestDir: {app}\
-Source: {#DLL_DIR}\QtCore4.dll; DestDir: {app}\
-Source: {#DLL_DIR}\QtGui4.dll; DestDir: {app}\
-Source: {#DLL_DIR}\QtNetwork4.dll; DestDir: {app}\
-Source: {#DLL_DIR}\QtXml4.dll; DestDir: {app}\
-Source: {#DLL_DIR}\QtSvg4.dll; DestDir: {app}\
-Source: {#DLL_DIR}\QtScript4.dll; DestDir: {app}\
-Source: {#DLL_DIR}\phonon4.dll; DestDir: {app}\
-Source: {#DLL_DIR}\iconengines\qsvgicon4.dll; DestDir: {app}\iconengines
-Source: {#DLL_DIR}\libcurl.dll; DestDir: {app}
-Source: {#DLL_DIR}\libfreetype.dll; DestDir: {app}
-Source: {#DLL_DIR}\libgcc_s_dw2-1.dll; DestDir: {app}
-Source: {#DLL_DIR}\libgcc_s_sjlj-1.dll; DestDir: {app}
-Source: {#DLL_DIR}\liblcms2.dll; DestDir: {app}
-Source: {#DLL_DIR}\libopenjpeg.dll; DestDir: {app}
-Source: {#DLL_DIR}\libpng15.dll; DestDir: {app}
-Source: {#DLL_DIR}\libjpeg.dll; DestDir: {app}
-Source: {#DLL_DIR}\libpoppler.dll; DestDir: {app}
-Source: {#DLL_DIR}\libpoppler-qt4.dll; DestDir: {app}
-Source: {#DLL_DIR}\libtiff3.dll; DestDir: {app}
-Source: {#DLL_DIR}\libxml2.dll; DestDir: {app}
-Source: {#DLL_DIR}\libz.dll; DestDir: {app}
-Source: {#DLL_DIR}\zlib1.dll; DestDir: {app}
-Source: {#DLL_DIR}\libeay32.dll; DestDir: {app}
-Source: {#DLL_DIR}\ssleay32.dll; DestDir: {app}
-Source: {#DLL_DIR}\libwinpthread-1.dll; DestDir: {app}
-Source: {#DLL_DIR}\libstdc++-6.dll; DestDir: {app} 
+Source: {#DEPENDENCIES}\mingwm10.dll; DestDir: {app}\
+Source: {#DEPENDENCIES}\iconv.dll; DestDir: {app}\
+Source: {#DEPENDENCIES}\QtCore4.dll; DestDir: {app}\
+Source: {#DEPENDENCIES}\QtGui4.dll; DestDir: {app}\
+Source: {#DEPENDENCIES}\QtNetwork4.dll; DestDir: {app}\
+Source: {#DEPENDENCIES}\QtXml4.dll; DestDir: {app}\
+Source: {#DEPENDENCIES}\QtSvg4.dll; DestDir: {app}\
+Source: {#DEPENDENCIES}\QtScript4.dll; DestDir: {app}\
+Source: {#DEPENDENCIES}\phonon4.dll; DestDir: {app}\
+Source: {#DEPENDENCIES}\iconengines\qsvgicon4.dll; DestDir: {app}\iconengines
+Source: {#DEPENDENCIES}\libcurl.dll; DestDir: {app}
+Source: {#DEPENDENCIES}\libfreetype.dll; DestDir: {app}
+Source: {#DEPENDENCIES}\libgcc_s_dw2-1.dll; DestDir: {app}
+Source: {#DEPENDENCIES}\libgcc_s_sjlj-1.dll; DestDir: {app}
+Source: {#DEPENDENCIES}\liblcms2.dll; DestDir: {app}
+Source: {#DEPENDENCIES}\libopenjpeg.dll; DestDir: {app}
+Source: {#DEPENDENCIES}\libpng15.dll; DestDir: {app}
+Source: {#DEPENDENCIES}\libjpeg.dll; DestDir: {app}
+Source: {#DEPENDENCIES}\libpoppler.dll; DestDir: {app}
+Source: {#DEPENDENCIES}\libpoppler-qt4.dll; DestDir: {app}
+Source: {#DEPENDENCIES}\libtiff3.dll; DestDir: {app}
+Source: {#DEPENDENCIES}\libxml2.dll; DestDir: {app}
+Source: {#DEPENDENCIES}\libz.dll; DestDir: {app}
+Source: {#DEPENDENCIES}\zlib1.dll; DestDir: {app}
+Source: {#DEPENDENCIES}\libeay32.dll; DestDir: {app}
+Source: {#DEPENDENCIES}\ssleay32.dll; DestDir: {app}
+Source: {#DEPENDENCIES}\libwinpthread-1.dll; DestDir: {app}
+Source: {#DEPENDENCIES}\libstdc++-6.dll; DestDir: {app} 
 #else
-Source: {#DLL_DIR}\*; DestDir: {app}
-Source: {#DLL_DIR}\iconengines\*; DestDir: {app}\iconengines
-Source: {#DLL_DIR}\imageformats\*; DestDir: {app}\imageformats
-Source: {#DLL_DIR}\platforms\*; DestDir: {app}\platforms
-Source: {#DLL_DIR}\printsupport\*; DestDir: {app}\printsupport
+Source: {#DEPENDENCIES}\*.dll; DestDir: {app}
+Source: {#DEPENDENCIES}\iconengines\*; DestDir: {app}\iconengines
+Source: {#DEPENDENCIES}\imageformats\*; DestDir: {app}\imageformats
+Source: {#DEPENDENCIES}\platforms\*; DestDir: {app}\platforms
+Source: {#DEPENDENCIES}\printsupport\*; DestDir: {app}\printsupport
 #endif
 
 Source: utilities\dictionaries\en_GB.*; DestDir: {app}\dictionaries
@@ -120,15 +127,7 @@ Source: texstudio_pt_BR.qm; DestDir: {app}\translations
 Source: texstudio_ru.qm; DestDir: {app}\translations
 ;Source: texstudio_uk.qm; DestDir: {app}\translations
 Source: texstudio_zh_CN.qm; DestDir: {app}\translations
-;Source: qt_cs.qm; DestDir: {app}\translations
-;Source: qt_de.qm; DestDir: {app}\translations
-;Source: qt_es.qm; DestDir: {app}\translations
-Source: qt_fr.qm; DestDir: {app}\translations
-;Source: qt_hu.qm; DestDir: {app}\translations
-;Source: qt_ja.qm; DestDir: {app}\translations
-Source: qt_pl.qm; DestDir: {app}\translations
-;Source: qt_ru.qm; DestDir: {app}\translations
-Source: qt_zh.qm; DestDir: {app}\translations
+Source: {#DEPENDENCIES}\qt*.qm; DestDir: {app}\translations
 
 [Icons]
 Name: {group}\TeXstudio; Filename: {app}\TeXstudio.exe
