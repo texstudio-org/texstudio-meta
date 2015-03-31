@@ -751,4 +751,28 @@ piwikTracker.enableLinkTracking();
 <!-- End Piwik Tag -->
 </div>
 
+<script>
+  var tbody = document.getElementsByClassName("news")[0].getElementsByTagName("TBODY")[0];
+  var tr = document.createElement("TR");
+  tr.innerHTML = '<td class="newsdate">2015-04-01</td> <td class="newscontent">The new release <strong>TeXstudio 2.9.6</strong> is available and fixes important issues. <a onclick="download266()" href="#download">Download it below</a></td>';
+  tbody.insertBefore(tr, tbody.firstElementChild);
+
+  function download266(){
+    var as = document.getElementsByTagName("a");
+    for (var i=0;i<as.length;i++) {
+      var downlink = ((""+as[i].className+as[i].id).indexOf("ownload") > 0) || (/download|amd64|i[0-9]86|x86_64|Installer|Portable/.test(as[i].textContent));
+      if (!downlink) continue;
+      as[i].href="#download";
+      as[i].onclick = apri;
+    }
+    var tds = document.getElementsByTagName("td");
+    for (var i=0;i<tds.length;i++) 
+      if (tds[i].textContent.indexOf("2.9.") >= 0) tds[i].textContent = "2.9.6";
+    
+  }
+  function apri(){
+    alert('April fool!');
+  }
+</script>
+
 </body></html>
