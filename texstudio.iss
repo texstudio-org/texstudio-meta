@@ -1,10 +1,10 @@
 [Setup]
 ;Change this in every version
-AppVerName=TeXstudio 2.9.4
-AppVersion=2.9.4
+AppVerName=TeXstudio 2.9.5
+AppVersion=2.9.5
 
-OutputBaseFilename=texstudio2.9.4_win_qt5.3.1
-;OutputBaseFilename=texstudio281_snapshot_2014-07-24_win
+OutputBaseFilename=texstudio2.9.5_snapshot_2015-06-21_win_qt5.4.1
+;OutputBaseFilename=texstudio2.9.4_win_qt4.8.6
 
 ;#define qt4_build
 #define qt5_build
@@ -68,18 +68,12 @@ Source: {#DLL_DIR}\platforms\*; DestDir: {app}\platforms
 Source: {#DLL_DIR}\printsupport\*; DestDir: {app}\printsupport
 #endif
 
-Source: utilities\dictionaries\en_GB.*; DestDir: {app}\dictionaries
-Source: utilities\dictionaries\en_US.*; DestDir: {app}\dictionaries
-Source: utilities\dictionaries\fr_FR.*; DestDir: {app}\dictionaries
-Source: utilities\dictionaries\de_DE.*; DestDir: {app}\dictionaries
-Source: utilities\dictionaries\hu_HU.*; DestDir: {app}\dictionaries
-Source: utilities\dictionaries\pt_BR.*; DestDir: {app}\dictionaries
+Source: utilities\dictionaries\*.dic; DestDir: {app}\dictionaries
+Source: utilities\dictionaries\*.aff; DestDir: {app}\dictionaries
 Source: utilities\dictionaries\de.*; DestDir: {app}\dictionaries
 Source: utilities\dictionaries\en.*; DestDir: {app}\dictionaries
 Source: utilities\dictionaries\fr.*; DestDir: {app}\dictionaries
-Source: utilities\dictionaries\th_en_US_v2.dat.*; DestDir: {app}\dictionaries
-Source: utilities\dictionaries\th_fr_FR_v2.dat.*; DestDir: {app}\dictionaries
-Source: utilities\dictionaries\th_de_DE_v2.dat.*; DestDir: {app}\dictionaries
+Source: utilities\dictionaries\th_*_v2.dat; DestDir: {app}\dictionaries
 
 Source: utilities\AUTHORS; DestDir: {app}\help
 Source: utilities\CHANGELOG.txt; DestDir: {app}\help
