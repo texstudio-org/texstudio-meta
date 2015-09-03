@@ -1,9 +1,9 @@
 [Setup]
 ;Change this in every version
-AppVerName=TeXstudio 2.9.5
-AppVersion=2.9.5
+AppVerName=TeXstudio 2.10.0
+AppVersion=2.10.0
 
-OutputBaseFilename=texstudio2.9.5_snapshot_2015-06-21_win_qt5.4.1
+OutputBaseFilename=texstudio2.10.0_win_qt5.4.1
 ;OutputBaseFilename=texstudio2.9.4_win_qt4.8.6
 
 ;#define qt4_build
