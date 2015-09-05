@@ -1,0 +1,23 @@
+\documentclass[10pt,a4paper]{article}
+\begin{document}
+
+\section{Spell Checking}\label{sec:chk}
+Here you can see the spell-checking on different mispelled wrods: Tehy are automaticaly underlined. \textbf{TeX commands} which usually contain text are also checked. Compare \textbf{sec:chk} and \ref{sec:chk} 
+
+\section{Syntax Checking}
+Unknown \LaTeX \commands are automatically highlighted.
+The same is true for non-matching braces: {  ]
+
+\section{Reference Checking}
+Reference are checked for their existence \ref{sec:chk} exists, but \ref{sec:spam} does not. So it's underlined.
+
+\section{Citation Checking}
+The same holds for citations: \cite{citation01} and \cite{notInBibliography}. This works both with BiBTeX as with local bibliographies.
+
+\begin{thebibliography}
+\bibitem{citation01} This is my paper
+\end{thebibliography}
+
+
+
+\end{document}
