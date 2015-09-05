@@ -15,6 +15,7 @@ uploadCommands="put index.html"
 
 OWNDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source $OWNDIR/.ftpdata
+if [ ! -e $OWNDIR/.ftpdata ]; then echo Create file $OWNDIR/.ftpdata with ftp connection data; exit; fi 
 uploadCommands="user $username $password\ncd $remotepath\n$uploadCommands\nbye";
 
 echo -e "$uploadCommands" | ftp -n -v $domain 
