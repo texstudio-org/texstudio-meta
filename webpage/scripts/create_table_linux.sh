@@ -18,10 +18,9 @@ xidel \
      --extract-exclude=u,plat,os,lastos,release-version,release-date,debianlink,debiansize            \
      -e "<body>{os := (), release-version := '$VERSION', lastos := '', debianlink := '$DEBIANLINK', debiansize := '$DEBIANSIZE', release-date:= '$CURYEAR'}</body>"   \
      -f "<BODY><PRE><A/><A/><A/><A/><t:loop><A>{.}</A></t:loop></PRE></BODY>"                         \
-     -e '()'                                                                                          \
      -f '//a[text() = ("i386/", "i586/", "i686/", "x86_64/", "amd64/")]'                              \
      --hide-variable-names                                                                            \
-     -e 'xquery version "1.0";
+     -e 'xquery version "3.0";
          declare function entry($os, $u, $plat, $size){
            let $temp := <tr>
            <td>{if ($os = $lastos) then "" else $os}</td>
@@ -37,9 +36,9 @@ xidel \
          };
          result := for $a in (//text()[contains(., $release-date)]/preceding-sibling::a[1][contains(@href, $release-version)])[1]
          let $u :=resolve-uri($a, $url),
-             $plat := filter($u,"meyer/(.*)/", 1), 
-             $os := translate(filter($plat,"(.*)/", 1),"_", " "),
-             $realplat := filter($plat,"[^/]+$")
+             $plat := extract($u,"meyer/(.*)/", 1), 
+             $os := translate(extract($plat,"(.*)/", 1),"_", " "),
+             $realplat := extract($plat,"[^/]+$")
          return (
            if (contains($os, "Fedora") and not(contains($lastos, "Fedora"))) then entry("Debian Jessie", $debianlink, "amd64", $debiansize) else (),
            entry($os, $u, $realplat, replace(extract($a/following-sibling::text(),"[0-9.]+ *[MK]$"), "([0-9.]+) *([MK])", "$1 $2iB"))
