@@ -32,7 +32,7 @@ while read line && [[ $a -lt 2 ]]; do
   if [[ $a -gt 0 ]]; then echo $pline; fi; 
   pline=$line; 
   if [[ $line =~ -\>\ TeXs|TeXstudio\ [0-9.]+\ *-\> ]]; then a=$(($a+1)); fi; 
-done < utilities/CHANGELOG.txt >> /tmp/texstudio$VERSION.readme.txt
+done < utilities/manual/CHANGELOG.txt >> /tmp/texstudio$VERSION.readme.txt
 
 echo Done:
 
