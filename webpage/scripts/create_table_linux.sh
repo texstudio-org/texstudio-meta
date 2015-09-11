@@ -22,7 +22,8 @@ xidel \
      --hide-variable-names                                                                            \
      -e 'xquery version "3.0";
          declare function entry($os, $u, $plat, $size){
-           let $temp := <tr>
+           if (not($u)) then ()
+           else let $temp := <tr>
            <td>{if ($os = $lastos) then "" else $os}</td>
            <td>{if ($os = $lastos) then "" else $release-version}</td>
            <td><a href="{$u}">{$plat}</a> Package</td>

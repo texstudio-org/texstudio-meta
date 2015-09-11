@@ -32,10 +32,10 @@ if [ $? -eq 0 ]; then OS2SIZE=$(getSize $OS2); else OS2=""; fi
 xidel index.html --extract-kind=xquery -e - --output-format html > /tmp/new.html <<EOF 
   declare function local:changeText(\$e, \$newtext) {
     element {node-name(\$e)} {\$e / @*, for \$i in \$e/element() return local:update(\$i), text {\$newtext } }
-  }
+  };
   declare function local:changeHref(\$e, \$newlink) {
     element {node-name(\$e)} {\$e / @*[name() ne "href"], attribute href {\$newlink}, for \$i in \$e/node() return local:update(\$i)}
-  }
+  };
   declare function local:update(\$e) {
     if (not(\$e instance of element())) then \$e
     else if (\$e/@class = ("currentVersion", "currentVersionMac")) then local:changeText(\$e, "$VERSION")
