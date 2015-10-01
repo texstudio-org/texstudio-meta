@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <versions>
-	<stable value="2.9.4" />
+	<stable value="2.10.2" />  <!-- only used up to TXS 2.10.2. newer versions check the <version> tags below -->
+	<version type="stable" platform="win" number="2.10.2" revision="5508" />
+	<version type="stable" platform="mac" number="2.10.2" revision="5506" />
+	<version type="stable" platform="linux" number="2.10.2" revision="5506" />
+	<version type="development" platform="win" number="2.10.1" revision="5489" />
+	<version type="development" platform="mac" number="2.10.1" revision="5487" />
 </versions>
 
