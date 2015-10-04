@@ -4,6 +4,8 @@
 	<version type="stable" platform="win" number="2.10.2" revision="5508" />
 	<version type="stable" platform="mac" number="2.10.2" revision="5506" />
 	<version type="stable" platform="linux" number="2.10.2" revision="5506" />
+<!--	<version type="release candidate" platform="win" number="2.10.4" revision="5568" /> -->
+<!--	<version type="release candidate" platform="mac" number="2.10.4" revision="5568" /> -->
 	<version type="development" platform="win" number="2.10.1" revision="5489" />
 	<version type="development" platform="mac" number="2.10.1" revision="5487" />
 </versions>
