@@ -1,20 +1,23 @@
 [Setup]
 ;Change this in every version
-AppVerName=TeXstudio 2.10.2
-AppVersion=2.10.2
+;AppVerName=TeXstudio 2.10.4 RC
+AppVerName=TeXstudio 2.10.4
+AppVersion=2.10.4
 
-OutputBaseFilename=texstudio2.10.2_win_qt5.4.1
-;OutputBaseFilename=texstudio2.9.4_win_qt4.8.6
+OutputBaseFilename=texstudio-2.10.4-win-qt5.5.1
+;OutputBaseFilename=texstudio-2.10.4-rc-win-qt5.5.1
+;OutputBaseFilename=texstudio-2.10.3-dev-hg5570-win-qt5.5.0
+;OutputBaseFilename=texstudio-2.10.2-win-qt5.5.0
 
 ;#define qt4_build
 #define qt5_build
 
 #ifdef qt4_build
-  #define DLL_DIR "..\texstudio-build\dlls\qt-4.8.6"
+  #define DLL_DIR "..\texstudio-build\dependencies\qt-4.8.6"
   #define EXE_DIR "..\texstudio-build\exe\qt4"
 #endif
 #ifdef qt5_build
-  #define DLL_DIR "..\texstudio-build\dlls\qt-5.3.1"
+  #define DLL_DIR "..\texstudio-build\dependencies\qt-5.5.1"
   #define EXE_DIR "..\texstudio-build\exe\qt5"
 #endif
 
@@ -76,7 +79,7 @@ Source: utilities\dictionaries\fr.*; DestDir: {app}\dictionaries
 Source: utilities\dictionaries\th_*_v2.dat; DestDir: {app}\dictionaries
 
 Source: utilities\AUTHORS; DestDir: {app}\help
-Source: utilities\CHANGELOG.txt; DestDir: {app}\help
+;Source: utilities\CHANGELOG.txt; DestDir: {app}\help
 Source: utilities\COPYING; DestDir: {app}\help
 Source: utilities\latex2e.html; DestDir: {app}\help
 Source: utilities\latex2e.css; DestDir: {app}\help
@@ -91,6 +94,7 @@ Source: templates\*; DestDir: {app}\templates
 Source: texstudio_cs.qm; DestDir: {app}\translations
 Source: texstudio_de.qm; DestDir: {app}\translations
 Source: texstudio_es.qm; DestDir: {app}\translations
+Source: texstudio_el.qm; DestDir: {app}\translations
 Source: texstudio_fr.qm; DestDir: {app}\translations
 Source: texstudio_hu.qm; DestDir: {app}\translations
 Source: texstudio_ja.qm; DestDir: {app}\translations
