@@ -1,13 +1,12 @@
 [Setup]
 ;Change this in every version
-;AppVerName=TeXstudio 2.10.4 RC
-AppVerName=TeXstudio 2.10.4
-AppVersion=2.10.4
+;AppVerName=TeXstudio 2.10.6 RC
+AppVerName=TeXstudio 2.10.6
+AppVersion=2.10.6
 
-OutputBaseFilename=texstudio-2.10.4-win-qt5.5.1
-;OutputBaseFilename=texstudio-2.10.4-rc-win-qt5.5.1
-;OutputBaseFilename=texstudio-2.10.3-dev-hg5570-win-qt5.5.0
-;OutputBaseFilename=texstudio-2.10.2-win-qt5.5.0
+OutputBaseFilename=texstudio-2.10.6-win-qt5.5.1
+;OutputBaseFilename=texstudio-2.10.6-rc-win-qt5.5.1
+;OutputBaseFilename=texstudio-2.10.5-dev-hg5726-win-qt5.5.1
 
 ;#define qt4_build
 #define qt5_build
@@ -64,7 +63,7 @@ Source: {#DLL_DIR}\ssleay32.dll; DestDir: {app}
 Source: {#DLL_DIR}\libwinpthread-1.dll; DestDir: {app}
 Source: {#DLL_DIR}\libstdc++-6.dll; DestDir: {app} 
 #else
-Source: {#DLL_DIR}\*; DestDir: {app}
+Source: {#DLL_DIR}\*.dll; DestDir: {app}
 Source: {#DLL_DIR}\iconengines\*; DestDir: {app}\iconengines
 Source: {#DLL_DIR}\imageformats\*; DestDir: {app}\imageformats
 Source: {#DLL_DIR}\platforms\*; DestDir: {app}\platforms
@@ -73,9 +72,9 @@ Source: {#DLL_DIR}\printsupport\*; DestDir: {app}\printsupport
 
 Source: utilities\dictionaries\*.dic; DestDir: {app}\dictionaries
 Source: utilities\dictionaries\*.aff; DestDir: {app}\dictionaries
-Source: utilities\dictionaries\de.*; DestDir: {app}\dictionaries
-Source: utilities\dictionaries\en.*; DestDir: {app}\dictionaries
-Source: utilities\dictionaries\fr.*; DestDir: {app}\dictionaries
+Source: utilities\dictionaries\*.badWords; DestDir: {app}\dictionaries
+Source: utilities\dictionaries\*.stopWords; DestDir: {app}\dictionaries
+Source: utilities\dictionaries\*.stopWords.level2; DestDir: {app}\dictionaries
 Source: utilities\dictionaries\th_*_v2.dat; DestDir: {app}\dictionaries
 
 Source: utilities\AUTHORS; DestDir: {app}\help
@@ -95,24 +94,28 @@ Source: texstudio_cs.qm; DestDir: {app}\translations
 Source: texstudio_de.qm; DestDir: {app}\translations
 Source: texstudio_es.qm; DestDir: {app}\translations
 Source: texstudio_el.qm; DestDir: {app}\translations
+Source: texstudio_es.qm; DestDir: {app}\translations
 Source: texstudio_fr.qm; DestDir: {app}\translations
 Source: texstudio_hu.qm; DestDir: {app}\translations
-Source: texstudio_ja.qm; DestDir: {app}\translations
 Source: texstudio_it.qm; DestDir: {app}\translations
+Source: texstudio_ja.qm; DestDir: {app}\translations
 Source: texstudio_pl.qm; DestDir: {app}\translations
 Source: texstudio_pt_BR.qm; DestDir: {app}\translations
-Source: texstudio_ru.qm; DestDir: {app}\translations
+Source: texstudio_ru_RU.qm; DestDir: {app}\translations
 ;Source: texstudio_uk.qm; DestDir: {app}\translations
+Source: texstudio_vi.qm; DestDir: {app}\translations
 Source: texstudio_zh_CN.qm; DestDir: {app}\translations
 Source: qt_cs.qm; DestDir: {app}\translations
 Source: qt_de.qm; DestDir: {app}\translations
 Source: qt_es.qm; DestDir: {app}\translations
 Source: qt_fr.qm; DestDir: {app}\translations
 Source: qt_hu.qm; DestDir: {app}\translations
+Source: qt_it.qm; DestDir: {app}\translations
 Source: qt_ja.qm; DestDir: {app}\translations
 Source: qt_pl.qm; DestDir: {app}\translations
+Source: qt_pt.qm; DestDir: {app}\translations
 Source: qt_ru.qm; DestDir: {app}\translations
-Source: qt_zh.qm; DestDir: {app}\translations
+Source: qt_zh_CN.qm; DestDir: {app}\translations
 
 [Icons]
 Name: {group}\TeXstudio; Filename: {app}\TeXstudio.exe
@@ -126,9 +129,11 @@ Name: es; MessagesFile: compiler:Languages\Spanish.isl
 Name: fr; MessagesFile: compiler:Languages\French.isl
 Name: it; MessagesFile: compiler:Languages\Italian.isl
 Name: cz; MessagesFile: compiler:Languages\Czech.isl
+Name: pl; MessagesFile: compiler:Languages\Polish.isl
 Name: pt_BR; MessagesFile: compiler:Languages\BrazilianPortuguese.isl
 Name: hu; MessagesFile: compiler:Languages\Hungarian.isl
 Name: ja; MessagesFile: compiler:Languages\Japanese.isl
+Name: ru; MessagesFile: compiler:Languages\Russian.isl
 
 
 [Tasks]
