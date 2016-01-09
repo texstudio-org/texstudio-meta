@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <versions>
 	<stable value="2.10.4" />  <!-- only used up to TXS 2.10.2. newer versions check the <version> tags below -->
-	<version type="stable" platform="win" number="2.10.4" revision="5633" />
-	<version type="stable" platform="mac" number="2.10.4" revision="5633" />
-	<version type="stable" platform="linux" number="2.10.4" revision="5633" />
-<!--	<version type="release candidate" platform="win" number="2.10.4" revision="5568" /> -->
+	<version type="stable" platform="win" number="2.10.6" revision="5771" />
+	<version type="stable" platform="mac" number="2.10.6" revision="5771" />
+	<version type="stable" platform="linux" number="2.10.6" revision="5771" />
+	<version type="release candidate" platform="win" number="2.10.6" revision="5733" />
 <!--	<version type="release candidate" platform="mac" number="2.10.4" revision="5568" /> -->
-	<version type="development" platform="win" number="2.10.3" revision="5570" />
+	<version type="development" platform="win" number="2.10.5" revision="5681" />
 	<version type="development" platform="mac" number="2.10.1" revision="5487" />
 </versions>
 
