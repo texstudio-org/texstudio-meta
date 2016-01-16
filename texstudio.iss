@@ -1,10 +1,9 @@
 [Setup]
 ;Change this in every version
-;AppVerName=TeXstudio 2.10.6 RC
-AppVerName=TeXstudio 2.10.6
-AppVersion=2.10.6
+AppVerName=TeXstudio 2.10.8
+AppVersion=2.10.8
 
-OutputBaseFilename=texstudio-2.10.6-win-qt5.5.1
+OutputBaseFilename=texstudio-2.10.8-win-qt5.5.1
 ;OutputBaseFilename=texstudio-2.10.6-rc-win-qt5.5.1
 ;OutputBaseFilename=texstudio-2.10.5-dev-hg5726-win-qt5.5.1
 
