@@ -5,7 +5,9 @@ source $OWNDIR/checkversion.sh
 
 
 VERSION=$TXS_VERSION_CPP
-USERNAME=jsundermeyer
+if [[ "$(whoami)" = benito ]]; then USERNAME=benibela; 
+else USERNAME=jsundermeyer; 
+fi
 echo Version: $VERSION
 echo Password for sf user $USERNAME
 read PASSWORD
@@ -16,16 +18,16 @@ function setDef(){
   FILEGREP=$1
   PLATFORM=$2
   FILEGREPFALLBACK=$3
-  FILE=$(grep $FILEGREP /tmp/txsfiles | head -1)
-  if [[ -z  ]]; then FILE=$(grep $FILEGREPFALLBACK /tmp/txsfiles | head -1); fi
-  if [[ -n $FILE ]]; then 
+  FILE=$(grep -E $FILEGREP /tmp/txsfiles | head -1)
+  if [[ -z "$FILE" ]] &&  [[ -n "$FILEGREPFALLBACK" ]]; then FILE=$(grep -E $FILEGREPFALLBACK /tmp/txsfiles | head -1); fi
+  if [[ -n "$FILE" ]]; then 
     echo $FILE on $PLATFORM
   
-    /home/benito/hg/programs/internet/xidel/xidel https://sourceforge.net/auth/         \
+    xidel https://sourceforge.net/auth/         \
       -f "form((//form)[2], {'username': '$USERNAME', 'password': '$PASSWORD'})"            \
-      -f "object(('method', 'PUT', 
-                'post', 'name=$FILE&download_label=&default=$PLATFORM', 
-                'url', 'https://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%20$VERSION/$FILE'))" 
+      -f "{'method': 'PUT', 
+           'post': 'name=$FILE&download_label=&default=$PLATFORM', 
+           'url': 'https://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%20$VERSION/$FILE'}" 
     echo
   fi
 }
@@ -33,7 +35,7 @@ function setDef(){
 
  
 setDef 'qt5.*exe$' windows '\.exe$'
-setDef '\.zip\.' mac
+setDef '\.dmg\.|-osx-' mac 
 setDef '\.deb$' linux
 setDef '\.tar.gz$' "solaris&default=bsd&default=others"
 
