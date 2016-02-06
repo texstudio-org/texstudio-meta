@@ -1,5 +1,6 @@
 [Setup]
 ;Change this in every version
+;AppVerName=TeXstudio 2.10.6 RC
 AppVerName=TeXstudio 2.10.8
 AppVersion=2.10.8
 
