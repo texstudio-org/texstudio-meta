@@ -54,6 +54,8 @@
 		<div id="recent-news">
 			<table class="news">
 			<tbody>
+			<tr><td class="newsdate">2016-02-17</td>
+			<td class="newscontent">There are community-provided <a href="#appimage">Linux AppImages available</a> for TeXstudio.</td></tr>
 			<tr><td class="newsdate">2016-01-20</td>
 			<td class="newscontent">The new release <strong>TeXstudio 2.10.8</strong> is available. This is a bugfix release (see <a href="http://texstudio.sourceforge.net/manual/current/CHANGELOG.txt">changelog</a>).<br>For Ubuntu 14.04 use Qt4 Version.<br>Thanks to all translators on transifex.</td></tr>
 			<tr><td class="newsdate">2016-01-09</td>
@@ -748,56 +750,27 @@ http://sourceforge.net/blog/projects-of-the-week-february-16-2015">Featured Proj
            </tr>
      </tbody>
 
-			<thead>
-			
+	 <thead>
+			<tr id="appimage" class="platformDownload"><td colspan="5">Linux AppImage</td></tr>
+			<tr><td colspan="5"><a href="http://appimage.org/">AppImages</a> are binaries that are packaged with all their dependencies and should thus run on any linux desktop system.<br><b>Please note:</b> The binaries linked below are not created and maintained by the TeXstudio authors. We do not guarantee for their contents and we do not provide any support for these.</td></tr>
+			<tr><td colspan="5"><a href="https://bintray.com/unruhschuh/AppImages/TeXstudio/view#files">Download TeXstudio AppImages by Thomas Leitz</a></td></tr>
+		</thead>
+		<tbody>
+		</tbody>
+	 
+		<thead>
 			<tr class="platformDownload"><td colspan="5">Mac OS X</td></tr>
 			<tr><th>Platform</th><th>Version</th><th> Type</th><th>Size</th><th>How to install</th></tr>	
-			</thead>
+		</thead>
 			<tbody>
 			<tr><td>10.8+</td>
 				<td class="currentVersionMac">2.10.8</td>
 				<td><a class="macDownload" href="https://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%202.10.8/texstudio-2.10.8-osx-qt5.5.zip/download">zip</a></td>	
 				<td>42.7 MB</td>
 				<td><a class="macDownload" href="https://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%202.10.8/texstudio-2.10.8-osx-qt5.5.zip/download">download</a>, and start it.<br>
-				<b>Note:</b> Because we do not have an Apple Developer Account, OS X may complain about an <a href="http://support.apple.com/kb/PH14369">unidentified developer</a> and deny opening TXS. In that case, open the context menu on the TXS icon (Ctrl + Click) and select open.</td>
+				<b>Please note:</b> Because we do not have an Apple Developer Account, OS X may complain about an <a href="http://support.apple.com/kb/PH14369">unidentified developer</a> and deny opening TXS. In that case, open the context menu on the TXS icon (Ctrl + Click) and select open.</td>
 			</tr>			
-			<!--
-			<tr><td>10.8</td>
-				<td>2.5.2</td>
-				<td><a href="http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%202.5.2/texstudio_2.5.2.dmg.zip/download">zip</a></td>	
-				<td>28.9 MB</td>
-				<td><a href="http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%202.5.2/texstudio_2.5.2.dmg.zip/download">download</a>, extract and start it.  </td>
-			</tr>
-			<tr><td>10.7.5</td>
-				<td>2.5.2</td>
-				<td><a href="http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%202.5.2/texstudio_2.5.2_mac10.7.5.dmg.zip/download">zip</a></td>	
-				<td>29.4 MB</td>
-				<td><a href="http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%202.5.2/texstudio_2.5.2_mac10.7.5.dmg.zip/download">download</a>, extract and start it.  </td>
-			</tr>-->
-			<!--<tr><td>10.5 (x86)</td>
-				<td>2.4</td>
-				<td><a href="http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%202.4/texstudio_2.4_mac_osx105.zip/download">zip</a></td>	
-				<td>30 MiB</td>
-				<td><a href="http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%202.4/texstudio_2.4_mac_osx105.zip/download">download</a>, extract and start it.</td>
-			</tr>-->
-
-			</tbody>
-
-	<!--		
-			
-			<tr><td>10.7</td>
-				<td>2.3?</td>
-				<td><a href="http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%202.3/texstudio-2.3_osx10.7.zip/download">zip</a></td>	
-				<td>33.9&nbsp;MiB</td>
-				<td><a href="http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%202.3/texstudio-2.3_osx10.7.zip/download">download</a>, extract and start it.  </td></tr>
-			
-			<tr><td>10.5(/6)</td>
-				<td>2.3</td>
-				<td><a href="http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%202.3/texstudio2.3_osx10.5.zip/download">zip</a></td>	
-				<td>31.3&nbsp;MiB</td>
-				<td><a href="http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%202.3/texstudio2.3_osx10.5.zip/download">download</a>, extract and start it.  </td></tr>
-			</tr>
--->
+		</tbody>
 
 			<thead>
 			<tr class="platformDownload"><td colspan="5">OS/2</td></tr>
@@ -900,7 +873,7 @@ http://sourceforge.net/blog/projects-of-the-week-february-16-2015">Featured Proj
 		<h3>TeXstudio Authors:</h3>
 		<p>Benito van der Zander, Jan Sundermeyer, Daniel Braun, Tim Hoffmann</p>
 		<h3>Thanks to</h3>
-		<p>Contributers: Frédéric Devernay, Denis Bitouzé, Jean-Côme Charpentier, Luis Silvestre, Enrico Vittorini, Aleksandr Zolotarev, David Sichau, Grigory Mozhaev, mattgk, A. Weder, Pavel Fric, András Somogyi, István Blahota, Edson Henriques, Grant McLean, Tom Jampen, Kostas Oikinimou, Lion Guillaume, ranks.nl, AI Corleone, Diego Andrés Jarrín, Matthias Pospiech, Zulkifli Hidayat, Christian Spieß, Robert Diaz, Kirill Müller, Atsushi Nakajima, Yuriy Kolerov, Victor Kozyakin, Mattia Meneguzzo, Andriy Bandura, Carlos Eduardo Valencia Urbina, Koutheir Attouchi, Stefan Kraus, Bjoern Menke, Charles Brunet, François Gannaz.
+		<p>Contributers: Frédéric Devernay, Denis Bitouzé, Jean-Côme Charpentier, Luis Silvestre, Enrico Vittorini, Aleksandr Zolotarev, David Sichau, Grigory Mozhaev, mattgk, A. Weder, Pavel Fric, András Somogyi, István Blahota, Edson Henriques, Grant McLean, Tom Jampen, Kostas Oikinimou, Lion Guillaume, ranks.nl, AI Corleone, Diego Andrés Jarrín, Matthias Pospiech, Zulkifli Hidayat, Christian Spieß, Robert Diaz, Kirill Müller, Atsushi Nakajima, Yuriy Kolerov, Victor Kozyakin, Mattia Meneguzzo, Andriy Bandura, Carlos Eduardo Valencia Urbina, Koutheir Attouchi, Stefan Kraus, Bjoern Menke, Charles Brunet, François Gannaz, Marek Kurdej, Paulo Silva, Thiago de Melo, YoungFrog, Klaus Schneider-Zapp, Jakob Nixdorf, Thomas Leitz.
 			<span id="contributorContact">(Contact us if you are missing or don't want to be mentioned.)</span></p>
 		<p><a href="http://sourceforge.net/projects/texstudio"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=250595&amp;type=10" width="64" height="12" style="position: relative; top: 3px;" alt="SourceForge"></a> for hosting TeXstudio.</p>
 		
