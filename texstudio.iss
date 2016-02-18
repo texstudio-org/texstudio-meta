@@ -134,10 +134,54 @@ Name: ja; MessagesFile: compiler:Languages\Japanese.isl
 Name: ru; MessagesFile: compiler:Languages\Russian.isl
 
 [Tasks]
-Name: desktopicon; Description: "Create a &desktop icon"; GroupDescription: "Additional icons:"; Flags: unchecked
-Name: quicklaunchicon; Description: "Create a &Quick Launch icon"; GroupDescription: "Additional icons:"; Flags: unchecked
-Name: texAssociation; Description: "Associate .tex files with TeXstudio"; GroupDescription: File extensions:
-Name: txssAssociation; Description: "Associate session files (.txss) files with TeXstudio"; GroupDescription: File extensions:
+ ; GroupDescription: "{cm:AdditionalIcons}"
+Name: desktopicon; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
+Name: quicklaunchicon; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
+Name: texAssociation; Description: "{cm:AssocFileExtTex}"; GroupDescription: {cm:AssocFileExt}
+Name: txssAssociation; Description: "{cm:AssocFileExtTxss}"; GroupDescription: {cm:AssocFileExt}
+
+[CustomMessages]
+AssocFileExt=Associate file extensions with TeXstudio:
+de.AssocFileExt=Verknüpfe Dateierweiterungen mit TeXstudio:
+fr.AssocFileExt=Associer des extensions de fichier avec TeXstudio:
+
+AssocFileExtTex=TeX files (*.tex)
+de.AssocFileExtTex=TeX Dateien (*.tex)
+fr.AssocFileExtTex=fichiers TeX (*.tex)
+
+AssocFileExtTxss=TeXstudio session files (.txss)
+de.AssocFileExtTxss=TeXstudio Session Dateien (.txss)
+fr.AssocFileExtTxss=fichiers session de TeXstudio (.txss)
+
+UninstallOptions=TeXstudio Uninstall Options
+de.UninstallOptions=Entfernen
+fr.UninstallOptions=Désinstaller
+
+UninstallAdditionallyRemove=Additionally remove:
+de.UninstallAdditionallyRemove=Zusätzlich entfernen:
+fr.UninstallAdditionallyRemove=Désinstaller plus:
+              
+Uninstall=Uninstall
+de.Uninstall=Entfernen
+fr.Uninstall=Désinstaller
+
+UninstallCancel=Cancel
+de.UninstallCancel=Abbrechen
+fr.UninstallCancel=Annuler
+
+UninstallUserDataFolder=User Data Folder
+de.UninstallUserDataFolder=Benutzer-Ordner
+fr.UninstallUserDataFolder=Dossier de données de l'utilisateur
+
+UninstallUserCompletionFiles=User Completion Files
+
+UninstallUserTemplates=User Templates
+de.UninstallUserTemplates=Benutzer-Templates
+fr.UninstallUserTemplates=Modèles de l'utilisateur
+                   
+UninstallSettings=Settings
+de.UninstallSettings=Einstellungen
+fr.UninstallSettings=Configurations
 
 [Registry]
 Root: HKCR; Subkey: ".tex"; ValueType: string; ValueName: ""; ValueData: "texfile"; Flags: uninsdeletevalue; Tasks: texAssociation
@@ -198,19 +242,19 @@ begin
   try
     Form.ClientWidth := ScaleX(256);
     Form.ClientHeight := ScaleY(168);
-    Form.Caption := 'TeXstudio Uninstall Options';
+    Form.Caption := CustomMessage('UninstallOptions');
     Form.Center();
 
     Info := TLabel.Create(Form);
     Info.Parent := Form;
-    Info.Caption := 'Additionally Remove:'
+    Info.Caption := CustomMessage('UninstallAdditionallyRemove')
     Info.Top := ScaleY(10);
     Info.Left := ScaleX(10);
 
     CheckAll := TCheckBox.Create(Form);
     CheckAll.Parent := Form;
     CheckAll.Checked := False;
-    CheckAll.Caption := 'User Data Folder';
+    CheckAll.Caption := CustomMessage('UninstallUserDataFolder');
     CheckAll.Top := ScaleY(Info.Top + Info.Height + 6);
     CheckAll.Left := ScaleX(14);
     CheckAll.Width := Form.ClientWidth - 2*ScaleX(6);
@@ -219,7 +263,7 @@ begin
     CheckSettings := TCheckBox.Create(Form);
     CheckSettings.Parent := Form;
     CheckSettings.Checked := False;
-    CheckSettings.Caption := 'Settings';
+    CheckSettings.Caption := CustomMessage('UninstallSettings');
     CheckSettings.Top := ScaleY(CheckAll.Top + CheckAll.Height + 6);
     CheckSettings.Left := ScaleX(20);
     CheckSettings.Width := Form.ClientWidth - 2*ScaleX(6);
@@ -228,7 +272,7 @@ begin
     CheckUserTemplates := TCheckBox.Create(Form);
     CheckUserTemplates.Parent := Form;
     CheckUserTemplates.Checked := False;
-    CheckUserTemplates.Caption := 'User Templates';
+    CheckUserTemplates.Caption := CustomMessage('UninstallUserTemplates');
     CheckUserTemplates.Top := ScaleY(CheckSettings.Top + CheckSettings.Height + 6);
     CheckUserTemplates.Left := ScaleX(20);
     CheckUserTemplates.Width := Form.ClientWidth - 2*ScaleX(6);
@@ -237,7 +281,7 @@ begin
     CheckCwlFiles := TCheckBox.Create(Form);
     CheckCwlFiles.Parent := Form;
     CheckCwlFiles.Checked := False;
-    CheckCwlFiles.Caption := 'User Completion Files';
+    CheckCwlFiles.Caption := CustomMessage('UninstallUserCompletionFiles');
     CheckCwlFiles.Top := ScaleY(CheckUserTemplates.Top + CheckUserTemplates.Height + 6);
     CheckCwlFiles.Left := ScaleX(20);
     CheckCwlFiles.Width := Form.ClientWidth - 2*ScaleX(6);
@@ -249,7 +293,7 @@ begin
     CancelButton.Height := ScaleY(23);
     CancelButton.Left := Form.ClientWidth - ScaleX(75 + 6 + 75 + 10);
     CancelButton.Top := Form.ClientHeight - ScaleY(23 + 10);
-    CancelButton.Caption := 'Cancel';
+    CancelButton.Caption := CustomMessage('UninstallCancel');
     CancelButton.ModalResult := mrCancel;
     CancelButton.Cancel := True;
 
@@ -259,7 +303,7 @@ begin
     UninstallButton.Height := ScaleY(23);
     UninstallButton.Left := Form.ClientWidth - ScaleX(75 + 10);
     UninstallButton.Top := Form.ClientHeight - ScaleY(23 + 10);
-    UninstallButton.Caption := 'Uninstall';
+    UninstallButton.Caption := CustomMessage('Uninstall');
     UninstallButton.ModalResult := mrOk;
     UninstallButton.Default := True;
 
