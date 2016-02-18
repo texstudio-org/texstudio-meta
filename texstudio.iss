@@ -119,8 +119,6 @@ Source: qt_zh_CN.qm; DestDir: {app}\translations
 
 [Icons]
 Name: {group}\TeXstudio; Filename: {app}\TeXstudio.exe
-Name: {commondesktop}\TeXstudio; Filename: {app}\TeXstudio.exe
-
 
 [Languages]
 Name: en; MessagesFile: compiler:Default.isl
@@ -135,8 +133,9 @@ Name: hu; MessagesFile: compiler:Languages\Hungarian.isl
 Name: ja; MessagesFile: compiler:Languages\Japanese.isl
 Name: ru; MessagesFile: compiler:Languages\Russian.isl
 
-
 [Tasks]
+Name: desktopicon; Description: "Create a &desktop icon"; GroupDescription: "Additional icons:"; Flags: unchecked
+Name: quicklaunchicon; Description: "Create a &Quick Launch icon"; GroupDescription: "Additional icons:"; Flags: unchecked
 Name: texAssociation; Description: "Associate .tex files with TeXstudio"; GroupDescription: File extensions:
 Name: txssAssociation; Description: "Associate session files (.txss) files with TeXstudio"; GroupDescription: File extensions:
 
@@ -147,7 +146,6 @@ Root: HKCR; Subkey: "texfile\shell\open\command"; ValueType: string; ValueName: 
 Root: HKCR; Subkey: ".txss"; ValueType: string; ValueName: ""; ValueData: "texfile"; Flags: uninsdeletekey; Tasks: txssAssociation
 Root: HKCR; Subkey: "txssfile"; ValueType: string; ValueName: ""; ValueData: "LaTeX Document"; Flags: uninsdeletekey; Tasks: txssAssociation
 Root: HKCR; Subkey: "txssfile\shell\open\command"; ValueType: string; ValueName: ""; ValueData: """{app}\TeXstudio.exe"" ""%1"""; Flags: uninsdeletekey; Tasks: txssAssociation
-
 
 [Run]
 Filename: {app}\texstudio.exe; Description: Start TeXstudio; Flags: nowait skipifsilent postinstall
