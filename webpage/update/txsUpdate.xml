@@ -2,8 +2,8 @@
 <versions>
 	<stable value="2.10.8" />  <!-- only used up to TXS 2.10.2. newer versions check the <version> tags below -->
 	<version type="stable" platform="win" number="2.10.8" revision="5803" />
-	<version type="stable" platform="mac" number="2.10.8" revision="5803" />
-	<version type="stable" platform="linux" number="2.10.8" revision="5803" />
+	<version type="stable" platform="mac" number="2.10.8" revision="5802" />
+	<version type="stable" platform="linux" number="2.10.8" revision="5802" />
 	<version type="release candidate" platform="win" number="2.10.6" revision="5733" />
 <!--	<version type="release candidate" platform="mac" number="2.10.4" revision="5568" /> -->
 	<version type="development" platform="win" number="2.10.5" revision="5681" />
