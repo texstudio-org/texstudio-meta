@@ -6,7 +6,7 @@
 	<version type="stable" platform="linux" number="2.10.8" revision="5802" />
 	<version type="release candidate" platform="win" number="2.10.6" revision="5733" />
 <!--	<version type="release candidate" platform="mac" number="2.10.4" revision="5568" /> -->
-	<version type="development" platform="win" number="2.10.5" revision="5681" />
+	<version type="development" platform="win" number="2.10.9" revision="5909" />
 	<version type="development" platform="mac" number="2.10.1" revision="5487" />
 </versions>
 
