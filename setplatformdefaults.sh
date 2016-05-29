@@ -6,6 +6,7 @@ source $OWNDIR/checkversion.sh
 
 VERSION=$TXS_VERSION_CPP
 if [[ "$(whoami)" = benito ]]; then USERNAME=benibela; 
+elif [[ "$(whoami)" = tim ]]; then USERNAME=t_hoffmann; 
 else USERNAME=jsundermeyer; 
 fi
 echo Version: $VERSION
