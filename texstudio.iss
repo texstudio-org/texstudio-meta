@@ -1,13 +1,13 @@
 [Setup]
 ;Change this in every version
-AppVerName=TeXstudio 2.11.0
-AppVersion=2.11.0
+AppVerName=TeXstudio 2.11.1
+AppVersion=2.11.1
 ;AppVerName=TeXstudio 2.10.10 RC
 ;AppVersion=2.10.10 RC
 
-OutputBaseFilename=texstudio-2.11.0-win-qt5.5.1
+;OutputBaseFilename=texstudio-2.11.0-win-qt5.5.1
 ;OutputBaseFilename=texstudio-2.10.10-rc-win-qt5.5.1
-;OutputBaseFilename=texstudio-2.10.9-dev-hg5983-win-qt5.5.1
+OutputBaseFilename=texstudio-2.11.1-dev-hg6095-win-qt5.6.1
 
 ;#define qt4_build
 #define qt5_build
@@ -17,7 +17,7 @@ OutputBaseFilename=texstudio-2.11.0-win-qt5.5.1
   #define EXE_DIR "..\texstudio-build\exe\qt4"
 #endif
 #ifdef qt5_build
-  #define DLL_DIR "..\texstudio-build\dependencies\qt-5.5.1_poppler_39"
+  #define DLL_DIR "..\texstudio-build\dependencies\qt-5.6.1"
   #define EXE_DIR "..\texstudio-build\exe\qt5"
 #endif
 
