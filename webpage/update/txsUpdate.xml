@@ -3,10 +3,10 @@
 	<stable value="2.11.0" />  <!-- only used up to TXS 2.10.2. newer versions check the <version> tags below -->
 	<version type="stable" platform="win" number="2.11.0" revision="6062" />
 	<version type="stable" platform="mac" number="2.11.0" revision="6065" />
-	<version type="stable" platform="linux" number="2.11.0" revision="6065" />
-	<version type="release candidate" platform="win" number="2.10.10" revision="6024" />
+	<version type="stable" platform="linux" number="2.11.0" revision="6060" />
+	<version type="release candidate" platform="win" number="2.11.2" revision="6157" />
 	<version type="release candidate" platform="mac" number="2.10.10" revision="6024" />
-	<version type="development" platform="win" number="2.10.9" revision="5983" />
+	<version type="development" platform="win" number="2.11.1" revision="6095" />
 	<version type="development" platform="mac" number="2.10.9" revision="5929" />
 </versions>
 
