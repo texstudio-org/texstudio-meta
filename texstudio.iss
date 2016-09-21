@@ -75,12 +75,12 @@ Source: {#DLL_DIR}\platforms\*; DestDir: {app}\platforms
 Source: {#DLL_DIR}\printsupport\*; DestDir: {app}\printsupport
 #endif
 
-Source: utilities\dictionaries\*.dic; DestDir: {app}\dictionaries
-Source: utilities\dictionaries\*.aff; DestDir: {app}\dictionaries
-Source: utilities\dictionaries\*.badWords; DestDir: {app}\dictionaries
-Source: utilities\dictionaries\*.stopWords; DestDir: {app}\dictionaries
-Source: utilities\dictionaries\*.stopWords.level2; DestDir: {app}\dictionaries
-Source: utilities\dictionaries\th_*_v2.dat; DestDir: {app}\dictionaries
+Source: utilities\dictionaries\*.dic; DestDir: {userappdata}\TeXstudio\dictionaries
+Source: utilities\dictionaries\*.aff; DestDir: {userappdata}\TeXstudio\dictionaries
+Source: utilities\dictionaries\*.badWords; DestDir: {userappdata}\TeXstudio\dictionaries
+Source: utilities\dictionaries\*.stopWords; DestDir: {userappdata}\TeXstudio\dictionaries
+Source: utilities\dictionaries\*.stopWords.level2; DestDir: {userappdata}\TeXstudio\dictionaries
+Source: utilities\dictionaries\th_*_v2.dat; DestDir: {userappdata}\TeXstudio\dictionaries
 
 Source: utilities\AUTHORS; DestDir: {app}\help
 ;Source: utilities\CHANGELOG.txt; DestDir: {app}\help
