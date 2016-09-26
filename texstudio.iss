@@ -1,12 +1,12 @@
 [Setup]
 ;Change this in every version
-;AppVerName=TeXstudio 2.11.1
-;AppVersion=2.11.1
-AppVerName=TeXstudio 2.11.2 RC
-AppVersion=2.11.2 RC
+AppVerName=TeXstudio 2.11.2
+AppVersion=2.11.2
+;AppVerName=TeXstudio 2.11.2 RC
+;AppVersion=2.11.2 RC
 
-;OutputBaseFilename=texstudio-2.11.0-win-qt5.5.1
-OutputBaseFilename=texstudio-2.11.2-rc-win-qt5.6.1
+OutputBaseFilename=texstudio-2.11.2-win-qt5.6.1
+;OutputBaseFilename=texstudio-2.11.2-rc-win-qt5.6.1
 ;OutputBaseFilename=texstudio-2.11.1-dev-hg6134-win-qt5.6.1
 
 ;#define qt4_build
