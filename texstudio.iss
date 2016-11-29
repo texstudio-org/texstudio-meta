@@ -143,7 +143,6 @@ Name: ru; MessagesFile: compiler:Languages\Russian.isl
 [Tasks]
  ; GroupDescription: "{cm:AdditionalIcons}"
 Name: desktopicon; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
-Name: quicklaunchicon; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 Name: texAssociation; Description: "{cm:AssocFileExtTex}"; GroupDescription: {cm:AssocFileExt}
 Name: txssAssociation; Description: "{cm:AssocFileExtTxss}"; GroupDescription: {cm:AssocFileExt}
 
