@@ -20,7 +20,7 @@ xidel \
      -f "<BODY><PRE><A/><A/><A/><A/><t:loop><A>{.}</A></t:loop></PRE></BODY>"                         \
      -f '//a[text() = ("i386/", "i586/", "i686/", "x86_64/", "amd64/")]'                              \
      --hide-variable-names                                                                            \
-     -e 'xquery version "3.0";
+     -e 'xquery version "3.0-xidel";
          declare function entry($os, $u, $plat, $size){
            if (not($u)) then ()
            else let $qt4 := contains($u, "qt4"), 
