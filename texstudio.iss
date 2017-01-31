@@ -109,7 +109,7 @@ Source: texstudio_ja.qm; DestDir: {app}\translations
 Source: texstudio_pl.qm; DestDir: {app}\translations
 Source: texstudio_pt_BR.qm; DestDir: {app}\translations
 Source: texstudio_ru_RU.qm; DestDir: {app}\translations
-;Source: texstudio_uk.qm; DestDir: {app}\translations
+Source: texstudio_uk.qm; DestDir: {app}\translations
 Source: texstudio_vi.qm; DestDir: {app}\translations
 Source: texstudio_zh_CN.qm; DestDir: {app}\translations
 Source: qt_cs.qm; DestDir: {app}\translations
@@ -122,6 +122,7 @@ Source: qt_ja.qm; DestDir: {app}\translations
 Source: qt_pl.qm; DestDir: {app}\translations
 Source: qt_pt.qm; DestDir: {app}\translations
 Source: qt_ru.qm; DestDir: {app}\translations
+Source: qt_uk.qm; DestDir: {app}\translations
 Source: qt_zh_CN.qm; DestDir: {app}\translations
 
 [Icons]
