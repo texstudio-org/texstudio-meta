@@ -8,6 +8,15 @@ TXS_VERSION=$TXS_VERSION_CPP
 HG_VERSION=$(hg identify -n)
 HG_REVISION=$(hg identify -i)
 
+# check if the current version has a tag other than tip
+if ! hg tags | grep -xq "^[^t][^i][^p].*$HG_VERSION:$HG_REVISION"
+then
+    echo "The current version does not have a tag, i.e. it's probably not intended for release. Do you wish to create a tarball anyway? [y/N]"
+    read -n 1 proceed
+    if [ $proceed != "y" ]; then exit 1; fi
+fi
+
+
 echo "creating src tarball for TeXstudio $TXS_VERSION hg $HG_VERSION:$HG_REVISION"
 
 # update hg_revision.cpp
