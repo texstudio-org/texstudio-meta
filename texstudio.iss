@@ -1,14 +1,14 @@
 [Setup]
 ;Change this in every version
-AppVerName=TeXstudio 2.12.2
-AppVersion=2.12.2
-;AppVerName=TeXstudio 2.12.2 RC
-;AppVersion=2.12.2 RC
+AppVerName=TeXstudio 2.12.4
+AppVersion=2.12.4
+;AppVerName=TeXstudio 2.12.4 RC
+;AppVersion=2.12.4 RC
 ;AppVerName=TeXstudio 2.11.2 Dev
 ;AppVersion=2.11.3 Dev
 
-OutputBaseFilename=texstudio-2.12.2-win-qt5.6.2
-;OutputBaseFilename=texstudio-2.12.2-rc-win-qt5.6.2
+OutputBaseFilename=texstudio-2.12.4-win-qt5.6.2
+;OutputBaseFilename=texstudio-2.12.4-rc-win-qt5.6.2
 ;OutputBaseFilename=texstudio-2.11.3-dev-hg6281-win-qt5.6.2
 
 ;#define qt4_build
@@ -85,7 +85,6 @@ Source: utilities\dictionaries\*.stopWords.level2; DestDir: {userappdata}\TeXstu
 Source: utilities\dictionaries\th_*_v2.dat; DestDir: {userappdata}\TeXstudio\dictionaries
 
 Source: utilities\AUTHORS; DestDir: {app}\help
-;Source: utilities\CHANGELOG.txt; DestDir: {app}\help
 Source: utilities\COPYING; DestDir: {app}\help
 Source: utilities\latex2e.html; DestDir: {app}\help
 Source: utilities\latex2e.css; DestDir: {app}\help
@@ -106,9 +105,11 @@ Source: texstudio_fr.qm; DestDir: {app}\translations
 Source: texstudio_hu.qm; DestDir: {app}\translations
 Source: texstudio_it.qm; DestDir: {app}\translations
 Source: texstudio_ja.qm; DestDir: {app}\translations
+Source: texstudio_nl.qm; DestDir: {app}\translations
 Source: texstudio_pl.qm; DestDir: {app}\translations
 Source: texstudio_pt_BR.qm; DestDir: {app}\translations
 Source: texstudio_ru_RU.qm; DestDir: {app}\translations
+Source: texstudio_tr_TR.qm; DestDir: {app}\translations
 Source: texstudio_uk.qm; DestDir: {app}\translations
 Source: texstudio_vi.qm; DestDir: {app}\translations
 Source: texstudio_zh_CN.qm; DestDir: {app}\translations
