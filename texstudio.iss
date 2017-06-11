@@ -126,7 +126,7 @@ Source: qt_uk.qm; DestDir: {app}\translations
 Source: qt_zh_CN.qm; DestDir: {app}\translations
 
 [Icons]
-Name: {group}\TeXstudio; Filename: {app}\TeXstudio.exe
+Name: {commonprograms}\TeXstudio; Filename: {app}\TeXstudio.exe
 Name: {commondesktop}\TeXstudio; Filename: {app}\TeXstudio.exe; Tasks: desktopicon
 
 [Languages]
