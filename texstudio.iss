@@ -30,13 +30,12 @@ AppPublisherURL=http://texstudio.sourceforge.net/
 
 DefaultDirName={pf}\TeXstudio
 DefaultGroupName=TeXstudio
+DisableProgramGroupPage=yes
 UninstallDisplayIcon={app}\texstudio.exe
 SourceDir=..\texstudio-hg\
 OutputDir=..\texstudio-installers
 WizardSmallImageFile=images\innosetup_wizard_small.bmp
-WizardImageFile=images\innosetup_wizard_large.bmp
-WizardImageStretch=False
-WizardImageBackColor=$3D0029
+ShowLanguageDialog=auto
 
 [Files]
 Source: {#EXE_DIR}\texstudio.exe; DestDir: {app}\
