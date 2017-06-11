@@ -37,8 +37,13 @@ OutputDir=..\texstudio-installers
 WizardSmallImageFile=images\innosetup_wizard_small.bmp
 ShowLanguageDialog=auto
 
+; *** Code signing setup ***
+; You have to setup a corresponding code signing command at Tools -> Configure Sign Tools...
+; You can comment out the following line if you want to build without code signing.
+SignTool=sign-txs
+
 [Files]
-Source: {#EXE_DIR}\texstudio.exe; DestDir: {app}\
+Source: {#EXE_DIR}\texstudio.exe; DestDir: {app}\; Flags: sign
 #ifdef qt4_build
 Source: {#DLL_DIR}\mingwm10.dll; DestDir: {app}\
 Source: {#DLL_DIR}\iconv.dll; DestDir: {app}\
