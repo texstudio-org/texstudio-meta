@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <versions>
 	<stable value="2.12.6" />  <!-- only used up to TXS 2.10.2. newer versions check the <version> tags below -->
-	<version type="stable" platform="win" number="2.12.4" revision="6474" />
-	<version type="stable" platform="mac" number="2.12.4" revision="6474" />
-	<version type="stable" platform="linux" number="2.12.4" revision="6474" />
+	<version type="stable" platform="win" number="2.12.6" revision="6631" />
+	<version type="stable" platform="mac" number="2.12.6" revision="6631" />
+	<version type="stable" platform="linux" number="2.12.6" revision="6631" />
 	<version type="release candidate" platform="win" number="2.12.0" revision="6336" />
 	<version type="release candidate" platform="mac" number="2.10.10" revision="6024" />
 	<version type="development" platform="win" number="2.12.5" revision="6539" />
