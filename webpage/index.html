@@ -83,6 +83,8 @@
 		<div class="hiddentext">
 			<table class="news">
 			<tbody>
+			<tr><td class="newsdate">2017-12-21</td>
+			<td class="newscontent">We have migrated our version control system from Mercurial to git. The mercurial repository remains, but won't be updated any longer. From now on, you can obtain the latest source code from <a href="https://github.com/texstudio-org/texstudio">our git repository on github.com</a>.</td></tr>
 			<tr><td class="newsdate">2015-09-16</td>
 			<td class="newscontent">The new release <strong>TeXstudio 2.10.2</strong> is available. This is a bugfix release (see <a href="http://texstudio.sourceforge.net/manual/current/CHANGELOG.txt">changelog</a>).</td></tr>
 			<tr><td class="newsdate">2015-09-10</td>
@@ -306,7 +308,7 @@ http://sourceforge.net/blog/projects-of-the-week-february-16-2015">Featured Proj
 	</ul>
 
 		<p>
-		You can find more details in the <a href="http://texstudio.sourceforge.net/manual/current/usermanual_en.html">user manual</a> or in the <a href="https://sourceforge.net/p/texstudio/hg/ci/tip/log/">Mercurial Changelog</a>.<br><br>
+		You can find more details in the <a href="http://texstudio.sourceforge.net/manual/current/usermanual_en.html">user manual</a> or in the <a href="https://github.com/texstudio-org/texstudio/commits/master">Git Changelog</a>.<br><br>
 
 		Feel free to <a href="#participate">share your ideas</a> on possible future improvements of TeXstudio.
 	</p></div> <!--end features-->
@@ -907,7 +909,7 @@ http://sourceforge.net/blog/projects-of-the-week-february-16-2015">Featured Proj
 			<tr class="platformDownload"><td colspan="5">Source Code</td></tr>
 			</thead>
 			<tbody>
-			<tr><td></td><td>latest</td><td><a href="https://sourceforge.net/p/texstudio/hg/ci/default/tree/">Mercurial repository</a></td><td></td><td>see the <a href="https://sourceforge.net/p/texstudio/wiki/Compiling">wiki</a></td></tr>
+			<tr><td></td><td>latest</td><td><a href="https://github.com/texstudio-org/texstudio/">Git repository</a></td><td></td><td>see the <a href="https://github.com/texstudio-org/texstudio/wiki/Compiling">wiki</a></td></tr>
 			<tr><td></td><td class="currentVersion">2.12.6</td><td><a class="srcDownload" href="https://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%202.12.6/texstudio-2.12.6.tar.gz/download">source tarball</a></td><td class="srcDownloadSize">69.0 MB</td><td>see the <a href="https://sourceforge.net/p/texstudio/wiki/Compiling">wiki</a></td></tr>
 			</tbody>
 
@@ -926,8 +928,8 @@ http://sourceforge.net/blog/projects-of-the-week-february-16-2015">Featured Proj
 		</thead></table>
 
 		<h3 id="snapshots">Development Snapshots and Release Candidates</h3>
-		<p>We produce snapshots of the current development status from time to time. These versions will most likely be older than the current tip of the Mercurial repository (so they might not contain the very very recent changes). However they allow you to have a look and try out features that are not yet officially released without the need to compile TeXstudio yourself.</p>
-		<p>You can obtain <b>binary snapshots</b> of the development status as well as <b>release candidate versions</b> from <a href="https://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%20development/">this directory</a>.</p>
+		<p>Since moving to github, we are using automated build farms to provide build snapshots from nearly every commit. This allows automatic testing to avoid regressions as well as checking that the commits are compatible on all major platforms (Qt5,Qt4, without poppler, OSX and win).</p>
+		<p>You can obtain <b>binary snapshots</b> from <a href="https://bintray.com/sunderme/texstudio">bintray.com</a>. Ubuntu snapshots are provided via  <a https://launchpad.net/~sunderme/+archive/ubuntu/texstudio-daily">ppa:sunderme/texstudio-daily</a>.</p>
 		<p>If you are interested to be notified on the most recent changes development snapshots, you can setup the update notification in TeXstudio accordingly (Options → General → Update → Update Level).</p>
 		<h3>Older Versions</h3>
 		<p>Older versions can be found on <a href="https://sourceforge.net/projects/texstudio/files/texstudio/">our sourceforge site</a>.  
@@ -945,27 +947,23 @@ http://sourceforge.net/blog/projects-of-the-week-february-16-2015">Featured Proj
 		<h2>Give Feedback</h2>
 		<p>User feedback is highly welcome. Depending on the type of feedback you may use different channels to communicate.</p>
 		<ul>
-		<li>Feature requests can be placed in the <a href="https://sourceforge.net/p/texstudio/feature-requests/">feature request tracker</a>.</li>
-		<li>Bug reports: Please post bug reports in the <a href="https://sourceforge.net/p/texstudio/bugs/">bug tracker</a>.</li>
-		<li>For general discussion and remarks use the TeXstudio <a href="https://sourceforge.net/projects/texstudio/forums/forum/907839">forum</a> or <a href="https://lists.sourceforge.net/lists/listinfo/texstudio-list">mailinglist</a>.</li>
+		<li>Feature requests,bug reports and questions can be placed in the <a href="https://github.com/texstudio-org/texstudio/issues">issue tracker</a>. Please set a label whether this is a feature request/enhancement, a question or a bug report. In case of a bug report, please state version and operation system and a description which allows to reproduce the issue on another computer.</li>
 		</ul>
 		
 
 		<h2>Contribute</h2>
 		<p>You do not necessarily have to be a programmer to help and make TeXstudio even better. There are many ways to contribute.</p>
 		<ul>
-		<!--
-		<li><a href="https://sourceforge.net/p/texstudio/wiki/Translating">Translate</a> TeXstudio into a new language or update an existing translation.</li>
-		-->
+		<li>Write cwl-files for your favorite package.</li>
 		<li><a href="https://www.transifex.com/texstudio/texstudio/">Translate</a> TeXstudio into a new language or update an existing translation.</li>
 		<li>Design icons.</li>
 		<li>Help on improving our website.</li>
-		<li>Update or extend the <a href="http://texstudio.sourceforge.net/manual/current/usermanual_en.html">user manual</a> or the <a href="https://sourceforge.net/p/texstudio/wiki/">wiki</a>.</li>
+		<li>Update or extend the <a href="http://texstudio.sourceforge.net/manual/current/usermanual_en.html">user manual</a> or the <a href="https://github.com/texstudio-org/texstudio/wiki">wiki</a>.</li>
 		<li>Write tutorials or create screencasts.</li>
 		<li>Package TeXstudio for your favorite distribution or platform.</li>
-		<li>TeXstudio is written in C++/Qt. Programmers are welcome to implement new features or fix bugs.</li>
+		<li>TeXstudio is written in C++/Qt. Programmers are welcome to implement new features or fix bugs. Code development take place on <a href="https://github.com/texstudio-org/texstudio">github</a>. Pull-requests, direct patches or changed files are welcome.</li>
 		</ul>
-		<p>It is a good idea to announce your plans on the texstudio mailing list. So everybody knows what's going on around TeXstudio and there is no duplicate work. For questions how you can contribute contact one of the developers.</p>
+		<p>It is a good idea to announce your plans on the texstudio issue list. So everybody knows what's going on around TeXstudio and there is no duplicate work. For questions how you can contribute contact one of the developers.</p>
 	</div> <!--end participate-->
 
 	
