@@ -17,7 +17,12 @@ xidel \
      http://download.opensuse.org/repositories/home:/jsundermeyer/                                    \
      --extract-exclude=u,plat,os,lastos,lastqt4,lastplat,release-version,release-date,debianlink,debiansize            \
      -e "<body>{os := (), release-version := '$VERSION', lastos := '', lastqt4 := (), lastplat := (), debianlink := '$DEBIANLINK', debiansize := '$DEBIANSIZE', release-date:= '$CURYEAR'}</body>"   \
-     -f "<BODY><PRE><A/><A/><A/><A/><t:loop><A>{.}</A></t:loop></PRE></BODY>"                         \
+     -f '<div id="mirrorbrain-wrap">
+           <h2/>
+           <table>
+              <tr><td><a/></td></tr> 
+              <t:loop><tr><td><A>{.}</A></td></tr></t:loop>
+           </table></div>'                         \
      -f '//a[text() = ("i386/", "i586/", "i686/", "x86_64/", "amd64/")]'                              \
      --hide-variable-names                                                                            \
      -e 'xquery version "3.0-xidel";
@@ -37,14 +42,16 @@ xidel \
            $temptemp := ($lastos := $os, $lastqt4 := $qt4, $lastplat := $plat)
            return $temp
          };
-         result := for $a in   (//text()[contains(., $release-date)]/preceding-sibling::a[1][contains(@href, $release-version) and not(contains(@href, "debuginfo"))])  
-         let $u :=resolve-uri($a, $url),
+         result := for $tr in //tr[contains(., $release-date)][td[2]/a[1][contains(@href, $release-version) and not(matches(@href, "debuginfo|dbgsym"))]]  
+         let $u := $tr/td[2]/a[1],
+             $u :=resolve-uri($u, $url),
+             $size := $tr/td[4],
              $plat := extract($u,"meyer/(.*)/", 1), 
              $os := translate(extract($plat,"(.*)/", 1),"_", " "),
              $realplat := extract($plat,"[^/]+$")
          return (
            if (contains($os, "Fedora") and not(contains($lastos, "Fedora"))) then entry("Debian Jessie", $debianlink, "amd64", $debiansize) else (),
-           entry($os, $u, $realplat, replace(extract($a/following-sibling::text(),"[0-9.]+ *[MK]$"), "([0-9.]+) *([MK])", "$1 $2iB"))
+           entry($os, $u, $realplat, replace(extract($size,"[0-9.]+ *[MK]$"), "([0-9.]+) *([MK])", "$1 $2iB"))
          )'     --printed-node-format html                                                                          
      #2> /dev/null
      
