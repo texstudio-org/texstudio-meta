@@ -9,15 +9,15 @@ function getSize(){
   xidel /tmp/txsfiles -e "<tr><th><a href='$1'></th><td headers='files_size_h'>{.}</td></tr>" --hide-variable-names
 }
 
-WININSTALLER=$(xidel /tmp/txsfiles -e 'let $urls := css("#files a.name")[contains(., "exe")]/@href return ($urls[contains(., "qt5")], $urls)[1]  ')
+WININSTALLER=$(xidel /tmp/txsfiles -e 'let $urls := css("#files .file th a")[contains(., "exe")]/@href return ($urls[contains(., "qt5")], $urls)[1]  ')
 WININSTALLERSIZE=$(getSize $WININSTALLER)
-MACDMG=$(xidel /tmp/txsfiles -e 'css("#files a.name")[contains(., "osx")]/@href')
+MACDMG=$(xidel /tmp/txsfiles -e 'css("#files .file th a")[contains(., "osx")]/@href')
 MACDMGSIZE=$(getSize $MACDMG)
-WINUSB=$(xidel /tmp/txsfiles -e 'css("#files a.name")[(contains(., "usb") or contains(., "portable") ) and contains(., "zip")]/@href')
+WINUSB=$(xidel /tmp/txsfiles -e '(css("#files .file th a")[(contains(., "usb") or contains(., "portable") ) and contains(., "zip")]/@href)[1]')
 if [ $? -eq 0 ] && [ -n "$WINUSB" ]; then WINUSBSIZE=$(getSize $WINUSB); else WINUSB=""; fi
-TARBALL=$(xidel /tmp/txsfiles -e 'css("#files a.name")[contains(., "tar.gz")]/@href')
+TARBALL=$(xidel /tmp/txsfiles -e 'css("#files .file th a")[contains(., "tar.gz")]/@href')
 TARBALLSIZE=$(getSize $TARBALL)
-OS2=$(xidel /tmp/txsfiles -e 'css("#files a.name")[contains(., "os2")]/@href')
+OS2=$(xidel /tmp/txsfiles -e 'css("#files .file th a")[contains(., "os2")]/@href')
 if [ $? -eq 0 ] && [ -n "$OS2" ]; then OS2SIZE=$(getSize $OS2); else OS2=""; fi
 
 #echo $WININSTALLER
