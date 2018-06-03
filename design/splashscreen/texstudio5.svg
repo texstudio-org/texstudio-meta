@@ -14,7 +14,7 @@
    height="551.60803"
    id="svg2"
    sodipodi:version="0.32"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
    version="1.0"
    sodipodi:docname="texstudio5.svg"
    inkscape:export-filename="/opt/texmakerx/images/splash.png"
@@ -3677,6 +3677,65 @@
          stdDeviation="3.1117126"
          id="feGaussianBlur5896" />
     </filter>
+    <g
+       id="g8945">
+      <symbol
+         id="glyph0-0-36"
+         overflow="visible">
+        <path
+           id="path8924"
+           d=""
+           style="stroke:none;" />
+      </symbol>
+      <symbol
+         id="glyph0-1-75"
+         overflow="visible">
+        <path
+           id="path8927"
+           d="M 7.0625 -2.328125 C 7.078125 -2.375 7.109375 -2.4375 7.109375 -2.46875 C 7.109375 -2.46875 7.109375 -2.578125 6.984375 -2.578125 C 6.890625 -2.578125 6.875 -2.515625 6.859375 -2.453125 C 6.203125 -0.984375 5.84375 -0.3125 4.140625 -0.3125 L 2.6875 -0.3125 C 2.546875 -0.3125 2.515625 -0.3125 2.46875 -0.3125 C 2.359375 -0.328125 2.328125 -0.34375 2.328125 -0.421875 C 2.328125 -0.453125 2.328125 -0.46875 2.375 -0.640625 L 3.0625 -3.375 L 4.046875 -3.375 C 4.890625 -3.375 4.890625 -3.15625 4.890625 -2.90625 C 4.890625 -2.84375 4.890625 -2.71875 4.828125 -2.421875 C 4.8125 -2.375 4.796875 -2.34375 4.796875 -2.3125 C 4.796875 -2.265625 4.828125 -2.203125 4.921875 -2.203125 C 5 -2.203125 5.03125 -2.25 5.078125 -2.40625 L 5.640625 -4.734375 C 5.640625 -4.796875 5.59375 -4.84375 5.515625 -4.84375 C 5.4375 -4.84375 5.40625 -4.78125 5.390625 -4.671875 C 5.171875 -3.90625 5 -3.671875 4.078125 -3.671875 L 3.140625 -3.671875 L 3.734375 -6.078125 C 3.828125 -6.4375 3.84375 -6.46875 4.28125 -6.46875 L 5.6875 -6.46875 C 6.890625 -6.46875 7.203125 -6.1875 7.203125 -5.359375 C 7.203125 -5.125 7.203125 -5.109375 7.15625 -4.828125 C 7.15625 -4.78125 7.140625 -4.703125 7.140625 -4.65625 C 7.140625 -4.609375 7.171875 -4.53125 7.265625 -4.53125 C 7.375 -4.53125 7.390625 -4.59375 7.40625 -4.78125 L 7.609375 -6.515625 C 7.640625 -6.78125 7.59375 -6.78125 7.34375 -6.78125 L 2.296875 -6.78125 C 2.109375 -6.78125 2 -6.78125 2 -6.578125 C 2 -6.46875 2.09375 -6.46875 2.28125 -6.46875 C 2.65625 -6.46875 2.9375 -6.46875 2.9375 -6.296875 C 2.9375 -6.25 2.9375 -6.234375 2.875 -6.046875 L 1.5625 -0.78125 C 1.46875 -0.390625 1.453125 -0.3125 0.65625 -0.3125 C 0.484375 -0.3125 0.375 -0.3125 0.375 -0.125 C 0.375 0 0.46875 0 0.65625 0 L 5.828125 0 C 6.0625 0 6.078125 -0.015625 6.140625 -0.171875 Z M 7.0625 -2.328125 "
+           style="stroke:none;" />
+      </symbol>
+      <symbol
+         id="glyph0-2-35"
+         overflow="visible">
+        <path
+           id="path8930"
+           d="M 0.875 -0.59375 C 0.84375 -0.4375 0.78125 -0.203125 0.78125 -0.15625 C 0.78125 0.015625 0.921875 0.109375 1.078125 0.109375 C 1.203125 0.109375 1.375 0.03125 1.453125 -0.171875 C 1.453125 -0.1875 1.578125 -0.65625 1.640625 -0.90625 L 1.859375 -1.796875 C 1.90625 -2.03125 1.96875 -2.25 2.03125 -2.46875 C 2.0625 -2.640625 2.140625 -2.9375 2.15625 -2.96875 C 2.296875 -3.28125 2.828125 -4.1875 3.78125 -4.1875 C 4.234375 -4.1875 4.3125 -3.8125 4.3125 -3.484375 C 4.3125 -3.234375 4.25 -2.953125 4.171875 -2.65625 L 3.890625 -1.5 L 3.6875 -0.75 C 3.65625 -0.546875 3.5625 -0.203125 3.5625 -0.15625 C 3.5625 0.015625 3.703125 0.109375 3.84375 0.109375 C 4.15625 0.109375 4.21875 -0.140625 4.296875 -0.453125 C 4.4375 -1.015625 4.8125 -2.46875 4.890625 -2.859375 C 4.921875 -2.984375 5.453125 -4.1875 6.546875 -4.1875 C 6.96875 -4.1875 7.078125 -3.84375 7.078125 -3.484375 C 7.078125 -2.921875 6.65625 -1.78125 6.453125 -1.25 C 6.375 -1.015625 6.328125 -0.90625 6.328125 -0.703125 C 6.328125 -0.234375 6.671875 0.109375 7.140625 0.109375 C 8.078125 0.109375 8.453125 -1.34375 8.453125 -1.421875 C 8.453125 -1.53125 8.359375 -1.53125 8.328125 -1.53125 C 8.234375 -1.53125 8.234375 -1.5 8.1875 -1.34375 C 8.03125 -0.8125 7.71875 -0.109375 7.171875 -0.109375 C 7 -0.109375 6.921875 -0.203125 6.921875 -0.4375 C 6.921875 -0.6875 7.015625 -0.921875 7.109375 -1.140625 C 7.296875 -1.671875 7.71875 -2.765625 7.71875 -3.34375 C 7.71875 -3.984375 7.3125 -4.40625 6.5625 -4.40625 C 5.828125 -4.40625 5.3125 -3.96875 4.9375 -3.4375 C 4.9375 -3.5625 4.90625 -3.90625 4.625 -4.140625 C 4.375 -4.359375 4.0625 -4.40625 3.8125 -4.40625 C 2.90625 -4.40625 2.421875 -3.765625 2.25 -3.53125 C 2.203125 -4.109375 1.78125 -4.40625 1.328125 -4.40625 C 0.875 -4.40625 0.6875 -4.015625 0.59375 -3.84375 C 0.421875 -3.484375 0.296875 -2.90625 0.296875 -2.875 C 0.296875 -2.765625 0.390625 -2.765625 0.40625 -2.765625 C 0.515625 -2.765625 0.515625 -2.78125 0.578125 -3 C 0.75 -3.703125 0.953125 -4.1875 1.3125 -4.1875 C 1.46875 -4.1875 1.609375 -4.109375 1.609375 -3.734375 C 1.609375 -3.515625 1.578125 -3.40625 1.453125 -2.890625 Z M 0.875 -0.59375 "
+           style="stroke:none;" />
+      </symbol>
+      <symbol
+         id="glyph0-3-6"
+         overflow="visible">
+        <path
+           id="path8933"
+           d="M 4.6875 -3.765625 C 4.703125 -3.8125 4.71875 -3.875 4.71875 -3.9375 C 4.71875 -4.109375 4.609375 -4.203125 4.4375 -4.203125 C 4.34375 -4.203125 4.0625 -4.140625 4.03125 -3.78125 C 3.84375 -4.140625 3.5 -4.40625 3.09375 -4.40625 C 1.96875 -4.40625 0.734375 -3.015625 0.734375 -1.578125 C 0.734375 -0.59375 1.328125 0 2.046875 0 C 2.640625 0 3.109375 -0.46875 3.203125 -0.578125 L 3.21875 -0.5625 C 3.015625 0.3125 2.890625 0.734375 2.890625 0.75 C 2.84375 0.84375 2.515625 1.828125 1.453125 1.828125 C 1.265625 1.828125 0.9375 1.8125 0.65625 1.71875 C 0.953125 1.640625 1.0625 1.375 1.0625 1.203125 C 1.0625 1.046875 0.953125 0.859375 0.6875 0.859375 C 0.46875 0.859375 0.15625 1.03125 0.15625 1.4375 C 0.15625 1.84375 0.515625 2.046875 1.46875 2.046875 C 2.71875 2.046875 3.4375 1.265625 3.59375 0.671875 Z M 3.40625 -1.28125 C 3.34375 -1.015625 3.109375 -0.765625 2.890625 -0.578125 C 2.6875 -0.40625 2.375 -0.21875 2.078125 -0.21875 C 1.578125 -0.21875 1.4375 -0.734375 1.4375 -1.140625 C 1.4375 -1.609375 1.71875 -2.796875 2 -3.296875 C 2.265625 -3.78125 2.6875 -4.1875 3.109375 -4.1875 C 3.765625 -4.1875 3.90625 -3.375 3.90625 -3.328125 C 3.90625 -3.28125 3.890625 -3.21875 3.875 -3.1875 Z M 3.40625 -1.28125 "
+           style="stroke:none;" />
+      </symbol>
+      <symbol
+         id="glyph0-4"
+         overflow="visible">
+        <path
+           id="path8936"
+           d="M 2.859375 -6.8125 C 2.859375 -6.8125 2.859375 -6.921875 2.734375 -6.921875 C 2.5 -6.921875 1.78125 -6.84375 1.515625 -6.8125 C 1.4375 -6.8125 1.328125 -6.796875 1.328125 -6.625 C 1.328125 -6.5 1.421875 -6.5 1.5625 -6.5 C 2.046875 -6.5 2.0625 -6.4375 2.0625 -6.328125 L 2.03125 -6.125 L 0.59375 -0.390625 C 0.546875 -0.25 0.546875 -0.234375 0.546875 -0.171875 C 0.546875 0.0625 0.75 0.109375 0.84375 0.109375 C 1 0.109375 1.15625 -0.015625 1.203125 -0.15625 L 1.390625 -0.90625 L 1.609375 -1.796875 C 1.671875 -2.03125 1.734375 -2.25 1.78125 -2.46875 C 1.796875 -2.53125 1.890625 -2.859375 1.890625 -2.921875 C 1.921875 -3.015625 2.234375 -3.5625 2.578125 -3.84375 C 2.796875 -4 3.09375 -4.1875 3.53125 -4.1875 C 3.953125 -4.1875 4.0625 -3.84375 4.0625 -3.484375 C 4.0625 -2.953125 3.6875 -1.859375 3.453125 -1.25 C 3.375 -1.03125 3.3125 -0.90625 3.3125 -0.703125 C 3.3125 -0.234375 3.671875 0.109375 4.140625 0.109375 C 5.078125 0.109375 5.4375 -1.34375 5.4375 -1.421875 C 5.4375 -1.53125 5.359375 -1.53125 5.328125 -1.53125 C 5.21875 -1.53125 5.21875 -1.5 5.171875 -1.34375 C 5.03125 -0.8125 4.703125 -0.109375 4.15625 -0.109375 C 3.984375 -0.109375 3.921875 -0.203125 3.921875 -0.4375 C 3.921875 -0.6875 4 -0.921875 4.09375 -1.140625 C 4.25 -1.578125 4.703125 -2.765625 4.703125 -3.34375 C 4.703125 -3.984375 4.3125 -4.40625 3.5625 -4.40625 C 2.9375 -4.40625 2.453125 -4.09375 2.078125 -3.640625 Z M 2.859375 -6.8125 "
+           style="stroke:none;" />
+      </symbol>
+      <symbol
+         id="glyph1-0-29"
+         overflow="visible">
+        <path
+           id="path8939"
+           d=""
+           style="stroke:none;" />
+      </symbol>
+      <symbol
+         id="glyph1-1-12"
+         overflow="visible">
+        <path
+           id="path8942"
+           d="M 6.84375 -3.265625 C 7 -3.265625 7.1875 -3.265625 7.1875 -3.453125 C 7.1875 -3.65625 7 -3.65625 6.859375 -3.65625 L 0.890625 -3.65625 C 0.75 -3.65625 0.5625 -3.65625 0.5625 -3.453125 C 0.5625 -3.265625 0.75 -3.265625 0.890625 -3.265625 Z M 6.859375 -1.328125 C 7 -1.328125 7.1875 -1.328125 7.1875 -1.53125 C 7.1875 -1.71875 7 -1.71875 6.84375 -1.71875 L 0.890625 -1.71875 C 0.75 -1.71875 0.5625 -1.71875 0.5625 -1.53125 C 0.5625 -1.328125 0.75 -1.328125 0.890625 -1.328125 Z M 6.859375 -1.328125 "
+           style="stroke:none;" />
+      </symbol>
+    </g>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -3685,15 +3744,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="475.92693"
-     inkscape:cy="261.45915"
+     inkscape:zoom="5.6568542"
+     inkscape:cx="866.8762"
+     inkscape:cy="350.59213"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      inkscape:window-width="1391"
-     inkscape:window-height="628"
-     inkscape:window-x="1148"
-     inkscape:window-y="685"
+     inkscape:window-height="792"
+     inkscape:window-x="41"
+     inkscape:window-y="48"
      showgrid="false"
      inkscape:window-maximized="0"
      showguides="false"
@@ -3705,11 +3764,13 @@
     <sodipodi:guide
        orientation="0,1"
        position="511.52918,84.654698"
-       id="guide6249" />
+       id="guide6249"
+       inkscape:locked="false" />
     <sodipodi:guide
        orientation="0,1"
        position="416.77687,549.93096"
-       id="guide6544" />
+       id="guide6544"
+       inkscape:locked="false" />
   </sodipodi:namedview>
   <metadata
      id="metadata7">
@@ -3881,15 +3942,15 @@
        inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
        x="714.17786"
        y="530.54822"
-       id="text3929"
-       sodipodi:linespacing="125%"><tspan
+       id="text3929"><tspan
          sodipodi:role="line"
          id="tspan3933"
          x="714.17786"
-         y="530.54822" /></text>
+         y="530.54822"
+         style="font-size:40px;line-height:1.25;font-family:sans-serif"> </tspan></text>
     <path
        sodipodi:type="arc"
        style="opacity:0.57948722;color:#000000;fill:#b6b6b6;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:4.40267706;marker:none;visibility:visible;display:inline;overflow:visible"
@@ -7494,77 +7555,77 @@
       </g>
     </g>
     <g
-       id="surface1-63"
-       transform="matrix(1.6036111,0,0,1.6036111,424.54424,20.663712)"
+       id="surface26576"
+       transform="matrix(1.617933,0,0,1.617933,420.02466,18.675245)"
        style="fill:#ffffff">
       <g
-         id="g7644"
+         id="g8951"
          style="fill:#ffffff;fill-opacity:1">
         <use
-           id="use7646"
+           id="use8949"
            y="156.683"
-           x="285.289"
-           xlink:href="#glyph0-0-1"
-           width="1"
-           height="1"
+           x="285.22"
+           xlink:href="#glyph0-1-75"
+           width="100%"
+           height="100%"
            style="fill:#ffffff" />
       </g>
       <g
-         id="g7648"
+         id="g8955"
          style="fill:#ffffff;fill-opacity:1">
         <use
-           id="use7650"
+           id="use8953"
            y="156.683"
-           x="295.84601"
-           xlink:href="#glyph1-0-8"
-           width="1"
-           height="1"
+           x="295.91501"
+           xlink:href="#glyph1-1-12"
+           width="100%"
+           height="100%"
            style="fill:#ffffff" />
       </g>
       <g
-         id="g7652"
+         id="g8961"
          style="fill:#ffffff;fill-opacity:1">
         <use
-           id="use7654"
+           id="use8957"
            y="156.683"
-           x="306.362"
-           xlink:href="#glyph0-1-49"
-           width="1"
-           height="1"
+           x="306.43201"
+           xlink:href="#glyph0-2-35"
+           width="100%"
+           height="100%"
            style="fill:#ffffff" />
         <use
-           id="use7656"
+           id="use8959"
            y="156.683"
-           x="315.10916"
-           xlink:href="#glyph0-2-20"
-           width="1"
-           height="1"
+           x="315.17917"
+           xlink:href="#glyph0-3-6"
+           width="100%"
+           height="100%"
            style="fill:#ffffff" />
       </g>
       <g
-         id="g7658"
+         id="g8965"
          style="fill:#ffffff;fill-opacity:1">
         <use
-           id="use7660"
+           id="use8963"
            y="156.683"
-           x="320.21997"
-           xlink:href="#glyph0-3-1"
-           width="1"
-           height="1"
+           x="320.28998"
+           xlink:href="#glyph0-4"
+           width="100%"
+           height="100%"
            style="fill:#ffffff" />
       </g>
     </g>
     <text
        xml:space="preserve"
-       style="font-size:12.53152084px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:'Bitstream Vera Sans';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
        x="768.92633"
        y="583.03125"
-       id="text7790"
-       sodipodi:linespacing="125%"><tspan
+       id="text7790"><tspan
          sodipodi:role="line"
          id="tspan7792"
          x="768.92633"
-         y="583.03125">           http://www.texstudio.org</tspan></text>
+         y="583.03125"
+         style="font-size:12.53152084px;line-height:1.25">           http://www.texstudio.org</tspan></text>
     <g
        id="surface1-30"
        transform="matrix(1.7818427,0,0,1.7818427,-145.98858,211.39658)"
@@ -7720,16 +7781,16 @@
        id="g5660"
        transform="translate(1.1281072,4)">
       <text
-         sodipodi:linespacing="125%"
          id="text3084-9-6"
          y="399.94894"
          x="459.89853"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:111px;line-height:125%;font-family:LMRomanUnsl10;-inkscape-font-specification:LMRomanUnsl10;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#999999;fill-opacity:1;stroke:none;filter:url(#filter5894)"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:LMRomanUnsl10;-inkscape-font-specification:LMRomanUnsl10;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#999999;fill-opacity:1;stroke:none;filter:url(#filter5894)"
          xml:space="preserve"><tspan
            y="399.94894"
            x="459.89853"
            id="tspan3086-6-0"
-           sodipodi:role="line">studio</tspan></text>
+           sodipodi:role="line"
+           style="font-size:111px;line-height:1.25">studio</tspan></text>
       <g
          transform="matrix(10.455804,0,0,10.455804,-1116.4008,-1038.6206)"
          id="surface1-2-0-4"
@@ -7772,16 +7833,16 @@
         </g>
       </g>
       <text
-         sodipodi:linespacing="125%"
          id="text3084-2"
          y="393.01193"
          x="455.7197"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:111px;line-height:125%;font-family:LMRomanUnsl10;-inkscape-font-specification:LMRomanUnsl10;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#333333;fill-opacity:1;stroke:none"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:LMRomanUnsl10;-inkscape-font-specification:LMRomanUnsl10;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#333333;fill-opacity:1;stroke:none"
          xml:space="preserve"><tspan
            y="393.01193"
            x="455.7197"
            id="tspan3086-4"
-           sodipodi:role="line">studio</tspan></text>
+           sodipodi:role="line"
+           style="font-size:111px;line-height:1.25">studio</tspan></text>
       <g
          transform="matrix(10.455804,0,0,10.455804,-1120.5796,-1045.5576)"
          id="surface1-2-1"
