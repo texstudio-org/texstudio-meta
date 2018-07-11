@@ -3,27 +3,36 @@ if [[ "$1" = "" ]]; then echo "need version number"; exit; fi
 
 VERSION=$1
 
-xidel https://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%20$VERSION/ --download /tmp/txsfiles
+xidel https://github.com/texstudio-org/texstudio/releases/tag/$VERSION/ --download /tmp/txsfiles
 
 function getSize(){
   xidel /tmp/txsfiles -e "<tr><th><a href='$1'></th><td headers='files_size_h'>{.}</td></tr>" --hide-variable-names
 }
 
-WININSTALLER=$(xidel /tmp/txsfiles -e 'let $urls := css("#files .file th a")[contains(., "exe")]/@href return ($urls[contains(., "qt5")], $urls)[1]  ')
+WININSTALLER=$(xidel /tmp/txsfiles --xpath 'let $urls := //a/@href return ($urls[contains(., "exe")], $urls)[1]')
+WININSTALLER="https://github.com$WININSTALLER"
 WININSTALLERSIZE=$(getSize $WININSTALLER)
-MACDMG=$(xidel /tmp/txsfiles -e 'css("#files .file th a")[contains(., "osx")]/@href')
+MACDMG=$(xidel /tmp/txsfiles --xpath 'let $urls := //a/@href return ($urls[contains(., "dmg")], $urls)[1]')
+MACDMG="https://github.com$MACDMG"
 MACDMGSIZE=$(getSize $MACDMG)
-WINUSB=$(xidel /tmp/txsfiles -e '(css("#files .file th a")[(contains(., "usb") or contains(., "portable") ) and contains(., "zip")]/@href)[1]')
+WINUSB=$(xidel /tmp/txsfiles --xpath 'let $urls := //a/@href return ($urls[contains(., "qt5")], $urls)[1]')
+WINUSB="https://github.com$WINUSB"
 if [ $? -eq 0 ] && [ -n "$WINUSB" ]; then WINUSBSIZE=$(getSize $WINUSB); else WINUSB=""; fi
-TARBALL=$(xidel /tmp/txsfiles -e 'css("#files .file th a")[contains(., "tar.gz")]/@href')
+APPIMAGE=$(xidel /tmp/txsfiles --xpath 'let $urls := //a/@href return ($urls[contains(., "app")], $urls)[1]')
+APPIMAGE="https://github.com$APPIMAGE"
+if [ $? -eq 0 ] && [ -n "$APPIMAGE" ]; then APPIMAGESIZE=$(getSize $APPIMAGE); else APPIMAGE=""; fi
+TARBALL=$(xidel /tmp/txsfiles --xpath 'let $urls := //a/@href return ($urls[contains(., "tar.gz")], $urls)[1]')
+TARBALL="https://github.com$TARBALL"
 TARBALLSIZE=$(getSize $TARBALL)
 OS2=$(xidel /tmp/txsfiles -e 'css("#files .file th a")[contains(., "os2")]/@href')
 if [ $? -eq 0 ] && [ -n "$OS2" ]; then OS2SIZE=$(getSize $OS2); else OS2=""; fi
 
 #echo $WININSTALLER
 #echo $WININSTALLERSIZE
+#echo $MACDMG
 #echo $WINUSB
 #echo $WINUSBSIZE
+#echo $APPIMAGE
 #echo $TARBALL
 #echo $TARBALLSIZE
 
