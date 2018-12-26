@@ -3,29 +3,29 @@ if [[ "$1" = "" ]]; then echo "need version number"; exit; fi
 
 VERSION=$1
 
-xidel https://github.com/texstudio-org/texstudio/releases/tag/$VERSION/ --download /tmp/txsfiles
 
-function getSize(){
-  xidel /tmp/txsfiles -e "<tr><th><a href='$1'></th><td headers='files_size_h'>{.}</td></tr>" --hide-variable-names
-}
 
-WININSTALLER=$(xidel /tmp/txsfiles --xpath 'let $urls := //a/@href return ($urls[contains(., "exe")], $urls)[1]')
-WININSTALLER="https://github.com$WININSTALLER"
-WININSTALLERSIZE=$(getSize $WININSTALLER)
-MACDMG=$(xidel /tmp/txsfiles --xpath 'let $urls := //a/@href return ($urls[contains(., "dmg")], $urls)[1]')
-MACDMG="https://github.com$MACDMG"
-MACDMGSIZE=$(getSize $MACDMG)
-WINUSB=$(xidel /tmp/txsfiles --xpath 'let $urls := //a/@href return ($urls[contains(., "qt5")], $urls)[1]')
-WINUSB="https://github.com$WINUSB"
-if [ $? -eq 0 ] && [ -n "$WINUSB" ]; then WINUSBSIZE=$(getSize $WINUSB); else WINUSB=""; fi
-APPIMAGE=$(xidel /tmp/txsfiles --xpath 'let $urls := //a/@href return ($urls[contains(., "app")], $urls)[1]')
-APPIMAGE="https://github.com$APPIMAGE"
-if [ $? -eq 0 ] && [ -n "$APPIMAGE" ]; then APPIMAGESIZE=$(getSize $APPIMAGE); else APPIMAGE=""; fi
-TARBALL=$(xidel /tmp/txsfiles --xpath 'let $urls := //a/@href return ($urls[contains(., "tar.gz")], $urls)[1]')
-TARBALL="https://github.com$TARBALL"
-TARBALLSIZE=$(getSize $TARBALL)
-OS2=$(xidel /tmp/txsfiles -e 'css("#files .file th a")[contains(., "os2")]/@href')
-if [ $? -eq 0 ] && [ -n "$OS2" ]; then OS2SIZE=$(getSize $OS2); else OS2=""; fi
+eval "$(xidel https://github.com/texstudio-org/texstudio/releases/tag/$VERSION/  --xquery '
+  let $root := (/)
+  let $find := function($searched){ 
+    let $link := ($root//a[contains(@href, $searched)])[1] 
+    return map { 
+      "url": $link/resolve-html(), 
+      "size": $link//small[matches(., "[MG]B")]!string() 
+    } }
+  return (
+    $find("exe")!( WININSTALLER := ?url, WININSTALLERSIZE := ?size  ),
+    $find("dmg")!( MACDMG := ?url, MACDMGSIZE := ?size  ),
+    $find("qt5")!( WINUSB := ?url, WINUSBSIZE := ?size  ),
+    $find("app")!( APPIMAGE := ?url, APPIMAGESIZE := ?size  ),
+    $find("tar.gz")!( TARBALL := ?url, TARBALLSIZE := ?size  )
+  )  
+' --output-format bash)"
+
+
+
+#OS2=$(xidel /tmp/txsfiles -e 'css("#files .file th a")[contains(., "os2")]/@href')
+#if [ $? -eq 0 ] && [ -n "$OS2" ]; then OS2SIZE=$(getSize $OS2); else OS2=""; fi
 
 #echo $WININSTALLER
 #echo $WININSTALLERSIZE
@@ -57,6 +57,8 @@ xidel index.html --extract-kind=xquery -e - --output-format html > /tmp/new.html
     else if (\$e/@class eq "macDownloadSize") then local:changeText(\$e, "$MACDMGSIZE")
     else if (\$e/@class eq "srcDownload") then local:changeHref(\$e, "$TARBALL")
     else if (\$e/@class eq "srcDownloadSize") then local:changeText(\$e, "$TARBALLSIZE")
+    else if (\$e/@class eq "appImageDownload") then local:changeHref(\$e, "$APPIMAGE")
+    else if (\$e/@class eq "appImageDownloadSize") then local:changeText(\$e, "($APPIMAGESIZE)")
     else if ("$OS2" ne "" and \$e/@class eq "currentVersionOS2") then local:changeText(\$e, "$VERSION")
     else if ("$OS2" ne "" and \$e/@class eq "os2Download") then local:changeHref(\$e, "$OS2")
     else if ("$OS2" ne "" and \$e/@class eq "os2DownloadSize") then local:changeText(\$e, "$OS2SIZE")
