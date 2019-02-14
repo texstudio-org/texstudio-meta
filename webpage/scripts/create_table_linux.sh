@@ -15,8 +15,8 @@ echo ""
 
 xidel \
      http://download.opensuse.org/repositories/home:/jsundermeyer/                                    \
-     --extract-exclude=u,plat,os,lastos,lastqt4,lastplat,release-version,release-date,debianlink,debiansize            \
-     -e "<body>{os := (), release-version := '$VERSION', lastos := '', lastqt4 := (), lastplat := (), debianlink := '$DEBIANLINK', debiansize := '$DEBIANSIZE', release-date:= '$CURYEAR'}</body>"   \
+     --extract-exclude=u,plat,os,lastos,lastqt4,lastplat,release-version,debianlink,debiansize            \
+     -e "<body>{os := (), release-version := '$VERSION', lastos := '', lastqt4 := (), lastplat := (), debianlink := '$DEBIANLINK', debiansize := '$DEBIANSIZE'}</body>"   \
      -f '<div id="mirrorbrain-wrap">
            <h2/>
            <table>
@@ -42,7 +42,7 @@ xidel \
            $temptemp := ($lastos := $os, $lastqt4 := $qt4, $lastplat := $plat)
            return $temp
          };
-         result := for $tr in //tr[contains(., $release-date)][td[2]/a[1][contains(@href, $release-version) and not(matches(@href, "debuginfo|dbgsym"))]]  
+         result := for $tr in //tr[td[2]/a[1][contains(@href, $release-version) and not(matches(@href, "debuginfo|dbgsym"))]]  
          let $u := $tr/td[2]/a[1],
              $u :=resolve-uri($u, $url),
              $size := $tr/td[4],
