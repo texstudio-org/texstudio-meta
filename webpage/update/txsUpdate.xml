@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <versions>
-	<stable value="2.12.14" />  <!-- only used up to TXS 2.10.2. newer versions check the <version> tags below -->
+	<stable value="2.12.16" />  <!-- only used up to TXS 2.10.2. newer versions check the <version> tags below -->
 	<version type="stable" platform="win" number="2.12.6" revision="6631" />
 	<version type="stable" platform="mac" number="2.12.6" revision="6631" />
 	<version type="stable" platform="linux" number="2.12.6" revision="6631" />
