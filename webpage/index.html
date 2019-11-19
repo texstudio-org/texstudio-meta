@@ -34,14 +34,17 @@
 		<p>TeXstudio is open source and is available for all major operating systems.</p>
 		
 		<div id="directDownload">
-				<a id="winDownload" class="downloadButton" href="">Download now<br><span class="downloadVersion">TeXstudio <span class="currentVersion">2.12.16</span> (Windows-Installer)</span></a>
-				<a id="macDownload" class="downloadButton" href="">Download now<br><span class="downloadVersion">TeXstudio <span class="currentVersion">2.12.16</span> (OSX dmg)</span></a>
-		</div>
+				<a id="winDownload" class="downloadButton" href="#winDownloadSection">Download now<br><span class="downloadVersion">TeXstudio <span class="currentVersion">2.12.16</span> (Windows-Installer)</span></a>
+				<a id="macDownload" class="downloadButton" href="#macDownloadSection">Download now<br><span class="downloadVersion">TeXstudio <span class="currentVersion">2.12.16</span> (OSX dmg)</span></a>
+				<a id="linuxDownload" class="downloadButton" href="#linuxDownloadSection">Download now<br><span class="downloadVersion">TeXstudio <span class="currentVersion">2.12.16</span></span></a>
+			</div>
 		<script type="text/javascript">
 		if (navigator.appVersion.indexOf("Win")==-1)
 			$('#winDownload').hide();
 		if (navigator.appVersion.indexOf("Mac")==-1)
 			$('#macDownload').hide();
+		if (navigator.appVersion.indexOf("Win")!=-1 && navigator.appVersion.indexOf("Mac")!=-1)
+			$('#linuxDownload').hide();
 		</script>
 	
 
@@ -330,7 +333,7 @@ http://sourceforge.net/blog/projects-of-the-week-february-16-2015">Featured Proj
 		<h1>Download</h1>
 		<table class="downloadTable">
 		<thead>
-			<tr class="platformDownload"><td colspan="5">Windows</td></tr>
+			<tr class="platformDownload" id="winDownloadSection"><td colspan="5">Windows</td></tr>
 			<tr><th>Platform</th><th>Version</th><th> Type</th><th>Size</th><th>How to install</th></tr>
 		</thead>
 		<tbody>
@@ -348,7 +351,7 @@ http://sourceforge.net/blog/projects-of-the-week-february-16-2015">Featured Proj
 			</tr>
 		</tbody>
 		<thead>
-			<tr class="platformDownload"><td colspan="5">Linux</td></tr>
+			<tr class="platformDownload" id="linuxDownloadSection"><td colspan="5">Linux</td></tr>
 			<tr><td colspan="5">We recommend that you first try to install TeXstudio from the repository of your distribution. Only if TeXstudio is not available there, use the following pre-packaged versions.</td></tr>
 			<tr><td colspan="5">For Ubuntu, a PPA is available: <a href="https://code.launchpad.net/~sunderme/+archive/ubuntu/texstudio">PPA</a></td></tr>
 			<tr><td colspan="5">Furthermore an app-image is available which can be run on any platform: <a class="appImageDownload" href="https://github.com/texstudio-org/texstudio/releases/download/2.12.16/texstudio-2.12.16-x86_64.AppImage">appImage</a> <span class="appImageDownloadSize">()</span>. Just make the file executable and run it.</td></tr>
@@ -777,7 +780,7 @@ http://sourceforge.net/blog/projects-of-the-week-february-16-2015">Featured Proj
 		</tbody>
 	 
 		<thead>
-			<tr class="platformDownload"><td colspan="5">Mac OS X</td></tr>
+			<tr class="platformDownload" id="macDownloadSection"><td colspan="5">Mac OS X</td></tr>
 			<tr><th>Platform</th><th>Version</th><th> Type</th><th>Size</th><th>How to install</th></tr>	
 		</thead>
 			<tbody>
