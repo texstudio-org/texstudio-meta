@@ -43,7 +43,7 @@
 			$('#winDownload').hide();
 		if (navigator.appVersion.indexOf("Mac")==-1)
 			$('#macDownload').hide();
-		if (navigator.appVersion.indexOf("Win")!=-1 && navigator.appVersion.indexOf("Mac")!=-1)
+		if (navigator.appVersion.indexOf("Win")!=-1 || navigator.appVersion.indexOf("Mac")!=-1)
 			$('#linuxDownload').hide();
 		</script>
 	
