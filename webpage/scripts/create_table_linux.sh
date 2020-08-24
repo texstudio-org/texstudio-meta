@@ -17,12 +17,13 @@ xidel \
      http://download.opensuse.org/repositories/home:/jsundermeyer/                                    \
      --extract-exclude=u,plat,os,lastos,lastqt4,lastplat,release-version,debianlink,debiansize            \
      -e "<body>{os := (), release-version := '$VERSION', lastos := '', lastqt4 := (), lastplat := (), debianlink := '$DEBIANLINK', debiansize := '$DEBIANSIZE'}</body>"   \
-     -f '<div id="mirrorbrain-wrap">
-           <h2/>
+     -f '<main>
            <table>
+              <tr><th><hr/></th></tr>
               <tr><td><a/></td></tr> 
               <t:loop><tr><td><A>{.}</A></td></tr></t:loop>
-           </table></div>'                         \
+           </table>
+         </main>'                         \
      -f '//a[text() = ("i386/", "i586/", "i686/", "x86_64/", "amd64/")]'                              \
      --hide-variable-names                                                                            \
      -e 'xquery version "3.0-xidel";
