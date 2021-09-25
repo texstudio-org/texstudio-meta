@@ -14,6 +14,9 @@ TXS_BUILD=`echo $TXS_VERSION_CPP |cut -d "." -f 3`
 TXS_NSI_MAJOR=`grep -oE "define VERSIONMAJOR.*[0-9]+" utilities/texstudio.nsi |grep -oE "[0-9]+"`
 TXS_NSI_MINOR=`grep -oE "define VERSIONMINOR.*[0-9]+" utilities/texstudio.nsi |grep -oE "[0-9]+"`
 TXS_NSI_BUILD=`grep -oE "define VERSIONBUILD.*[0-9]+" utilities/texstudio.nsi |grep -oE "[0-9]+"`
+TXS_NSI2_MAJOR=`grep -oE "define VERSIONMAJOR.*[0-9]+" utilities/texstudio-msys.nsi |grep -oE "[0-9]+"`
+TXS_NSI2_MINOR=`grep -oE "define VERSIONMINOR.*[0-9]+" utilities/texstudio-msys.nsi |grep -oE "[0-9]+"`
+TXS_NSI2_BUILD=`grep -oE "define VERSIONBUILD.*[0-9]+" utilities/texstudio-msys.nsi |grep -oE "[0-9]+"`
 DT=`date -R`
 DT2=`date +%y\\-%m\\-%d`
 
@@ -50,6 +53,18 @@ fi
 if [[ $TXS_NSI_BUILD != $TXS_BUILD ]]; then 
   echo "update texstudio.nsi \(build\)"
   sed -i "s/VERSIONBUILD [0-9]\+/VERSIONBUILD $TXS_BUILD/" utilities/texstudio.nsi
+fi
+if [[ $TXS_NSI2_MAJOR != $TXS_MAJOR ]]; then 
+  echo "update texstudio-msys.nsi \(major\)"
+  sed -i "s/VERSIONMAJOR [0-9]\+/VERSIONMAJOR $TXS_MAJOR/" utilities/texstudio-msys.nsi
+fi
+if [[ $TXS_NSI2_MINOR != $TXS_MINOR ]]; then 
+  echo "update texstudio-msys.nsi \(minor\)"
+  sed -i "s/VERSIONMINOR [0-9]\+/VERSIONMINOR $TXS_MINOR/" utilities/texstudio-msys.nsi
+fi
+if [[ $TXS_NSI2_BUILD != $TXS_BUILD ]]; then 
+  echo "update texstudio-msys.nsi \(build\)"
+  sed -i "s/VERSIONBUILD [0-9]\+/VERSIONBUILD $TXS_BUILD/" utilities/texstudio-msys.nsi
 fi
 
 
