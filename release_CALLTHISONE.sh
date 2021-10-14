@@ -4,6 +4,7 @@ if [[ -e /home/benito ]]; then eval `keychain -q --eval --agents ssh id_rsa `; f
 
 OWNDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source $OWNDIR/checkversion.sh
+source $OWNDIR/changelog2metainfo.sh
 # $OWNDIR/createsrctar1.sh 
 # $OWNDIR/createpkg.sh --release
 # $OWNDIR/create_releasenotes3.sh should probably be pushed to github somewhere (or into index.html)
