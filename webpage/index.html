@@ -35,7 +35,7 @@
 		
 		<div id="directDownload">
 				<a id="winDownload" class="downloadButton" href="https://github.com/texstudio-org/texstudio/releases/download/4.0.2/texstudio-4.0.2-win-qt6.exe">Download now<br><span class="downloadVersion">TeXstudio <span class="currentVersion">4.0.2</span> (Windows-Installer)</span></a>
-				<a id="macDownload" class="downloadButton" href="https://github.com/texstudio-org/texstudio/releases/download/4.0.2/texstudio-4.0.2-osx-qt6.dmg">Download now<br><span class="downloadVersion">TeXstudio <span class="currentVersion">4.0.2</span> (OSX dmg)<br>for macOS <b>11</b> or higher</span></a>
+				<a id="macDownload" class="downloadButton" href="https://github.com/texstudio-org/texstudio/releases/download/4.0.2/texstudio-4.0.2-osx.dmg">Download now<br><span class="downloadVersion">TeXstudio <span class="currentVersion">4.0.2</span> (OSX dmg)<br>for macOS <b>11</b> or higher</span></a>
 		</div>
 		<script type="text/javascript">
 		if (navigator.appVersion.indexOf("Win")==-1)
@@ -54,7 +54,7 @@
 		<div id="recent-news">
 			<table class="news">
 			<tbody>
-			<tr><td class="newsdate">2021-10-11</td>
+			<tr><td class="newsdate">2021-10-22</td>
 			<td class="newscontent">A new release <strong>TeXstudio 4.0.2</strong> is available. This bugfix release which contains Qt6.2 on windows and osx.  On OSX this should fix problems with the cursor.<br>see <a href="https://raw.githubusercontent.com/texstudio-org/texstudio/master/utilities/manual/CHANGELOG.txt">changelog</a></td></tr>
 			<tr><td class="newsdate">2021-10-11</td>
 			<td class="newscontent">A new release <strong>TeXstudio 4.0.1</strong> is available. This bugfix release which contains Qt6.2 on windows and osx.  On OSX this should fix entering accented characters.<br>see <a href="https://raw.githubusercontent.com/texstudio-org/texstudio/master/utilities/manual/CHANGELOG.txt">changelog</a></td></tr>
@@ -63,6 +63,12 @@
 			<tr><td class="newsdate">2021-05-13</td>
 			<td class="newscontent">A new bugfix release <strong>TeXstudio 3.1.2</strong> is available.<br>see <a href="https://raw.githubusercontent.com/texstudio-org/texstudio/master/utilities/manual/CHANGELOG.txt">changelog</a></td></tr>
 			<tr><td class="newsdate">2021-02-22</td>
+			</tbody></table>
+		</div>
+		<div id="hiding-box">
+		<div class="hiddentext">
+			<table class="news">
+			<tbody>
 			<td class="newscontent">A new bugfix release <strong>TeXstudio 3.1.1</strong> is available.Mainly it fixes crashes loading included files.<br>see <a href="https://raw.githubusercontent.com/texstudio-org/texstudio/master/utilities/manual/CHANGELOG.txt">changelog</a></td></tr>
 			<tr><td class="newsdate">2021-02-17</td>
 			<td class="newscontent">A new bugfix release <strong>TeXstudio 3.1.0</strong> is available.Mainly changing the GUI language has been fixed. Furthermore a global TOC is available besides the structure view. It is work in progress and not (yet) automatically updated. Please give feedback.<br>see <a href="https://raw.githubusercontent.com/texstudio-org/texstudio/master/utilities/manual/CHANGELOG.txt">changelog</a></td></tr>
@@ -118,12 +124,6 @@
 			<td class="newscontent">The new release <strong>TeXstudio 2.10.4</strong> is available. This is a bugfix release.<br>For Ubuntu 14.04, use the Qt4 Version.<br>Thanks to all translators on transifex.</td></tr>
 			<tr><td class="newsdate">2015-10-02</td>
 			<td class="newscontent">TeXstudio has been chosen as sourceforge <a href="https://sourceforge.net/blog/october-2015-staff-pick-project-of-the-month-texstudio/">Project of the Month</a>.</td></tr>
-			</tbody></table>
-		</div>
-		<div id="hiding-box">
-		<div class="hiddentext">
-			<table class="news">
-			<tbody>
 			<tr><td class="newsdate">2017-12-21</td>
 			<td class="newscontent">We have migrated our version control system from Mercurial to git. The mercurial repository remains, but won't be updated any longer. From now on, you can obtain the latest source code from <a href="https://github.com/texstudio-org/texstudio">our git repository on github.com</a>.</td></tr>
 			<tr><td class="newsdate">2015-09-16</td>
@@ -587,9 +587,9 @@ http://sourceforge.net/blog/projects-of-the-week-february-16-2015">Featured Proj
 			<tbody>
 			<tr><td>11+</td>
 				<td class="currentVersionMac">4.0.2</td>
-				<td><a class="macDownload" href="https://github.com/texstudio-org/texstudio/releases/download/4.0.2/texstudio-4.0.2-osx-qt6.dmg">dmg</a></td>	
+				<td><a class="macDownload" href="https://github.com/texstudio-org/texstudio/releases/download/4.0.2/texstudio-4.0.2-osx.dmg">dmg</a></td>	
 				<td>42.7 MB</td>
-				<td><a class="macDownload" href="https://github.com/texstudio-org/texstudio/releases/download/4.0.2/texstudio-4.0.2-osx-qt6.dmg">download</a>, and start it.<br>
+				<td><a class="macDownload" href="https://github.com/texstudio-org/texstudio/releases/download/4.0.2/texstudio-4.0.2-osx.dmg">download</a>, and start it.<br>
 				<b>Please note:</b> Because we do not have an Apple Developer Account, OS X may complain about an <a href="http://support.apple.com/kb/PH14369">unidentified developer</a> and deny opening TXS. In that case, open the context menu on the TXS icon (Ctrl + Click) and select open.</td>
 			</tr>	
 			<tr><td>11+</td>
@@ -600,26 +600,6 @@ http://sourceforge.net/blog/projects-of-the-week-february-16-2015">Featured Proj
 			</tr>	
      <tr><td>10.x</td><td colspan="3"></td><td>There is no release for macOS 10.x, but you can compile it from source or using homebrew. The 11+ release may work on 10.15, but check for newer version seems to lead to crash, so disable that function in the options.</td>
 		
-
-			<thead>
-			<tr class="platformDownload"><td colspan="5">OS/2</td></tr>
-			<tr><th>Platform</th><th>Version</th><th> Type</th><th>Size</th><th>How to install</th></tr>
-			</thead>
-
-			</tr></tbody><tbody>
-			<tr><td></td><td class="currentVersionOS2">2.10.4</td><td><a class="os2Download" href="http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%202.10.4/texstudio-2.10.4-os2.7z/download">7z</a></td><td class="os2DownloadSize">12.2 MB</td><td><a class="os2Download" href="http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%202.10.4/texstudio-2.10.4-os2.7z/download">download</a>, extract and start it.</td></tr>
-			</tbody>
-<!--
-			<thead>
-			<tr class="platformDownload"><td colspan="5">FreeBSD</td></tr>
-			<tr><th>Platform</th><th>Version</th><th> Type</th><th>Size</th><th>How to install</th></tr>
-			</thead>
-			
-			<tbody>
-			<tr><td></td><td>2.8.8</td><td>from packages</td><td></td><td>pkg install texstudio</td></tr>
-			<tr><td></td><td>2.8.8</td><td>from sources</td><td></td><td>cd /usr/ports/editors/texmakerx/ &amp;&amp; make install clean</td></tr>
-			</tbody>
-			-->
 
 			<thead>
 			<tr class="platformDownload"><td colspan="5">Source Code</td></tr>
