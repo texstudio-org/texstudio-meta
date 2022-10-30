@@ -8,6 +8,7 @@ TXS_VERSION_CHANGELOG=`grep TeXstudio utilities/manual/CHANGELOG.txt | head -1 |
 TXS_VERSION_DEBIAN_CHANGELOG=`head -1 debian/changelog | grep -oE [0-9.]+ `
 TXS_VERSION_SPEC=`grep Version: utilities/texstudio.spec | head -1 | grep -oE "[0-9.]+"`
 TXS_VERSION_INFOPLIST=$(grep -A 1 CFBundleShortVersionString Info.plist | grep '<string>' | grep -oE "[0-9.]*")
+TXS_VERSION_CMAKE=`grep ' VERSION' CMakeLists.txt | grep -oE [0-9.]+`
 TXS_MAJOR=`echo $TXS_VERSION_CPP |cut -d "." -f 1`
 TXS_MINOR=`echo $TXS_VERSION_CPP |cut -d "." -f 2`
 TXS_BUILD=`echo $TXS_VERSION_CPP |cut -d "." -f 3`
@@ -41,6 +42,10 @@ fi
 if [[ $TXS_VERSION_CPP != $TXS_VERSION_INFOPLIST ]]; then 
   echo "update Info.plist"
   sed -i "s/$TXS_VERSION_INFOPLIST/$TXS_VERSION_CPP/" Info.plist
+fi
+if [[ $TXS_VERSION_CPP != $TXS_VERSION_CMAKE ]]; then 
+  echo "update CMakeLists.txt"
+  sed -i "s/ VERSION [0-9.]\+/ VERSION $TXS_VERSION_CPP/" CMakeLists.txt
 fi
 if [[ $TXS_NSI_MAJOR != $TXS_MAJOR ]]; then 
   echo "update texstudio.nsi \(major\)"
