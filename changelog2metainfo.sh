@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 
-. .github/scripts/get-version.sh > /dev/null
+cd .github
+. scripts/get-version.sh > /dev/null
+cd ..
 RELEASE_OPENING_TAG="<release date=\"$RELEASE_DATE\" version=\"$TXS_VERSION\">"
 DESCRIPTION_OPENING_TAG="<description>"
 LIST_OPENING_TAG="<ul>"
-CHANGELOG=$(sed '/^[[:space:]]*$/d' utilities/manual/CHANGELOG.txt | tail -n +2 | awk 'NR==2,/TeXstudio/' | head -n -1 | sed -e 's|^-|<li>|g' | sed -e 's|$|</li>|g' | sed -e 's|<li>\s\{1,\}|<li>|g' )
+CHANGELOG=$(sed '/^[[:space:]]*$/d' utilities/manual/source/CHANGELOG.md | tail -n +2 | awk 'NR==2,/TeXstudio/' | head -n -1 | sed -e 's|^-|<li>|g' | sed -e 's|$|</li>|g' | sed -e 's|<li>\s\{1,\}|<li>|g' )
 CHANGELOG="${CHANGELOG//
 /\\n}"
 LIST_CLOSING_TAG="</ul>"
