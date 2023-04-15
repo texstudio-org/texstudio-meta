@@ -5,7 +5,7 @@ METADIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 TXS_VERSION_CPP=`grep TXSVERSION src/utilsVersion.h | head -1 | cut -d " " -f 3 | tr -d "\"" | grep -oE [0-9.]+`
 TXS_VERSION_MANPAGE=`grep TH utilities/texstudio.1 | head -1 | cut -d " " -f 5 | tr -d "\""`
 TXS_VERSION_MANUAL=`grep release utilities/manual/source/conf.py | head -1 | grep -oE [0-9.]+ | tail -1`
-TXS_VERSION_CHANGELOG=`grep TeXstudio utilities/manual/CHANGELOG.txt | head -1 | grep -oE [0-9.]+ | tail -1`
+TXS_VERSION_CHANGELOG=`grep TeXstudio utilities/manual/source/CHANGELOG.md | head -1 | grep -oE [0-9.]+ | tail -1`
 TXS_VERSION_DEBIAN_CHANGELOG=`head -1 debian/changelog | grep -oE [0-9.]+ `
 TXS_VERSION_SPEC=`grep Version: utilities/texstudio.spec | head -1 | grep -oE "[0-9.]+"`
 TXS_VERSION_INFOPLIST=$(grep -A 1 CFBundleShortVersionString Info.plist | grep '<string>' | grep -oE "[0-9.]*")
@@ -34,8 +34,8 @@ then
   sed -i "s/$TXS_VERSION_MANUAL/$TXS_VERSION_CPP/" utilities/manual/source/conf.py
 fi
 if [[ $TXS_VERSION_CPP != $TXS_VERSION_CHANGELOG ]]; then 
-  echo "update: CHANGELOG.txt:"
-  sed -i "1s;^;TeXstudio $TXS_VERSION_CPP\n-----------------\n- \n\n;" utilities/manual/CHANGELOG.txt
+  echo "update: CHANGELOG.md:"
+  sed -i "2s;^;TeXstudio $TXS_VERSION_CPP\n\n- \n\n;" utilities/manual/source/CHANGELOG.md
 fi
 if [[ $TXS_VERSION_CPP != $TXS_VERSION_DEBIAN_CHANGELOG ]]; then 
   echo "update: changelog (debian/changelog):"
