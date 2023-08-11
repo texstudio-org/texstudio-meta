@@ -35,7 +35,7 @@ then
 fi
 if [[ $TXS_VERSION_CPP != $TXS_VERSION_CHANGELOG ]]; then 
   echo "update: CHANGELOG.md:"
-  sed -i "2s;^;TeXstudio $TXS_VERSION_CPP\n\n- \n\n;" utilities/manual/source/CHANGELOG.md
+  sed -i "2s;^;## TeXstudio $TXS_VERSION_CPP\n\n- \n\n;" utilities/manual/source/CHANGELOG.md
 fi
 if [[ $TXS_VERSION_CPP != $TXS_VERSION_DEBIAN_CHANGELOG ]]; then 
   echo "update: changelog (debian/changelog):"
