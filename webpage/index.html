@@ -35,12 +35,15 @@
 		
 		<div id="directDownload">
 				<a id="winDownload" class="downloadButton" href="https://github.com/texstudio-org/texstudio/releases/download/4.8.8/texstudio-4.8.8-win-qt6-signed.exe">Download now<br><span class="downloadVersion">TeXstudio <span class="currentVersion">4.8.8</span> (Windows-Installer)</span></a>
+				<a id="winDownloadArm" class="downloadButton" href="https://github.com/texstudio-org/texstudio/releases/download/4.8.8/texstudio-4.8.8-win-arm-qt6-signed.exe">Download now<br><span class="downloadVersion">TeXstudio <span class="currentVersion">4.8.8</span> (Windows-Installer,Arm64)</span></a>
 				<a id="macDownload" class="downloadButton" href="https://github.com/texstudio-org/texstudio/releases/download/4.8.8/texstudio-4.8.8-osx.zip">Download now<br><span class="downloadVersion">TeXstudio <span class="currentVersion">4.8.8</span> (OSX zip)<br>for macOS <b>11.7</b> or higher</span></a>
 				<a id="macDownloadM1" class="downloadButton" href="https://github.com/texstudio-org/texstudio/releases/download/4.8.8/texstudio-4.8.8-osx-m1.zip">Download now<br><span class="downloadVersion">TeXstudio <span class="currentVersion">4.8.8</span> (OSX M1 zip)<br>for macOS <b>14</b> or higher</span></a>
 		</div>
 		<script type="text/javascript">
-		if (navigator.appVersion.indexOf("Win")==-1)
+		if (navigator.appVersion.indexOf("Win")==-1){
 			$('#winDownload').hide();
+			$('#winDownloadArm').hide();
+		}
 		if (navigator.appVersion.indexOf("Mac")==-1){
 			$('#macDownload').hide();
 			$('#macDownloadM1').hide();
@@ -450,6 +453,18 @@ http://sourceforge.net/blog/projects-of-the-week-february-16-2015">Featured Proj
 			  <td><a class="winDownloadUSB" href="https://github.com/texstudio-org/texstudio/releases/download/4.8.8/texstudio-4.8.8-win-portable-qt6.zip">Portable (.zip)</a></td>
 			  <td class="winDownloadUSBSize"></td>
 			  <td><a class="winDownloadUSB" href="https://github.com/texstudio-org/texstudio/releases/download/4.8.8/texstudio-4.8.8-win-portable-qt6.zip">download</a> and unzip the zip</td>
+			</tr>
+			<tr><td>11 (Arm,64 bit,Qt6)</td>
+			  <td class="currentVersion">4.8.8</td>
+			  <td><a class="winDownloadInstaller" href="https://github.com/texstudio-org/texstudio/releases/download/4.8.8/texstudio-4.8.8-win-arm-qt6-signed.exe">Installer</a></td>
+			  <td class="winDownloadInstallerSize"></td>
+			  <td><a class="winDownloadInstaller" href="https://github.com/texstudio-org/texstudio/releases/download/4.8.8/texstudio-4.8.8-win-arm-qt6-signed.exe">download</a> and double click on the installer exe</td>
+			</tr>
+			<tr><td>11 (Arm,64 bit,Qt6)</td>
+			  <td class="currentVersionUSB">4.8.8</td>
+			  <td><a class="winDownloadUSB" href="https://github.com/texstudio-org/texstudio/releases/download/4.8.8/texstudio-4.8.8-win-arm-portable-qt6.zip">Portable (.zip)</a></td>
+			  <td class="winDownloadUSBSize"></td>
+			  <td><a class="winDownloadUSB" href="https://github.com/texstudio-org/texstudio/releases/download/4.8.8/texstudio-4.8.8-win-arm-portable-qt6.zip">download</a> and unzip the zip</td>
 			</tr>
 			<tr><td>7/8/10 (32 bit)</td>
 			<td>2.12.22.</td><td></td><td></td><td>see github <a href="https://github.com/texstudio-org/texstudio/releases/">releases</a></td>
