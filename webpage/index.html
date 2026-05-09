@@ -1,661 +1,2426 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="css/txs.css">
-<link rel="stylesheet" type="text/css" href="css/vertical.news.slider.css">
-<link rel="shortcut icon" href="./images/texstudio.ico">
-<title>TeXstudio - A LaTeX editor</title>
-<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>-->
-<script type="text/javascript" src="js/jquery-3.7.1.slim.min.js"></script>
-<script type="text/javascript" src="js/scroll.js"></script>
-<script type="text/javascript" src="js/vertical.news.slider.min.js"></script>
-<link rel="canonical" href="https://www.texstudio.org">
-<!-- gradient support for IE9. See http://www.colorzilla.com/gradient-editor/ -->
-<!--[if gte IE 9]>
-  <style type="text/css">
-    .gradient {
-       filter: none;
-    }
-  </style>
-<![endif]-->
-</head>
-<body>
-	
-<div id="container">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" type="text/css" href="css/txs.css" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="css/vertical.news.slider.css"
+        />
+        <link rel="shortcut icon" href="./images/texstudio.ico" />
+        <title>TeXstudio - A LaTeX editor</title>
+        <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>-->
+        <script
+            type="text/javascript"
+            src="js/jquery-3.7.1.slim.min.js"
+        ></script>
+        <script type="text/javascript" src="js/scroll.js"></script>
+        <script
+            type="text/javascript"
+            src="js/vertical.news.slider.min.js"
+        ></script>
+        <link rel="canonical" href="https://www.texstudio.org" />
+        <!-- gradient support for IE9. See http://www.colorzilla.com/gradient-editor/ -->
+        <!--[if gte IE 9]>
+            <style type="text/css">
+                .gradient {
+                    filter: none;
+                }
+            </style>
+        <![endif]-->
+    </head>
+    <body>
+        <div id="container">
+            <div id="right">
+                <div id="home" class="page">
+                    <h1>Welcome to TeXstudio</h1>
+                    <a
+                        href="https://sourceforge.net/projects/texstudio/#screenshots"
+                        ><img
+                            class="img-right"
+                            src="./images/title.png"
+                            alt="screenshot"
+                    /></a>
+                    <p>
+                        TeXstudio is an integrated writing environment for
+                        creating LaTeX documents. Our goal is to make writing
+                        LaTeX as easy and comfortable as possible. Therefore
+                        TeXstudio has numerous features like
+                        syntax-highlighting, integrated viewer, reference
+                        checking, and various assistants. For more details see
+                        the <a href="#features">features</a>.
+                    </p>
+                    <p>
+                        TeXstudio is open-source and is available for all major
+                        operating systems.
+                    </p>
 
+                    <div id="directDownload">
+                        <a
+                            id="winDownload"
+                            class="downloadButton"
+                            href="https://github.com/texstudio-org/texstudio/releases/download/4.9.4/texstudio-4.9.4-win-qt6-signed.exe"
+                            >Download now<br /><span class="downloadVersion"
+                                >TeXstudio
+                                <span class="currentVersion">4.9.4</span>
+                                (Windows-Installer,x86_64)</span
+                            ></a
+                        >
+                        <a
+                            id="winDownloadArm"
+                            class="downloadButton"
+                            href="https://github.com/texstudio-org/texstudio/releases/download/4.9.4/texstudio-4.9.4-win-arm-qt6-signed.exe"
+                            >Download now<br /><span class="downloadVersion"
+                                >TeXstudio
+                                <span class="currentVersion">4.9.4</span>
+                                (Windows-Installer,Arm64)</span
+                            ></a
+                        >
+                        <a
+                            id="macDownload"
+                            class="downloadButton"
+                            href="https://github.com/texstudio-org/texstudio/releases/download/4.9.4/texstudio-4.9.4-osx.zip"
+                            >Download now<br /><span class="downloadVersion"
+                                >TeXstudio
+                                <span class="currentVersion">4.9.4</span> (OSX
+                                zip)<br />for macOS <b>13.+</b> or higher</span
+                            ></a
+                        >
+                        <a
+                            id="macDownloadM1"
+                            class="downloadButton"
+                            href="https://github.com/texstudio-org/texstudio/releases/download/4.9.4/texstudio-4.9.4-osx-m1.zip"
+                            >Download now<br /><span class="downloadVersion"
+                                >TeXstudio
+                                <span class="currentVersion">4.9.4</span> (OSX
+                                M1 zip)<br />for macOS <b>13.+</b> or
+                                higher</span
+                            ></a
+                        >
+                    </div>
+                    <script type="text/javascript">
+                        if (navigator.appVersion.indexOf("Win") == -1) {
+                            $("#winDownload").hide();
+                            $("#winDownloadArm").hide();
+                        }
+                        if (navigator.appVersion.indexOf("Mac") == -1) {
+                            $("#macDownload").hide();
+                            $("#macDownloadM1").hide();
+                        }
+                    </script>
+                </div>
+                <!--end home-->
 
-<div id="right">
-	<div id="home" class="page">
-		<h1>Welcome to TeXstudio</h1>
-		<a href="https://sourceforge.net/projects/texstudio/#screenshots"><img class="img-right" src="./images/title.png" alt="screenshot"></a>
-		<p>TeXstudio is an integrated writing environment for creating LaTeX documents. Our goal is to make writing LaTeX as easy and comfortable as possible. Therefore TeXstudio has numerous features like syntax-highlighting, integrated viewer, reference checking, and various assistants. For more details see the <a href="#features">features</a>.</p>
-		<p>TeXstudio is open-source and is available for all major operating systems.</p>
-		
-		<div id="directDownload">
-				<a id="winDownload" class="downloadButton" href="https://github.com/texstudio-org/texstudio/releases/download/4.9.3/texstudio-4.9.3-win-qt6-signed.exe">Download now<br><span class="downloadVersion">TeXstudio <span class="currentVersion">4.9.3</span> (Windows-Installer,x86_64)</span></a>
-				<a id="winDownloadArm" class="downloadButton" href="https://github.com/texstudio-org/texstudio/releases/download/4.9.3/texstudio-4.9.3-win-arm-qt6-signed.exe">Download now<br><span class="downloadVersion">TeXstudio <span class="currentVersion">4.9.3</span> (Windows-Installer,Arm64)</span></a>
-				<a id="macDownload" class="downloadButton" href="https://github.com/texstudio-org/texstudio/releases/download/4.9.3/texstudio-4.9.3-osx.zip">Download now<br><span class="downloadVersion">TeXstudio <span class="currentVersion">4.9.3</span> (OSX zip)<br>for macOS <b>13.+</b> or higher</span></a>
-				<a id="macDownloadM1" class="downloadButton" href="https://github.com/texstudio-org/texstudio/releases/download/4.9.3/texstudio-4.9.3-osx-m1.zip">Download now<br><span class="downloadVersion">TeXstudio <span class="currentVersion">4.9.3</span> (OSX M1 zip)<br>for macOS <b>13.+</b> or higher</span></a>
-		</div>
-		<script type="text/javascript">
-		if (navigator.appVersion.indexOf("Win")==-1){
-			$('#winDownload').hide();
-			$('#winDownloadArm').hide();
-		}
-		if (navigator.appVersion.indexOf("Mac")==-1){
-			$('#macDownload').hide();
-			$('#macDownloadM1').hide();
-		}
-		</script>
-	
+                <div id="news" class="page">
+                    <h1>News</h1>
+                    <div id="recent-news">
+                        <table class="news">
+                            <tbody>
+                                <tr>
+                                    <td class="newsdate">2026-05-09</td>
+                                    <td class="newscontent">
+                                        A new release
+                                        <strong>TeXstudio 4.9.4</strong> is
+                                        available,<br />see
+                                        <a
+                                            href="https://texstudio-org.github.io/CHANGELOG.html"
+                                            >changelog</a
+                                        >.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="newsdate">2026-03-27</td>
+                                    <td class="newscontent">
+                                        A new release
+                                        <strong>TeXstudio 4.9.3</strong> is
+                                        available,<br />see
+                                        <a
+                                            href="https://texstudio-org.github.io/CHANGELOG.html"
+                                            >changelog</a
+                                        >.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="newsdate">2026-02-07</td>
+                                    <td class="newscontent">
+                                        A new release
+                                        <strong>TeXstudio 4.9.2</strong> is
+                                        available,<br />see
+                                        <a
+                                            href="https://texstudio-org.github.io/CHANGELOG.html"
+                                            >changelog</a
+                                        >.This fixes some crashes, among others.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="newsdate">2025-12-15</td>
+                                    <td class="newscontent">
+                                        A new release
+                                        <strong>TeXstudio 4.9.1</strong> is
+                                        available,<br />see
+                                        <a
+                                            href="https://texstudio-org.github.io/CHANGELOG.html"
+                                            >changelog</a
+                                        >.This fixes collaborative editing with
+                                        teamtype v0.9, among others.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="hiding-box">
+                        <div class="hiddentext">
+                            <table class="news">
+                                <tbody>
+                                    <tr>
+                                        <td class="newsdate">2025-11-07</td>
+                                        <td class="newscontent">
+                                            A new release
+                                            <strong>TeXstudio 4.9.0</strong> is
+                                            available,<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >.This release offers collaborative
+                                            editing with the help of teamtype
+                                            (currently available on OSX and
+                                            linux).
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2025-09-12</td>
+                                        <td class="newscontent">
+                                            A new release
+                                            <strong>TeXstudio 4.8.9</strong> is
+                                            available,<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >.This release fixes some bugs and
+                                            offers text selection on pdfs.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2025-07-11</td>
+                                        <td class="newscontent">
+                                            A new release
+                                            <strong>TeXstudio 4.8.8</strong> is
+                                            available,<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >.This is the first release to offer
+                                            win/arm64 builds.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2025-04-25</td>
+                                        <td class="newscontent">
+                                            A new release
+                                            <strong>TeXstudio 4.8.7</strong> is
+                                            available,<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >.Linux PPA uses Qt6 from now on and
+                                            it will work for Ubuntu 23.10 and
+                                            newer only.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2025-02-07</td>
+                                        <td class="newscontent">
+                                            A new release
+                                            <strong>TeXstudio 4.8.6</strong> is
+                                            available,<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2025-01-09</td>
+                                        <td class="newscontent">
+                                            Windows Defender currently
+                                            classifies a base library for txs as
+                                            virus. All indications point to a
+                                            false positive. To run txs, defender
+                                            needs to be advised to ignore txs
+                                            and its libraries, see also
+                                            <a
+                                                href="https://github.com/texstudio-org/texstudio/issues/3938"
+                                                >issue</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2024-12-13</td>
+                                        <td class="newscontent">
+                                            A new bugfix release
+                                            <strong>TeXstudio 4.8.5</strong> is
+                                            available,<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2024-09-27</td>
+                                        <td class="newscontent">
+                                            A new bugfix release
+                                            <strong>TeXstudio 4.8.4</strong> is
+                                            available,<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2024-09-20</td>
+                                        <td class="newscontent">
+                                            A new release
+                                            <strong>TeXstudio 4.8.3</strong> is
+                                            available,<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >. Main new feature is that windows
+                                            installer is code signed and should
+                                            give less warnings when installing.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2024-08-28</td>
+                                        <td class="newscontent">
+                                            A new release
+                                            <strong>TeXstudio 4.8.2</strong> is
+                                            available,<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2024-06-07</td>
+                                        <td class="newscontent">
+                                            A new release
+                                            <strong>TeXstudio 4.8.1</strong> is
+                                            available,<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2024-05-11</td>
+                                        <td class="newscontent">
+                                            A new release
+                                            <strong>TeXstudio 4.8.0</strong> is
+                                            available,<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2024-03-01</td>
+                                        <td class="newscontent">
+                                            A bug fix release
+                                            <strong>TeXstudio 4.7.3</strong> is
+                                            available,<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >.It offers a OSX 14 M1 build for
+                                            the first time.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2023-12-24</td>
+                                        <td class="newscontent">
+                                            A bug fix release
+                                            <strong>TeXstudio 4.7.2</strong> is
+                                            available,<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2023-12-05</td>
+                                        <td class="newscontent">
+                                            A bug fix release
+                                            <strong>TeXstudio 4.7.1</strong> is
+                                            available,<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >. OSX users reported mal-function
+                                            of txs on some systems. This version
+                                            uses Qt 6.6.0 again which seems to
+                                            work.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2023-12-02</td>
+                                        <td class="newscontent">
+                                            A new release
+                                            <strong>TeXstudio 4.7.0</strong> is
+                                            available,<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2023-08-11</td>
+                                        <td class="newscontent">
+                                            A bug fix release
+                                            <strong>TeXstudio 4.6.3</strong> is
+                                            available,<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2023-07-30</td>
+                                        <td class="newscontent">
+                                            A bug fix release
+                                            <strong>TeXstudio 4.6.2</strong> is
+                                            available,<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >. Crashes with large documents have
+                                            been reported.<br />
+                                            This version introduces file caching
+                                            for reopening included files. This
+                                            speeds up loading but disables
+                                            preview and search in cached
+                                            documents, see also
+                                            <a
+                                                href="https://texstudio-org.github.io/background.html#loaded-documents"
+                                                >manual</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2023-07-30</td>
+                                        <td class="newscontent">
+                                            A bug fix release
+                                            <strong>TeXstudio 4.6.1</strong> is
+                                            available,<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >. The path for caching data was set
+                                            to a wrong location.<br />
+                                            This version introduces file caching
+                                            for reopening included files. This
+                                            speeds up loading but disables
+                                            preview and search in cached
+                                            documents, see also
+                                            <a
+                                                href="https://texstudio-org.github.io/background.html#loaded-documents"
+                                                >manual</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2023-07-28</td>
+                                        <td class="newscontent">
+                                            A new release
+                                            <strong>TeXstudio 4.6.0</strong> is
+                                            available,<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            ><br />
+                                            This version introduces file caching
+                                            for reopening included files. THis
+                                            speeds up loading but disables
+                                            preview and search in cached
+                                            documents, see also
+                                            <a
+                                                href="https://texstudio-org.github.io/background.html#loaded-documents"
+                                                >manual</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2023-04-15</td>
+                                        <td class="newscontent">
+                                            A new release
+                                            <strong>TeXstudio 4.5.2</strong> is
+                                            available,<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2023-02-04</td>
+                                        <td class="newscontent">
+                                            A new release
+                                            <strong>TeXstudio 4.5.1</strong> is
+                                            available,<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/background.html#loaded-documents"
+                                                >changelog</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2022-11-27</td>
+                                        <td class="newscontent">
+                                            A new release
+                                            <strong>TeXstudio 4.4.1</strong> is
+                                            available,<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2022-11-19</td>
+                                        <td class="newscontent">
+                                            A new release
+                                            <strong>TeXstudio 4.4.0</strong> is
+                                            available. It provides an overhauled
+                                            manual,a new icon theme and no Qt5
+                                            build on windows among others,<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2022-08-26</td>
+                                        <td class="newscontent">
+                                            A new release
+                                            <strong>TeXstudio 4.3.1</strong> is
+                                            available,<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2022-08-07</td>
+                                        <td class="newscontent">
+                                            A new release
+                                            <strong>TeXstudio 4.3.0</strong> is
+                                            available,<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2022-04-17</td>
+                                        <td class="newscontent">
+                                            A new release
+                                            <strong>TeXstudio 4.2.3</strong> is
+                                            available. Most notable uses Qt6.3
+                                            on windows which fixes the line in
+                                            the pdf magnifier with on some
+                                            windows set-ups. Bugfixes,<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2022-02-20</td>
+                                        <td class="newscontent">
+                                            A new release
+                                            <strong>TeXstudio 4.2.2</strong> is
+                                            available. Bugfixes,<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2022-01-27</td>
+                                        <td class="newscontent">
+                                            A new release
+                                            <strong>TeXstudio 4.2.1</strong> is
+                                            available. Bugfixes,<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2022-01-8</td>
+                                        <td class="newscontent">
+                                            A new release
+                                            <strong>TeXstudio 4.2.0</strong> is
+                                            available. Bugfixes,<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2021-12-7</td>
+                                        <td class="newscontent">
+                                            A new release
+                                            <strong>TeXstudio 4.1.2</strong> is
+                                            available. It should fix session
+                                            restore and ctrl+letter shortcuts on
+                                            OSX.<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2021-11-20</td>
+                                        <td class="newscontent">
+                                            A new release
+                                            <strong>TeXstudio 4.1.1</strong> is
+                                            available. It should fix issue with
+                                            chinese character input.<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2021-11-20</td>
+                                        <td class="newscontent">
+                                            A new release
+                                            <strong>TeXstudio 4.1.0</strong> is
+                                            available. It should fix issue with
+                                            chinese character input.<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2021-11-6</td>
+                                        <td class="newscontent">
+                                            A new release
+                                            <strong>TeXstudio 4.0.4</strong> is
+                                            available. It should fix a crash on
+                                            OSX(qt6).<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2021-10-30</td>
+                                        <td class="newscontent">
+                                            A new release
+                                            <strong>TeXstudio 4.0.3</strong> is
+                                            available. It should fix crashes
+                                            which occur on some systems.<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2021-10-22</td>
+                                        <td class="newscontent">
+                                            A new release
+                                            <strong>TeXstudio 4.0.2</strong> is
+                                            available. This bugfix release which
+                                            contains Qt6.2 on windows and osx.
+                                            On OSX this should fix problems with
+                                            the cursor.<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2021-10-11</td>
+                                        <td class="newscontent">
+                                            A new release
+                                            <strong>TeXstudio 4.0.1</strong> is
+                                            available. This bugfix release which
+                                            contains Qt6.2 on windows and osx.
+                                            On OSX this should fix entering
+                                            accented characters.<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2021-09-25</td>
+                                        <td class="newscontent">
+                                            A new release
+                                            <strong>TeXstudio 4.0.0</strong> is
+                                            available. This version offers Qt6
+                                            support which should improve hidpi
+                                            handling.<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2021-05-13</td>
+                                        <td class="newscontent">
+                                            A new bugfix release
+                                            <strong>TeXstudio 3.1.2</strong> is
+                                            available.<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2021-02-22</td>
+                                        <td class="newscontent">
+                                            A new bugfix release
+                                            <strong>TeXstudio 3.1.1</strong> is
+                                            available.Mainly it fixes crashes
+                                            loading included files.<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2021-02-17</td>
+                                        <td class="newscontent">
+                                            A new bugfix release
+                                            <strong>TeXstudio 3.1.0</strong> is
+                                            available.Mainly changing the GUI
+                                            language has been fixed. Furthermore
+                                            a global TOC is available besides
+                                            the structure view. It is work in
+                                            progress and not (yet) automatically
+                                            updated. Please give feedback.<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2021-02-14</td>
+                                        <td class="newscontent">
+                                            A new bugfix release
+                                            <strong>TeXstudio 3.0.5</strong> is
+                                            available.<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2021-01-02</td>
+                                        <td class="newscontent">
+                                            Happy new year! A new bugfix release
+                                            <strong>TeXstudio 3.0.4</strong> is
+                                            available. It just fixes the
+                                            configuration of the pdf toolbar
+                                            size.<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2020-12-29</td>
+                                        <td class="newscontent">
+                                            A new bugfix release
+                                            <strong>TeXstudio 3.0.3</strong> is
+                                            available. No changes, just a build
+                                            fix for OSX.<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2020-12-28</td>
+                                        <td class="newscontent">
+                                            A new bugfix release
+                                            <strong>TeXstudio 3.0.2</strong> is
+                                            available.<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2020-09-01</td>
+                                        <td class="newscontent">
+                                            A new bugfix release
+                                            <strong>TeXstudio 3.0.1</strong> is
+                                            available.<br />see
+                                            <a
+                                                href="https://texstudio-org.github.io/CHANGELOG.html"
+                                                >changelog</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2020-08-25</td>
+                                        <td class="newscontent">
+                                            A new release
+                                            <strong>TeXstudio 3.0.0</strong> is
+                                            available.<br />Thanks to all
+                                            translators on transifex. For
+                                            Ubuntu, a ppa is available.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2020-01-18</td>
+                                        <td class="newscontent">
+                                            A bug fix release
+                                            <strong>TeXstudio 2.12.22</strong>
+                                            is available.<br />It fixes garbled
+                                            symbols in OSX, a crash when
+                                            changing magic language comment, and
+                                            pdf search path handling.<br /><strong
+                                                >This is the last release
+                                                supporting Qt4.</strong
+                                            ><br />LanguageTool &gt;=3.6 is only
+                                            supported with Qt5.<br />Thanks to
+                                            all translators on transifex. For
+                                            Ubuntu, a ppa is available.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2020-01-13</td>
+                                        <td class="newscontent">
+                                            A bug fix release
+                                            <strong>TeXstudio 2.12.20</strong>
+                                            is available.<br />It fixes a
+                                            problem with replacing when search
+                                            highlight is activated.<br /><strong
+                                                >This is the last release
+                                                supporting Qt4.</strong
+                                            ><br />LanguageTool &gt;=3.6 is only
+                                            supported with Qt5.<br />Thanks to
+                                            all translators on transifex. For
+                                            Ubuntu, a ppa is available.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2019-12-26</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TeXstudio 2.12.18</strong>
+                                            is available.<br />This is mainly a
+                                            bug fix release. Most notably change
+                                            is better support of regexp in
+                                            search (Qt5 version only).<br /><strong
+                                                >This is the last release
+                                                supporting Qt4.</strong
+                                            ><br />LanguageTool &gt;=3.6 is only
+                                            supported with Qt5.<br />Thanks to
+                                            all translators on transifex. For
+                                            Ubuntu, a ppa is available.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2019-05-19</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TeXstudio 2.12.16</strong>
+                                            is available.<br />This is mainly a
+                                            bug fix release. Most notably change
+                                            is flicker-free update of pdf.<br />LanguageTool
+                                            &gt;=3.6 is only supported with
+                                            Qt5.<br />Thanks to all translators
+                                            on transifex. For Ubuntu, a ppa is
+                                            available.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2018-11-30</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TeXstudio 2.12.14</strong>
+                                            is available. (see
+                                            <a
+                                                href="https://raw.githubusercontent.com/texstudio-org/texstudio/1551ba13b224a38229d1049983ac572710d352cd/utilities/manual/CHANGELOG.txt"
+                                                >changelog</a
+                                            >)<br />This is a bug fix release
+                                            for fixing that GUI language could
+                                            not be changed to all available
+                                            languages via GUI.<br />LanguageTool
+                                            &gt;=3.6 is only supported with
+                                            Qt5.<br />Thanks to all translators
+                                            on transifex. For Ubuntu, a ppa is
+                                            available.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2018-11-25</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TeXstudio 2.12.12</strong>
+                                            is available. (see
+                                            <a
+                                                href="https://raw.githubusercontent.com/texstudio-org/texstudio/fff9ed38a542ce2a5da8a58a46f0e5832ead0dcc/utilities/manual/CHANGELOG.txt"
+                                                >changelog</a
+                                            >)<br />LanguageTool &gt;=3.6 is
+                                            only supported with Qt5.<br />Thanks
+                                            to all translators on transifex. For
+                                            Ubuntu, a ppa is available.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2018-07-06</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TeXstudio 2.12.10</strong>
+                                            is available.<br />LanguageTool
+                                            &gt;=3.6 is only supported with
+                                            Qt5.<br />Thanks to all translators
+                                            on transifex. For Ubuntu, a ppa is
+                                            available.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2018-02-03</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TeXstudio 2.12.8</strong> is
+                                            available.<br />For Ubuntu 14.04,
+                                            use the Qt4 Version. LanguageTool
+                                            &gt;=3.6 is only supported with
+                                            Qt5.<br />Thanks to all translators
+                                            on transifex. For Ubuntu, a ppa is
+                                            available.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2018-02-03</td>
+                                        <td class="newscontent">
+                                            Active development has been moved to
+                                            github.com. We are happy to accept
+                                            pull-requests and any other help.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2017-07-25</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TeXstudio 2.12.6</strong> is
+                                            available.<br />For Ubuntu 14.04,
+                                            use the Qt4 Version. LanguageTool
+                                            &gt;=3.6 is only supported with
+                                            Qt5.<br />Thanks to all translators
+                                            on transifex.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2017-03-27</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TeXstudio 2.12.4</strong> is
+                                            available.<br />For Ubuntu 14.04,
+                                            use the Qt4 Version. LanguageTool
+                                            &gt;=3.6 is only supported with
+                                            Qt5.<br />Thanks to all translators
+                                            on transifex.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2017-01-24</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TeXstudio 2.12.2</strong> is
+                                            available.<br />For Ubuntu 14.04,
+                                            use the Qt4 Version. LanguageTool
+                                            &gt;=3.6 is only supported with
+                                            Qt5.<br />Thanks to all translators
+                                            on transifex.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2017-01-07</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TeXstudio 2.12.0</strong> is
+                                            available.<br />For Ubuntu 14.04,
+                                            use the Qt4 Version.<br />Thanks to
+                                            all translators on transifex.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2016-09-28</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TeXstudio 2.11.2</strong> is
+                                            available.<br />For Ubuntu 14.04,
+                                            use the Qt4 Version.<br />Thanks to
+                                            all translators on transifex.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2016-05-29</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TeXstudio 2.11.0</strong> is
+                                            available.<br />For Ubuntu 14.04,
+                                            use the Qt4 Version.<br />Thanks to
+                                            all translators on transifex.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2016-02-17</td>
+                                        <td class="newscontent">
+                                            There are community-provided
+                                            <a href="#appimage"
+                                                >Linux AppImages available</a
+                                            >
+                                            for TeXstudio.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2016-01-20</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TeXstudio 2.10.8</strong> is
+                                            available. This is a bugfix
+                                            release.<br />For Ubuntu 14.04, use
+                                            the Qt4 Version.<br />Thanks to all
+                                            translators on transifex.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2016-01-09</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TeXstudio 2.10.6</strong> is
+                                            available. This is a bugfix
+                                            release.<br />For Ubuntu 14.04, use
+                                            the Qt4 Version.<br />Thanks to all
+                                            translators on transifex.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2015-10-25</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TeXstudio 2.10.4</strong> is
+                                            available. This is a bugfix
+                                            release.<br />For Ubuntu 14.04, use
+                                            the Qt4 Version.<br />Thanks to all
+                                            translators on transifex.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2015-10-02</td>
+                                        <td class="newscontent">
+                                            TeXstudio has been chosen as
+                                            sourceforge
+                                            <a
+                                                href="https://sourceforge.net/blog/october-2015-staff-pick-project-of-the-month-texstudio/"
+                                                >Project of the Month</a
+                                            >.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2017-12-21</td>
+                                        <td class="newscontent">
+                                            We have migrated our version control
+                                            system from Mercurial to git. The
+                                            mercurial repository remains, but
+                                            won't be updated any longer. From
+                                            now on, you can obtain the latest
+                                            source code from
+                                            <a
+                                                href="https://github.com/texstudio-org/texstudio"
+                                                >our git repository on
+                                                github.com</a
+                                            >.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2015-09-16</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TeXstudio 2.10.2</strong> is
+                                            available. This is a bugfix release.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2015-09-10</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TeXstudio 2.10.0</strong> is
+                                            available. Linux builds are only
+                                            provided for distributions which
+                                            allow Qt5 builds. This mainly
+                                            affects Centos 6, Ubuntu 12.04 and
+                                            OpenSuse 11.3.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2015-09-10</td>
+                                        <td class="newscontent">
+                                            TeXstudio uses the service of
+                                            <a
+                                                href="https://www.transifex.com/texstudio/texstudio/"
+                                                >Transifex</a
+                                            >
+                                            to reduce difficulties to translate
+                                            texstudio in your mother tongue.
+                                            Please participate to increase the
+                                            number of tranlations.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2015-08-16</td>
+                                        <td class="newscontent">
+                                            TeXstudio is one of the candidates
+                                            for the SourceForge
+                                            <a
+                                                href="https://sourceforge.net/blog/community-choice-project-of-the-month-vote-october-2015/"
+                                                >project of the month</a
+                                            >.
+                                            <a
+                                                href="https://sourceforge.net/p/potm/discussion/vote/thread/2001cdf0/"
+                                                >Vote now!</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2015-06-29</td>
+                                        <td class="newscontent">
+                                            TeXstudio has been chosen as one of
+                                            the
+                                            <a
+                                                href="http://sourceforge.net/blog/project-of-the-week-june-29-2015"
+                                                >Featured Projects of the
+                                                week</a
+                                            >
+                                            on sourceforge.net
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2015-03-24</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TeXstudio 2.9.4</strong> is
+                                            available. This is a bug fix release
+                                            mainly for OSX and Linux. The
+                                            shortcuts for moving the cursor get
+                                            messed up if you use txs 2.9.2 with
+                                            a non-english language and change
+                                            something in the options. To remedy
+                                            the problem, you need to edit
+                                            .config/texstudio/texstudio.ini and
+                                            delete the keys
+                                            "Editor%20Key%20Mapping%20New".
+                                            Sorry for the inconvenience.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2015-03-22</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TeXstudio 2.9.2</strong> is
+                                            available.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2015-03-06</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TeXstudio 2.9.0</strong> is
+                                            available.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2015-02-17</td>
+                                        <td class="newscontent">
+                                            There are preview builds of the
+                                            upcoming 2.8.10 release available
+                                            for
+                                            <a
+                                                href="http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%20SVN/texstudio289_snapshot_2015-02-11_win_qt5.4.0.exe/download"
+                                                >Windows</a
+                                            >
+                                            and
+                                            <a
+                                                href="http://download.opensuse.org/repositories/home:/jsundermeyer/"
+                                                >Linux</a
+                                            >
+                                            (tagged as 2.8.9). It also continues
+                                            to be a
+                                            <a
+                                                href="
+http://sourceforge.net/blog/projects-of-the-week-february-16-2015"
+                                                >Featured Project</a
+                                            >
+                                            this week.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2015-02-10</td>
+                                        <td class="newscontent">
+                                            TeXstudio has been chosen as one of
+                                            the
+                                            <a
+                                                href="http://sourceforge.net/blog/projects-of-the-week-february-9-2015"
+                                                >Featured Projects of the
+                                                week</a
+                                            >
+                                            on sourceforge.net
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2014-12-07</td>
+                                        <td class="newscontent">
+                                            TeXstudio has been chosen as one of
+                                            the
+                                            <a
+                                                href="http://sourceforge.net/blog/projects-of-the-week-december-8-2014"
+                                                >Featured Projects of the
+                                                week</a
+                                            >
+                                            on sourceforge.net
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2014-12-04</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TeXstudio 2.8.8</strong> is
+                                            available.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2014-10-26</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TeXstudio 2.8.6</strong> is
+                                            available.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2014-09-08</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TeXstudio 2.8.4</strong> is
+                                            available.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2014-07-25</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TeXstudio 2.8.2</strong> is
+                                            available.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2014-06-21</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TeXstudio 2.8.0</strong> is
+                                            available.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2014-03-16</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TeXstudio 2.7.0</strong> is
+                                            available.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2014-02-10</td>
+                                        <td class="newscontent">
+                                            TeXstudio has been chosen as one of
+                                            the
+                                            <a
+                                                href="http://sourceforge.net/blog/projects-of-the-week-february-10-2014"
+                                                >Featured Projects of the
+                                                week</a
+                                            >
+                                            on sourceforge.net
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2013-11-02</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TeXstudio 2.6.6</strong> is
+                                            available to fix some bugs, e.g. the
+                                            home/end keys.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2013-10-20</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TeXstudio 2.6.4</strong> is
+                                            available. It fixes bugs and adds
+                                            some features.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2013-08-28</td>
+                                        <td class="newscontent">
+                                            We have migrated our version control
+                                            system from SVN to Mercurial. The
+                                            SVN repository remains, but won't be
+                                            updated any longer. From now on, you
+                                            can obtain the latest source code
+                                            from
+                                            <a
+                                                href="https://sourceforge.net/p/texstudio/hg/ci/default/tree/"
+                                                >our Mercurial repository</a
+                                            >.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2013-08-17</td>
+                                        <td class="newscontent">
+                                            TeXstudio has been elected as
+                                            SourceForge
+                                            <a
+                                                href="https://sourceforge.net/blog/august-2013-project-of-the-month-texstudio/"
+                                                >Project of the Month</a
+                                            >. You can read an interview there.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2013-07-14</td>
+                                        <td class="newscontent">
+                                            The new bug fix release
+                                            <strong>TeXstudio 2.6.2</strong> is
+                                            available.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2013-06-15</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TeXstudio 2.6.0</strong> is
+                                            available.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2013-04-03</td>
+                                        <td class="newscontent">
+                                            TeXstudio was one of the candidates
+                                            for the SourceForge
+                                            <a
+                                                href="http://sourceforge.net/blog/potm-vote-201305/"
+                                                >Project of the Month</a
+                                            >.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2013-03-18</td>
+                                        <td class="newscontent">
+                                            TeXstudio is one of the
+                                            <a
+                                                href="https://sourceforge.net/blog/featured-projects-march-18-2013/"
+                                                >Featured Projects of the
+                                                week</a
+                                            >
+                                            on sourceforge.net, again :)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2013-02-04</td>
+                                        <td class="newscontent">
+                                            TeXstudio has now been downloaded
+                                            more than 200 000 times from
+                                            sourceforge!
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2013-01-08</td>
+                                        <td class="newscontent">
+                                            The new bug fix release
+                                            <strong>TeXstudio 2.5.2</strong> is
+                                            available.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2012-11-22</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TeXstudio 2.5.1</strong> is
+                                            available.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2012-11-13</td>
+                                        <td class="newscontent">
+                                            TeXstudio is one of the
+                                            <a
+                                                href="https://sourceforge.net/blog/featured-projects-november-12-2012/"
+                                                >Featured Projects of the
+                                                week</a
+                                            >
+                                            on sourceforge.net
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2012-10-17</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TeXstudio 2.5</strong> is
+                                            available.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2012-09-02</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TeXstudio 2.4</strong> is
+                                            available.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2012-03-27</td>
+                                        <td class="newscontent">
+                                            TeXstudio got a
+                                            <strong>new website design</strong>.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2012-02-06</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TeXstudio 2.3</strong> is
+                                            available.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2011-07-20</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TeXstudio 2.2</strong> is
+                                            available.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2011-06-15</td>
+                                        <td class="newscontent">
+                                            TexMakerX is now called
+                                            <strong>TeXstudio</strong>.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2011-03-19</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TexMakerX 2.1</strong> is
+                                            available<br />
+                                            which adds again new features and
+                                            fixes some bugs.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2010-11-29</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TexMakerX 2.0</strong> is
+                                            available<br />
+                                            which adds new features and fixes
+                                            some bugs.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2010-07-20</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TexMakerX 1.9.9a</strong> is
+                                            available<br />
+                                            which adds new features and fixes
+                                            some bugs.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2010-05-06</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TexMakerX 1.9.9</strong> is
+                                            available<br />
+                                            which adds new features and fixes
+                                            some bugs.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2009-11-25</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TexMakerX 1.9.3</strong> is
+                                            available<br />
+                                            and fixes several bugs.<br />
+                                            Also the old releases have been
+                                            downloaded ten thousand times so
+                                            far.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2009-10-26</td>
+                                        <td class="newscontent">
+                                            The new release
+                                            <strong>TexMakerX 1.9.</strong> is
+                                            available<br />
+                                            which adds several new features and
+                                            fixes some bugs.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2009-05-06</td>
+                                        <td class="newscontent">
+                                            The second release
+                                            <strong>TexMakerX 1.8.1</strong> is
+                                            available<br />
+                                            which fixes several bugs and add
+                                            some new features.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2009-04-03</td>
+                                        <td class="newscontent">
+                                            <strong>TexMakerX 1.8</strong> has
+                                            now been <br />
+                                            downloaded one thousand times.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="newsdate">2009-02-22</td>
+                                        <td class="newscontent">
+                                            The first release
+                                            <strong>TexMakerX 1.8</strong> is
+                                            finished.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="more">
+                            <a><img src="images/down.png" /> show more</a>
+                        </div>
+                        <div class="less">
+                            <a><img src="images/up.png" /> show less</a>
+                        </div>
+                    </div>
+                </div>
+                <!--end news-->
 
-	</div> <!--end home-->
+                <div id="features" class="page">
+                    <h1>Features</h1>
 
+                    <h3>Comfortable Editing</h3>
+                    <div class="news-holder cf">
+                        <ul class="news-headlines">
+                            <li class="selected">Multi-Cursors</li>
+                            <li>Auto completion</li>
+                            <li>More than 1000 mathematical symbols</li>
+                            <li>Bookmarks</li>
+                            <li>Link overlay</li>
+                            <li>
+                                Assistants for images, tables, formulas, ...
+                            </li>
+                            <li>Drag &amp; drop support for images</li>
+                            <li>Table-formatting</li>
+                            <!--<li>Scripting support</li>-->
+                            <!--<li>Context menus</li>-->
+                            <!--<li>Jump to error locations</li>-->
+                            <!--<li>Customizable menus, toolbars and shortcuts</li>-->
+                            <!--<li>Template system</li>-->
+                            <!-- li.highlight gets inserted here -->
+                        </ul>
 
-	
-	<div id="news" class="page">
-		<h1>News</h1>
-		<div id="recent-news">
-			<table class="news">
-			<tbody>
-				<tr><td class="newsdate">2026-03-27</td>
-					<td class="newscontent">A new release <strong>TeXstudio 4.9.3</strong> is available,<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a>.</td></tr>
-				<tr><td class="newsdate">2026-02-07</td>
-					<td class="newscontent">A new release <strong>TeXstudio 4.9.2</strong> is available,<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a>.This fixes some crashes, among others.</td></tr>
-				<tr><td class="newsdate">2025-12-15</td>
-					<td class="newscontent">A new release <strong>TeXstudio 4.9.1</strong> is available,<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a>.This fixes collaborative editing with teamtype v0.9, among others.</td></tr>
-			</tbody></table>
-		</div>
-		<div id="hiding-box">
-		<div class="hiddentext">
-			<table class="news">
-			<tbody>
-				<tr><td class="newsdate">2025-11-07</td>
-					<td class="newscontent">A new release <strong>TeXstudio 4.9.0</strong> is available,<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a>.This release offers collaborative editing with the help of teamtype (currently available on OSX and linux).</td></tr>
-				<tr><td class="newsdate">2025-09-12</td>
-					<td class="newscontent">A new release <strong>TeXstudio 4.8.9</strong> is available,<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a>.This release fixes some bugs and offers text selection on pdfs.</td></tr>
-				<tr><td class="newsdate">2025-07-11</td>
-					<td class="newscontent">A new release <strong>TeXstudio 4.8.8</strong> is available,<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a>.This is the first release to offer win/arm64 builds.</td></tr>
-				<tr><td class="newsdate">2025-04-25</td>
-					<td class="newscontent">A new release <strong>TeXstudio 4.8.7</strong> is available,<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a>.Linux PPA uses Qt6 from now on and it will work for Ubuntu 23.10 and newer only.</td></tr>
-				<tr><td class="newsdate">2025-02-07</td>
-					<td class="newscontent">A new release <strong>TeXstudio 4.8.6</strong> is available,<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a>.</td></tr>
-				<tr><td class="newsdate">2025-01-09</td>
-					<td class="newscontent">Windows Defender currently classifies a base library for txs as virus. All indications point to a false positive. To run txs, defender needs to be advised to ignore txs and its libraries, see also <a href="https://github.com/texstudio-org/texstudio/issues/3938">issue</a></td></tr>
-				<tr><td class="newsdate">2024-12-13</td>
-					<td class="newscontent">A new bugfix release <strong>TeXstudio 4.8.5</strong> is available,<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a>.</td></tr>
-				<tr><td class="newsdate">2024-09-27</td>
-					<td class="newscontent">A new bugfix release <strong>TeXstudio 4.8.4</strong> is available,<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a>.</td></tr>
-				<tr><td class="newsdate">2024-09-20</td>
-					<td class="newscontent">A new release <strong>TeXstudio 4.8.3</strong> is available,<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a>. Main new feature is that windows installer is code signed and should give less warnings when installing.</td></tr>
-				<tr><td class="newsdate">2024-08-28</td>
-					<td class="newscontent">A new release <strong>TeXstudio 4.8.2</strong> is available,<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a>.</td></tr>
-				<tr><td class="newsdate">2024-06-07</td>
-					<td class="newscontent">A new release <strong>TeXstudio 4.8.1</strong> is available,<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a>.</td></tr>
-				<tr><td class="newsdate">2024-05-11</td>
-					<td class="newscontent">A new release <strong>TeXstudio 4.8.0</strong> is available,<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a>.</td></tr>
-				<tr><td class="newsdate">2024-03-01</td>
-					<td class="newscontent">A bug fix release <strong>TeXstudio 4.7.3</strong> is available,<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a>.It offers a OSX 14 M1 build for the first time.</td></tr>
-			<tr><td class="newsdate">2023-12-24</td>
-				<td class="newscontent">A bug fix release <strong>TeXstudio 4.7.2</strong> is available,<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a>.</td></tr>
-			<tr><td class="newsdate">2023-12-05</td>
-				<td class="newscontent">A bug fix release <strong>TeXstudio 4.7.1</strong> is available,<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a>. OSX users reported mal-function of txs on some systems. This version uses Qt 6.6.0 again which seems to work.</td></tr>
-			<tr><td class="newsdate">2023-12-02</td>
-				<td class="newscontent">A new release <strong>TeXstudio 4.7.0</strong> is available,<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a></td></tr>
-			<tr><td class="newsdate">2023-08-11</td>
-				<td class="newscontent">A bug fix release <strong>TeXstudio 4.6.3</strong> is available,<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a></td></tr>
-			<tr><td class="newsdate">2023-07-30</td>
-				<td class="newscontent">A bug fix release <strong>TeXstudio 4.6.2</strong> is available,<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a>. Crashes with large documents have been reported.<br>
-				This version introduces file caching for reopening included files. This speeds up loading but disables preview and search in cached documents, see also <a href="https://texstudio-org.github.io/background.html#loaded-documents">manual</a></td></tr>
-			<tr><td class="newsdate">2023-07-30</td>
-				<td class="newscontent">A bug fix release <strong>TeXstudio 4.6.1</strong> is available,<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a>. The path for caching data was set to a wrong location.<br>
-				This version introduces file caching for reopening included files. This speeds up loading but disables preview and search in cached documents, see also <a href="https://texstudio-org.github.io/background.html#loaded-documents">manual</a></td></tr>
-			<tr><td class="newsdate">2023-07-28</td>
-				<td class="newscontent">A new release <strong>TeXstudio 4.6.0</strong> is available,<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a><br>
-				This version introduces file caching for reopening included files. THis speeds up loading but disables preview and search in cached documents, see also <a href="https://texstudio-org.github.io/background.html#loaded-documents">manual</a></td></tr>
-			<tr><td class="newsdate">2023-04-15</td>
-				<td class="newscontent">A new release <strong>TeXstudio 4.5.2</strong> is available,<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a></td></tr>
-			<tr><td class="newsdate">2023-02-04</td>
-				<td class="newscontent">A new release <strong>TeXstudio 4.5.1</strong> is available,<br>see <a href="https://texstudio-org.github.io/background.html#loaded-documents">changelog</a></td></tr>
-			<tr><td class="newsdate">2022-11-27</td>
-				<td class="newscontent">A new release <strong>TeXstudio 4.4.1</strong> is available,<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a></td></tr>
-			<tr><td class="newsdate">2022-11-19</td>
-				<td class="newscontent">A new release <strong>TeXstudio 4.4.0</strong> is available. It provides an overhauled manual,a new icon theme and no Qt5 build on windows among others,<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a></td></tr>
-			<tr><td class="newsdate">2022-08-26</td>
-				<td class="newscontent">A new release <strong>TeXstudio 4.3.1</strong> is available,<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a></td></tr>
-			<tr><td class="newsdate">2022-08-07</td>
-				<td class="newscontent">A new release <strong>TeXstudio 4.3.0</strong> is available,<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a></td></tr>
-			<tr><td class="newsdate">2022-04-17</td>
-				<td class="newscontent">A new release <strong>TeXstudio 4.2.3</strong> is available. Most notable uses Qt6.3 on windows which fixes the line in the pdf magnifier with on some windows set-ups. Bugfixes,<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a></td></tr>
-			<tr><td class="newsdate">2022-02-20</td>
-				<td class="newscontent">A new release <strong>TeXstudio 4.2.2</strong> is available. Bugfixes,<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a></td></tr>
-			<tr><td class="newsdate">2022-01-27</td>
-				<td class="newscontent">A new release <strong>TeXstudio 4.2.1</strong> is available. Bugfixes,<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a></td></tr>
-			<tr><td class="newsdate">2022-01-8</td>
-				<td class="newscontent">A new release <strong>TeXstudio 4.2.0</strong> is available. Bugfixes,<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a></td></tr>
-			<tr><td class="newsdate">2021-12-7</td>
-				<td class="newscontent">A new release <strong>TeXstudio 4.1.2</strong> is available. It should fix session restore and ctrl+letter shortcuts on OSX.<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a></td></tr>
-			<tr><td class="newsdate">2021-11-20</td>
-				<td class="newscontent">A new release <strong>TeXstudio 4.1.1</strong> is available. It should fix issue with chinese character input.<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a></td></tr>
-			<tr><td class="newsdate">2021-11-20</td>
-				<td class="newscontent">A new release <strong>TeXstudio 4.1.0</strong> is available. It should fix issue with chinese character input.<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a></td></tr>
-			<tr><td class="newsdate">2021-11-6</td>
-			<td class="newscontent">A new release <strong>TeXstudio 4.0.4</strong> is available. It should fix a crash on OSX(qt6).<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a></td></tr>
-			<tr><td class="newsdate">2021-10-30</td>
-			<td class="newscontent">A new release <strong>TeXstudio 4.0.3</strong> is available. It should fix crashes which occur on some systems.<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a></td></tr>
-			<tr><td class="newsdate">2021-10-22</td>
-			<td class="newscontent">A new release <strong>TeXstudio 4.0.2</strong> is available. This bugfix release which contains Qt6.2 on windows and osx.  On OSX this should fix problems with the cursor.<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a></td></tr>
-			<tr><td class="newsdate">2021-10-11</td>
-			<td class="newscontent">A new release <strong>TeXstudio 4.0.1</strong> is available. This bugfix release which contains Qt6.2 on windows and osx.  On OSX this should fix entering accented characters.<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a></td></tr>
-			<tr><td class="newsdate">2021-09-25</td>
-			<td class="newscontent">A new release <strong>TeXstudio 4.0.0</strong> is available. This version offers Qt6 support which should improve hidpi handling.<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a></td></tr>
-			<tr><td class="newsdate">2021-05-13</td>
-			<td class="newscontent">A new bugfix release <strong>TeXstudio 3.1.2</strong> is available.<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a></td></tr>
-			<tr><td class="newsdate">2021-02-22</td>
-			<td class="newscontent">A new bugfix release <strong>TeXstudio 3.1.1</strong> is available.Mainly it fixes crashes loading included files.<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a></td></tr>
-			<tr><td class="newsdate">2021-02-17</td>
-			<td class="newscontent">A new bugfix release <strong>TeXstudio 3.1.0</strong> is available.Mainly changing the GUI language has been fixed. Furthermore a global TOC is available besides the structure view. It is work in progress and not (yet) automatically updated. Please give feedback.<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a></td></tr>
-			<tr><td class="newsdate">2021-02-14</td>
-			<td class="newscontent">A new bugfix release <strong>TeXstudio 3.0.5</strong> is available.<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a></td></tr>
-			<tr><td class="newsdate">2021-01-02</td>
-			<td class="newscontent">Happy new year! A new bugfix release <strong>TeXstudio 3.0.4</strong> is available. It just fixes the configuration of the pdf toolbar size.<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a></td></tr>
-			<tr><td class="newsdate">2020-12-29</td>
-			<td class="newscontent">A new bugfix release <strong>TeXstudio 3.0.3</strong> is available. No changes, just a build fix for OSX.<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a></td></tr>
-			<tr><td class="newsdate">2020-12-28</td>
-			<td class="newscontent">A new bugfix release <strong>TeXstudio 3.0.2</strong> is available.<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a></td></tr>
-			<tr><td class="newsdate">2020-09-01</td>
-			<td class="newscontent">A new bugfix release <strong>TeXstudio 3.0.1</strong> is available.<br>see <a href="https://texstudio-org.github.io/CHANGELOG.html">changelog</a></td></tr>
-			<tr><td class="newsdate">2020-08-25</td>
-			<td class="newscontent">A new release <strong>TeXstudio 3.0.0</strong> is available.<br>Thanks to all translators on transifex. For Ubuntu, a ppa is available.</td></tr>
-			<tr><td class="newsdate">2020-01-18</td>
-			<td class="newscontent">A bug fix release <strong>TeXstudio 2.12.22</strong> is available.<br>It fixes garbled symbols in OSX, a crash when changing magic language comment, and pdf search path handling.<br><strong>This is the last release supporting Qt4.</strong><br>LanguageTool &gt;=3.6 is only supported with Qt5.<br>Thanks to all translators on transifex. For Ubuntu, a ppa is available.</td></tr>	
-			<tr><td class="newsdate">2020-01-13</td>
-			<td class="newscontent">A bug fix release <strong>TeXstudio 2.12.20</strong> is available.<br>It fixes a problem with replacing when search highlight is activated.<br><strong>This is the last release supporting Qt4.</strong><br>LanguageTool &gt;=3.6 is only supported with Qt5.<br>Thanks to all translators on transifex. For Ubuntu, a ppa is available.</td></tr>	
-			<tr><td class="newsdate">2019-12-26</td>
-			<td class="newscontent">The new release <strong>TeXstudio 2.12.18</strong> is available.<br>This is mainly a bug fix release. Most notably change is better support of regexp in search (Qt5 version only).<br><strong>This is the last release supporting Qt4.</strong><br>LanguageTool &gt;=3.6 is only supported with Qt5.<br>Thanks to all translators on transifex. For Ubuntu, a ppa is available.</td></tr>	
-			<tr><td class="newsdate">2019-05-19</td>
-			<td class="newscontent">The new release <strong>TeXstudio 2.12.16</strong> is available.<br>This is mainly a bug fix release. Most notably change is flicker-free update of pdf.<br>LanguageTool &gt;=3.6 is only supported with Qt5.<br>Thanks to all translators on transifex. For Ubuntu, a ppa is available.</td></tr>	
-			<tr><td class="newsdate">2018-11-30</td>
-			<td class="newscontent">The new release <strong>TeXstudio 2.12.14</strong> is available. (see <a href="https://raw.githubusercontent.com/texstudio-org/texstudio/1551ba13b224a38229d1049983ac572710d352cd/utilities/manual/CHANGELOG.txt">changelog</a>)<br>This is a bug fix release for fixing that GUI language could not be changed to all available languages via GUI.<br>LanguageTool &gt;=3.6 is only supported with Qt5.<br>Thanks to all translators on transifex. For Ubuntu, a ppa is available.</td></tr>	
-			<tr><td class="newsdate">2018-11-25</td>
-			<td class="newscontent">The new release <strong>TeXstudio 2.12.12</strong> is available. (see <a href="https://raw.githubusercontent.com/texstudio-org/texstudio/fff9ed38a542ce2a5da8a58a46f0e5832ead0dcc/utilities/manual/CHANGELOG.txt">changelog</a>)<br>LanguageTool &gt;=3.6 is only supported with Qt5.<br>Thanks to all translators on transifex. For Ubuntu, a ppa is available.</td></tr>	
-			<tr><td class="newsdate">2018-07-06</td>
-			<td class="newscontent">The new release <strong>TeXstudio 2.12.10</strong> is available.<br>LanguageTool &gt;=3.6 is only supported with Qt5.<br>Thanks to all translators on transifex. For Ubuntu, a ppa is available.</td></tr>	
-			<tr><td class="newsdate">2018-02-03</td>
-			<td class="newscontent">The new release <strong>TeXstudio 2.12.8</strong> is available.<br>For Ubuntu 14.04, use the Qt4 Version. LanguageTool &gt;=3.6 is only supported with Qt5.<br>Thanks to all translators on transifex. For Ubuntu, a ppa is available.</td></tr>	
-			<tr><td class="newsdate">2018-02-03</td>
-			<td class="newscontent">Active development has been moved to github.com. We are happy to accept pull-requests and any other help.</td></tr>	
-			<tr><td class="newsdate">2017-07-25</td>
-			<td class="newscontent">The new release <strong>TeXstudio 2.12.6</strong> is available.<br>For Ubuntu 14.04, use the Qt4 Version. LanguageTool &gt;=3.6 is only supported with Qt5.<br>Thanks to all translators on transifex.</td></tr>	
-			<tr><td class="newsdate">2017-03-27</td>
-			<td class="newscontent">The new release <strong>TeXstudio 2.12.4</strong> is available.<br>For Ubuntu 14.04, use the Qt4 Version. LanguageTool &gt;=3.6 is only supported with Qt5.<br>Thanks to all translators on transifex.</td></tr>	
-			<tr><td class="newsdate">2017-01-24</td>
-			<td class="newscontent">The new release <strong>TeXstudio 2.12.2</strong> is available.<br>For Ubuntu 14.04, use the Qt4 Version. LanguageTool &gt;=3.6 is only supported with Qt5.<br>Thanks to all translators on transifex.</td></tr>	
-			<tr><td class="newsdate">2017-01-07</td>
-			<td class="newscontent">The new release <strong>TeXstudio 2.12.0</strong> is available.<br>For Ubuntu 14.04, use the Qt4 Version.<br>Thanks to all translators on transifex.</td></tr>
-			<tr><td class="newsdate">2016-09-28</td>
-			<td class="newscontent">The new release <strong>TeXstudio 2.11.2</strong> is available.<br>For Ubuntu 14.04, use the Qt4 Version.<br>Thanks to all translators on transifex.</td></tr>
-			<tr><td class="newsdate">2016-05-29</td>
-			<td class="newscontent">The new release <strong>TeXstudio 2.11.0</strong> is available.<br>For Ubuntu 14.04, use the Qt4 Version.<br>Thanks to all translators on transifex.</td></tr>
-			<tr><td class="newsdate">2016-02-17</td>
-			<td class="newscontent">There are community-provided <a href="#appimage">Linux AppImages available</a> for TeXstudio.</td></tr>
-			<tr><td class="newsdate">2016-01-20</td>
-			<td class="newscontent">The new release <strong>TeXstudio 2.10.8</strong> is available. This is a bugfix release.<br>For Ubuntu 14.04, use the Qt4 Version.<br>Thanks to all translators on transifex.</td></tr>
-			<tr><td class="newsdate">2016-01-09</td>
-			<td class="newscontent">The new release <strong>TeXstudio 2.10.6</strong> is available. This is a bugfix release.<br>For Ubuntu 14.04, use the Qt4 Version.<br>Thanks to all translators on transifex.</td></tr>
-			<tr><td class="newsdate">2015-10-25</td>
-			<td class="newscontent">The new release <strong>TeXstudio 2.10.4</strong> is available. This is a bugfix release.<br>For Ubuntu 14.04, use the Qt4 Version.<br>Thanks to all translators on transifex.</td></tr>
-			<tr><td class="newsdate">2015-10-02</td>
-			<td class="newscontent">TeXstudio has been chosen as sourceforge <a href="https://sourceforge.net/blog/october-2015-staff-pick-project-of-the-month-texstudio/">Project of the Month</a>.</td></tr>
-			<tr><td class="newsdate">2017-12-21</td>
-			<td class="newscontent">We have migrated our version control system from Mercurial to git. The mercurial repository remains, but won't be updated any longer. From now on, you can obtain the latest source code from <a href="https://github.com/texstudio-org/texstudio">our git repository on github.com</a>.</td></tr>
-			<tr><td class="newsdate">2015-09-16</td>
-			<td class="newscontent">The new release <strong>TeXstudio 2.10.2</strong> is available. This is a bugfix release.</td></tr>
-			<tr><td class="newsdate">2015-09-10</td>
-			<td class="newscontent">The new release <strong>TeXstudio 2.10.0</strong> is available. Linux builds are only provided for distributions which allow Qt5 builds. This mainly affects Centos 6, Ubuntu 12.04 and OpenSuse 11.3.</td></tr>
-			<tr><td class="newsdate">2015-09-10</td>
-			<td class="newscontent">TeXstudio uses the service of <a href="https://www.transifex.com/texstudio/texstudio/">Transifex</a> to reduce  difficulties to translate texstudio in your mother tongue. Please participate to increase the number of tranlations.</td></tr>
-			<tr><td class="newsdate">2015-08-16</td>
-			<td class="newscontent">TeXstudio is one of the candidates for the SourceForge <a href="https://sourceforge.net/blog/community-choice-project-of-the-month-vote-october-2015/">project of the month</a>. <a href="https://sourceforge.net/p/potm/discussion/vote/thread/2001cdf0/">Vote now!</a></td></tr>
-			<tr><td class="newsdate">2015-06-29</td>
-			<td class="newscontent">TeXstudio has been chosen as one of the <a href="http://sourceforge.net/blog/project-of-the-week-june-29-2015">Featured Projects of the week</a> on sourceforge.net</td></tr>
-			<tr><td class="newsdate">2015-03-24</td>
-			<td class="newscontent">The new release <strong>TeXstudio 2.9.4</strong> is available. This is a bug fix release mainly for OSX and Linux. The shortcuts for moving the cursor get messed up if you use txs 2.9.2 with a non-english language and change something in the options. To remedy the problem, you need to edit .config/texstudio/texstudio.ini and delete the keys "Editor%20Key%20Mapping%20New". Sorry for the inconvenience.</td></tr>
-			<tr><td class="newsdate">2015-03-22</td>
-			<td class="newscontent">The new release <strong>TeXstudio 2.9.2</strong> is available.</td></tr>
-			<tr><td class="newsdate">2015-03-06</td>
-			<td class="newscontent">The new release <strong>TeXstudio 2.9.0</strong> is available.</td></tr>
-			<tr><td class="newsdate">2015-02-17</td>
-			<td class="newscontent">There are preview builds of the upcoming 2.8.10 release available for <a href="http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%20SVN/texstudio289_snapshot_2015-02-11_win_qt5.4.0.exe/download">Windows</a> and <a href="http://download.opensuse.org/repositories/home:/jsundermeyer/">Linux</a> (tagged as 2.8.9). It also continues to be a <a href="
-http://sourceforge.net/blog/projects-of-the-week-february-16-2015">Featured Project</a> this week. </td>
-			</tr><tr><td class="newsdate">2015-02-10</td>
-			<td class="newscontent">TeXstudio has been chosen as one of the <a href="http://sourceforge.net/blog/projects-of-the-week-february-9-2015">Featured Projects of the week</a> on sourceforge.net</td></tr>
-			<tr><td class="newsdate">2014-12-07</td>
-			<td class="newscontent">TeXstudio has been chosen as one of the <a href="http://sourceforge.net/blog/projects-of-the-week-december-8-2014">Featured Projects of the week</a> on sourceforge.net</td></tr>
-			<tr><td class="newsdate">2014-12-04</td>
-			<td class="newscontent">The new release <strong>TeXstudio 2.8.8</strong> is available.</td></tr>
-			<tr><td class="newsdate">2014-10-26</td>
-			<td class="newscontent">The new release <strong>TeXstudio 2.8.6</strong> is available.</td></tr>
-			<tr><td class="newsdate">2014-09-08</td>
-			<td class="newscontent">The new release <strong>TeXstudio 2.8.4</strong> is available.</td></tr>
-			<tr><td class="newsdate">2014-07-25</td>
-			<td class="newscontent">The new release <strong>TeXstudio 2.8.2</strong> is available.</td></tr>
-			<tr><td class="newsdate">2014-06-21</td>
-			<td class="newscontent">The new release <strong>TeXstudio 2.8.0</strong> is available.</td></tr>
-			<tr><td class="newsdate">2014-03-16</td>
-			<td class="newscontent">The new release <strong>TeXstudio 2.7.0</strong> is available.</td></tr>
-			<tr><td class="newsdate">2014-02-10</td>
-			<td class="newscontent">TeXstudio has been chosen as one of the <a href="http://sourceforge.net/blog/projects-of-the-week-february-10-2014">Featured Projects of the week</a> on sourceforge.net</td></tr>
-			<tr><td class="newsdate">2013-11-02</td>
-			<td class="newscontent">The new release <strong>TeXstudio 2.6.6</strong> is available to fix some bugs, e.g. the home/end keys.</td></tr>
-			<tr><td class="newsdate">2013-10-20</td>
-			<td class="newscontent">The new release <strong>TeXstudio 2.6.4</strong> is available. It fixes bugs and adds some features.</td></tr>
-			<tr><td class="newsdate">2013-08-28</td>
-			<td class="newscontent">We have migrated our version control system from SVN to Mercurial. The SVN repository remains, but won't be updated any longer. From now on, you can obtain the latest source code from <a href="https://sourceforge.net/p/texstudio/hg/ci/default/tree/">our Mercurial repository</a>.</td></tr>
-			<tr><td class="newsdate">2013-08-17</td>
-			<td class="newscontent">TeXstudio has been elected as SourceForge <a href="https://sourceforge.net/blog/august-2013-project-of-the-month-texstudio/">Project of the Month</a>. You can read an interview there.</td></tr>
-			<tr><td class="newsdate">2013-07-14</td>
-			<td class="newscontent">The new bug fix release <strong>TeXstudio 2.6.2</strong> is available.</td></tr>
-			<tr><td class="newsdate">2013-06-15</td>
-			<td class="newscontent">The new release <strong>TeXstudio 2.6.0</strong> is available.</td></tr>
-			<tr><td class="newsdate">2013-04-03</td>
-			<td class="newscontent">TeXstudio was one of the candidates for the SourceForge <a href="http://sourceforge.net/blog/potm-vote-201305/">Project of the Month</a>.</td></tr>
-			<tr><td class="newsdate">2013-03-18</td>
-			<td class="newscontent">TeXstudio is one of the <a href="https://sourceforge.net/blog/featured-projects-march-18-2013/">Featured Projects of the week</a> on sourceforge.net, again :)</td></tr>
-			<tr><td class="newsdate">2013-02-04</td>
-			<td class="newscontent">TeXstudio has now been downloaded more than 200 000 times from sourceforge!</td></tr>
-			<tr><td class="newsdate">2013-01-08</td>
-			<td class="newscontent">The new bug fix release <strong>TeXstudio 2.5.2</strong> is available.</td></tr>
-			<tr><td class="newsdate">2012-11-22</td>
-			<td class="newscontent">The new release <strong>TeXstudio 2.5.1</strong> is available.</td></tr>
-			<tr><td class="newsdate">2012-11-13</td>
-			<td class="newscontent">TeXstudio is one of the <a href="https://sourceforge.net/blog/featured-projects-november-12-2012/">Featured Projects of the week</a> on sourceforge.net</td></tr>
-			<tr><td class="newsdate">2012-10-17</td>
-			<td class="newscontent">The new release <strong>TeXstudio 2.5</strong> is available.</td></tr>
-			<tr><td class="newsdate">2012-09-02</td>
-			<td class="newscontent">The new release <strong>TeXstudio 2.4</strong> is available.</td></tr>
-			<tr><td class="newsdate">2012-03-27</td>
-			<td class="newscontent">TeXstudio got a <strong>new website design</strong>.</td></tr>
-			<tr><td class="newsdate">2012-02-06</td>
-			<td class="newscontent">The new release <strong>TeXstudio 2.3</strong> is available.</td></tr>
-			<tr><td class="newsdate">2011-07-20</td>
-			<td class="newscontent">The new release <strong>TeXstudio 2.2</strong> is available.</td></tr>
-			<tr><td class="newsdate">2011-06-15</td>
-			<td class="newscontent">TexMakerX is now called <strong>TeXstudio</strong>.</td></tr>
-			<tr><td class="newsdate">2011-03-19</td>
-			<td class="newscontent">The new release <strong>TexMakerX 2.1</strong> is available<br>
-				which adds again new features and fixes some bugs.</td></tr>
-			<tr><td class="newsdate">2010-11-29</td>
-			<td class="newscontent">The new release <strong>TexMakerX 2.0</strong> is available<br>
-				which adds new features and fixes some bugs.</td></tr>
-			<tr><td class="newsdate">2010-07-20</td>
-			<td class="newscontent">The new release <strong>TexMakerX 1.9.9a</strong> is available<br>
-				which adds new features and fixes some bugs.</td></tr>
-			<tr><td class="newsdate">2010-05-06</td>
-			<td class="newscontent">The new release <strong>TexMakerX 1.9.9</strong> is available<br>
-				which adds new features and fixes some bugs.</td></tr>
-			<tr><td class="newsdate">2009-11-25</td>
-			<td class="newscontent">The new release <strong>TexMakerX 1.9.3</strong> is available<br>
-				and fixes several bugs.<br>
-				Also the old releases have been downloaded ten thousand times so far.</td></tr>
-			<tr><td class="newsdate">2009-10-26</td>
-			<td class="newscontent">The new release <strong>TexMakerX 1.9.</strong> is available<br>
-				which adds several new features and fixes some bugs.</td></tr>
-			<tr><td class="newsdate">2009-05-06</td>
-			<td class="newscontent">The second release <strong>TexMakerX 1.8.1</strong> is available<br>
-				which fixes several bugs and add some new features.</td></tr>
-			<tr><td class="newsdate">2009-04-03</td>
-			<td class="newscontent"><strong>TexMakerX 1.8</strong> has now been <br>
-				downloaded one thousand times.</td></tr>
-			<tr><td class="newsdate">2009-02-22</td>
-			<td class="newscontent">The first release <strong>TexMakerX 1.8</strong> is finished.</td></tr>
-			</tbody></table>
-		</div>
-		<div class="more"><a><img src="images/down.png"> show more</a></div>
-		<div class="less"><a><img src="images/up.png"> show less</a></div>
-		</div>
-	</div> <!--end news-->
-		
-		
-	
-	<div id="features" class="page">
-		<h1>Features</h1>
-		
-		<h3>Comfortable Editing</h3>
-		<div class="news-holder cf">
+                        <div class="news-preview">
+                            <div class="news-content top-content">
+                                <img src="images/block-cursor.png" />
+                                <p>
+                                    Edit multiple positions at the same time.
+                                    Vertical blocks can even be copied and
+                                    pasted.
+                                </p>
+                            </div>
+                            <!-- .news-content -->
 
-			<ul class="news-headlines">
-				<li class="selected">Multi-Cursors</li>
-				<li>Auto completion</li>
-				<li>More than 1000 mathematical symbols</li>
-				<li>Bookmarks</li>
-				<li>Link overlay</li>
-				<li>Assistants for images, tables, formulas, ...</li>
-				<li>Drag &amp; drop support for images</li>
-				<li>Table-formatting</li>
-				<!--<li>Scripting support</li>-->
-				<!--<li>Context menus</li>-->
-				<!--<li>Jump to error locations</li>-->
-				<!--<li>Customizable menus, toolbars and shortcuts</li>-->
-				<!--<li>Template system</li>-->
-			  <!-- li.highlight gets inserted here -->
-			</ul>
+                            <div class="news-content">
+                                <img src="images/autocompletion-help.png" />
+                                <p>
+                                    Suggests possible LaTeX commands as you
+                                    type. There is a tooltip help explaining the
+                                    command.
+                                </p>
+                                <p>
+                                    Completion works also for references and
+                                    bibliography entries.
+                                </p>
+                            </div>
+                            <!-- .news-content -->
 
-			<div class="news-preview">
+                            <div class="news-content">
+                                <img src="images/symbols.png" />
+                                <p>
+                                    Quick access to more than 1000 mathematical
+                                    symbols.
+                                </p>
+                            </div>
+                            <!-- .news-content -->
 
-			  <div class="news-content top-content">
-				<img src="images/block-cursor.png">
-				<p>Edit multiple positions at the same time. Vertical blocks can even be copied and pasted.</p>
-			  </div><!-- .news-content -->
+                            <div class="news-content">
+                                <img src="images/bookmarks.png" />
+                                <p>
+                                    Use bookmarks too keep references to
+                                    important places in your text and to
+                                    navigate there quickly.
+                                </p>
+                                <p>
+                                    Tooltips show a preview of the code
+                                    position.
+                                </p>
+                            </div>
+                            <!-- .news-content -->
 
-			  <div class="news-content">
-				<img src="images/autocompletion-help.png">
-				<p>Suggests possible LaTeX commands as you type. There is a tooltip help explaining the command.</p>
-				<p>Completion works also for references and bibliography entries.</p>
-			  </div><!-- .news-content -->
+                            <div class="news-content">
+                                <img src="images/link-overlay.png" />
+                                <p>
+                                    Filenames, references and citations turn
+                                    into links when moving the mouse over them
+                                    while holding &lt;Ctrl&gt;.
+                                </p>
+                                <p>
+                                    Also here, tooltips show a preview of the
+                                    code position.
+                                </p>
+                            </div>
+                            <!-- .news-content -->
 
-			  <div class="news-content">
-				<img src="images/symbols.png">
-				<p>Quick access to more than 1000 mathematical symbols.</p>
-			  </div><!-- .news-content -->
+                            <div class="news-content">
+                                <img src="images/assistants.png" />
+                                <p>
+                                    Generate blocks of code using assistants
+                                    without the need for detailed LaTeX
+                                    knowledge.
+                                </p>
+                            </div>
+                            <!-- .news-content -->
 
-			  <div class="news-content">
-				<img src="images/bookmarks.png">
-				<p>Use bookmarks too keep references to important places in your text and to navigate there quickly.</p>
-				<p>Tooltips show a preview of the code position.</p>
-			  </div><!-- .news-content -->
+                            <div class="news-content">
+                                <img src="images/dragdropimages.png" />
+                                <p>
+                                    When you drag an image on the editor the
+                                    image assistant opens. From there it's just
+                                    one more click to have the code for the
+                                    image inclusion. Of course, we try to make
+                                    the paths relative. This also works with
+                                    multiple images.
+                                </p>
+                            </div>
+                            <!-- .news-content -->
 
-			  <div class="news-content">
-				<img src="images/link-overlay.png">
-				<p>Filenames, references and citations turn into links when moving the mouse over them while holding &lt;Ctrl&gt;.</p>
-				<p>Also here, tooltips show a preview of the code position.</p>
-			  </div><!-- .news-content -->
+                            <div class="news-content">
+                                <img src="images/table-formating.png" />
+                                <p>
+                                    You can copy / paste / insert new table
+                                    columns with a single click.
+                                </p>
+                                <p>
+                                    The table-autoformatter aligns the table
+                                    code.
+                                </p>
+                            </div>
+                            <!-- .news-content -->
+                        </div>
+                        <!-- .news-preview -->
+                    </div>
+                    <!-- .news-holder -->
 
-			  <div class="news-content">
-				<img src="images/assistants.png">
-				<p>Generate blocks of code using assistants without the need for detailed LaTeX knowledge.</p>
-			  </div><!-- .news-content -->
+                    <h3>Keep The Overview</h3>
+                    <div class="img-block-right">
+                        <img
+                            src="./images/inlineChecking_zoom.png"
+                            alt="screenshot"
+                        /><br />Inline Checking
+                    </div>
+                    <ul>
+                        <li>Structure view</li>
+                        <li>Code folding</li>
+                        <li>Advanced syntax highlighting</li>
+                        <li>Interactive spellchecker</li>
+                        <li>Interactive grammar checker</li>
+                        <li>Interactive reference checker</li>
+                        <li>
+                            Clear display of LaTeX errors and warnings (in the
+                            editor and as a list)
+                        </li>
+                    </ul>
+                    <h3>Advanced build system</h3>
+                    <div class="img-block-right">
+                        <img
+                            src="./images/errorHighlighting_zoom.png"
+                            alt="screenshot"
+                        /><br />Error Highlighting
+                    </div>
+                    <ul>
+                        <li>
+                            Built-in support for various LaTeX compilers, index,
+                            bibliography and glossary tools, Latexmk, and many
+                            more
+                        </li>
+                        <li>
+                            Automatic detection of the need for multiple LaTeX
+                            runs
+                        </li>
+                        <li>Run any program you like</li>
+                        <li>
+                            Completely customizable for the creation of the
+                            complete document
+                        </li>
+                    </ul>
+                    <h3>View The Result</h3>
+                    <div class="img-block-right"></div>
+                    <ul>
+                        <li>
+                            Integrated PDF viewer with (almost) word-level
+                            syncing
+                        </li>
+                        <li>
+                            Live-updating inline preview for formulas and code
+                            segments
+                        </li>
+                        <li>Tooltip preview for included images</li>
+                    </ul>
+                    <h3>Easy Setup</h3>
+                    <ul>
+                        <li>
+                            Installers or packages available for Windows, Linux,
+                            and Mac OS X
+                        </li>
+                        <li>Portable USB version available</li>
+                        <li>
+                            Automatic detection of MikTeX, TeX Live, Ghostscript
+                            and Standardlatex
+                        </li>
+                        <li>SVN support</li>
+                    </ul>
 
-			  <div class="news-content">
-				<img src="images/dragdropimages.png">
-				<p>When you drag an image on the editor the image assistant opens. From there it's just one more click to have the code for the image inclusion. Of course, we try to make the paths relative. This also works with multiple images.</p>
-			  </div><!-- .news-content -->
+                    <p>
+                        You can find more details in the
+                        <a
+                            href="https://texstudio-org.github.io/getting_started.html"
+                            >user manual</a
+                        >
+                        or in the
+                        <a
+                            href="https://github.com/texstudio-org/texstudio/commits/master"
+                            >Git Changelog</a
+                        >.<br /><br />
 
-  			  <div class="news-content">
-				<img src="images/table-formating.png">
-				<p>You can copy / paste / insert new table columns with a single click.</p>
-				<p>The table-autoformatter aligns the table code.</p>
-			  </div><!-- .news-content -->
+                        Feel free to
+                        <a href="#participate">share your ideas</a> on possible
+                        future improvements of TeXstudio.
+                    </p>
+                </div>
+                <!--end features-->
 
-			  
-			</div><!-- .news-preview -->
+                <div id="download" class="page">
+                    <h1>Download</h1>
+                    <table class="downloadTable">
+                        <thead>
+                            <tr class="platformDownload">
+                                <td colspan="5">Windows</td>
+                            </tr>
+                            <tr>
+                                <td colspan="5">
+                                    On win11, visual studio runtime is required.
+                                    See
+                                    <a
+                                        href="https://github.com/texstudio-org/texstudio/issues/2664"
+                                        >here</a
+                                    >
+                                    how to install that.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5">
+                                    <b>Code signing policy</b>: Free code
+                                    signing provided by
+                                    <a href="https://about.signpath.io/"
+                                        >SignPath.io</a
+                                    >, certificate by
+                                    <a href="https://signpath.org/"
+                                        >SignPath Foundation</a
+                                    >. Code signing is approved by Jan
+                                    Sundermeyer. This program will not transfer
+                                    any information to other networked systems
+                                    unless specifically requested by the user or
+                                    the person installing or operating it (e.g.
+                                    AI chat).
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="2">Platform</th>
+                                <th>Version</th>
+                                <th>Type</th>
+                                <th>How to install</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="2">10/11 (x86,64 bit,Qt6)</td>
+                                <td class="currentVersion">4.9.4</td>
+                                <td>
+                                    <a
+                                        class="winDownloadInstaller"
+                                        href="https://github.com/texstudio-org/texstudio/releases/download/4.9.4/texstudio-4.9.4-win-qt6-signed.exe"
+                                        >Installer</a
+                                    >
+                                </td>
+                                <td>
+                                    <a
+                                        class="winDownloadInstaller"
+                                        href="https://github.com/texstudio-org/texstudio/releases/download/4.9.4/texstudio-4.9.4-win-qt6-signed.exe"
+                                        >download</a
+                                    >
+                                    and double click on the installer exe
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">10/11 (x86,64 bit,Qt6)</td>
+                                <td class="currentVersionUSB">4.9.4</td>
+                                <td>
+                                    <a
+                                        class="winDownloadUSB"
+                                        href="https://github.com/texstudio-org/texstudio/releases/download/4.9.4/texstudio-4.9.4-win-portable-qt6.zip"
+                                        >Portable (.zip)</a
+                                    >
+                                </td>
+                                <td>
+                                    <a
+                                        class="winDownloadUSB"
+                                        href="https://github.com/texstudio-org/texstudio/releases/download/4.9.4/texstudio-4.9.4-win-portable-qt6.zip"
+                                        >download</a
+                                    >
+                                    and unzip the zip
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">11 (Arm,64 bit,Qt6)</td>
+                                <td class="currentVersion">4.9.4</td>
+                                <td>
+                                    <a
+                                        class="winDownloadInstaller"
+                                        href="https://github.com/texstudio-org/texstudio/releases/download/4.9.4/texstudio-4.9.4-win-arm-qt6-signed.exe"
+                                        >Installer</a
+                                    >
+                                </td>
+                                <td>
+                                    <a
+                                        class="winDownloadInstaller"
+                                        href="https://github.com/texstudio-org/texstudio/releases/download/4.9.4/texstudio-4.9.4-win-arm-qt6-signed.exe"
+                                        >download</a
+                                    >
+                                    and double click on the installer exe
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">11 (Arm,64 bit,Qt6)</td>
+                                <td class="currentVersionUSB">4.9.4</td>
+                                <td>
+                                    <a
+                                        class="winDownloadUSB"
+                                        href="https://github.com/texstudio-org/texstudio/releases/download/4.9.4/texstudio-4.9.4-win-arm-portable-qt6.zip"
+                                        >Portable (.zip)</a
+                                    >
+                                </td>
+                                <td>
+                                    <a
+                                        class="winDownloadUSB"
+                                        href="https://github.com/texstudio-org/texstudio/releases/download/4.9.4/texstudio-4.9.4-win-arm-portable-qt6.zip"
+                                        >download</a
+                                    >
+                                    and unzip the zip
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">7/8/10 (32 bit)</td>
+                                <td>2.12.22.</td>
+                                <td></td>
+                                <td>
+                                    see github
+                                    <a
+                                        href="https://github.com/texstudio-org/texstudio/releases/"
+                                        >releases</a
+                                    >
+                                </td>
 
-		  </div><!-- .news-holder -->
-		
-		<h3>Keep The Overview</h3>
-		<div class="img-block-right">
-		<img src="./images/inlineChecking_zoom.png" alt="screenshot"><br>Inline Checking
-		</div>
-		<ul>
-			<li>Structure view</li>
-			<li>Code folding</li>
-			<li>Advanced syntax highlighting</li>
-			<li>Interactive spellchecker</li>
-			<li>Interactive grammar checker</li>
-			<li>Interactive reference checker</li>
-			<li>Clear display of LaTeX errors and warnings (in the editor and as a list)</li>
-		</ul>
-		<h3>Advanced build system</h3>
-		<div class="img-block-right">
-		<img src="./images/errorHighlighting_zoom.png" alt="screenshot"><br>Error Highlighting
-		</div>
-		<ul>
-			<li>Built-in support for various LaTeX compilers, index, bibliography and glossary tools, Latexmk, and many more</li>
-			<li>Automatic detection of the need for multiple LaTeX runs</li>
-			<li>Run any program you like</li>
-			<li>Completely customizable for the creation of the complete document</li>
-		</ul>
-		<h3>View The Result</h3>
-		<div class="img-block-right">
-		</div>
-		<ul>
-			<li>Integrated PDF viewer with (almost) word-level syncing</li>
-			<li>Live-updating inline preview for formulas and code segments</li>
-			<li>Tooltip preview for included images</li>
-		</ul>
-		<h3>Easy Setup</h3>
-		<ul>
-			<li>Installers or packages available for Windows, Linux, and Mac OS X</li>
-			<li>Portable USB version available</li>
-			<li>Automatic detection of MikTeX, TeX Live, Ghostscript and Standardlatex</li>
-			<li>SVN support</li>
-	</ul>
+                                <thead>
+                                    <tr class="platformDownload">
+                                        <td colspan="5">Linux</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5">
+                                            We recommend that you first try to
+                                            install TeXstudio from the
+                                            repository of your distribution.
+                                            Only if TeXstudio is not available
+                                            there, use the following
+                                            pre-packaged versions.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5">
+                                            For Ubuntu, a PPA is available:
+                                            <a
+                                                href="https://code.launchpad.net/~sunderme/+archive/ubuntu/texstudio"
+                                                >PPA</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5">
+                                            Furthermore, an app-image is
+                                            available which can be run on any
+                                            platform:
+                                            <a
+                                                class="appImageDownload"
+                                                href="https://github.com/texstudio-org/texstudio/releases/download/4.9.4/texstudio-4.9.4-x86_64.AppImage"
+                                                >appImage</a
+                                            >
+                                            <span class="appImageDownloadSize"
+                                                >()</span
+                                            >. Just make the file executable and
+                                            run it.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5">
+                                            Builds for other architectures (ARM,
+                                            PPC) can be found directly on the
+                                            OpenSUSE build service:
+                                            <a
+                                                href="https://build.opensuse.org/project/show/home:jsundermeyer"
+                                                >OBS</a
+                                            >
+                                        </td>
+                                    </tr>
+                                </thead>
+                            </tr>
+                        </tbody>
+                        <tbody id="linuxdownloads"></tbody>
 
-		<p>
-		You can find more details in the <a href="https://texstudio-org.github.io/getting_started.html">user manual</a> or in the <a href="https://github.com/texstudio-org/texstudio/commits/master">Git Changelog</a>.<br><br>
+                        <thead>
+                            <tr id="gentoo" class="platformDownload">
+                                <td colspan="5">Gentoo Linux</td>
+                            </tr>
+                            <tr>
+                                <td colspan="5">
+                                    Packages for Gentoo Linux built are by the
+                                    Gentoo community. They are available from
+                                    the
+                                    <a
+                                        href="https://packages.gentoo.org/packages/app-office/texstudio"
+                                        >official package repository</a
+                                    >.
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
 
-		Feel free to <a href="#participate">share your ideas</a> on possible future improvements of TeXstudio.
-	</p></div> <!--end features-->
+                        <thead>
+                            <tr id="appimage" class="platformDownload">
+                                <td colspan="5">Linux AppImage</td>
+                            </tr>
+                            <tr>
+                                <td colspan="5">
+                                    <a href="http://appimage.org/">AppImages</a>
+                                    are binaries that are packaged with all
+                                    their dependencies and should thus run on
+                                    any Linux desktop system.<br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5">
+                                    <a
+                                        class="appImageDownload"
+                                        href="https://github.com/texstudio-org/texstudio/releases/download/4.9.4/texstudio-4.9.4-x86_64.AppImage"
+                                        >Download TeXstudio AppImage</a
+                                    >
+                                    <span class="appImageDownloadSize">()</span>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
 
-	
-	
-	<div id="download" class="page">
-		<h1>Download</h1>
-		<table class="downloadTable">
-		<thead>
-			<tr class="platformDownload"><td colspan="5">Windows</td></tr>
-			<tr><td colspan="5">On win11, visual studio runtime is required. See <a href="https://github.com/texstudio-org/texstudio/issues/2664">here</a> how to install that.</td></tr>
-			<tr><td colspan="5"><b>Code signing policy</b>: Free code signing provided by <a href="https://about.signpath.io/">SignPath.io</a>, certificate by <a href="https://signpath.org/">SignPath Foundation</a>. Code signing is approved by Jan Sundermeyer. This program will not transfer any information to other networked systems unless specifically requested by the user or the person installing or operating it (e.g. AI chat).</td>
-			<tr><th colspan="2">Platform</th><th>Version</th><th> Type</th><th>How to install</th></tr>
-		</thead>
-		<tbody>
-			<tr><td colspan="2">10/11 (x86,64 bit,Qt6)</td>
-			  <td class="currentVersion">4.9.3</td>
-			  <td><a class="winDownloadInstaller" href="https://github.com/texstudio-org/texstudio/releases/download/4.9.3/texstudio-4.9.3-win-qt6-signed.exe">Installer</a></td>
-			  <td><a class="winDownloadInstaller" href="https://github.com/texstudio-org/texstudio/releases/download/4.9.3/texstudio-4.9.3-win-qt6-signed.exe">download</a> and double click on the installer exe</td>
-			</tr>
-			<tr><td colspan="2">10/11 (x86,64 bit,Qt6)</td>
-			  <td class="currentVersionUSB">4.9.3</td>
-			  <td><a class="winDownloadUSB" href="https://github.com/texstudio-org/texstudio/releases/download/4.9.3/texstudio-4.9.3-win-portable-qt6.zip">Portable (.zip)</a></td>
-			  <td><a class="winDownloadUSB" href="https://github.com/texstudio-org/texstudio/releases/download/4.9.3/texstudio-4.9.3-win-portable-qt6.zip">download</a> and unzip the zip</td>
-			</tr>
-			<tr><td colspan="2">11 (Arm,64 bit,Qt6)</td>
-			  <td class="currentVersion">4.9.3</td>
-			  <td><a class="winDownloadInstaller" href="https://github.com/texstudio-org/texstudio/releases/download/4.9.3/texstudio-4.9.3-win-arm-qt6-signed.exe">Installer</a></td>
-			  <td><a class="winDownloadInstaller" href="https://github.com/texstudio-org/texstudio/releases/download/4.9.3/texstudio-4.9.3-win-arm-qt6-signed.exe">download</a> and double click on the installer exe</td>
-			</tr>
-			<tr><td colspan="2">11 (Arm,64 bit,Qt6)</td>
-			  <td class="currentVersionUSB">4.9.3</td>
-			  <td><a class="winDownloadUSB" href="https://github.com/texstudio-org/texstudio/releases/download/4.9.3/texstudio-4.9.3-win-arm-portable-qt6.zip">Portable (.zip)</a></td>
-			  <td><a class="winDownloadUSB" href="https://github.com/texstudio-org/texstudio/releases/download/4.9.3/texstudio-4.9.3-win-arm-portable-qt6.zip">download</a> and unzip the zip</td>
-			</tr>
-			<tr><td colspan="2">7/8/10 (32 bit)</td>
-			<td>2.12.22.</td><td></td><td>see github <a href="https://github.com/texstudio-org/texstudio/releases/">releases</a></td>
-		
+                        <thead>
+                            <tr class="platformDownload">
+                                <td colspan="5">Mac OS X</td>
+                            </tr>
+                            <tr>
+                                <th>Platform</th>
+                                <th>Version</th>
+                                <th>Type</th>
+                                <th>Size</th>
+                                <th>How to install</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>13.+</td>
+                                <td class="currentVersionMac">4.9.4</td>
+                                <td>
+                                    <a
+                                        class="macDownload"
+                                        href="https://github.com/texstudio-org/texstudio/releases/download/4.9.4/texstudio-4.9.4-osx.zip"
+                                        >zip</a
+                                    >
+                                </td>
+                                <td>42.7 MB</td>
+                                <td>
+                                    <a
+                                        class="macDownload"
+                                        href="https://github.com/texstudio-org/texstudio/releases/download/4.9.4/texstudio-4.9.4-osx.zip"
+                                        >download</a
+                                    >, and start it.<br />
+                                    <b>Please note:</b> Because we do not have
+                                    an Apple Developer Account, OS X may
+                                    complain about an
+                                    <a
+                                        href="https://support.apple.com/guide/mac-help/apple-cant-check-app-for-malicious-software-mchleab3a043/mac"
+                                        >unidentified developer</a
+                                    >
+                                    and deny opening TXS. In that case, open the
+                                    context menu on the TXS icon (Ctrl + Click)
+                                    and select open.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>13.+ (M1)</td>
+                                <td class="currentVersionMac">4.9.4</td>
+                                <td>
+                                    <a
+                                        class="macDownload"
+                                        href="https://github.com/texstudio-org/texstudio/releases/download/4.9.4/texstudio-4.9.4-osx-m1.zip"
+                                        >zip</a
+                                    >
+                                </td>
+                                <td>42.7 MB</td>
+                                <td>
+                                    <a
+                                        class="macDownload"
+                                        href="https://github.com/texstudio-org/texstudio/releases/download/4.9.4/texstudio-4.9.4-osx-m1.zip"
+                                        >download</a
+                                    >, and start it.<br />
+                                    <b>Please note:</b> Because we do not have
+                                    an Apple Developer Account, OS X may
+                                    complain about an
+                                    <a
+                                        href="https://support.apple.com/guide/mac-help/apple-cant-check-app-for-malicious-software-mchleab3a043/mac"
+                                        >unidentified developer</a
+                                    >
+                                    and deny opening TXS. In that case, open the
+                                    context menu on the TXS icon (Ctrl + Click)
+                                    and select open.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>10.x</td>
+                                <td colspan="3"></td>
+                                <td>
+                                    There is no release for macOS 10.x, but you
+                                    can compile it from source or using
+                                    homebrew.
+                                </td>
 
-		<thead>
-			<tr class="platformDownload"><td colspan="5">Linux</td></tr>
-			<tr><td colspan="5">We recommend that you first try to install TeXstudio from the repository of your distribution. Only if TeXstudio is not available there, use the following pre-packaged versions.</td></tr>
-			<tr><td colspan="5">For Ubuntu, a PPA is available: <a href="https://code.launchpad.net/~sunderme/+archive/ubuntu/texstudio">PPA</a></td></tr>
-			<tr><td colspan="5">Furthermore, an app-image is available which can be run on any platform: <a class="appImageDownload" href="https://github.com/texstudio-org/texstudio/releases/download/4.9.3/texstudio-4.9.3-x86_64.AppImage">appImage</a> <span class="appImageDownloadSize">()</span>. Just make the file executable and run it.</td></tr>
-			<tr><td colspan="5">Builds for other architectures (ARM, PPC) can be found directly on the OpenSUSE build service: <a href="https://build.opensuse.org/project/show/home:jsundermeyer">OBS</a></td></tr>
-		</thead>
+                                <thead>
+                                    <tr class="platformDownload">
+                                        <td colspan="5">Source Code</td>
+                                    </tr>
+                                </thead>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td>latest</td>
+                                <td>
+                                    <a
+                                        href="https://github.com/texstudio-org/texstudio/"
+                                        >Git repository</a
+                                    >
+                                </td>
+                                <td></td>
+                                <td>
+                                    see the
+                                    <a
+                                        href="https://github.com/texstudio-org/texstudio/wiki/Compiling"
+                                        >wiki</a
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="currentVersion">4.9.4</td>
+                                <td>
+                                    <a
+                                        class="srcDownload"
+                                        href="https://github.com/texstudio-org/texstudio/archive/refs/tags/4.9.4.tar.gz"
+                                        >source tarball</a
+                                    >
+                                </td>
+                                <td class="srcDownloadSize"></td>
+                                <td>
+                                    see the
+                                    <a
+                                        href="https://sourceforge.net/p/texstudio/wiki/Compiling"
+                                        >wiki</a
+                                    >
+                                </td>
+                            </tr>
+                        </tbody>
 
-</tr></tbody><tbody id="linuxdownloads">
-
-     </tbody>
-
-
-		<thead>
-			<tr id="gentoo" class="platformDownload"><td colspan="5">Gentoo Linux</td></tr>
-			<tr><td colspan="5">Packages for Gentoo Linux built are by the Gentoo community. They are available from the <a href="https://packages.gentoo.org/packages/app-office/texstudio">official package repository</a>.</td></tr>
-		</thead>
-		<tbody>
-		</tbody>
-
-		<thead>
-			<tr id="appimage" class="platformDownload"><td colspan="5">Linux AppImage</td></tr>
-			<tr><td colspan="5"><a href="http://appimage.org/">AppImages</a> are binaries that are packaged with all their dependencies and should thus run on any Linux desktop system.<br></td></tr>
-			<tr><td colspan="5"><a class="appImageDownload" href="https://github.com/texstudio-org/texstudio/releases/download/4.9.3/texstudio-4.9.3-x86_64.AppImage">Download TeXstudio AppImage</a> <span class="appImageDownloadSize">()</span> </td></tr>
-		</thead>
-		<tbody>
-		</tbody>
-	 
-		<thead>
-			<tr class="platformDownload"><td colspan="5">Mac OS X</td></tr>
-			<tr><th>Platform</th><th>Version</th><th> Type</th><th>Size</th><th>How to install</th></tr>	
-		</thead>
-			<tbody>
-			<tr><td>13.+</td>
-				<td class="currentVersionMac">4.9.3</td>
-				<td><a class="macDownload" href="https://github.com/texstudio-org/texstudio/releases/download/4.9.3/texstudio-4.9.3-osx.zip">zip</a></td>	
-				<td>42.7 MB</td>
-				<td><a class="macDownload" href="https://github.com/texstudio-org/texstudio/releases/download/4.9.3/texstudio-4.9.3-osx.zip">download</a>, and start it.<br>
-				<b>Please note:</b> Because we do not have an Apple Developer Account, OS X may complain about an <a href="https://support.apple.com/guide/mac-help/apple-cant-check-app-for-malicious-software-mchleab3a043/mac">unidentified developer</a> and deny opening TXS. In that case, open the context menu on the TXS icon (Ctrl + Click) and select open.</td>
-			</tr>	
-			<tr><td>13.+ (M1)</td>
-				<td class="currentVersionMac">4.9.3</td>
-				<td><a class="macDownload" href="https://github.com/texstudio-org/texstudio/releases/download/4.9.3/texstudio-4.9.3-osx-m1.zip">zip</a></td>	
-				<td>42.7 MB</td>
-				<td><a class="macDownload" href="https://github.com/texstudio-org/texstudio/releases/download/4.9.3/texstudio-4.9.3-osx-m1.zip">download</a>, and start it.<br>
-				<b>Please note:</b> Because we do not have an Apple Developer Account, OS X may complain about an <a href="https://support.apple.com/guide/mac-help/apple-cant-check-app-for-malicious-software-mchleab3a043/mac">unidentified developer</a> and deny opening TXS. In that case, open the context menu on the TXS icon (Ctrl + Click) and select open.</td>
-			</tr>	
-     <tr><td>10.x</td><td colspan="3"></td><td>There is no release for macOS 10.x, but you can compile it from source or using homebrew.</td>
-		
-
-			<thead>
-			<tr class="platformDownload"><td colspan="5">Source Code</td></tr>
-			</thead>
-			</tr></tbody><tbody>
-			<tr><td></td><td>latest</td><td><a href="https://github.com/texstudio-org/texstudio/">Git repository</a></td><td></td><td>see the <a href="https://github.com/texstudio-org/texstudio/wiki/Compiling">wiki</a></td></tr>
-			<tr><td></td><td class="currentVersion">4.9.3</td><td><a class="srcDownload" href="https://github.com/texstudio-org/texstudio/archive/refs/tags/4.9.3.tar.gz">source tarball</a></td><td class="srcDownloadSize"></td><td>see the <a href="https://sourceforge.net/p/texstudio/wiki/Compiling">wiki</a></td></tr>
-			</tbody>
-
-			<thead>
-			<!--
+                        <thead>
+                            <!--
 			<tr class="platformDownload"><td colspan="5">New Translations</td></tr>
 			<tr><th colspan="3">Language</th><th colspan="2">Thanks to</th></tr>
 			</thead>
 			<tbody>
 			<tr><td></td><td colspan="2"><a href="https://sourceforge.net/p/texstudio/code/HEAD/tree/trunk/texstudio_cs.qm?format=raw">Czech</a></td><td colspan="3">Pavel Fric</td></tr>
-			
+
 			<tr><td></td><td colspan="2"><a href="https://sourceforge.net/p/texstudio/code/HEAD/tree/trunk/texstudio_ru.qm?format=raw">Russian</a></td><td colspan="3">Victor Kozyakin</td></tr>
 
 			<tr><td></td><td colspan="2"><a href="https://sourceforge.net/p/texstudio/code/HEAD/tree/trunk/texstudio_it.qm?format=raw">Italian</a></td><td colspan="3">Mattia Meneguzzo</td></tr>
 			-->
-		</thead></table>
+                        </thead>
+                    </table>
 
-		<h3 id="snapshots">Development Snapshots and Release Candidates</h3>
-		<p>Since moving to Github, we are using automated build farms to provide build snapshots from nearly every commit. This allows automatic testing to avoid regressions as well as checking that the commits are compatible on all major platforms (Qt5, Qt4, without poppler, OSX and Windows).</p>
-		<p>You can obtain <b>binary snapshots</b> from <a href="https://github.com/texstudio-org/texstudio/actions?query=workflow%3ACD">github</a>. Look for "artifacts" in the latest build. Ubuntu snapshots are provided via  <a href="https://launchpad.net/~sunderme/+archive/ubuntu/texstudio-daily">ppa:sunderme/texstudio-daily</a>.</p>
-		<p>If you are interested to be notified of the most recent changes in development snapshots, you can set up the update notification in TeXstudio accordingly (Options → General → Update → Update Level).</p>
-		<h3>Older Versions</h3>
-		<p>Older versions can be found on <a href="https://sourceforge.net/projects/texstudio/files/texstudio/">our SourceForge site</a>.  
-		</p>
-	</div> <!--end download-->
-	
-	
-	<div id="participate" class="page">
-		<h1>Participate</h1>
-		<p>As an open-source project, TeXstudio strongly benefits from an active community.</p>
-		<h2>Use and spread the word</h2>
-		<p>The easiest way to help with the development of TeXstudio is to use it! Furthermore, if you like TeXstudio, tell all your friends and colleagues about it.</p>
-		<p>In particular, we are looking for people who want to try the most recent features before they are officially released. If you are interested download and subscribe to <a href="#snapshots">release candidates and development snapshots</a>.</p>
-		
-		<h2>Give Feedback</h2>
-		<p>User feedback is highly welcome. Depending on the type of feedback you may use different channels to communicate.</p>
-		<ul>
-		<li>Feature requests, bug reports, and questions can be placed in the <a href="https://github.com/texstudio-org/texstudio/issues">issue tracker</a>. Please set a label whether this is a feature request/enhancement, a question, or a bug report. In case of a bug report, please state the version of texstudio and operation system and a description which allows us to reproduce the issue on another computer.</li>
-		</ul>
-		
+                    <h3 id="snapshots">
+                        Development Snapshots and Release Candidates
+                    </h3>
+                    <p>
+                        Since moving to Github, we are using automated build
+                        farms to provide build snapshots from nearly every
+                        commit. This allows automatic testing to avoid
+                        regressions as well as checking that the commits are
+                        compatible on all major platforms (Qt5, Qt4, without
+                        poppler, OSX and Windows).
+                    </p>
+                    <p>
+                        You can obtain <b>binary snapshots</b> from
+                        <a
+                            href="https://github.com/texstudio-org/texstudio/actions?query=workflow%3ACD"
+                            >github</a
+                        >. Look for "artifacts" in the latest build. Ubuntu
+                        snapshots are provided via
+                        <a
+                            href="https://launchpad.net/~sunderme/+archive/ubuntu/texstudio-daily"
+                            >ppa:sunderme/texstudio-daily</a
+                        >.
+                    </p>
+                    <p>
+                        If you are interested to be notified of the most recent
+                        changes in development snapshots, you can set up the
+                        update notification in TeXstudio accordingly (Options →
+                        General → Update → Update Level).
+                    </p>
+                    <h3>Older Versions</h3>
+                    <p>
+                        Older versions can be found on
+                        <a
+                            href="https://sourceforge.net/projects/texstudio/files/texstudio/"
+                            >our SourceForge site</a
+                        >.
+                    </p>
+                </div>
+                <!--end download-->
 
-		<h2>Contribute</h2>
-		<p>You do not necessarily have to be a programmer to help and make TeXstudio even better. There are many ways to contribute.</p>
-		<ul>
-		<li>Write cwl-files for your favorite package.</li>
-		<li><a href="https://app.transifex.com/texstudio/texstudio/dashboard/">Translate</a> TeXstudio into a new language or update an existing translation.</li>
-		<li>Design icons.</li>
-		<li>Help on improving our website.</li>
-		<li>Update or extend the <a href="https://texstudio-org.github.io/getting_started.html">user manual</a> or the <a href="https://github.com/texstudio-org/texstudio/wiki">wiki</a>.</li>
-		<li>Write tutorials or create screencasts.</li>
-		<li>Package TeXstudio for your favorite distribution or platform.</li>
-		<li>TeXstudio is written in C++/Qt. Programmers are welcome to implement new features or fix bugs. Code development takes place on <a href="https://github.com/texstudio-org/texstudio">Github</a>. Pull-requests, direct patches or changed files are welcome.</li>
-		</ul>
-		<p>It is a good idea to announce your plans on the texstudio issue list. So everybody knows what's going on around TeXstudio and there is no duplicate work. For questions about how you can contribute, contact one of the developers.</p>
-	</div> <!--end participate-->
+                <div id="participate" class="page">
+                    <h1>Participate</h1>
+                    <p>
+                        As an open-source project, TeXstudio strongly benefits
+                        from an active community.
+                    </p>
+                    <h2>Use and spread the word</h2>
+                    <p>
+                        The easiest way to help with the development of
+                        TeXstudio is to use it! Furthermore, if you like
+                        TeXstudio, tell all your friends and colleagues about
+                        it.
+                    </p>
+                    <p>
+                        In particular, we are looking for people who want to try
+                        the most recent features before they are officially
+                        released. If you are interested download and subscribe
+                        to
+                        <a href="#snapshots"
+                            >release candidates and development snapshots</a
+                        >.
+                    </p>
 
-	
-	
-	<div id="about" class="page">
-		<h1>About this editor</h1>
+                    <h2>Give Feedback</h2>
+                    <p>
+                        User feedback is highly welcome. Depending on the type
+                        of feedback you may use different channels to
+                        communicate.
+                    </p>
+                    <ul>
+                        <li>
+                            Feature requests, bug reports, and questions can be
+                            placed in the
+                            <a
+                                href="https://github.com/texstudio-org/texstudio/issues"
+                                >issue tracker</a
+                            >. Please set a label whether this is a feature
+                            request/enhancement, a question, or a bug report. In
+                            case of a bug report, please state the version of
+                            texstudio and operation system and a description
+                            which allows us to reproduce the issue on another
+                            computer.
+                        </li>
+                    </ul>
 
-		<p>TeXstudio has been forked from <a href="http://www.xm1math.net/texmaker/">Texmaker</a> in 2009, because of the non-open development process of Texmaker and due to different philosophies concerning configurability and features. Originally, it was called TeXmakerX because it started off as a small set of extensions to Texmaker with the hope that they would get integrated into Texmaker someday. While at some points you can still see that TeXstudio originates from Texmaker, significant changes in features and the code base have made it to a fully independent program.</p>
-		
-		<p>TeXstudio runs on Windows, Unix/Linux, BSD, and Mac OS X. It is licensed under the GPL v2. Being open-source, you are free to use and to modify it as you like.</p>
+                    <h2>Contribute</h2>
+                    <p>
+                        You do not necessarily have to be a programmer to help
+                        and make TeXstudio even better. There are many ways to
+                        contribute.
+                    </p>
+                    <ul>
+                        <li>Write cwl-files for your favorite package.</li>
+                        <li>
+                            <a
+                                href="https://app.transifex.com/texstudio/texstudio/dashboard/"
+                                >Translate</a
+                            >
+                            TeXstudio into a new language or update an existing
+                            translation.
+                        </li>
+                        <li>Design icons.</li>
+                        <li>Help on improving our website.</li>
+                        <li>
+                            Update or extend the
+                            <a
+                                href="https://texstudio-org.github.io/getting_started.html"
+                                >user manual</a
+                            >
+                            or the
+                            <a
+                                href="https://github.com/texstudio-org/texstudio/wiki"
+                                >wiki</a
+                            >.
+                        </li>
+                        <li>Write tutorials or create screencasts.</li>
+                        <li>
+                            Package TeXstudio for your favorite distribution or
+                            platform.
+                        </li>
+                        <li>
+                            TeXstudio is written in C++/Qt. Programmers are
+                            welcome to implement new features or fix bugs. Code
+                            development takes place on
+                            <a href="https://github.com/texstudio-org/texstudio"
+                                >Github</a
+                            >. Pull-requests, direct patches or changed files
+                            are welcome.
+                        </li>
+                    </ul>
+                    <p>
+                        It is a good idea to announce your plans on the
+                        texstudio issue list. So everybody knows what's going on
+                        around TeXstudio and there is no duplicate work. For
+                        questions about how you can contribute, contact one of
+                        the developers.
+                    </p>
+                </div>
+                <!--end participate-->
 
-		<h3>Maintainer:</h3>
-		<p>Benito van der Zander <br>
-		<span class="msafe"><span><span>benito</span><span> [ΑΤ symbol] </span>benibe<span>l</span>a.de  (please mention "texstudio" in the subject, if you write a mail)</span></span><br>
-		<a href="http://www.benibela.de/index_en.html">http://www.benibela.de/</a></p>
-		<h3>TeXstudio Authors:</h3>
-		<p>Benito van der Zander, Jan Sundermeyer, Daniel Braun, Tim Hoffmann</p>
-		<h3>Thanks to</h3>
-		<p>Contributers: Frédéric Devernay, Denis Bitouzé, Jean-Côme Charpentier, Luis Silvestre, Enrico Vittorini, Aleksandr Zolotarev, David Sichau, Grigory Mozhaev, mattgk, A. Weder, Pavel Fric, András Somogyi, István Blahota, Edson Henriques, Grant McLean, Tom Jampen, Kostas Oikinimou, Lion Guillaume, ranks.nl, AI Corleone, Diego Andrés Jarrín, Matthias Pospiech, Zulkifli Hidayat, Christian Spieß, Robert Diaz, Kirill Müller, Atsushi Nakajima, Yuriy Kolerov, Victor Kozyakin, Mattia Meneguzzo, Andriy Bandura, Carlos Eduardo Valencia Urbina, Koutheir Attouchi, Stefan Kraus, Bjoern Menke, Charles Brunet, François Gannaz, Marek Kurdej, Paulo Silva, Thiago de Melo, YoungFrog, Klaus Schneider-Zapp, Jakob Nixdorf, Thomas Leitz, Quoc Ho.
-			<span id="contributorContact">(Contact us if you are missing or don't want to be mentioned.)</span></p>
-		<p><a href="http://sourceforge.net/projects/texstudio"><img src="images/sflogo.gif" width="64" height="12" style="position: relative; top: 3px;" alt="SourceForge"></a> for hosting TeXstudio.</p>
-		
-<script>
-var sm = document.getElementsByClassName("msafe");
-for (var i=0;i<sm.length;i++) {
-  var mail = /(.*)\((.*)/.exec(sm[i].textContent);
-  sm[i].innerHTML = '<a onmouseover="(function(m){' +
-                      'var truemail = /^([a-zA-Z]+) *\\\[.*\\\] *([a-zA-Z.]+)/.exec(m.textContent); '+
-                      'm.textContent = truemail[1]+\' [click to remove spam protection] \'+truemail[2]; '+
-                      'm.onmouseover=\'\'; '+
-                      'm.onclick = function(){' +
-                        'm.onclick=\'\';'+
-                        'm.textContent = truemail[1]+\'\x40\'+truemail[2]; '+
-                        'setTimeout(function(){ m.href=\'mailto:\'+m.textContent;}, 100);}})(this)">'+mail[1]+
-                    '</a> ('+mail[2];
-}
-</script>
-			
-		<p>And to all open-source projects from which TeXstudio uses code or that inspired features of TeXstudio.</p>
-    
-    <p>Legal stuff: <a href="legal.html">Imprint / Privacy Policy</a>. </p>
-	</div> <!--end about -->
+                <div id="about" class="page">
+                    <h1>About this editor</h1>
 
-</div> <!-- end rightbar -->
+                    <p>
+                        TeXstudio has been forked from
+                        <a href="http://www.xm1math.net/texmaker/">Texmaker</a>
+                        in 2009, because of the non-open development process of
+                        Texmaker and due to different philosophies concerning
+                        configurability and features. Originally, it was called
+                        TeXmakerX because it started off as a small set of
+                        extensions to Texmaker with the hope that they would get
+                        integrated into Texmaker someday. While at some points
+                        you can still see that TeXstudio originates from
+                        Texmaker, significant changes in features and the code
+                        base have made it to a fully independent program.
+                    </p>
 
-<div id="leftbar">
-	<div id="logo-area">
-		<div id="logo-img">
-			<a href="#home"><img class="logo" src="./images/texstudio128x128.png" alt="TeXstudio Logo"></a>
-		</div>
-		<div id="logo-text">
-			<!-- class="logo_colour", allows you to change the colour of the text -->
-			<h1>TeX<span class="logo_colour">studio</span></h1>
-			<h2>LaTeX made comfortable</h2>
-		</div>
-	</div>
-	<div id="navigation-prebar">
-		<nav id="navigation-bar" class="gradient"> <!-- class="gradient" for IE9 support. See http://www.colorzilla.com/gradient-editor/ -->
-			<ul id="navigation">
-				<li class="nav1"><a href="#home">Home</a></li>
-				<li class="nav2"><a href="#news">News</a></li>
-				<li class="nav3"><a href="#features">Features</a></li>
-				<li class="nav4"><a href="#download">Download</a></li>
-				<li class="nav5"><a href="#participate">Participate</a></li>
-				<li class="nav6"><a href="#about">About</a></li>
-			</ul>
-		</nav>
-	</div>
-</div>
+                    <p>
+                        TeXstudio runs on Windows, Unix/Linux, BSD, and Mac OS
+                        X. It is licensed under the GPL v2. Being open-source,
+                        you are free to use and to modify it as you like.
+                    </p>
 
+                    <h3>Maintainer:</h3>
+                    <p>
+                        Benito van der Zander <br />
+                        <span class="msafe"
+                            ><span
+                                ><span>benito</span
+                                ><span> [ΑΤ symbol] </span
+                                >benibe<span>l</span>a.de (please mention
+                                "texstudio" in the subject, if you write a
+                                mail)</span
+                            ></span
+                        ><br />
+                        <a href="http://www.benibela.de/index_en.html"
+                            >http://www.benibela.de/</a
+                        >
+                    </p>
+                    <h3>TeXstudio Authors:</h3>
+                    <p>
+                        Benito van der Zander, Jan Sundermeyer, Daniel Braun,
+                        Tim Hoffmann
+                    </p>
+                    <h3>Thanks to</h3>
+                    <p>
+                        Contributers: Frédéric Devernay, Denis Bitouzé,
+                        Jean-Côme Charpentier, Luis Silvestre, Enrico Vittorini,
+                        Aleksandr Zolotarev, David Sichau, Grigory Mozhaev,
+                        mattgk, A. Weder, Pavel Fric, András Somogyi, István
+                        Blahota, Edson Henriques, Grant McLean, Tom Jampen,
+                        Kostas Oikinimou, Lion Guillaume, ranks.nl, AI Corleone,
+                        Diego Andrés Jarrín, Matthias Pospiech, Zulkifli
+                        Hidayat, Christian Spieß, Robert Diaz, Kirill Müller,
+                        Atsushi Nakajima, Yuriy Kolerov, Victor Kozyakin, Mattia
+                        Meneguzzo, Andriy Bandura, Carlos Eduardo Valencia
+                        Urbina, Koutheir Attouchi, Stefan Kraus, Bjoern Menke,
+                        Charles Brunet, François Gannaz, Marek Kurdej, Paulo
+                        Silva, Thiago de Melo, YoungFrog, Klaus Schneider-Zapp,
+                        Jakob Nixdorf, Thomas Leitz, Quoc Ho.
+                        <span id="contributorContact"
+                            >(Contact us if you are missing or don't want to be
+                            mentioned.)</span
+                        >
+                    </p>
+                    <p>
+                        <a href="http://sourceforge.net/projects/texstudio"
+                            ><img
+                                src="images/sflogo.gif"
+                                width="64"
+                                height="12"
+                                style="position: relative; top: 3px"
+                                alt="SourceForge"
+                        /></a>
+                        for hosting TeXstudio.
+                    </p>
 
-</div>
- 
+                    <script>
+                        var sm = document.getElementsByClassName("msafe");
+                        for (var i = 0; i < sm.length; i++) {
+                            var mail = /(.*)\((.*)/.exec(sm[i].textContent);
+                            sm[i].innerHTML =
+                                '<a onmouseover="(function(m){' +
+                                "var truemail = /^([a-zA-Z]+) *\\\[.*\\\] *([a-zA-Z.]+)/.exec(m.textContent); " +
+                                "m.textContent = truemail[1]+' [click to remove spam protection] '+truemail[2]; " +
+                                "m.onmouseover=''; " +
+                                "m.onclick = function(){" +
+                                "m.onclick='';" +
+                                "m.textContent = truemail[1]+'\x40'+truemail[2]; " +
+                                "setTimeout(function(){ m.href='mailto:'+m.textContent;}, 100);}})(this)\">" +
+                                mail[1] +
+                                "</a> (" +
+                                mail[2];
+                        }
+                    </script>
 
-</body></html>
+                    <p>
+                        And to all open-source projects from which TeXstudio
+                        uses code or that inspired features of TeXstudio.
+                    </p>
+
+                    <p>
+                        Legal stuff:
+                        <a href="legal.html">Imprint / Privacy Policy</a>.
+                    </p>
+                </div>
+                <!--end about -->
+            </div>
+            <!-- end rightbar -->
+
+            <div id="leftbar">
+                <div id="logo-area">
+                    <div id="logo-img">
+                        <a href="#home"
+                            ><img
+                                class="logo"
+                                src="./images/texstudio128x128.png"
+                                alt="TeXstudio Logo"
+                        /></a>
+                    </div>
+                    <div id="logo-text">
+                        <!-- class="logo_colour", allows you to change the colour of the text -->
+                        <h1>TeX<span class="logo_colour">studio</span></h1>
+                        <h2>LaTeX made comfortable</h2>
+                    </div>
+                </div>
+                <div id="navigation-prebar">
+                    <nav id="navigation-bar" class="gradient">
+                        <!-- class="gradient" for IE9 support. See http://www.colorzilla.com/gradient-editor/ -->
+                        <ul id="navigation">
+                            <li class="nav1"><a href="#home">Home</a></li>
+                            <li class="nav2"><a href="#news">News</a></li>
+                            <li class="nav3">
+                                <a href="#features">Features</a>
+                            </li>
+                            <li class="nav4">
+                                <a href="#download">Download</a>
+                            </li>
+                            <li class="nav5">
+                                <a href="#participate">Participate</a>
+                            </li>
+                            <li class="nav6"><a href="#about">About</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
